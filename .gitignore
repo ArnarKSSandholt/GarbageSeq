@@ -14,3 +14,6 @@ data/proteoms.tar.gz
 analyses/manual_classification_annotation.txt
 analyses/stats_on_representative_bins.csv
 analyses/stats_on_all_fOTUed_bins.csv
+
+# R studio project config file
+.Rproj.user
