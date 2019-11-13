@@ -1,13 +1,16 @@
-annotations/*
-genomes/*
-manual_classification_annotation.txt
-stats_on_all_fOTUed_bins.csv
-annotations.tar.gz
-genomes.tar.gz
-proteoms/*
-stats_on_representative_bins.csv
-bin2cogs.csv
-gffs/*
-proteoms.tar.gz
-fOTUs.csv
-gffs.tar.gz
+# Original data 
+data/annotations
+data/bin2cogs.csv
+data/genomes
+data/gffs
+data/proteoms
+data/annotations.tar.gz
+data/fOTUs.csv
+data/genomes.tar.gz
+data/gffs.tar.gz
+data/proteoms.tar.gz
+       	      
+# Original analyses
+analyses/manual_classification_annotation.txt
+analyses/stats_on_representative_bins.csv
+analyses/stats_on_all_fOTUed_bins.csv
