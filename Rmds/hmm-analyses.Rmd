@@ -1,0 +1,88 @@
+---
+title: "HMM analyses"
+author: "LJM"
+date: "`r Sys.Date()`"
+link-citations: true
+bibliography: bibliography.bib
+biblio-style: "alpha" #https://www.overleaf.com/learn/latex/Bibtex_bibliography_styles
+#csl: "../uppsala-universitet-institutionen-for-biologisk-grundutbildning.csl"
+documentclass: report
+output:
+  bookdown::html_document2:
+    highlight: tango
+    theme: journal
+    split_by: none # only generate a single output page
+    self_contained: TRUE
+    toc: yes
+    toc_float: 
+      collapsed: TRUE
+      smooth_scroll: TRUE
+      print: FALSE
+    code_folding: show
+    number_sections: TRUE
+    code_download: TRUE
+  html_document: 
+    toc: TRUE
+    toc_float: TRUE
+    code_folding: show
+    highlight: tango
+    number_sections: TRUE
+    self_contained: TRUE
+    smart: TRUE # To be figured out when this is useful
+    theme: journal
+  pdf_document:
+    toc: TRUE
+    toc_depth: 2
+    highlight: tango # This appears to be the same as default
+    number_sections: TRUE
+  bookdown::pdf_document2:
+    keep_tex: no
+    latex_engine: xelatex
+    #highlight: pygments #Other options: default, tango, kate, monochrome, espresso, zenburn, haddock, and textmate
+    #theme: spacelab
+    pandoc_args: ["--variable", "subparagraph",
+                "--top-level-division","chapter"] # Could also be section 
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Find annotated viruses in the `.emapper.annotations` files
+
+Search all viruses from eggnogg mapper annotations and store them in `viruses.emapper.annotations`-file. The goal is to use the identifiers in this file to fetch out protein sequences of all these viruses. 
+
+One possible way to go might be to create profile HMMs of some clear groups of viruses, e.g. all _Myoviridae_ are used to create a _Myoviridae_ profile, all _Siphoviridae_ another profile, etc. and scan the fOTUs with these HMM profiles to classify them. 
+
+```{bash include=TRUE}
+ANNOT="../data/annotations/"
+ANALYSES="../analyses/HMM_scan/"
+
+
+grep -E 'Viruses' "$ANNOT"*.emapper.annotations > "$ANALYSES"viruses.emapper.annotations
+head -n 2 "$ANALYSES"viruses.emapper.annotations
+```
+
+Now that we have all the viruses found, it would be good to try to survey what type of categories of viruses are there so that they can be used to create the profiles. Maybe one way to see the categories is the following:
+
+```{bash include=TRUE}
+ANNOT="../data/annotations/"
+ANALYSES="../analyses/HMM_scan/"
+
+
+awk '{print $5}' "$ANALYSES"viruses.emapper.annotations | sort | uniq
+```
+
+We thus see that there are 9 different categories of viruses with varying specificity. 
+
+The tool to be used in the HMM analyses is called HMMer v. 3.2.1 [@hmmer2018].
+
+```{bash}
+#fastafetch --help
+#fastaindex --help
+hmmscan -h
+```
+
+[@Slater2005]
+
+# References
