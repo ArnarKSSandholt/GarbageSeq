@@ -91,7 +91,8 @@ cat "$INPUT" | awk -v output_dir="$RESULTS_DIR" -f "$SCRIPT"
 This seems to be possible by searching the correct file indexing it with exonerate v. 2.4.0 [@Slater2005] command `fastaindex` and then fetching it with another tool in the exonerate utility suite called `fastafetch`. Lastly each of the fetched files are appended to a new file with hopefully most of the annotation data not lost (but contained in the fasta header).
 
 
-```{bash eval=FALSE, include=TRUE}
+```{bash echo=TRUE}
+ml bioinfo-tools exonerate/2.4.0
 VIRUS_ANNOT="../analyses/HMM_scan/virus_annotations_categorised/"
 PROTEOMS="../data/proteoms/"
 SCRIPT="../scripts/virusProteomGatherer.awk"
