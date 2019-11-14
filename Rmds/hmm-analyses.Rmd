@@ -127,7 +127,22 @@ for mFASTA in "${mFASTAs[@]}"; do
   mafft --auto --thread 4 "$VIRUS_PROTEOMS""$FILE" > "$PROTEOM_MSAs""$VIR_CATEGORY"".aln.faa"
 done
 ```
+
+## Build profile HMMs from the viral MSAs
+
+```{bash}
+PROTEOM_MSAs="../analyses/HMM_scan/virus_MSAs/"
+VIRUS_HMMs="../analyses/HMM_scan/virus_HMMs/"
+
+read -r -a MSAs <<< $( find $PROTEOM_MSAs -name "*.faa" -and -type f -print0 | xargs -0 echo )
+for MSA in "${MSAs[@]}"; do
+  FILE=$(echo $(basename "$MSA")) 
+  VIR_CATEGORY=$(echo $(basename "$MSA") | awk -F "." '{print $1}')
+  #echo "$FILE $VIR_CATEGORY"
+  hmmbuild --informat afa --amino --cpu 4 -o "$VIRUS_HMMs""$VIR_CATEGORY"".out" -O "$VIRUS_HMMs""$VIR_CATEGORY"".mod.out" "$VIRUS_HMMs""$VIR_CATEGORY"".hmm" "$PROTEOM_MSAs""$FILE"
+done
 #cut -f 2- "$ANALYSES"viruses.emapper.annotations | head -n 3
+```
 
 #fastafetch --fasta "../data/proteoms/Loc090116-9m_megahit_metabat_bin-1153.faa" --index "../analyses/HMM_scan/proteom_indexes/Loc090116-9m_megahit_metabat_bin-1153.idx" --query "Loc090116-9m_megahit_metabat_bin-1153_00054"
 
