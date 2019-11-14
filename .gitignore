@@ -18,5 +18,8 @@ analyses/stats_on_all_fOTUed_bins.csv
 # Viral proteom index files
 analyses/HMM_scan/proteom_indexes
 
+# Proteoms of each fOTU
+analyses/fOTU_proteomes/*.faa
+
 # R studio project config file
 .Rproj.user
