@@ -91,12 +91,22 @@ cat "$INPUT" | awk -v output_dir="$RESULTS_DIR" -f "$SCRIPT"
 This seems to be possible by searching the correct file indexing it with exonerate v. 2.4.0 [@Slater2005] command `fastaindex` and then fetching it with another tool in the exonerate utility suite called `fastafetch`. Lastly each of the fetched files are appended to a new file with hopefully most of the annotation data not lost (but contained in the fasta header).
 
 
-```{bash}
-#cut -f 2- "$ANALYSES"viruses.emapper.annotations | head -n 3
-#fastafetch --help
-#fastaindex --help
-```
+```{bash eval=FALSE, include=TRUE}
+VIRUS_ANNOT="../analyses/HMM_scan/virus_annotations_categorised/"
+PROTEOMS="../data/proteoms/"
+SCRIPT="../scripts/virusProteomGatherer.awk"
+PROTEOM_INDEXS="../analyses/HMM_scan/proteom_indexes/"
+VIRUS_PROTEOMS="../analyses/HMM_scan/virus_proteoms/"
 
+read -r -a ANNOTs <<< $( find $VIRUS_ANNOT -name "*.annot" -and -type f -print0 | xargs -0 echo )
+for ANNOT in "${ANNOTs[@]}"; do
+  FILE=$(echo $(basename "$ANNOT")) 
+  VIR_CATEGORY=$(echo $(basename "$ANNOT") | awk -F "." '{print $1}')
+  #echo "$FILE $VIR_CATEGORY"
+  cat "$VIRUS_ANNOT""$FILE" | awk -v output_dir="$RESULTS_DIR" -v proteom_dir="$PROTEOMS" -v proteom_index_dir="$PROTEOM_INDEXS" -f "$SCRIPT" > "$VIRUS_PROTEOMS""$VIR_CATEGORY"".faa"
+done
+
+```
 
 
 
