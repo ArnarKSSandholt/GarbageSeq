@@ -104,16 +104,15 @@ for ANNOT in "${ANNOTs[@]}"; do
   FILE=$(echo $(basename "$ANNOT")) 
   VIR_CATEGORY=$(echo $(basename "$ANNOT") | awk -F "." '{print $1}')
   #echo "$FILE $VIR_CATEGORY"
-  cat "$VIRUS_ANNOT""$FILE" | awk -v output_dir="$RESULTS_DIR" -v proteom_dir="$PROTEOMS" -v proteom_index_dir="$PROTEOM_INDEXS" -f "$SCRIPT" > "$VIRUS_PROTEOMS""$VIR_CATEGORY"".faa"
+  cat "$VIRUS_ANNOT""$FILE" | awk -v proteom_dir="$PROTEOMS" -v proteom_index_dir="$PROTEOM_INDEXS" -f "$SCRIPT" > "$VIRUS_PROTEOMS""$VIR_CATEGORY"".faa"
 done
-
 ```
 
-# Find viral sequences in fOTUs
+# Prepare for finding viral sequences in fOTUs
 
 The tool to be used in the HMM analyses is called HMMer v. 3.2.1 [@hmmer2018]. It requires multiple sequence alignments (MSA) as a source for building a profile HMM. Let's now use MAFFT v7.407 (2018/Jul/23) [@Katoh2013] to build MSAs from each of the viral multifasta files.
 
-## Build multiple sequence alignments
+## Build MSAs of same category of viral proteins
 
 ```{bash eval=FALSE, include=TRUE}
 VIRUS_PROTEOMS="../analyses/HMM_scan/virus_proteoms/"

@@ -1,9 +1,5 @@
 #!/usr/bin/awk -f
 {
-    # Check if there is an output dir given, if not give this generic one as such
-    if (length(output_dir) == 0){
-        output_dir = "../analyses/"
-    }
     # Check if there is proteoms directory given, if not exit
     if (length(proteom_dir) == 0){
         exit(1)
