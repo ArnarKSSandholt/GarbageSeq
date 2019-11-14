@@ -143,11 +143,27 @@ done
 #cut -f 2- "$ANALYSES"viruses.emapper.annotations | head -n 3
 ```
 
-## Search with a HMM profile a fOTU sequences
+## Create target protein multifasta files 
+
+The target protein multifasta files for searching with the built HMM profiles should contain all the protein sequences belonging to each fOTU. The file defining which bins belong to which fOTU are defined in file `../data/fOTUs.csv`. 
+
+Let's now create ~ 2800 multifasta files corresponding to each fOTU.
 
 ```{bash}
-hmmsearch -h
+fOTUs="../data/fOTUs.csv"
+PROTEOMS="../data/proteoms/"
+SCRIPT="../scripts/fOTUproteomGatherer.awk"
+fOTUproteoms_DIR="../analyses/fOTU_proteomes/"
+
+cat "$fOTUs" | awk -F, -v proteom_dir="$PROTEOMS" -v fOTUproteoms="$fOTUproteoms_DIR" -f "$SCRIPT"
+
 ```
+
+
+
+# Identify viral content in fOTUs with a HMM profile
+
+
 
 
 
