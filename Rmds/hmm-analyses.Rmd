@@ -64,6 +64,8 @@ grep -E 'Viruses' "$ANNOT"*.emapper.annotations > "$ANALYSES"viruses.emapper.ann
 head -n 2 "$ANALYSES"viruses.emapper.annot
 ```
 
+## Survey what categories of viruses are there
+
 Now that we have all the viruses found, it would be good to try to survey what type of categories of viruses are there so that they can be used to create the profiles. Maybe one way to see the categories is the following:
 
 ```{bash eval=FALSE, include=TRUE}
@@ -75,7 +77,19 @@ awk '{print $5}' "$ANALYSES"viruses.emapper.annot | sort | uniq
 
 We thus see that there are 9 different categories of viruses with varying specificity. 
 
-The tool to be used in the HMM analyses is called HMMer v. 3.2.1 [@hmmer2018].
+## Gather and group all viral protein sequences
+
+Next task is to gather groupwise all viral protein sequences. Maybe one simple way to go about doing that is by pattern matching the 5th field in the previously produced `viruses.emapper.annot` file with the found categories and saving each category in own file.
+
+```{bash eval=FALSE, include=TRUE}
+INPUT="../analyses/HMM_scan/viruses.emapper.annot"
+SCRIPT="../scripts/virusSeparator.awk"
+RESULTS_DIR="../analyses/HMM_scan/virus_annotations_categorised/"
+cat "$INPUT" | awk -v output_dir="$RESULTS_DIR" -f "$SCRIPT"
+```
+
+This seems to be possible by searching the correct file indexing it with exonerate v. 2.4.0 [@Slater2005] command `fastaindex` and then fetching it with another tool in the exonerate utility suite called `fastafetch`. Lastly each of the fetched files are appended to a new file with hopefully most of the annotation data not lost (but contained in the fasta header).
+
 
 ```{bash}
 #fastafetch --help
