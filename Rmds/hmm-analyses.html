@@ -12,7 +12,7 @@
 
 <meta name="author" content="LJM" />
 
-<meta name="date" content="2019-11-13" />
+<meta name="date" content="2019-11-14" />
 
 <title>HMM analyses</title>
 
@@ -1677,7 +1677,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">HMM analyses</h1>
 <h4 class="author">LJM</h4>
-<h4 class="date">2019-11-13</h4>
+<h4 class="date">2019-11-14</h4>
 
 </div>
 
@@ -1686,86 +1686,37 @@ div.tocify {
 <h1><span class="header-section-number">1</span> Find annotated viruses in the <code>.emapper.annotations</code> files</h1>
 <p>Search all viruses from eggnogg mapper annotations and store them in <code>viruses.emapper.annotations</code>-file. The goal is to use the identifiers in this file to fetch out protein sequences of all these viruses.</p>
 <p>One possible way to go might be to create profile HMMs of some clear groups of viruses, e.g. all <em>Myoviridae</em> are used to create a <em>Myoviridae</em> profile, all <em>Siphoviridae</em> another profile, etc. and scan the fOTUs with these HMM profiles to classify them.</p>
+<div id="gather-all-eggnogg-mapper-annotated-viruses-in-one-file" class="section level2">
+<h2><span class="header-section-number">1.1</span> Gather all eggnogg mapper annotated viruses in one file</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="va">ANNOT=</span><span class="st">&quot;../data/annotations/&quot;</span></a>
 <a class="sourceLine" id="cb1-2" data-line-number="2"><span class="va">ANALYSES=</span><span class="st">&quot;../analyses/HMM_scan/&quot;</span></a>
 <a class="sourceLine" id="cb1-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb1-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="fu">grep</span> -E <span class="st">'Viruses'</span> <span class="st">&quot;</span><span class="va">$ANNOT</span><span class="st">&quot;</span>*.emapper.annotations <span class="op">&gt;</span> <span class="st">&quot;</span><span class="va">$ANALYSES</span><span class="st">&quot;</span>viruses.emapper.annotations</a>
-<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="fu">head</span> -n 2 <span class="st">&quot;</span><span class="va">$ANALYSES</span><span class="st">&quot;</span>viruses.emapper.annotations</a></code></pre></div>
-<pre><code>## ../data/annotations/Loc080925-4-5m_megahit_metabat_bin-0016.emapper.annotations:Loc080925-4-5m_megahit_metabat_bin-0016_00020    1229753.K7QL84_9CAUD    7.9e-09 66.6    Myoviridae                                                  Viruses 4QEXW@10239,4QIZJ@10662,4QTUY@28883,4QZJC@35237 NA|NA|NA        
-## ../data/annotations/Loc080925-4-5m_megahit_metabat_bin-0016.emapper.annotations:Loc080925-4-5m_megahit_metabat_bin-0016_00024    1636271.A0A0E3M3Z1_9CAUD    3.3e-50 205.7   Siphoviridae                                                    Viruses 4QAIK@10239,4QKNC@10699,4QPEB@28883 NA|NA|NA    S   hydrolase activity</code></pre>
+<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="fu">grep</span> -E <span class="st">'Viruses'</span> <span class="st">&quot;</span><span class="va">$ANNOT</span><span class="st">&quot;</span>*.emapper.annotations <span class="op">&gt;</span> <span class="st">&quot;</span><span class="va">$ANALYSES</span><span class="st">&quot;</span>viruses.emapper.annot</a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="fu">head</span> -n 2 <span class="st">&quot;</span><span class="va">$ANALYSES</span><span class="st">&quot;</span>viruses.emapper.annot</a></code></pre></div>
+</div>
+<div id="survey-what-categories-of-viruses-are-there" class="section level2">
+<h2><span class="header-section-number">1.2</span> Survey what categories of viruses are there</h2>
 <p>Now that we have all the viruses found, it would be good to try to survey what type of categories of viruses are there so that they can be used to create the profiles. Maybe one way to see the categories is the following:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="va">ANNOT=</span><span class="st">&quot;../data/annotations/&quot;</span></a>
-<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="va">ANALYSES=</span><span class="st">&quot;../analyses/HMM_scan/&quot;</span></a>
-<a class="sourceLine" id="cb3-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb3-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="fu">awk</span> <span class="st">'{print $5}'</span> <span class="st">&quot;</span><span class="va">$ANALYSES</span><span class="st">&quot;</span>viruses.emapper.annotations <span class="kw">|</span> <span class="fu">sort</span> <span class="kw">|</span> <span class="fu">uniq</span></a></code></pre></div>
-<pre><code>## Caudovirales
-## Herpesvirales
-## Myoviridae
-## Podoviridae
-## Siphoviridae
-## Tectiviridae
-## Viruses
-## dsDNA
-## ssDNA</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="va">ANNOT=</span><span class="st">&quot;../data/annotations/&quot;</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="va">ANALYSES=</span><span class="st">&quot;../analyses/HMM_scan/&quot;</span></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="fu">awk</span> <span class="st">'{print $5}'</span> <span class="st">&quot;</span><span class="va">$ANALYSES</span><span class="st">&quot;</span>viruses.emapper.annot <span class="kw">|</span> <span class="fu">sort</span> <span class="kw">|</span> <span class="fu">uniq</span></a></code></pre></div>
 <p>We thus see that there are 9 different categories of viruses with varying specificity.</p>
+</div>
+<div id="gather-and-group-all-viral-protein-sequences" class="section level2">
+<h2><span class="header-section-number">1.3</span> Gather and group all viral protein sequences</h2>
+<p>Next task is to gather groupwise all viral protein sequences. Maybe one simple way to go about doing that is by pattern matching the 5th field in the previously produced <code>viruses.emapper.annot</code> file with the found categories and saving each category in own file.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="va">INPUT=</span><span class="st">&quot;../analyses/HMM_scan/viruses.emapper.annot&quot;</span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="va">SCRIPT=</span><span class="st">&quot;../scripts/virusSeparator.awk&quot;</span></a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="va">RESULTS_DIR=</span><span class="st">&quot;../analyses/HMM_scan/virus_annotations_categorised/&quot;</span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="fu">cat</span> <span class="st">&quot;</span><span class="va">$INPUT</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">awk</span> -v output_dir=<span class="st">&quot;</span><span class="va">$RESULTS_DIR</span><span class="st">&quot;</span> -f <span class="st">&quot;</span><span class="va">$SCRIPT</span><span class="st">&quot;</span></a></code></pre></div>
+<p>This seems to be possible by searching the correct file indexing it with exonerate v. 2.4.0 <span class="citation">(Slater and Birney <a href="#ref-Slater2005">2005</a>)</span> command <code>fastaindex</code> and then fetching it with another tool in the exonerate utility suite called <code>fastafetch</code>. Lastly each of the fetched files are appended to a new file with hopefully most of the annotation data not lost (but contained in the fasta header).</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="co">#cut -f 2- &quot;$ANALYSES&quot;viruses.emapper.annotations | head -n 3</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="co">#fastafetch --help</span></a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co">#fastaindex --help</span></a></code></pre></div>
 <p>The tool to be used in the HMM analyses is called HMMer v. 3.2.1 <span class="citation">(“HMMER v. 3.2.1 (June 2018)” <a href="#ref-hmmer2018">n.d.</a>)</span>.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="co">#fastafetch --help</span></a>
-<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="co">#fastaindex --help</span></a>
-<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="ex">hmmscan</span> -h</a></code></pre></div>
-<pre><code>## # hmmscan :: search sequence(s) against a profile database
-## # HMMER 3.2.1 (June 2018); http://hmmer.org/
-## # Copyright (C) 2018 Howard Hughes Medical Institute.
-## # Freely distributed under the BSD open source license.
-## # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-## Usage: hmmscan [-options] &lt;hmmdb&gt; &lt;seqfile&gt;
-## 
-## Basic options:
-##   -h : show brief help on version and usage
-## 
-## Options controlling output:
-##   -o &lt;f&gt;           : direct output to file &lt;f&gt;, not stdout
-##   --tblout &lt;f&gt;     : save parseable table of per-sequence hits to file &lt;f&gt;
-##   --domtblout &lt;f&gt;  : save parseable table of per-domain hits to file &lt;f&gt;
-##   --pfamtblout &lt;f&gt; : save table of hits and domains to file, in Pfam format &lt;f&gt;
-##   --acc            : prefer accessions over names in output
-##   --noali          : don't output alignments, so output is smaller
-##   --notextw        : unlimit ASCII text output line width
-##   --textw &lt;n&gt;      : set max width of ASCII text output lines  [120]  (n&gt;=120)
-## 
-## Options controlling reporting thresholds:
-##   -E &lt;x&gt;     : report models &lt;= this E-value threshold in output  [10.0]  (x&gt;0)
-##   -T &lt;x&gt;     : report models &gt;= this score threshold in output
-##   --domE &lt;x&gt; : report domains &lt;= this E-value threshold in output  [10.0]  (x&gt;0)
-##   --domT &lt;x&gt; : report domains &gt;= this score cutoff in output
-## 
-## Options controlling inclusion (significance) thresholds:
-##   --incE &lt;x&gt;    : consider models &lt;= this E-value threshold as significant
-##   --incT &lt;x&gt;    : consider models &gt;= this score threshold as significant
-##   --incdomE &lt;x&gt; : consider domains &lt;= this E-value threshold as significant
-##   --incdomT &lt;x&gt; : consider domains &gt;= this score threshold as significant
-## 
-## Options for model-specific thresholding:
-##   --cut_ga : use profile's GA gathering cutoffs to set all thresholding
-##   --cut_nc : use profile's NC noise cutoffs to set all thresholding
-##   --cut_tc : use profile's TC trusted cutoffs to set all thresholding
-## 
-## Options controlling acceleration heuristics:
-##   --max    : Turn all heuristic filters off (less speed, more power)
-##   --F1 &lt;x&gt; : MSV threshold: promote hits w/ P &lt;= F1  [0.02]
-##   --F2 &lt;x&gt; : Vit threshold: promote hits w/ P &lt;= F2  [1e-3]
-##   --F3 &lt;x&gt; : Fwd threshold: promote hits w/ P &lt;= F3  [1e-5]
-##   --nobias : turn off composition bias filter
-## 
-## Other expert options:
-##   --nonull2     : turn off biased composition score corrections
-##   -Z &lt;x&gt;        : set # of comparisons done, for E-value calculation
-##   --domZ &lt;x&gt;    : set # of significant seqs, for domain E-value calculation
-##   --seed &lt;n&gt;    : set RNG seed to &lt;n&gt; (if 0: one-time arbitrary seed)  [42]
-##   --qformat &lt;s&gt; : assert input &lt;seqfile&gt; is in format &lt;s&gt;: no autodetection
-##   --cpu &lt;n&gt;     : number of parallel CPU workers to use for multithreads  [2]</code></pre>
-<p><span class="citation">(Slater and Birney <a href="#ref-Slater2005">2005</a>)</span></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="co">#hmmscan -h</span></a></code></pre></div>
+</div>
 </div>
 <div id="references" class="section level1 unnumbered">
 <h1>References</h1>
@@ -1779,7 +1730,7 @@ div.tocify {
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiSE1NIGFuYWx5c2VzIgphdXRob3I6ICJMSk0iCmRhdGU6ICJgciBTeXMuRGF0ZSgpYCIKbGluay1jaXRhdGlvbnM6IHRydWUKYmlibGlvZ3JhcGh5OiBiaWJsaW9ncmFwaHkuYmliCmJpYmxpby1zdHlsZTogImFscGhhIiAjaHR0cHM6Ly93d3cub3ZlcmxlYWYuY29tL2xlYXJuL2xhdGV4L0JpYnRleF9iaWJsaW9ncmFwaHlfc3R5bGVzCiNjc2w6ICIuLi91cHBzYWxhLXVuaXZlcnNpdGV0LWluc3RpdHV0aW9uZW4tZm9yLWJpb2xvZ2lzay1ncnVuZHV0YmlsZG5pbmcuY3NsIgpkb2N1bWVudGNsYXNzOiByZXBvcnQKb3V0cHV0OgogIGJvb2tkb3duOjpodG1sX2RvY3VtZW50MjoKICAgIGhpZ2hsaWdodDogdGFuZ28KICAgIHRoZW1lOiBqb3VybmFsCiAgICBzcGxpdF9ieTogbm9uZSAjIG9ubHkgZ2VuZXJhdGUgYSBzaW5nbGUgb3V0cHV0IHBhZ2UKICAgIHNlbGZfY29udGFpbmVkOiBUUlVFCiAgICB0b2M6IHllcwogICAgdG9jX2Zsb2F0OiAKICAgICAgY29sbGFwc2VkOiBUUlVFCiAgICAgIHNtb290aF9zY3JvbGw6IFRSVUUKICAgICAgcHJpbnQ6IEZBTFNFCiAgICBjb2RlX2ZvbGRpbmc6IHNob3cKICAgIG51bWJlcl9zZWN0aW9uczogVFJVRQogICAgY29kZV9kb3dubG9hZDogVFJVRQogIGh0bWxfZG9jdW1lbnQ6IAogICAgdG9jOiBUUlVFCiAgICB0b2NfZmxvYXQ6IFRSVUUKICAgIGNvZGVfZm9sZGluZzogc2hvdwogICAgaGlnaGxpZ2h0OiB0YW5nbwogICAgbnVtYmVyX3NlY3Rpb25zOiBUUlVFCiAgICBzZWxmX2NvbnRhaW5lZDogVFJVRQogICAgc21hcnQ6IFRSVUUgIyBUbyBiZSBmaWd1cmVkIG91dCB3aGVuIHRoaXMgaXMgdXNlZnVsCiAgICB0aGVtZTogam91cm5hbAogIHBkZl9kb2N1bWVudDoKICAgIHRvYzogVFJVRQogICAgdG9jX2RlcHRoOiAyCiAgICBoaWdobGlnaHQ6IHRhbmdvICMgVGhpcyBhcHBlYXJzIHRvIGJlIHRoZSBzYW1lIGFzIGRlZmF1bHQKICAgIG51bWJlcl9zZWN0aW9uczogVFJVRQogIGJvb2tkb3duOjpwZGZfZG9jdW1lbnQyOgogICAga2VlcF90ZXg6IG5vCiAgICBsYXRleF9lbmdpbmU6IHhlbGF0ZXgKICAgICNoaWdobGlnaHQ6IHB5Z21lbnRzICNPdGhlciBvcHRpb25zOiBkZWZhdWx0LCB0YW5nbywga2F0ZSwgbW9ub2Nocm9tZSwgZXNwcmVzc28sIHplbmJ1cm4sIGhhZGRvY2ssIGFuZCB0ZXh0bWF0ZQogICAgI3RoZW1lOiBzcGFjZWxhYgogICAgcGFuZG9jX2FyZ3M6IFsiLS12YXJpYWJsZSIsICJzdWJwYXJhZ3JhcGgiLAogICAgICAgICAgICAgICAgIi0tdG9wLWxldmVsLWRpdmlzaW9uIiwiY2hhcHRlciJdICMgQ291bGQgYWxzbyBiZSBzZWN0aW9uIAotLS0KCmBgYHtyIHNldHVwLCBpbmNsdWRlPUZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUpCmBgYAoKIyBGaW5kIGFubm90YXRlZCB2aXJ1c2VzIGluIHRoZSBgLmVtYXBwZXIuYW5ub3RhdGlvbnNgIGZpbGVzCgpTZWFyY2ggYWxsIHZpcnVzZXMgZnJvbSBlZ2dub2dnIG1hcHBlciBhbm5vdGF0aW9ucyBhbmQgc3RvcmUgdGhlbSBpbiBgdmlydXNlcy5lbWFwcGVyLmFubm90YXRpb25zYC1maWxlLiBUaGUgZ29hbCBpcyB0byB1c2UgdGhlIGlkZW50aWZpZXJzIGluIHRoaXMgZmlsZSB0byBmZXRjaCBvdXQgcHJvdGVpbiBzZXF1ZW5jZXMgb2YgYWxsIHRoZXNlIHZpcnVzZXMuIAoKT25lIHBvc3NpYmxlIHdheSB0byBnbyBtaWdodCBiZSB0byBjcmVhdGUgcHJvZmlsZSBITU1zIG9mIHNvbWUgY2xlYXIgZ3JvdXBzIG9mIHZpcnVzZXMsIGUuZy4gYWxsIF9NeW92aXJpZGFlXyBhcmUgdXNlZCB0byBjcmVhdGUgYSBfTXlvdmlyaWRhZV8gcHJvZmlsZSwgYWxsIF9TaXBob3ZpcmlkYWVfIGFub3RoZXIgcHJvZmlsZSwgZXRjLiBhbmQgc2NhbiB0aGUgZk9UVXMgd2l0aCB0aGVzZSBITU0gcHJvZmlsZXMgdG8gY2xhc3NpZnkgdGhlbS4gCgpgYGB7YmFzaCBpbmNsdWRlPVRSVUV9CkFOTk9UPSIuLi9kYXRhL2Fubm90YXRpb25zLyIKQU5BTFlTRVM9Ii4uL2FuYWx5c2VzL0hNTV9zY2FuLyIKCgpncmVwIC1FICdWaXJ1c2VzJyAiJEFOTk9UIiouZW1hcHBlci5hbm5vdGF0aW9ucyA+ICIkQU5BTFlTRVMidmlydXNlcy5lbWFwcGVyLmFubm90YXRpb25zCmhlYWQgLW4gMiAiJEFOQUxZU0VTInZpcnVzZXMuZW1hcHBlci5hbm5vdGF0aW9ucwpgYGAKCk5vdyB0aGF0IHdlIGhhdmUgYWxsIHRoZSB2aXJ1c2VzIGZvdW5kLCBpdCB3b3VsZCBiZSBnb29kIHRvIHRyeSB0byBzdXJ2ZXkgd2hhdCB0eXBlIG9mIGNhdGVnb3JpZXMgb2YgdmlydXNlcyBhcmUgdGhlcmUgc28gdGhhdCB0aGV5IGNhbiBiZSB1c2VkIHRvIGNyZWF0ZSB0aGUgcHJvZmlsZXMuIE1heWJlIG9uZSB3YXkgdG8gc2VlIHRoZSBjYXRlZ29yaWVzIGlzIHRoZSBmb2xsb3dpbmc6CgpgYGB7YmFzaCBpbmNsdWRlPVRSVUV9CkFOTk9UPSIuLi9kYXRhL2Fubm90YXRpb25zLyIKQU5BTFlTRVM9Ii4uL2FuYWx5c2VzL0hNTV9zY2FuLyIKCgphd2sgJ3twcmludCAkNX0nICIkQU5BTFlTRVMidmlydXNlcy5lbWFwcGVyLmFubm90YXRpb25zIHwgc29ydCB8IHVuaXEKYGBgCgpXZSB0aHVzIHNlZSB0aGF0IHRoZXJlIGFyZSA5IGRpZmZlcmVudCBjYXRlZ29yaWVzIG9mIHZpcnVzZXMgd2l0aCB2YXJ5aW5nIHNwZWNpZmljaXR5LiAKClRoZSB0b29sIHRvIGJlIHVzZWQgaW4gdGhlIEhNTSBhbmFseXNlcyBpcyBjYWxsZWQgSE1NZXIgdi4gMy4yLjEgW0BobW1lcjIwMThdLgoKYGBge2Jhc2h9CiNmYXN0YWZldGNoIC0taGVscAojZmFzdGFpbmRleCAtLWhlbHAKaG1tc2NhbiAtaApgYGAKCltAU2xhdGVyMjAwNV0KCiMgUmVmZXJlbmNlcwo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiSE1NIGFuYWx5c2VzIgphdXRob3I6ICJMSk0iCmRhdGU6ICJgciBTeXMuRGF0ZSgpYCIKbGluay1jaXRhdGlvbnM6IHRydWUKYmlibGlvZ3JhcGh5OiBiaWJsaW9ncmFwaHkuYmliCmJpYmxpby1zdHlsZTogImFscGhhIiAjaHR0cHM6Ly93d3cub3ZlcmxlYWYuY29tL2xlYXJuL2xhdGV4L0JpYnRleF9iaWJsaW9ncmFwaHlfc3R5bGVzCiNjc2w6ICIuLi91cHBzYWxhLXVuaXZlcnNpdGV0LWluc3RpdHV0aW9uZW4tZm9yLWJpb2xvZ2lzay1ncnVuZHV0YmlsZG5pbmcuY3NsIgpkb2N1bWVudGNsYXNzOiByZXBvcnQKb3V0cHV0OgogIGJvb2tkb3duOjpodG1sX2RvY3VtZW50MjoKICAgIGhpZ2hsaWdodDogdGFuZ28KICAgIHRoZW1lOiBqb3VybmFsCiAgICBzcGxpdF9ieTogbm9uZSAjIG9ubHkgZ2VuZXJhdGUgYSBzaW5nbGUgb3V0cHV0IHBhZ2UKICAgIHNlbGZfY29udGFpbmVkOiBUUlVFCiAgICB0b2M6IHllcwogICAgdG9jX2Zsb2F0OiAKICAgICAgY29sbGFwc2VkOiBUUlVFCiAgICAgIHNtb290aF9zY3JvbGw6IFRSVUUKICAgICAgcHJpbnQ6IEZBTFNFCiAgICBjb2RlX2ZvbGRpbmc6IHNob3cKICAgIG51bWJlcl9zZWN0aW9uczogVFJVRQogICAgY29kZV9kb3dubG9hZDogVFJVRQogIGh0bWxfZG9jdW1lbnQ6IAogICAgdG9jOiBUUlVFCiAgICB0b2NfZmxvYXQ6IFRSVUUKICAgIGNvZGVfZm9sZGluZzogc2hvdwogICAgaGlnaGxpZ2h0OiB0YW5nbwogICAgbnVtYmVyX3NlY3Rpb25zOiBUUlVFCiAgICBzZWxmX2NvbnRhaW5lZDogVFJVRQogICAgc21hcnQ6IFRSVUUgIyBUbyBiZSBmaWd1cmVkIG91dCB3aGVuIHRoaXMgaXMgdXNlZnVsCiAgICB0aGVtZTogam91cm5hbAogIHBkZl9kb2N1bWVudDoKICAgIHRvYzogVFJVRQogICAgdG9jX2RlcHRoOiAyCiAgICBoaWdobGlnaHQ6IHRhbmdvICMgVGhpcyBhcHBlYXJzIHRvIGJlIHRoZSBzYW1lIGFzIGRlZmF1bHQKICAgIG51bWJlcl9zZWN0aW9uczogVFJVRQogIGJvb2tkb3duOjpwZGZfZG9jdW1lbnQyOgogICAga2VlcF90ZXg6IG5vCiAgICBsYXRleF9lbmdpbmU6IHhlbGF0ZXgKICAgICNoaWdobGlnaHQ6IHB5Z21lbnRzICNPdGhlciBvcHRpb25zOiBkZWZhdWx0LCB0YW5nbywga2F0ZSwgbW9ub2Nocm9tZSwgZXNwcmVzc28sIHplbmJ1cm4sIGhhZGRvY2ssIGFuZCB0ZXh0bWF0ZQogICAgI3RoZW1lOiBzcGFjZWxhYgogICAgcGFuZG9jX2FyZ3M6IFsiLS12YXJpYWJsZSIsICJzdWJwYXJhZ3JhcGgiLAogICAgICAgICAgICAgICAgIi0tdG9wLWxldmVsLWRpdmlzaW9uIiwiY2hhcHRlciJdICMgQ291bGQgYWxzbyBiZSBzZWN0aW9uIAotLS0KCmBgYHtyIHNldHVwLCBpbmNsdWRlPUZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUpCmBgYAoKIyBGaW5kIGFubm90YXRlZCB2aXJ1c2VzIGluIHRoZSBgLmVtYXBwZXIuYW5ub3RhdGlvbnNgIGZpbGVzCgpTZWFyY2ggYWxsIHZpcnVzZXMgZnJvbSBlZ2dub2dnIG1hcHBlciBhbm5vdGF0aW9ucyBhbmQgc3RvcmUgdGhlbSBpbiBgdmlydXNlcy5lbWFwcGVyLmFubm90YXRpb25zYC1maWxlLiBUaGUgZ29hbCBpcyB0byB1c2UgdGhlIGlkZW50aWZpZXJzIGluIHRoaXMgZmlsZSB0byBmZXRjaCBvdXQgcHJvdGVpbiBzZXF1ZW5jZXMgb2YgYWxsIHRoZXNlIHZpcnVzZXMuIAoKT25lIHBvc3NpYmxlIHdheSB0byBnbyBtaWdodCBiZSB0byBjcmVhdGUgcHJvZmlsZSBITU1zIG9mIHNvbWUgY2xlYXIgZ3JvdXBzIG9mIHZpcnVzZXMsIGUuZy4gYWxsIF9NeW92aXJpZGFlXyBhcmUgdXNlZCB0byBjcmVhdGUgYSBfTXlvdmlyaWRhZV8gcHJvZmlsZSwgYWxsIF9TaXBob3ZpcmlkYWVfIGFub3RoZXIgcHJvZmlsZSwgZXRjLiBhbmQgc2NhbiB0aGUgZk9UVXMgd2l0aCB0aGVzZSBITU0gcHJvZmlsZXMgdG8gY2xhc3NpZnkgdGhlbS4gCgojIyBHYXRoZXIgYWxsIGVnZ25vZ2cgbWFwcGVyIGFubm90YXRlZCB2aXJ1c2VzIGluIG9uZSBmaWxlCgpgYGB7YmFzaCBldmFsPUZBTFNFLCBpbmNsdWRlPVRSVUV9CkFOTk9UPSIuLi9kYXRhL2Fubm90YXRpb25zLyIKQU5BTFlTRVM9Ii4uL2FuYWx5c2VzL0hNTV9zY2FuLyIKCmdyZXAgLUUgJ1ZpcnVzZXMnICIkQU5OT1QiKi5lbWFwcGVyLmFubm90YXRpb25zID4gIiRBTkFMWVNFUyJ2aXJ1c2VzLmVtYXBwZXIuYW5ub3QKaGVhZCAtbiAyICIkQU5BTFlTRVMidmlydXNlcy5lbWFwcGVyLmFubm90CmBgYAoKIyMgU3VydmV5IHdoYXQgY2F0ZWdvcmllcyBvZiB2aXJ1c2VzIGFyZSB0aGVyZQoKTm93IHRoYXQgd2UgaGF2ZSBhbGwgdGhlIHZpcnVzZXMgZm91bmQsIGl0IHdvdWxkIGJlIGdvb2QgdG8gdHJ5IHRvIHN1cnZleSB3aGF0IHR5cGUgb2YgY2F0ZWdvcmllcyBvZiB2aXJ1c2VzIGFyZSB0aGVyZSBzbyB0aGF0IHRoZXkgY2FuIGJlIHVzZWQgdG8gY3JlYXRlIHRoZSBwcm9maWxlcy4gTWF5YmUgb25lIHdheSB0byBzZWUgdGhlIGNhdGVnb3JpZXMgaXMgdGhlIGZvbGxvd2luZzoKCmBgYHtiYXNoIGV2YWw9RkFMU0UsIGluY2x1ZGU9VFJVRX0KQU5OT1Q9Ii4uL2RhdGEvYW5ub3RhdGlvbnMvIgpBTkFMWVNFUz0iLi4vYW5hbHlzZXMvSE1NX3NjYW4vIgoKYXdrICd7cHJpbnQgJDV9JyAiJEFOQUxZU0VTInZpcnVzZXMuZW1hcHBlci5hbm5vdCB8IHNvcnQgfCB1bmlxCmBgYAoKV2UgdGh1cyBzZWUgdGhhdCB0aGVyZSBhcmUgOSBkaWZmZXJlbnQgY2F0ZWdvcmllcyBvZiB2aXJ1c2VzIHdpdGggdmFyeWluZyBzcGVjaWZpY2l0eS4gCgojIyBHYXRoZXIgYW5kIGdyb3VwIGFsbCB2aXJhbCBwcm90ZWluIHNlcXVlbmNlcwoKTmV4dCB0YXNrIGlzIHRvIGdhdGhlciBncm91cHdpc2UgYWxsIHZpcmFsIHByb3RlaW4gc2VxdWVuY2VzLiBNYXliZSBvbmUgc2ltcGxlIHdheSB0byBnbyBhYm91dCBkb2luZyB0aGF0IGlzIGJ5IHBhdHRlcm4gbWF0Y2hpbmcgdGhlIDV0aCBmaWVsZCBpbiB0aGUgcHJldmlvdXNseSBwcm9kdWNlZCBgdmlydXNlcy5lbWFwcGVyLmFubm90YCBmaWxlIHdpdGggdGhlIGZvdW5kIGNhdGVnb3JpZXMgYW5kIHNhdmluZyBlYWNoIGNhdGVnb3J5IGluIG93biBmaWxlLgoKYGBge2Jhc2ggZXZhbD1GQUxTRSwgaW5jbHVkZT1UUlVFfQpJTlBVVD0iLi4vYW5hbHlzZXMvSE1NX3NjYW4vdmlydXNlcy5lbWFwcGVyLmFubm90IgpTQ1JJUFQ9Ii4uL3NjcmlwdHMvdmlydXNTZXBhcmF0b3IuYXdrIgpSRVNVTFRTX0RJUj0iLi4vYW5hbHlzZXMvSE1NX3NjYW4vdmlydXNfYW5ub3RhdGlvbnNfY2F0ZWdvcmlzZWQvIgpjYXQgIiRJTlBVVCIgfCBhd2sgLXYgb3V0cHV0X2Rpcj0iJFJFU1VMVFNfRElSIiAtZiAiJFNDUklQVCIKYGBgCgpUaGlzIHNlZW1zIHRvIGJlIHBvc3NpYmxlIGJ5IHNlYXJjaGluZyB0aGUgY29ycmVjdCBmaWxlIGluZGV4aW5nIGl0IHdpdGggZXhvbmVyYXRlIHYuIDIuNC4wIFtAU2xhdGVyMjAwNV0gY29tbWFuZCBgZmFzdGFpbmRleGAgYW5kIHRoZW4gZmV0Y2hpbmcgaXQgd2l0aCBhbm90aGVyIHRvb2wgaW4gdGhlIGV4b25lcmF0ZSB1dGlsaXR5IHN1aXRlIGNhbGxlZCBgZmFzdGFmZXRjaGAuIExhc3RseSBlYWNoIG9mIHRoZSBmZXRjaGVkIGZpbGVzIGFyZSBhcHBlbmRlZCB0byBhIG5ldyBmaWxlIHdpdGggaG9wZWZ1bGx5IG1vc3Qgb2YgdGhlIGFubm90YXRpb24gZGF0YSBub3QgbG9zdCAoYnV0IGNvbnRhaW5lZCBpbiB0aGUgZmFzdGEgaGVhZGVyKS4KCgpgYGB7YmFzaH0KI2N1dCAtZiAyLSAiJEFOQUxZU0VTInZpcnVzZXMuZW1hcHBlci5hbm5vdGF0aW9ucyB8IGhlYWQgLW4gMwojZmFzdGFmZXRjaCAtLWhlbHAKI2Zhc3RhaW5kZXggLS1oZWxwCmBgYAoKCgoKClRoZSB0b29sIHRvIGJlIHVzZWQgaW4gdGhlIEhNTSBhbmFseXNlcyBpcyBjYWxsZWQgSE1NZXIgdi4gMy4yLjEgW0BobW1lcjIwMThdLgoKYGBge2Jhc2h9CiNobW1zY2FuIC1oCmBgYAoKCgojIFJlZmVyZW5jZXMK</div>
 
 
 </div>
