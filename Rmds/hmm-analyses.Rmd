@@ -92,7 +92,7 @@ This seems to be possible by searching the correct file indexing it with exonera
 
 
 ```{bash echo=TRUE}
-ml bioinfo-tools exonerate/2.4.0
+#ml bioinfo-tools exonerate/2.4.0
 VIRUS_ANNOT="../analyses/HMM_scan/virus_annotations_categorised/"
 PROTEOMS="../data/proteoms/"
 SCRIPT="../scripts/virusProteomGatherer.awk"
