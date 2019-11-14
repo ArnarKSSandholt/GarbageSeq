@@ -54,13 +54,14 @@ Search all viruses from eggnogg mapper annotations and store them in `viruses.em
 
 One possible way to go might be to create profile HMMs of some clear groups of viruses, e.g. all _Myoviridae_ are used to create a _Myoviridae_ profile, all _Siphoviridae_ another profile, etc. and scan the fOTUs with these HMM profiles to classify them. 
 
-```{bash include=TRUE}
+## Gather all eggnogg mapper annotated viruses in one file
+
+```{bash eval=FALSE, include=TRUE}
 ANNOT="../data/annotations/"
 ANALYSES="../analyses/HMM_scan/"
 
-
-grep -E 'Viruses' "$ANNOT"*.emapper.annotations > "$ANALYSES"viruses.emapper.annotations
-head -n 2 "$ANALYSES"viruses.emapper.annotations
+grep -E 'Viruses' "$ANNOT"*.emapper.annotations > "$ANALYSES"viruses.emapper.annot
+head -n 2 "$ANALYSES"viruses.emapper.annot
 ```
 
 Now that we have all the viruses found, it would be good to try to survey what type of categories of viruses are there so that they can be used to create the profiles. Maybe one way to see the categories is the following:
