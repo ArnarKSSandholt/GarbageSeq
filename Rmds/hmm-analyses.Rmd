@@ -144,8 +144,10 @@ done
 #cut -f 2- "$ANALYSES"viruses.emapper.annotations | head -n 3
 ```
 
-#fastafetch --fasta "../data/proteoms/Loc090116-9m_megahit_metabat_bin-1153.faa" --index "../analyses/HMM_scan/proteom_indexes/Loc090116-9m_megahit_metabat_bin-1153.idx" --query "Loc090116-9m_megahit_metabat_bin-1153_00054"
+## Search with a HMM profile a fOTU sequences
 
+```{bash}
+hmmsearch -h
 ```
 
 
