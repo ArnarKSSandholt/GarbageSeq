@@ -92,11 +92,21 @@ This seems to be possible by searching the correct file indexing it with exonera
 
 
 ```{bash}
+#cut -f 2- "$ANALYSES"viruses.emapper.annotations | head -n 3
 #fastafetch --help
 #fastaindex --help
-hmmscan -h
 ```
 
-[@Slater2005]
+
+
+
+
+The tool to be used in the HMM analyses is called HMMer v. 3.2.1 [@hmmer2018].
+
+```{bash}
+#hmmscan -h
+```
+
+
 
 # References
