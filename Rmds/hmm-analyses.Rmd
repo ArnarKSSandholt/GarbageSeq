@@ -66,12 +66,11 @@ head -n 2 "$ANALYSES"viruses.emapper.annot
 
 Now that we have all the viruses found, it would be good to try to survey what type of categories of viruses are there so that they can be used to create the profiles. Maybe one way to see the categories is the following:
 
-```{bash include=TRUE}
+```{bash eval=FALSE, include=TRUE}
 ANNOT="../data/annotations/"
 ANALYSES="../analyses/HMM_scan/"
 
-
-awk '{print $5}' "$ANALYSES"viruses.emapper.annotations | sort | uniq
+awk '{print $5}' "$ANALYSES"viruses.emapper.annot | sort | uniq
 ```
 
 We thus see that there are 9 different categories of viruses with varying specificity. 
