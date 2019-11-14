@@ -109,13 +109,24 @@ done
 
 ```
 
+# Find viral sequences in fOTUs
 
-The tool to be used in the HMM analyses is called HMMer v. 3.2.1 [@hmmer2018].
+The tool to be used in the HMM analyses is called HMMer v. 3.2.1 [@hmmer2018]. It requires multiple sequence alignments (MSA) as a source for building a profile HMM. Let's now use MAFFT v7.407 (2018/Jul/23) [@Katoh2013] to build MSAs from each of the viral multifasta files.
 
-```{bash eval=FALSE, include=FALSE}
-#fastaindex --help
-#fastafetch --help
-#fastaindex --fasta "../data/proteoms/Loc090116-9m_megahit_metabat_bin-1153.faa" --index "../analyses/HMM_scan/proteom_indexes/Loc090116-9m_megahit_metabat_bin-1153.idx"
+## Build multiple sequence alignments
+
+```{bash eval=FALSE, include=TRUE}
+VIRUS_PROTEOMS="../analyses/HMM_scan/virus_proteoms/"
+PROTEOM_MSAs="../analyses/HMM_scan/virus_MSAs/"
+
+read -r -a mFASTAs <<< $( find $VIRUS_PROTEOMS -name "*.faa" -and -type f -print0 | xargs -0 echo )
+for mFASTA in "${mFASTAs[@]}"; do
+  FILE=$(echo $(basename "$mFASTA")) 
+  VIR_CATEGORY=$(echo $(basename "$mFASTA") | awk -F "." '{print $1}')
+  #echo "$FILE $VIR_CATEGORY"
+  mafft --auto --thread 4 "$VIRUS_PROTEOMS""$FILE" > "$PROTEOM_MSAs""$VIR_CATEGORY"".aln.faa"
+done
+```
 #cut -f 2- "$ANALYSES"viruses.emapper.annotations | head -n 3
 
 #fastafetch --fasta "../data/proteoms/Loc090116-9m_megahit_metabat_bin-1153.faa" --index "../analyses/HMM_scan/proteom_indexes/Loc090116-9m_megahit_metabat_bin-1153.idx" --query "Loc090116-9m_megahit_metabat_bin-1153_00054"
