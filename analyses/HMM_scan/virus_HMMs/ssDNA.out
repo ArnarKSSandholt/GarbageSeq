@@ -1,0 +1,18 @@
+# hmmbuild :: profile HMM construction from multiple sequence alignments
+# HMMER 3.2.1 (June 2018); http://hmmer.org/
+# Copyright (C) 2018 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# input alignment file:             ../analyses/HMM_scan/virus_MSAs/ssDNA.aln.faa
+# output HMM file:                  ../analyses/HMM_scan/virus_HMMs/ssDNA.hmm
+# output directed to file:          ../analyses/HMM_scan/virus_HMMs/ssDNA.out
+# processed alignment resaved to:   ../analyses/HMM_scan/virus_HMMs/ssDNA.mod.out
+# input alignment is asserted as:   protein
+# number of worker threads:         4
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# idx name                  nseq  alen  mlen eff_nseq re/pos description
+#---- -------------------- ----- ----- ----- -------- ------ -----------
+1     ssDNA.aln                2   174   145     0.61  0.593 
+
+# CPU time: 0.12u 0.00s 00:00:00.12 Elapsed: 00:00:00.12
