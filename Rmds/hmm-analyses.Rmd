@@ -112,7 +112,7 @@ done
 The tool to be used in the HMM analyses is called HMMer v. 3.2.1 [@hmmer2018].
 
 ```{bash eval=FALSE, include=FALSE}
-fastaindex --help
+#fastaindex --help
 #fastafetch --help
 #fastaindex --fasta "../data/proteoms/Loc090116-9m_megahit_metabat_bin-1153.faa" --index "../analyses/HMM_scan/proteom_indexes/Loc090116-9m_megahit_metabat_bin-1153.idx"
 #cut -f 2- "$ANALYSES"viruses.emapper.annotations | head -n 3
