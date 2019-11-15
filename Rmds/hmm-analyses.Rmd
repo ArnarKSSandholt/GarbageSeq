@@ -152,15 +152,30 @@ fOTUs="../data/fOTUs.csv"
 PROTEOMS="../data/proteoms/"
 SCRIPT="../scripts/fOTUproteomGatherer.awk"
 fOTUproteoms_DIR="../analyses/fOTU_proteomes/"
-
 cat "$fOTUs" | awk -F, -v proteom_dir="$PROTEOMS" -v fOTUproteoms="$fOTUproteoms_DIR" -f "$SCRIPT"
-
 ```
-
-
 
 # Identify viral content in fOTUs with a HMM profile
 
+The identification with the 9 HMM profiles can be executed in the following way:
+
+```{bash}
+fOTUproteoms_DIR="../analyses/fOTU_proteomes/"
+VIRUS_HMMs_DIR="../analyses/HMM_scan/virus_HMMs/"
+HMMer_OUTPUT_DIR="../analyses/HMM_scan/virus_hmm_scan_out/"
+
+read -r -a fOTUproteoms <<< $( find $fOTUproteoms_DIR -name "*.faa" -and -type f -print0 | xargs -0 echo )
+read -r -a VIRUS_HMMs <<< $( find $VIRUS_HMMs_DIR -name "*.hmm" -and -type f -print0 | xargs -0 echo )
+for fOTUproteom in "${fOTUproteoms[@]}"; do
+  fOTU_FILE=$(echo $(basename "$fOTUproteom")) 
+  fOTU=$(echo $(basename "$fOTUproteom") | awk -F "." '{print $1}')
+  for VIRUS_HMM in "${VIRUS_HMMs[@]}"; do
+    VIR_HMM_FILE=$(echo $(basename "$VIRUS_HMM")) 
+    VIR_CATEGORY=$(echo $(basename "$VIRUS_HMM") | awk -F "." '{print $1}')
+    hmmsearch --cpu 4 -o "$HMMer_OUTPUT_DIR""out/""$fOTU""_""$VIR_CATEGORY"".out" -A "$HMMer_OUTPUT_DIR""alns/""$fOTU""$VIR_CATEGORY"".aln.out" --tblout "$HMMer_OUTPUT_DIR""tblout/""$fOTU""$VIR_CATEGORY"".tbl.out" --domtblout "$HMMer_OUTPUT_DIR""domtblout/""$fOTU""$VIR_CATEGORY"".domtbl.out" --pfamtblout "$HMMer_OUTPUT_DIR""pfamtblout/""$fOTU""$VIR_CATEGORY"".pfamtbl.out" "$VIRUS_HMMs_DIR""$VIR_HMM_FILE" "$fOTUproteoms_DIR""$fOTU_FILE"
+  done
+done
+```
 
 
 
