@@ -160,6 +160,7 @@ cat "$fOTUs" | awk -F, -v proteom_dir="$PROTEOMS" -v fOTUproteoms="$fOTUproteoms
 The identification with the 9 HMM profiles can be executed in the following way:
 
 ```{bash}
+ml bioinfo-tools hmmer/3.2.1
 fOTUproteoms_DIR="../analyses/fOTU_proteomes/"
 VIRUS_HMMs_DIR="../analyses/HMM_scan/virus_HMMs/"
 HMMer_OUTPUT_DIR="../analyses/HMM_scan/virus_hmm_scan_out/"
