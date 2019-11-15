@@ -23,3 +23,10 @@ analyses/fOTU_proteomes/*.faa
 
 # R studio project config file
 .Rproj.user
+
+# HHMer search outputs
+analyses/HMM_scan/virus_hmm_scan_out/alns/*.out
+analyses/HMM_scan/virus_hmm_scan_out/domtblout/*.out
+analyses/HMM_scan/virus_hmm_scan_out/out/*.out
+analyses/HMM_scan/virus_hmm_scan_out/pfamtblout/*.out
+analyses/HMM_scan/virus_hmm_scan_out/tblout/*.out
