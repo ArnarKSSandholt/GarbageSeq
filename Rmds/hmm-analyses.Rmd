@@ -8,19 +8,13 @@ biblio-style: "alpha" #https://www.overleaf.com/learn/latex/Bibtex_bibliography_
 #csl: "../uppsala-universitet-institutionen-for-biologisk-grundutbildning.csl"
 documentclass: report
 output:
-  bookdown::html_document2:
-    highlight: tango
-    theme: journal
-    split_by: none # only generate a single output page
-    self_contained: TRUE
-    toc: yes
-    toc_float: 
-      collapsed: TRUE
-      smooth_scroll: TRUE
-      print: FALSE
-    code_folding: show
-    number_sections: TRUE
-    code_download: TRUE
+  bookdown::pdf_document2:
+    keep_tex: no
+    latex_engine: xelatex
+    #highlight: pygments #Other options: default, tango, kate, monochrome, espresso, zenburn, haddock, and textmate
+    #theme: spacelab
+    pandoc_args: ["--variable", "subparagraph",
+                "--top-level-division","chapter"] # Could also be section 
   html_document: 
     toc: TRUE
     toc_float: TRUE
@@ -35,13 +29,19 @@ output:
     toc_depth: 2
     highlight: tango # This appears to be the same as default
     number_sections: TRUE
-  bookdown::pdf_document2:
-    keep_tex: no
-    latex_engine: xelatex
-    #highlight: pygments #Other options: default, tango, kate, monochrome, espresso, zenburn, haddock, and textmate
-    #theme: spacelab
-    pandoc_args: ["--variable", "subparagraph",
-                "--top-level-division","chapter"] # Could also be section 
+  bookdown::html_document2:
+    highlight: tango
+    theme: journal
+    split_by: none # only generate a single output page
+    self_contained: TRUE
+    toc: yes
+    toc_float: 
+      collapsed: TRUE
+      smooth_scroll: TRUE
+      print: FALSE
+    code_folding: show
+    number_sections: TRUE
+    code_download: TRUE
 ---
 
 ```{r setup, include=FALSE}
@@ -147,7 +147,7 @@ The target protein multifasta files for searching with the built HMM profiles sh
 
 Let's now create ~ 2800 multifasta files corresponding to each fOTU.
 
-```{bash}
+```{bash eval=FALSE, include=TRUE}
 fOTUs="../data/fOTUs.csv"
 PROTEOMS="../data/proteoms/"
 SCRIPT="../scripts/fOTUproteomGatherer.awk"
@@ -159,8 +159,8 @@ cat "$fOTUs" | awk -F, -v proteom_dir="$PROTEOMS" -v fOTUproteoms="$fOTUproteoms
 
 The identification with the 9 HMM profiles can be executed in the following way:
 
-```{bash}
-ml bioinfo-tools hmmer/3.2.1
+```{bash eval=FALSE, include=TRUE}
+#ml bioinfo-tools hmmer/3.2.1
 fOTUproteoms_DIR="../analyses/fOTU_proteomes/"
 VIRUS_HMMs_DIR="../analyses/HMM_scan/virus_HMMs/"
 HMMer_OUTPUT_DIR="../analyses/HMM_scan/virus_hmm_scan_out/"
