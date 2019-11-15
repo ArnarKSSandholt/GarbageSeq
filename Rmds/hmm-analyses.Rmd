@@ -103,7 +103,6 @@ read -r -a ANNOTs <<< $( find $VIRUS_ANNOT -name "*.annot" -and -type f -print0 
 for ANNOT in "${ANNOTs[@]}"; do
   FILE=$(echo $(basename "$ANNOT")) 
   VIR_CATEGORY=$(echo $(basename "$ANNOT") | awk -F "." '{print $1}')
-  #echo "$FILE $VIR_CATEGORY"
   cat "$VIRUS_ANNOT""$FILE" | awk -v proteom_dir="$PROTEOMS" -v proteom_index_dir="$PROTEOM_INDEXS" -f "$SCRIPT" > "$VIRUS_PROTEOMS""$VIR_CATEGORY"".faa"
 done
 ```
@@ -122,7 +121,6 @@ read -r -a mFASTAs <<< $( find $VIRUS_PROTEOMS -name "*.faa" -and -type f -print
 for mFASTA in "${mFASTAs[@]}"; do
   FILE=$(echo $(basename "$mFASTA")) 
   VIR_CATEGORY=$(echo $(basename "$mFASTA") | awk -F "." '{print $1}')
-  #echo "$FILE $VIR_CATEGORY"
   mafft --auto --thread 4 "$VIRUS_PROTEOMS""$FILE" > "$PROTEOM_MSAs""$VIR_CATEGORY"".aln.faa"
 done
 ```
