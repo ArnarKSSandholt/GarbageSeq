@@ -11,7 +11,8 @@ RUN R -e "install.packages('DT')" \
 && mv /root/bin/phantomjs /usr/bin/phantomjs \
 && chmod a+rx /usr/bin/phantomjs \
 && R -e "install.packages('revealjs', type = 'source')" \
-&& R -e "install.packages('reticulate')"
+&& R -e "install.packages('reticulate')" \
+&& R -e "install.packages('kableExtra')"
 
 # Install miniconda
 RUN wget --quiet https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh && \
