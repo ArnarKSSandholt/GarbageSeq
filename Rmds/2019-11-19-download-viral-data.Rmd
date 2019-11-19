@@ -63,12 +63,12 @@ kable(taxids) %>%
                 fixed_thead = T)
 ```
 
-It seems difficult to figure out what nognames each taxid has so using the [RESTFul (web) API](http://eggnog5.embl.de/#/app/api) provided by EggNOG seems out of question. However, browsing [EggNOG database v. 5.0 data](http://eggnog5.embl.de/download/eggnog_5.0/per_tax_level/) on per taxa level, it seems that the data is stored in systematic way where it is essential to know the taxids. Therefore, let's now download the data using these taxids:
+It seems difficult to figure out what nognames each taxid has so using the [RESTFul (web) API](http://eggnog5.embl.de/#/app/api) provided by EggNOG seems out of question. However, browsing [EggNOG database v. 5.0 data](http://eggnog5.embl.de/download/eggnog_5.0/per_tax_level/) on per taxa level, it seems that the data is stored in systematic way where it is essential to know the taxids. Therefore, let's now download the data using the txids. The following returns some strange output and will be discarded:
 
-```{bash}
+```{bash eval=FALSE, include=TRUE}
 INPUT="../analyses/HMM_scan_using_eggNOG_HMMs/virus_taxids.csv"
 URL_ROOT="http://eggnog5.embl.de/download/eggnog_5.0/per_tax_level/"
-OUTPUT_DIR="../analyses/HMM_scan_using_eggNOG_HMMs/eggnog_data/"
+OUTPUT_DIR="../analyses/HMM_scan_using_eggNOG_HMMs/eggNOG_data"
 OLDIFS=$IFS
 IFS=','
 [ ! -f $INPUT ] && { echo "$INPUT file not found"; exit 99; }
@@ -77,10 +77,19 @@ while read taxon_name taxid; do
   if [ $taxon_name != "taxonomic name" ]; then
     #echo "Others"
     TAXON=$(echo $taxon_name | sed -e "s/[[:space:]]/_/g")
+    #echo $TAXON
     # Download annotations files
-    wget -c -O "$OUTPUT_DIR""$TAXON""_""$taxid""_annotations.tsv.gz" "$URL_ROOT""$taxid""/""$taxid""_annotations.tsv.gz"
+
+    #wget -c -O "$OUTPUT_DIR""$TAXON""_""$taxid""_annotations.tsv.gz" "$URL_ROOT""$taxid""/""$taxid""_annotations.tsv.gz"
+    #echo $OUT   """_""$taxid""_annotations.tsv.gz"
+    IFS=$OLDIFS
+    echo "${OUTPUT_DIR}${TAXON}_${taxid}_annotations.tsv.gz" 
+    #; ""$URL_ROOT""$taxid""/""$taxid""_annotations.tsv.gz"
+    OLDIFS=$IFS
+    IFS=','
     # Download hmms
-    wget -c -O "$OUTPUT_DIR""$TAXON""_""$taxid""_hmms.tar" "$URL_ROOT""$taxid""/""$taxid""_hmms.tar"
+    #wget -c -O "$OUTPUT_DIR""$TAXON""_""$taxid""_hmms.tar" "$URL_ROOT""$taxid""/""$taxid""_hmms.tar"
+    #echo "$OUTPUT_DIR""$TAXON""_""$taxid""_hmms.tar ; " "$URL_ROOT""$taxid""/""$taxid""_hmms.tar"
   fi
 done < $INPUT
 IFS=$OLDIFS
