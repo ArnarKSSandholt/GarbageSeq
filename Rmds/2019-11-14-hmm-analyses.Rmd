@@ -178,7 +178,11 @@ for fOTUproteom in "${fOTUproteoms[@]}"; do
 done
 ```
 
+# Session info
 
+```{r}
+sessionInfo()
+```
 
 
 # References

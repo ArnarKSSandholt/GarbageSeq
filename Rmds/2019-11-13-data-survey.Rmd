@@ -101,3 +101,9 @@ glimpse(stats_on_representative_bins)
 colnames(stats_on_representative_bins)
 ```
 
+# Session info
+
+```{r}
+sessionInfo()
+```
+
