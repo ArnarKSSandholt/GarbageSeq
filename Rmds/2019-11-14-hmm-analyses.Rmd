@@ -8,13 +8,6 @@ biblio-style: "alpha" #https://www.overleaf.com/learn/latex/Bibtex_bibliography_
 #csl: "../uppsala-universitet-institutionen-for-biologisk-grundutbildning.csl"
 documentclass: report
 output:
-  bookdown::pdf_document2:
-    keep_tex: no
-    latex_engine: xelatex
-    #highlight: pygments #Other options: default, tango, kate, monochrome, espresso, zenburn, haddock, and textmate
-    #theme: spacelab
-    pandoc_args: ["--variable", "subparagraph",
-                "--top-level-division","chapter"] # Could also be section 
   html_document: 
     toc: TRUE
     toc_float: TRUE
@@ -24,6 +17,13 @@ output:
     self_contained: TRUE
     smart: TRUE # To be figured out when this is useful
     theme: journal
+  bookdown::pdf_document2:
+    keep_tex: no
+    latex_engine: xelatex
+    #highlight: pygments #Other options: default, tango, kate, monochrome, espresso, zenburn, haddock, and textmate
+    #theme: spacelab
+    pandoc_args: ["--variable", "subparagraph",
+                "--top-level-division","chapter"] # Could also be section 
   pdf_document:
     toc: TRUE
     toc_depth: 2
