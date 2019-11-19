@@ -30,3 +30,7 @@ analyses/HMM_scan/virus_hmm_scan_out/domtblout/*.out
 analyses/HMM_scan/virus_hmm_scan_out/out/*.out
 analyses/HMM_scan/virus_hmm_scan_out/pfamtblout/*.out
 analyses/HMM_scan/virus_hmm_scan_out/tblout/*.out
+
+# Downloaded viral eggNOG data
+analyses/HMM_scan_using_eggNOG_HMMs/eggNOG_data/*hmms.tar
+analyses/HMM_scan_using_eggNOG_HMMs/eggNOG_data/*annotations.tsv.gz
