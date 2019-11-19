@@ -95,8 +95,18 @@ done < $INPUT
 IFS=$OLDIFS
 ```
 
+Maybe another script might do the trick instead:
 
+```{bash}
+INPUT="../analyses/HMM_scan_using_eggNOG_HMMs/virus_taxids.csv"
+URL_ROOT="http://eggnog5.embl.de/download/eggnog_5.0/per_tax_level/"
+OUTPUT_DIR="../analyses/HMM_scan_using_eggNOG_HMMs/eggnog_data/"
+SCRIPT="../scripts/eggNOGdataDownloader.awk"
 
+# Skip the header line
+tail -n +2 $INPUT | awk -F, -v url="$URL_ROOT" -v output="$OUTPUT_DIR" -f "$SCRIPT"
+
+```
 
 
 
