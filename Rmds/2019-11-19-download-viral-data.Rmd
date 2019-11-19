@@ -100,7 +100,7 @@ Maybe another script might do the trick instead:
 ```{bash}
 INPUT="../analyses/HMM_scan_using_eggNOG_HMMs/virus_taxids.csv"
 URL_ROOT="http://eggnog5.embl.de/download/eggnog_5.0/per_tax_level/"
-OUTPUT_DIR="../analyses/HMM_scan_using_eggNOG_HMMs/eggnog_data/"
+OUTPUT_DIR="../analyses/HMM_scan_using_eggNOG_HMMs/eggNOG_data/"
 SCRIPT="../scripts/eggNOGdataDownloader.awk"
 
 # Skip the header line
