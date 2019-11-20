@@ -112,7 +112,7 @@ Yes. The download succeeded!
 
 Then we need to untar some of the downloads and ...
 
-```{bash}
+```{bash eval=FALSE, include=TRUE}
 DATA="../analyses/HMM_scan_using_eggNOG_HMMs/eggNOG_data/"
 OUTPUT="../analyses/HMM_scan_using_eggNOG_HMMs/eggNOG_data/HMMs/"
 
@@ -124,14 +124,14 @@ done
 
 unzip some others:
 
-```{bash}
+```{bash eval=FALSE, include=TRUE}
 DATA="../analyses/HMM_scan_using_eggNOG_HMMs/eggNOG_data/"
 gunzip "$DATA"*.tsv.gz
 ```
 
 And lastly let's rearrange the files to own directories:
 
-```{bash}
+```{bash eval=FALSE, include=TRUE}
 # Move tar files
 DATA="../analyses/HMM_scan_using_eggNOG_HMMs/eggNOG_data/"
 mv "$DATA"*.tar "$DATA""tars/"
