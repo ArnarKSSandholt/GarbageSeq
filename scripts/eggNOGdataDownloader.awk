@@ -1,10 +1,10 @@
 #!/usr/bin/awk -f
 {
-    # Check if there is output proteoms directory given, if not exit
+    # Check if the url root is given, if not exit
     if (length(url) == 0){
         exit(1)
     }
-    # Check if there is output proteoms directory given, if not exit
+    # Check if output directory root for the downloads is given, if not exit
     if (length(output) == 0){
         exit(2)
     }
