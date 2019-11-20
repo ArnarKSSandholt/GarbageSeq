@@ -12,7 +12,7 @@
     taxon = $1
     taxid = $2
 
-    # Let's substitute the white spaces with underscore in the first fields
+    # Substitute white spaces in 1st field with underscores
     gsub(" ","_",taxon)
     
     # Run the downloading of the data with wget command
