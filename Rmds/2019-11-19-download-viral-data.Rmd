@@ -108,6 +108,37 @@ tail -n +2 $INPUT | awk -F, -v url="$URL_ROOT" -v output="$OUTPUT_DIR" -f "$SCRI
 
 ```
 
+Yes. The download succeeded!
+
+Then we need to untar some of the downloads and ...
+
+```{bash}
+DATA="../analyses/HMM_scan_using_eggNOG_HMMs/eggNOG_data/"
+OUTPUT="../analyses/HMM_scan_using_eggNOG_HMMs/eggNOG_data/HMMs/"
+
+read -r -a TARs <<< $( find $DATA -name "*.tar" -and -type f -print0 | xargs -0 echo )
+for TAR in "${TARs[@]}"; do
+  tar -xvf $TAR -C "$OUTPUT"
+done
+```
+
+unzip some others:
+
+```{bash}
+DATA="../analyses/HMM_scan_using_eggNOG_HMMs/eggNOG_data/"
+gunzip "$DATA"*.tsv.gz
+```
+
+And lastly let's rearrange the files to own directories:
+
+```{bash}
+# Move tar files
+DATA="../analyses/HMM_scan_using_eggNOG_HMMs/eggNOG_data/"
+mv "$DATA"*.tar "$DATA""tars/"
+# Move annotation files
+mv "$DATA"*.tsv "$DATA""annotations/"
+```
+
 
 
 # Session info
