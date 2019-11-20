@@ -8,16 +8,18 @@
     if (length(output) == 0){
         exit(2)
     }
-
+    # Give meaningful names to the fields
     taxon = $1
     taxid = $2
 
     # Let's substitute the white spaces with underscore in the first fields
     gsub(" ","_",taxon)
     
+    # Run the downloading of the data with wget command
     system("wget -c -O "output""taxon"_"taxid"_annotations.tsv.gz "url""taxid"/"taxid"_annotations.tsv.gz")
     system("wget -c -O "output""taxon"_"taxid"_hmms.tar "url""taxid"/"taxid"_hmms.tar")
-
+    
+    # Some testing here
     #system("echo "output""taxon"_"taxid"_annotations.tsv.gz "url""taxid"/"taxid"_annotations.tsv.gz")
     #system("echo "output""taxon"_"taxid"_hmms.tar "url""taxid"/"taxid"_hmms.tar")
     #print(taxon)
