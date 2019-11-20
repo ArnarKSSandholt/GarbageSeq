@@ -21,8 +21,9 @@ analyses/HMM_scan/proteom_indexes
 # Proteoms of each fOTU
 analyses/fOTU_proteomes/*.faa
 
-# R studio project config file
+# R studio project config file and R history
 .Rproj.user
+.Rhistory
 
 # HHMer search outputs
 analyses/HMM_scan/virus_hmm_scan_out/alns/*.out
