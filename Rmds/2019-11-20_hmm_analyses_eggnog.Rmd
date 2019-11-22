@@ -86,6 +86,10 @@ OUTPUT2="10239-with-cogOTU_1082.out"
 SCRIPT="../scripts/hmmsearchOutputParser.awk"
 #pcre2grep -M -B 19 -A 11 "^    \d.+$\n(.*\n)*?^Internal pipeline statistics summary:" $OUTPUT1
 #pcre2grep -M -B 19 -A 11 "^    \d.+$\n(.*\n)*?^Internal pipeline statistics summary:" $OUTPUT2
+cat $OUTPUT2 | awk -v delimiter="\t" -v last_col=10 -f $SCRIPT
+```
+
+
 
 # Utility script for changing delimiters
 
