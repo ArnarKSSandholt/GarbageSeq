@@ -64,8 +64,8 @@ for TAXID in $DATA*/ ; do
     for fOTUproteom in "${fOTUproteoms[@]}"; do
       fOTU_FILE=$(echo $(basename "$fOTUproteom"))
       fOTU=$(echo $(basename "$fOTUproteom") | awk -F "." '{print $1}')
-      #echo $fOTUproteom
-      hmmsearch --cpu 4 --noali -E 0.01 --domE 0.01 "$HMM" "$fOTUproteom" >> "$HMMer_OUTPUT_DIR""$TAXID_NO""_""$fOTU"".out"
+      echo $fOTU,$HMM_VARIANT,$TAXID_NO >> hmmruns.csv
+      hmmsearch --cpu 4 --noali --notextw -E 0.01 --domE 0.01 "$HMM" "$fOTUproteom" >> "$HMMer_OUTPUT_DIR""$TAXID_NO""-with-""$HMM_VARIANT""-in-""$fOTU"".out"
       #hmmsearch --cpu 4 --noali -E 0.01 --domE 0.01 --incE 0.001 --incdomE 0.001 --notextw -o "$HMMer_OUTPUT_DIR""$TAXID_NO""_""$HMM_VARIANT"".out" --pfamtblout "$HMMer_OUTPUT_DIR""$TAXID_NO""_""$HMM_VARIANT"".pfamtbl.out" "$HMM" "$fOTUproteom"
       #hmmsearch --cpu 3 --noali -E 0.01 --domE 0.01 --incE 0.001 --incdomE 0.001 --notextw -o "$HMMer_OUTPUT_DIR""$TAXID_NO""_""$HMM_VARIANT"".out" --tblout "$HMMer_OUTPUT_DIR""$TAXID_NO""_""$HMM_VARIANT"".tbl.out" "$HMM" "$fOTUproteom"
       #hmmsearch --cpu 3 --noali -E 0.01 --domE 0.01 --incE 0.001 --incdomE 0.001 --notextw --tblout "$HMMer_OUTPUT_DIR""$TAXID_NO""_""$HMM_VARIANT"".tbl.out" "$HMM" "$fOTUproteom"
