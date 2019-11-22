@@ -78,11 +78,15 @@ done
 
 # Utility script for changing delimiters
 
+The changing of delimiters is from space delimited to a user given delimiter
 
 ```{bash}
 SCRIPT="../scripts/eggNOGdeliminator.awk"
 TSV_FILE="Fuselloviridae_10474_annotations.tsv"
-cat $TSV_FILE | awk -v delimiter=";" -v last_col="4" -f $SCRIPT
+# A regex for the linus that should be skipped when adding delimiters in the middle
+REGEXP="^#.+"
+
+cat $TSV_FILE | awk -v delimiter=";" -v last_col="4" -v excluded_recs="$REGEXP" -f $SCRIPT
 ```
 
 
