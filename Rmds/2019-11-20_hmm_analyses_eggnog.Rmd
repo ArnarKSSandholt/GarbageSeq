@@ -54,7 +54,8 @@ HMMer_OUTPUT_DIR="../analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_viruses/"
 
 
 read -r -a fOTUproteoms <<< $( find $fOTUproteoms_DIR -name "*.faa" -and -type f -print0 | xargs -0 echo )
-
+# Take time of this run
+SECONDS=0
 for TAXID in $DATA*/ ; do
   TAXID_NO=$(echo "$TAXID" | awk -F "/" '{print $(NF-1)}')
   read -r -a HMMs <<< $( find $TAXID -name "*.hmm" -and -type f -print0 | xargs -0 echo )
@@ -72,6 +73,8 @@ for TAXID in $DATA*/ ; do
     done
   done
 done
+duration=$SECONDS
+echo "$(($duration / 60)) minutes and $(($duration % 60)) seconds elapsed."
 ```
 
 
