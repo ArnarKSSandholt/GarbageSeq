@@ -15,9 +15,16 @@ BEGIN{
     if (length(last_col) == 0){
         last_col = NF
     }
+    if (length(excluded_recs) == 0){
+        # This regex doesn't match anything and thus nothing is excluded
+        # A useful link to explain this syntax: https://stackoverflow.com/q/14115522
+        excluded_recs = ".^"
+    }
 }
-{
-    # Define last field as empty string for starters...
+# Create a dynamic user given regexp for excluded lines
+# A useful link to explain this syntax: https://stackoverflow.com/q/39384283
+$0!~excluded_recs{
+    # Define the last field as empty string for starters...
     last_field = ""
     if (NF <= last_col){
         # There is no last column or the last column is only one word
