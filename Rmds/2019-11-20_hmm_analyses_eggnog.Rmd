@@ -52,8 +52,8 @@ Essentially the following code will be run in a sbatch script:
 #ml bioinfo-tools hmmer/3.2.1
 DATA="../analyses/HMM_scan_using_eggNOG_HMMs/eggNOG_data/HMMs/10239/"
 fOTUproteoms_DIR="../analyses/fOTU_proteomes/"
-HMMer_OUTPUT_DIR="../analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_viruses/"
-#HMMer_OUTPUT_DIR="./test/"
+#HMMer_OUTPUT_DIR="../analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_viruses/"
+HMMer_OUTPUT_DIR="./test/"
 #DATA="./HMMs/10239"
 #fOTUproteoms_DIR="./fOTU_proteomes/"
 TAXID_NO="10239"
@@ -62,7 +62,7 @@ echo "fOTUprot" ${#fOTUproteoms[@]}
 # Take time of this run
 SECONDS=0
 read -r -a HMMs <<< $( find $DATA -name "*.hmm" -and -type f -print0 | xargs -0 echo )
-echo ${HMMs[@]} > hmms.tes
+#echo ${#HMMs[@]} # > hmms.tes
 for fOTUproteom in "${fOTUproteoms[@]}"; do
   fOTU_FILE=$(echo $(basename "$fOTUproteom"))
   fOTU=$(echo $(basename "$fOTUproteom") | awk -F "." '{print $1}')
