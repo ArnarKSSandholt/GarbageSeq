@@ -1,5 +1,7 @@
 #!/usr/bin/awk -f
-# This script parses HMMer 3.2.1 hmmsearch output files match scores for complete sequences
+
+# This script assumes that the last field in each record is a "difficult one", 
+# i.e. has several words that might tend to normally be parsed as separate fields
 BEGIN{
     # Check if output field separator is given, if not it'll be ","
     if (length(delimiter) == 0){
@@ -15,15 +17,23 @@ BEGIN{
     }
     last_field = ""
 }
-# Match query row first in order to grap the hmm_variant name
 /Query:       /{
+    # Reset variable keeping track of if the hit is inside the inclusion threshold
+    # inclusion = 1 --- is inside
+    # inclusion = 2 --- is NOT inside
+    inclusion = 1
     split($2,term,"\.")
     hmm_variant = term[1]
+    #print hmm_variant
     # Move 5 rows ahead
     getline; getline; getline; getline; getline; 
     # Check if the row is not empty, start parsing
     while ($0!=""){
-        # Gather upp the last column (Description) into one variable
+        # Skip inclusion threshold lines
+        if ($0=="  ------ inclusion threshold ------"){
+            getline
+            inclusion = 2
+        }
         for (i = last_col; i <= NF; ++i){
             # Don't need to add space before the first word
             if (i == last_col){
@@ -33,7 +43,8 @@ BEGIN{
                 last_field = last_field" "$i
             }
         }
-        printf "%s%c", hmm_variant,delimiter
+        # Print the name of the hmm variant as first column
+        printf "%s%c%s%c", hmm_variant,delimiter,inclusion,delimiter
         # Handle the actual printing
         for (i = 1; i < last_col; ++i){
             printf "%s%c", $i,delimiter
@@ -41,6 +52,6 @@ BEGIN{
         # Append the built last field before printing \n
         printf "%s\n", last_field
         # Move to next line
-        getline;
+        getline
     }
 }
