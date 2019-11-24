@@ -53,26 +53,24 @@ Essentially the following code will be run in a sbatch script:
 DATA="../analyses/HMM_scan_using_eggNOG_HMMs/eggNOG_data/HMMs/10239/"
 fOTUproteoms_DIR="../analyses/fOTU_proteomes/"
 HMMer_OUTPUT_DIR="../analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_viruses/"
-
-
+#HMMer_OUTPUT_DIR="./test/"
+#DATA="./HMMs/10239"
+#fOTUproteoms_DIR="./fOTU_proteomes/"
+TAXID_NO="10239"
 read -r -a fOTUproteoms <<< $( find $fOTUproteoms_DIR -name "*.faa" -and -type f -print0 | xargs -0 echo )
+echo "fOTUprot" ${#fOTUproteoms[@]}
 # Take time of this run
 SECONDS=0
-for TAXID in $DATA*/ ; do
-  TAXID_NO=$(echo "$TAXID" | awk -F "/" '{print $(NF-1)}')
-  read -r -a HMMs <<< $( find $TAXID -name "*.hmm" -and -type f -print0 | xargs -0 echo )
+read -r -a HMMs <<< $( find $DATA -name "*.hmm" -and -type f -print0 | xargs -0 echo )
+echo ${HMMs[@]} > hmms.tes
+for fOTUproteom in "${fOTUproteoms[@]}"; do
+  fOTU_FILE=$(echo $(basename "$fOTUproteom"))
+  fOTU=$(echo $(basename "$fOTUproteom") | awk -F "." '{print $1}')
   for HMM in "${HMMs[@]}"; do
     HMM_FILE=$(echo $(basename "$HMM"))
     HMM_VARIANT=$(echo $(basename "$HMM") | awk -F "." '{print $1}')
-    for fOTUproteom in "${fOTUproteoms[@]}"; do
-      fOTU_FILE=$(echo $(basename "$fOTUproteom"))
-      fOTU=$(echo $(basename "$fOTUproteom") | awk -F "." '{print $1}')
-      #echo "$HMMer_OUTPUT_DIR""$TAXID_NO""-with-""$HMM_VARIANT""-in-""$fOTU"".pfamtbl.out" >> hmmruns.csv
-      hmmsearch --cpu 10 --noali --notextw -E 0.1 --domE 0.1 --incE 0.01 --incdomE 0.01 "$HMM" "$fOTUproteom" >> "$HMMer_OUTPUT_DIR""$TAXID_NO""-with-""$fOTU"".out"
-      #hmmsearch --cpu 10 --noali -E 0.1 --domE 0.1 --incE 0.001 --incdomE 0.001 --notextw --pfamtblout "$HMMer_OUTPUT_DIR""$TAXID_NO""-with-""$HMM_VARIANT""-in-""$fOTU"".pfamtbl.out" "$HMM" "$fOTUproteom"
-      #hmmsearch --cpu 3 --noali -E 0.01 --domE 0.01 --incE 0.001 --incdomE 0.001 --notextw -o "$HMMer_OUTPUT_DIR""$TAXID_NO""_""$HMM_VARIANT"".out" --tblout "$HMMer_OUTPUT_DIR""$TAXID_NO""_""$HMM_VARIANT"".tbl.out" "$HMM" "$fOTUproteom"
-      #hmmsearch --cpu 3 --noali -E 0.01 --domE 0.01 --incE 0.001 --incdomE 0.001 --notextw --tblout "$HMMer_OUTPUT_DIR""$TAXID_NO""_""$HMM_VARIANT"".tbl.out" "$HMM" "$fOTUproteom"
-    done
+    #echo $HMM_VARIANT, $fOTU, $TAXID_NO >> "$HMMer_OUTPUT_DIR""$TAXID_NO""-with-""$fOTU"".out"
+    #hmmsearch --cpu 10 --noali --notextw -E 0.1 --domE 0.1 --incE 0.01 --incdomE 0.01 "$HMM" "$fOTUproteom" >> "$HMMer_OUTPUT_DIR""$TAXID_NO""-with-""$fOTU"".out"
   done
 done
 duration=$SECONDS
