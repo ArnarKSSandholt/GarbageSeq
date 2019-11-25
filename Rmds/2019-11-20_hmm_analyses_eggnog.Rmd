@@ -107,8 +107,9 @@ echo "$(($duration / 60)) minutes and $(($duration % 60)) seconds elapsed."
 
 
 
+# Testing utilities
 
-# Utility script for parsing eggNOG output files
+## Utility script for parsing eggNOG output files
 
 ```{bash}
 OUTPUT="../analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_viruses/"
@@ -122,7 +123,7 @@ duration=$SECONDS
 echo "$(($duration / 60)) minutes and $(($duration % 60)) seconds elapsed."
 ```
 
-# Utility script for changing delimiters
+## Utility script for changing delimiters
 
 The changing of delimiters is from space delimited to a user given delimiter
 
