@@ -73,16 +73,16 @@ echo "$(($duration / 60)) minutes and $(($duration % 60)) seconds elapsed."
 ```
 
 
+# Utility script for parsing eggNOG output files
+
 ```{bash}
-OUTPUT1="10239-with-cogOTU_998.out"
-OUTPUT2="10239-with-cogOTU_1082.out"
-OUTPUT3="10239-with-cogOTU_1.out"
-OUTPUT4="10239-with-cogOTU_1036.out"
+OUTPUT="../analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_viruses/"
+FILE="10239-with-cogOTU_1165.out"
 SCRIPT="../scripts/hmmsearchOutputParser.awk"
 #pcre2grep -M -B 19 -A 11 "^    \d.+$\n(.*\n)*?^Internal pipeline statistics summary:" $OUTPUT1
 SECONDS=0
 #pcre2grep -M -B 19 -A 11 "^    \d.+$\n(.*\n)*?^Internal pipeline statistics summary:" $OUTPUT4 > test.txt
-cat $OUTPUT4 | awk -v delimiter="\t" -v last_col=10 -f $SCRIPT
+awk -v filename="$FILE" -v delimiter="\t" -v last_col=10 -f $SCRIPT "$OUTPUT""$FILE"
 duration=$SECONDS
 echo "$(($duration / 60)) minutes and $(($duration % 60)) seconds elapsed."
 ```
