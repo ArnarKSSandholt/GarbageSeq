@@ -109,13 +109,16 @@ for(fOTU_file in files) {
     pull(Target_Bin_id) %>%
     length()
   
+  # Grab the total number of bins in the fOTU
   fOTU_tot_num_bins <- fOTU %>%
     pull(num_bins)
-  
   fOTU_tot_num_bins <- fOTU_vec_len/fOTU_tot_num_bins[1]
+  
+  # Append the value to a vector
   hit_percentage <- c(hit_percentage,fOTU_tot_num_bins)
 }
 
+# Create finally a tibble from the vector
 hits <- tibble(hit_percentage)
 
 ```
