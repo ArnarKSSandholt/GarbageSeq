@@ -41,7 +41,7 @@ BEGIN{
         # Skip inclusion threshold lines
         if ($0=="  ------ inclusion threshold ------"){
             getline
-            inclusion = 2
+            inclusion = 0
         }
         # Gather the last field into one variable
         for (i = last_col; i <= NF; ++i){
