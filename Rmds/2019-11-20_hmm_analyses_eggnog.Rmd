@@ -74,12 +74,33 @@ echo "$(($duration / 60)) minutes and $(($duration % 60)) seconds elapsed."
 
 # Counting number of bins in each fOTU
 
-```{bash}
+```{bash eval=FALSE, include=TRUE}
 fOTUs="../data/fOTUs.csv"
 SCRIPT="../scripts/binCounter.awk"
 OUTPUT="../analyses/numBinsfOTU.csv"
 cat $fOTUs | awk -F, -v delimiter="," -f $SCRIPT > $OUTPUT
 ```
+
+# Parse csv:s from eggNOG output files
+
+```{bash}
+SCRIPT="../scripts/hmmsearchOutputParser.awk"
+eggNOGs="../analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_viruses/"
+PARSED="../analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_parsed/"
+read -r -a eggNOGarray <<< $( find $eggNOGs -name "*.out" -and -type f -print0 | xargs -0 echo )
+
+SECONDS=0
+for eggNOGfile in "${eggNOGarray[@]}"; do
+  FILE=$(echo $(basename "$eggNOGfile"))
+  fOTU=$(echo $FILE | awk -F "-with-" '{print $2}' | awk -F "." '{print $1}')
+  awk -v filename="$FILE" -v delimiter="\t" -v last_col=10 -f "$SCRIPT" "$eggNOGfile" > "$PARSED""$fOTU"".tsv"
+done
+
+duration=$SECONDS
+echo "$(($duration / 60)) minutes and $(($duration % 60)) seconds elapsed."
+```
+
+
 
 
 
