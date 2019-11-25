@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-{
+BEGIN{
     # Check if there is proteoms directory given, if not exit
     if (length(proteom_dir) == 0){
         exit(1)
@@ -8,7 +8,8 @@
     if (length(fOTUproteoms) == 0){
         exit(2)
     }
-
+}
+{
     fOTUname = $1
     # Create an array from all bin names belonging to the current fOTU
     numBins = split($2, fOTUbins, ";")
