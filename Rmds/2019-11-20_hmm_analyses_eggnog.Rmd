@@ -65,7 +65,7 @@ for fOTUproteom in "${fOTUproteoms[@]}"; do
   for HMM in "${HMMs[@]}"; do
     HMM_FILE=$(echo $(basename "$HMM"))
     HMM_VARIANT=$(echo $(basename "$HMM") | awk -F "." '{print $1}')
-    #hmmsearch --cpu 10 --noali --notextw -E 0.1 --domE 0.1 --incE 0.01 --incdomE 0.01 "$HMM" "$fOTUproteom" >> "$HMMer_OUTPUT_DIR""$TAXID_NO""-with-""$fOTU"".out"
+    hmmsearch --cpu 10 --noali --notextw -E 0.1 --domE 0.1 --incE 0.01 --incdomE 0.01 "$HMM" "$fOTUproteom" >> "$HMMer_OUTPUT_DIR""$TAXID_NO""-with-""$fOTU"".out"
   done
 done
 duration=$SECONDS
