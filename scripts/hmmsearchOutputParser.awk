@@ -19,7 +19,9 @@ BEGIN{
     if (length(filename) == 0){
         exit(1)
     }
-
+    # A variable to keep track of if any values were ever printed
+    printed = "" # Switch is false!
+    # Initialise the description field (not sure if necessary in AWK)
     last_field = ""
     # Parse out fOTU name from e.g. 10239-with-cogOTU_1165.out
     split(filename,nameData,"-with-")
@@ -38,6 +40,8 @@ BEGIN{
     getline; getline; getline; getline; getline; 
     # Check if the row is not empty, start parsing
     while ($0!=""){
+        # Switch to printed
+        printed = "Now we are about to start printing!" 
         # Skip inclusion threshold lines
         if ($0=="  ------ inclusion threshold ------"){
             getline
@@ -74,5 +78,11 @@ BEGIN{
         printf "%s\n", last_field
         # Move to next line
         getline
+    }
+}
+
+END{
+    if(length(printed) == 0){
+        printf "%s%c%s%c%s%c%s%c%s%c%s%c%s%c%s%c%s%c%s%c%s%c%s%c%s%c%s", "dummy",delimiter,"4QC6W",delimiter,"0",delimiter,"Loc090116-8m_megahit_metabat_bin-0499",delimiter,"01440",delimiter,"0.072",delimiter,"12.1",delimiter,"0.0",delimiter,"0.099",delimiter,"11.6",delimiter,"0.0",delimiter,"1.1",delimiter,"1",delimiter,"N-acetyl-alpha-D-glucosaminyl"
     }
 }
