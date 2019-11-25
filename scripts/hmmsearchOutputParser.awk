@@ -43,6 +43,7 @@ BEGIN{
             getline
             inclusion = 2
         }
+        # Gather the last field into one variable
         for (i = last_col; i <= NF; ++i){
             # Don't need to add space before the first word
             if (i == last_col){
