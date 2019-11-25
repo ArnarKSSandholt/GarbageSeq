@@ -72,6 +72,20 @@ duration=$SECONDS
 echo "$(($duration / 60)) minutes and $(($duration % 60)) seconds elapsed."
 ```
 
+# Counting number of bins in each fOTU
+
+```{bash}
+fOTUs="../data/fOTUs.csv"
+SCRIPT="../scripts/binCounter.awk"
+OUTPUT="../analyses/numBinsfOTU.csv"
+cat $fOTUs | awk -F, -v delimiter="," -f $SCRIPT > $OUTPUT
+```
+
+
+
+
+
+
 
 # Utility script for parsing eggNOG output files
 
