@@ -40,3 +40,7 @@ analyses/HMM_scan_using_eggNOG_HMMs/eggNOG_data/tars/*
 !analyses/HMM_scan_using_eggNOG_HMMs/eggNOG_data/tars/README.md
 analyses/HMM_scan_using_eggNOG_HMMs/eggNOG_data/HMMs/*
 !analyses/HMM_scan_using_eggNOG_HMMs/eggNOG_data/HMMs/README.md
+
+# Parsed hmmsearch tab delimited files
+analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_parsed/*
+!analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_parsed/README.md
