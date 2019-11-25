@@ -15,7 +15,16 @@ BEGIN{
     if (length(last_col) == 0){
         last_col = NF
     }
+    # If no file name is given, exit
+    if (length(filename) == 0){
+        exit(1)
+    }
+
     last_field = ""
+    # Parse out fOTU name from e.g. 10239-with-cogOTU_1165.out
+    split(filename,nameData,"-with-")
+    split(nameData[2],fOTUnameData,".")
+    fOTU = fOTUnameData[1]
 }
 /Query:       /{
     # Reset variable keeping track of if the hit is inside the inclusion threshold
