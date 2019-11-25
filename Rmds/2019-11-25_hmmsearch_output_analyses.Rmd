@@ -87,6 +87,17 @@ for(fOTU_file in files) {
   fOTU <- read_tsv(file = path_file, 
                    col_types = "cclffdddddddic", 
                    col_names = tsv_names)
+  
+  # Check if there were empty bins
+  fOTU_first_term <- fOTU %>%
+    pull(fOTU_name)
+  fOTU_first_term <- fOTU_first_term[1]
+  
+  if(fOTU_first_term == "dummy"){
+    hit_percentage <- c(hit_percentage,0.0)
+    next
+  }
+  
   # Make a big data table out of these three tibbles by left joining 
   fOTU <- left_join(fOTU, egg_nog_cats, by = "hmm_profile_id") %>%
     left_join(., fOTUbinNums, by = "fOTU_name") %>%
