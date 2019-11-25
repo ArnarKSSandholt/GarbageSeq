@@ -53,10 +53,21 @@ BEGIN{
                 last_field = last_field" "$i
             }
         }
-        # Print the name of the hmm variant as first column
-        printf "%s%c%s%c", hmm_variant,delimiter,inclusion,delimiter
-        # Handle the actual printing
-        for (i = 1; i < last_col; ++i){
+        # Split bin name and the sequence identifier, 
+        # e.g. Loc090721-8m_megahit_metabat_bin-060_00849 -> "Loc090721-8m_megahit_metabat_bin-060" and "00849"
+        # and print them separately
+        binInfoSeqID = $9 
+        numElements = split(binInfoSeqID,binInfoSeqIDArray,"_")
+        # The last element is always the sequence identifier in the bin file
+        seqID = binInfoSeqIDArray[numElements]
+        # The rest is the bin identifier and the sequence identifier can be
+        # replaced by empty string (removed)
+        sub("_"seqID,"",binInfoSeqID)
+        binInfo = binInfoSeqID
+        # Print first: fOTU name, hmm variant, if the match was included according to hmmer, bin ID and sequence ID
+        printf "%s%c%s%c%s%c%s%c%s%c", fOTU,delimiter,hmm_variant,delimiter,inclusion,delimiter,binInfo,delimiter,seqID,delimiter
+        # Handle the actual printing apart from the last two fields/columns
+        for (i = 1; i < last_col-1; ++i){
             printf "%s%c", $i,delimiter
         }
         # Append the built last field before printing \n
