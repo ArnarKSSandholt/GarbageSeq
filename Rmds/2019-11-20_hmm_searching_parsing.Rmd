@@ -1,5 +1,5 @@
 ---
-title: "HMM analyses using eggNOG data"
+title: "HMM search using eggNOG viral data and parsing of output"
 author: "LJM"
 date: "`r Sys.Date()`"
 link-citations: true
@@ -8,19 +8,13 @@ biblio-style: "alpha" #https://www.overleaf.com/learn/latex/Bibtex_bibliography_
 #csl: "../uppsala-universitet-institutionen-for-biologisk-grundutbildning.csl"
 documentclass: report
 output:
-  bookdown::html_document2:
-    highlight: tango
-    theme: journal
-    split_by: none # only generate a single output page
-    self_contained: TRUE
-    toc: yes
-    toc_float: 
-      collapsed: TRUE
-      smooth_scroll: TRUE
-      print: FALSE
-    code_folding: show
-    number_sections: TRUE
-    code_download: TRUE
+  bookdown::pdf_document2:
+    keep_tex: no
+    latex_engine: xelatex
+    #highlight: pygments #Other options: default, tango, kate, monochrome, espresso, zenburn, haddock, and textmate
+    #theme: spacelab
+    pandoc_args: ["--variable", "subparagraph",
+                "--top-level-division","chapter"] # Could also be section 
   html_document: 
     toc: TRUE
     toc_float: TRUE
@@ -35,13 +29,19 @@ output:
     toc_depth: 2
     highlight: tango # This appears to be the same as default
     number_sections: TRUE
-  bookdown::pdf_document2:
-    keep_tex: no
-    latex_engine: xelatex
-    #highlight: pygments #Other options: default, tango, kate, monochrome, espresso, zenburn, haddock, and textmate
-    #theme: spacelab
-    pandoc_args: ["--variable", "subparagraph",
-                "--top-level-division","chapter"] # Could also be section 
+  bookdown::html_document2:
+    highlight: tango
+    theme: journal
+    split_by: none # only generate a single output page
+    self_contained: TRUE
+    toc: yes
+    toc_float: 
+      collapsed: TRUE
+      smooth_scroll: TRUE
+      print: FALSE
+    code_folding: show
+    number_sections: TRUE
+    code_download: TRUE
 ---
 
 # Searching with HMMs
@@ -81,9 +81,9 @@ OUTPUT="../analyses/numBinsfOTU.csv"
 cat $fOTUs | awk -F, -v delimiter="," -f $SCRIPT > $OUTPUT
 ```
 
-# Parse csv:s from eggNOG output files
+# Parse delimited files from hmmsearch output files
 
-```{bash}
+```{bash eval=FALSE, include=TRUE}
 SCRIPT="../scripts/hmmsearchOutputParser.awk"
 eggNOGs="../analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_viruses/"
 PARSED="../analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_parsed/"
@@ -100,18 +100,11 @@ duration=$SECONDS
 echo "$(($duration / 60)) minutes and $(($duration % 60)) seconds elapsed."
 ```
 
-
-
-
-
-
-
-
-# Testing utilities
+# Testing new utilities
 
 ## Utility script for parsing eggNOG output files
 
-```{bash}
+```{bash eval=FALSE, include=TRUE}
 OUTPUT="../analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_viruses/"
 FILE="10239-with-cogOTU_1165.out"
 SCRIPT="../scripts/hmmsearchOutputParser.awk"
@@ -127,7 +120,7 @@ echo "$(($duration / 60)) minutes and $(($duration % 60)) seconds elapsed."
 
 The changing of delimiters is from space delimited to a user given delimiter
 
-```{bash}
+```{bash eval=FALSE, include=TRUE}
 SCRIPT="../scripts/eggNOGdeliminator.awk"
 TSV_FILE="Fuselloviridae_10474_annotations.tsv"
 # A regex for the linus that should be skipped when adding delimiters in the middle
@@ -135,21 +128,6 @@ REGEXP="^#.+"
 
 cat $TSV_FILE | awk -v delimiter=";" -v last_col="4" -v excluded_recs="$REGEXP" -f $SCRIPT
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # Session info
 
