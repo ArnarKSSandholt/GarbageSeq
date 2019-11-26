@@ -67,6 +67,9 @@ egg_nog_cats <- read_tsv(file = "../data/annotations/10239_annotations.tsv",
   # Drop taxid because it's uninteresting
   select(.,-taxid)
 
+num_seqs <- read_csv(file = "../analyses/numSeqsBin.csv", 
+                          col_types = "ci")
+
 # Read in some data
 tsv_names <- c("fOTU_name",
                "hmm_profile_id",
@@ -88,7 +91,7 @@ for(fOTU_file in files) {
   path_file <- paste(path_to_data,fOTU_file, sep = "")
   
   fOTU <- read_tsv(file = path_file, 
-                   col_types = "cclffdddddddic", 
+                   col_types = "cclcfdddddddic", 
                    col_names = tsv_names)
   
   # Check if there were empty bins
@@ -116,6 +119,9 @@ for(fOTU_file in files) {
   
   # Add num hits beside each bin
   fOTU <- left_join(fOTU, numHits, by = "Target_Bin_id")
+  
+  # Add total number of sequences in each bin
+  fOTU <- left_join(fOTU, num_seqs, by = "Target_Bin_id")
   
   # Count how many unique hits to bins there are
   fOTU_vec_len <- fOTU %>%
