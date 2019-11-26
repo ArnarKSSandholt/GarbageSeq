@@ -143,6 +143,17 @@ hits <- tibble(hit_percentage)
 
 ```
 
+Maybe of interest is to group by all the target bins and look for how many unique matches there are between HMMs and seqs.
+
+```{r}
+#fOTU %>%
+#  group_by(Target_Bin_id) %>%
+#  n_distinct(Target_Seq_id) %>%
+#  count()
+```
+
+
+
 # Visualise the data
 
 The following graph depicts how large percentage of bins in fOTU have at least one hit from viral HMM profiles with e-value less than 0.01.
