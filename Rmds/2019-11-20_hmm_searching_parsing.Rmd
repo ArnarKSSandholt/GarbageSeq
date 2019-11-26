@@ -8,13 +8,19 @@ biblio-style: "alpha" #https://www.overleaf.com/learn/latex/Bibtex_bibliography_
 #csl: "../uppsala-universitet-institutionen-for-biologisk-grundutbildning.csl"
 documentclass: report
 output:
-  bookdown::pdf_document2:
-    keep_tex: no
-    latex_engine: xelatex
-    #highlight: pygments #Other options: default, tango, kate, monochrome, espresso, zenburn, haddock, and textmate
-    #theme: spacelab
-    pandoc_args: ["--variable", "subparagraph",
-                "--top-level-division","chapter"] # Could also be section 
+  bookdown::html_document2:
+    highlight: tango
+    theme: journal
+    split_by: none # only generate a single output page
+    self_contained: TRUE
+    toc: yes
+    toc_float: 
+      collapsed: TRUE
+      smooth_scroll: TRUE
+      print: FALSE
+    code_folding: show
+    number_sections: TRUE
+    code_download: TRUE
   html_document: 
     toc: TRUE
     toc_float: TRUE
@@ -29,19 +35,13 @@ output:
     toc_depth: 2
     highlight: tango # This appears to be the same as default
     number_sections: TRUE
-  bookdown::html_document2:
-    highlight: tango
-    theme: journal
-    split_by: none # only generate a single output page
-    self_contained: TRUE
-    toc: yes
-    toc_float: 
-      collapsed: TRUE
-      smooth_scroll: TRUE
-      print: FALSE
-    code_folding: show
-    number_sections: TRUE
-    code_download: TRUE
+  bookdown::pdf_document2:
+    keep_tex: no
+    latex_engine: xelatex
+    #highlight: pygments #Other options: default, tango, kate, monochrome, espresso, zenburn, haddock, and textmate
+    #theme: spacelab
+    pandoc_args: ["--variable", "subparagraph",
+                "--top-level-division","chapter"] # Could also be section 
 ---
 
 # Searching with HMMs
@@ -99,6 +99,32 @@ done
 duration=$SECONDS
 echo "$(($duration / 60)) minutes and $(($duration % 60)) seconds elapsed."
 ```
+
+# Create a csv containing number of sequences per bin
+
+```{bash eval=FALSE, include=TRUE}
+BINS="../data/proteoms/"
+OUTPUT="../analyses/numSeqsBin.csv"
+
+read -r -a BINS_ARRAY <<< $( find $BINS -name "*.faa" -and -type f -print0 | xargs -0 echo )
+
+# Here the Bin ID is named this way because it's faster to join this data to another later on
+printf "%s\n" "Target_Bin_id,Num_of_seqs" >> $OUTPUT
+
+SECONDS=0
+for BIN in "${BINS_ARRAY[@]}"; do
+  FILE=$(echo $(basename "$BIN"))
+  BIN_ID=$(echo $(basename "$FILE") | awk -F "." '{print $1}')
+  NUM_SEQS=$(grep -c '>' $BIN)
+  printf "%s," "$BIN_ID" >> $OUTPUT
+  printf "%s\n" "$NUM_SEQS" >> $OUTPUT
+done
+
+duration=$SECONDS
+echo "$(($duration / 60)) minutes and $(($duration % 60)) seconds elapsed."
+
+```
+
 
 # Testing new utilities
 
