@@ -8,13 +8,19 @@ biblio-style: "alpha" #https://www.overleaf.com/learn/latex/Bibtex_bibliography_
 #csl: "../uppsala-universitet-institutionen-for-biologisk-grundutbildning.csl"
 documentclass: report
 output:
-  bookdown::pdf_document2:
-    keep_tex: no
-    latex_engine: xelatex
-    #highlight: pygments #Other options: default, tango, kate, monochrome, espresso, zenburn, haddock, and textmate
-    #theme: spacelab
-    pandoc_args: ["--variable", "subparagraph",
-                "--top-level-division","chapter"] # Could also be section 
+  bookdown::html_document2:
+    highlight: tango
+    theme: journal
+    split_by: none # only generate a single output page
+    self_contained: TRUE
+    toc: yes
+    toc_float: 
+      collapsed: TRUE
+      smooth_scroll: TRUE
+      print: FALSE
+    code_folding: show
+    number_sections: TRUE
+    code_download: TRUE
   html_document: 
     toc: TRUE
     toc_float: TRUE
@@ -29,19 +35,13 @@ output:
     toc_depth: 2
     highlight: tango # This appears to be the same as default
     number_sections: TRUE
-  bookdown::html_document2:
-    highlight: tango
-    theme: journal
-    split_by: none # only generate a single output page
-    self_contained: TRUE
-    toc: yes
-    toc_float: 
-      collapsed: TRUE
-      smooth_scroll: TRUE
-      print: FALSE
-    code_folding: show
-    number_sections: TRUE
-    code_download: TRUE
+  bookdown::pdf_document2:
+    keep_tex: no
+    latex_engine: xelatex
+    #highlight: pygments #Other options: default, tango, kate, monochrome, espresso, zenburn, haddock, and textmate
+    #theme: spacelab
+    pandoc_args: ["--variable", "subparagraph",
+                "--top-level-division","chapter"] # Could also be section 
 ---
 
 # Analysing hmm output data 
@@ -57,10 +57,13 @@ files <- list.files(path = path_to_data, pattern = "*.tsv", recursive=FALSE)
 
 fOTUbinNums <- read_csv(file = "../analyses/numBinsfOTU.csv", 
                           col_types = "ci", 
-                          col_names = c("fOTU_name","num_bins"))
+                          col_names = c("fOTU_name",
+                                        "num_bins"))
 egg_nog_cats <- read_tsv(file = "../data/annotations/10239_annotations.tsv", 
                          col_types = "fcfc", 
-                         col_names = c("taxid","hmm_profile_id","egg_nog_category","hmm_description")) %>%
+                         col_names = c("taxid","hmm_profile_id",
+                                       "egg_nog_category",
+                                       "hmm_description")) %>%
   # Drop taxid because it's uninteresting
   select(.,-taxid)
 
@@ -92,7 +95,7 @@ for(fOTU_file in files) {
   fOTU_first_term <- fOTU %>%
     pull(fOTU_name)
   fOTU_first_term <- fOTU_first_term[1]
-  
+  # The empty bins had "dummy" as the first word in the first line
   if(fOTU_first_term == "dummy"){
     hit_percentage <- c(hit_percentage,0.0)
     next
@@ -135,6 +138,8 @@ hits <- tibble(hit_percentage)
 ```
 
 # Visualise the data
+
+The following graph depicts how large percentage of bins in fOTU have at least one hit from viral HMM profiles with e-value less than 0.01.
 
 ```{r}
 qplot(hit_percentage, data = hits, binwidth = 0.01)
