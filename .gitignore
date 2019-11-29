@@ -44,3 +44,6 @@ analyses/HMM_scan_using_eggNOG_HMMs/eggNOG_data/HMMs/*
 # Parsed hmmsearch tab delimited files
 analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_parsed/*
 !analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_parsed/README.md
+
+# Temporary directory for fOTUs that already have been scanned from viruses
+analyses/fOTU_proteomes_studied/*
