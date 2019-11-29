@@ -155,6 +155,23 @@ REGEXP="^#.+"
 cat $TSV_FILE | awk -v delimiter=";" -v last_col="4" -v excluded_recs="$REGEXP" -f $SCRIPT
 ```
 
+## Helper chunk for moving already studied fOTUs
+
+```{bash eval=FALSE, include=TRUE}
+STUDIED_fOTUs="../analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_viruses/"
+fOTUs="../analyses/fOTU_proteomes/" 
+TEMP_STORAGE="../analyses/fOTU_proteomes_studied/"
+
+read -r -a STUDIED_fOTUs_ARRAY <<< $( find $STUDIED_fOTUs -name "*.out" -and -type f -print0 | xargs -0 echo )
+for STUDIED_fOTU in "${STUDIED_fOTUs_ARRAY[@]}"; do
+  fOTU=$(echo $(basename "$STUDIED_fOTU") | awk -F "." '{print $1}')
+  mv "$fOTUs""$fOTU"".faa" "$TEMP_STORAGE"
+done
+
+```
+
+
+
 # Session info
 
 ```{r}
