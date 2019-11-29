@@ -164,12 +164,11 @@ TEMP_STORAGE="../analyses/fOTU_proteomes_studied/"
 
 read -r -a STUDIED_fOTUs_ARRAY <<< $( find $STUDIED_fOTUs -name "*.out" -and -type f -print0 | xargs -0 echo )
 for STUDIED_fOTU in "${STUDIED_fOTUs_ARRAY[@]}"; do
-  fOTU=$(echo $(basename "$STUDIED_fOTU") | awk -F "." '{print $1}')
+  fOTU=$(echo $(basename "$STUDIED_fOTU") | awk -F "." '{print $1}' | awk -F "-with-" '{print $2}')
   mv "$fOTUs""$fOTU"".faa" "$TEMP_STORAGE"
 done
 
 ```
-
 
 
 # Session info
