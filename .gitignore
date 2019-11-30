@@ -48,6 +48,9 @@ analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_parsed/*
 # Temporary directory for fOTUs that already have been scanned from viruses
 analyses/fOTU_proteomes_studied/*
 
+# Ignore the results of first run with incomplete results for ~2800 fOTUs
+analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_viruses_backup/*
+
 # Ignore all files but README.md in singularity directory
 singularity/*
 !singularity/README.md
