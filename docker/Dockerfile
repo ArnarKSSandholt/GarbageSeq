@@ -3,7 +3,11 @@ FROM rocker-own-base:latest
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 
 RUN apt-get update --fix-missing && apt-get install -y wget bzip2 ca-certificates \
-    libglib2.0-0 libxext6 libsm6 libxrender1 exonerate
+    libglib2.0-0 libxext6 libsm6 libxrender1 exonerate curl libwww-perl libnet-perl \
+    libxml-simple-perl build-essential gcc-multilib apt-utils perl expat \
+    libexpat-dev cpanminus \
+# This is needed for multiline grep searches
+    pcre2-utils
 
 # Install DT for nice looking tables and webshots for pdf:s to work
 RUN R -e "install.packages('DT')" \
@@ -30,14 +34,15 @@ RUN conda config --add channels conda-forge
 RUN conda config --add channels bioconda
 RUN conda install biopython
 
-# This is needed for multiline grep searches
-RUN apt-get install -y pcre2-utils
-
-# Install tool for automatic trimming of spurious MPAs
-RUN conda install trimal
 
 # Install HMMER v. 3.2.1-2
 RUN conda install hmmer
+# Install bio-perl
+RUN conda install perl-bioperl entrez-direct
 
+# Install tool for automatic trimming of spurious MPAs
 # Install mafft in order to create MPAs for HMM profile building
-RUN conda install mafft
+RUN conda install trimal mafft
+
+# Clear the package list for saving space
+RUN rm -rf /var/lib/apt/lists/*
