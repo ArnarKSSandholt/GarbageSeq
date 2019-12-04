@@ -177,8 +177,19 @@ Doesn't seem like PCA will be very useful.
 The following graph depicts how large percentage of bins in fOTU have at least one hit from viral HMM profiles with e-value less than 0.01.
 
 ```{r eval=FALSE, include=TRUE}
-qplot(hit_percentage, data = hits, binwidth = 0.01)
+plot(fOTUsHMM_pca$x[,1], fOTUsHMM_pca$x[,2])
 ```
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Not used at the moment
