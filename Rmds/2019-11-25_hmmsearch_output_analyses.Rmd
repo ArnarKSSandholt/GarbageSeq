@@ -35,40 +35,40 @@ output:
     toc_depth: 2
     highlight: tango # This appears to be the same as default
     number_sections: TRUE
-  bookdown::pdf_document2:
-    keep_tex: no
-    latex_engine: xelatex
-    #highlight: pygments #Other options: default, tango, kate, monochrome, espresso, zenburn, haddock, and textmate
-    #theme: spacelab
-    pandoc_args: ["--variable", "subparagraph",
-                "--top-level-division","chapter"] # Could also be section 
+  bookdown::html_document2:
+    highlight: tango
+    theme: journal
+    split_by: none # only generate a single output page
+    self_contained: TRUE
+    toc: yes
+    toc_float: 
+      collapsed: TRUE
+      smooth_scroll: TRUE
+      print: FALSE
+    code_folding: show
+    number_sections: TRUE
+    code_download: TRUE
 ---
 
-# Analysing hmm output data 
+# Load libraries
 
-```{r message=FALSE}
+```{r message=FALSE, warning=FALSE}
+# This is needed for spread()
+library(tidyr)
 library(tidyverse)
+```
 
-hit_percentage <- vector()
+# Initilise variables
 
-path_to_data <- "../analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_parsed/"
+```{r, message=FALSE, cache=TRUE}
+#fOTUsHMM <- read_csv(file = "../analyses/fOTU_HMM_headers.csv")
+fOTUsHMM <- tibble()
 
-files <- list.files(path = path_to_data, pattern = "*.tsv", recursive=FALSE)
+path_to_data <- 
+  "../analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_parsed/"
 
-fOTUbinNums <- read_csv(file = "../analyses/numBinsfOTU.csv", 
-                          col_types = "ci", 
-                          col_names = c("fOTU_name",
-                                        "num_bins"))
-egg_nog_cats <- read_tsv(file = "../data/annotations/10239_annotations.tsv", 
-                         col_types = "fcfc", 
-                         col_names = c("taxid","hmm_profile_id",
-                                       "egg_nog_category",
-                                       "hmm_description")) %>%
-  # Drop taxid because it's uninteresting
-  select(.,-taxid)
-
-num_seqs <- read_csv(file = "../analyses/numSeqsBin.csv", 
-                          col_types = "ci")
+files <- list.files(path = path_to_data, 
+                    pattern = "*.tsv", recursive=FALSE)
 
 # Read in some data
 tsv_names <- c("fOTU_name",
@@ -76,7 +76,7 @@ tsv_names <- c("fOTU_name",
                "inside_inclusion_threshold",
                "Target_Bin_id",
                "Target_Seq_id",
-               "full_sequence_e-value",
+               "full_sequence_e_value",
                "full_sequence_score",
                "full_sequence_bias",
                "best_one_domain_e-value",
@@ -85,33 +85,138 @@ tsv_names <- c("fOTU_name",
                "exp",
                "N",
                "description")
+```
 
+# Read data and create a tibble out of them
+
+```{r, cache=TRUE}
+# Go through each tsv parsed results file
 for(fOTU_file in files) {
-  
+  # Create the file path
   path_file <- paste(path_to_data,fOTU_file, sep = "")
   
+  # Create a tibble from a tsv file
   fOTU <- read_tsv(file = path_file, 
                    col_types = "cclcfdddddddic", 
-                   col_names = tsv_names)
+                   col_names = tsv_names) %>%
+    # Take only interesting columns
+    select(.,c("fOTU_name",
+               "hmm_profile_id",
+               "full_sequence_e_value")) %>%
+    # Create a new col with -log_10 e-values
+    mutate(log_eval = -1*log10(full_sequence_e_value)) %>%
+    # Drop the old e-value column
+    select(.,-full_sequence_e_value) 
   
   # Check if there were empty bins
   fOTU_first_term <- fOTU %>%
-    pull(fOTU_name)
+    pull(fOTU_name) # This returns a vector of fOTU names
+  # Pick just first element because that 
+  # would be where my "dummy" text would reside
   fOTU_first_term <- fOTU_first_term[1]
-  # The empty bins had "dummy" as the first word in the first line
+  
+  # Check if the results had no hits
   if(fOTU_first_term == "dummy"){
-    hit_percentage <- c(hit_percentage,0.0)
+    # For now just jump over those fOTUs with zero hits
+    #fOTUsHMM <- bind_rows(fOTUsHMM,tibble())
     next
+  }else{
+    # If there were matches spread the -log_10 evalues for each
+    # fOTU in one row
+    fOTU <- fOTU %>%
+      # Group all same HMMs together
+      group_by(hmm_profile_id) %>%
+      # Choose average of all e-values for each unique HMM
+      summarise(avg_log_eval = mean(log_eval)) %>%
+      add_column(fOTU_name = fOTU_first_term) %>%
+      
+      # Choose the largest value among the unique HMMs
+      #summarise(max = max(log_eval)) %>%
+      #add_column(fOTU_name = fOTU_first_term)
+      
+      # pivot_wider should work for tidyr v. 1.0.0 
+      # but I use 0.8.3, therefore I use spread() instead
+      # pivot_wider(names_from = hmm_profile_id, 
+      #            values_from = log_eval)
+      
+      # Finally, spread the e-vals on one row
+      spread(hmm_profile_id,avg_log_eval)
   }
-  
-  # Make a big data table out of these three tibbles by left joining 
-  fOTU <- left_join(fOTU, egg_nog_cats, by = "hmm_profile_id") %>%
-    left_join(., fOTUbinNums, by = "fOTU_name") %>%
-    # Remove values that were outside inclusion threshold
-    filter(.,inside_inclusion_threshold) %>%
-    # Drop inside_inclusion_threshold now that it has done its duty
-    select(.,-inside_inclusion_threshold)
-  
+  # Append the current fOTU data to one big tibble
+  fOTUsHMM <- bind_rows(fOTUsHMM,fOTU)
+}
+```
+
+# Exchange NA, Inf and -Inf with 0
+
+```{r}
+is.na(fOTUsHMM) <- sapply(fOTUsHMM, is.infinite)
+fOTUsHMM[is.na(fOTUsHMM)] <- 0
+```
+
+# Move fOTU names to row names and execute PCA 
+
+```{r}
+fOTUsHMM_pca <- fOTUsHMM %>% 
+  column_to_rownames(var = "fOTU_name") %>%
+  prcomp(., 
+         center = TRUE)
+```
+
+# Checkout the results of the PCA
+
+```{r}
+summary(fOTUsHMM_pca)
+```
+
+Doesn't seem like PCA will be very useful.
+
+
+# Visualise the results
+
+The following graph depicts how large percentage of bins in fOTU have at least one hit from viral HMM profiles with e-value less than 0.01.
+
+```{r eval=FALSE, include=TRUE}
+qplot(hit_percentage, data = hits, binwidth = 0.01)
+```
+
+
+# Not used at the moment
+
+This following is not run because they are not of interest at the moment.
+
+```{r eval=FALSE, include=TRUE}
+fOTUbinNums <- read_csv(file = "../analyses/numBinsfOTU.csv", 
+                          col_types = "ci", 
+                          col_names = c("fOTU_name",
+                                        "num_bins"))
+egg_nog_cats <- 
+  read_tsv(file = "../data/annotations/10239_annotations.tsv", 
+           col_types = "fcfc", 
+           col_names = c("taxid","hmm_profile_id",
+                         "egg_nog_category",
+                         "hmm_description")) %>%
+  # Drop taxid because it's uninteresting
+  select(.,-taxid)
+
+num_seqs <- read_csv(file = "../analyses/numSeqsBin.csv", 
+                          col_types = "ci")
+```
+
+
+```{r eval=FALSE, include=TRUE}
+# Make a big tibble out of these three tibbles by left joining 
+fOTU <- left_join(fOTU, 
+                  egg_nog_cats, 
+                  by = "hmm_profile_id") %>%
+  left_join(., 
+            fOTUbinNums, 
+            by = "fOTU_name") %>%
+  # Remove values that were outside inclusion threshold
+  filter(.,inside_inclusion_threshold) %>%
+  # Drop inside_inclusion_threshold now that it has done its duty
+  select(.,-inside_inclusion_threshold)
+
   # Find how many hits there are to each bin
   numHits <- fOTU %>%
     count(.,Target_Bin_id) %>%
@@ -135,31 +240,12 @@ for(fOTU_file in files) {
   fOTU_tot_num_bins <- fOTU_vec_len/fOTU_tot_num_bins[1]
   
   # Append the value to a vector
-  hit_percentage <- c(hit_percentage,fOTU_tot_num_bins)
-}
+#  hit_percentage <- c(hit_percentage,fOTU_tot_num_bins)
+
+#}
 
 # Create finally a tibble from the vector
-hits <- tibble(hit_percentage)
-
-```
-
-Maybe of interest is to group by all the target bins and look for how many unique matches there are between HMMs and seqs.
-
-```{r}
-#fOTU %>%
-#  group_by(Target_Bin_id) %>%
-#  n_distinct(Target_Seq_id) %>%
-#  count()
-```
-
-
-
-# Visualise the data
-
-The following graph depicts how large percentage of bins in fOTU have at least one hit from viral HMM profiles with e-value less than 0.01.
-
-```{r}
-qplot(hit_percentage, data = hits, binwidth = 0.01)
+#hits <- tibble(hit_percentage)
 ```
 
 
