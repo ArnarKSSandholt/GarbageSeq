@@ -232,12 +232,26 @@ ord1 <-  load(file = "../analyses/ord1.RData")
 ```
 
 
+How well does the 2-D representation of multidimensional space represent the actual multidimensional space is done by using statistic called stress. Stress < 0.1 indicates that the 2-D representation is a good repreresentation of the multi-D space. Let's check that out now:
 
+```{r}
+ord1$stress
+```
 
+This is quite low which is great! Let's now plot out the relationship between the ordination dissimilarities and the distances in the ordination space:
 
+```{r}
+stressplot(ord1)
+```
 
+Observed dissimilarity of 1 means the fOTU doesn't have any HMMs incommon with the others.
 
+Let's plot out the ordination space in 2-d:
 
+```{r}
+ordiplot(ord1)
+points(ord1)
+```
 
 
 
