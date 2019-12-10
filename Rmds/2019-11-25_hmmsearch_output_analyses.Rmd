@@ -56,6 +56,7 @@ output:
 # This is needed for spread()
 library(tidyr)
 library(tidyverse)
+library(ggplot2)
 ```
 
 # Initilise variables
@@ -147,6 +148,23 @@ for(fOTU_file in files) {
 }
 ```
 
+# Save R data
+
+The previous chunk with 1432 fOTUs took about 2 h 14 minutes to run with one Intel Core i7-8550U CPU @ 1.80GHz (turbo 1.99GHz). So in order to save up time from previous calculations again, let's store the R data:
+
+```{r eval=FALSE, include=TRUE}
+saveRDS(fOTUsHMM, file = "../analyses/fOTUsHMM.rds")
+save(fOTUsHMM, file = "../analyses/fOTUsHMM.RData")
+```
+
+# Load R data
+
+```{r eval=FALSE, include=TRUE}
+fOTUsHMM <-  load(file = "../analyses/fOTUsHMM.RData")
+#fOTUsHMM <- readRDS(file = "../analyses/fOTUsHMM.rds")
+```
+
+
 # Exchange NA, Inf and -Inf with 0
 
 ```{r}
@@ -176,11 +194,21 @@ Doesn't seem like PCA will be very useful.
 
 The following graph depicts how large percentage of bins in fOTU have at least one hit from viral HMM profiles with e-value less than 0.01.
 
+# Save R data
+
+Save the data once again to speed-up things.
+
 ```{r eval=FALSE, include=TRUE}
-plot(fOTUsHMM_pca$x[,1], fOTUsHMM_pca$x[,2])
+saveRDS(ord1, file = "../analyses/ord1.rds")
+save(ord1, file = "../analyses/ord1.RData")
 ```
 
+# Load R data
 
+```{r eval=FALSE, include=TRUE}
+ord1 <-  load(file = "../analyses/ord1.RData")
+#ord1 <- readRDS(file = "../analyses/ord1.rds")
+```
 
 
 
