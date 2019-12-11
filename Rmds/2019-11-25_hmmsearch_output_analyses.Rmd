@@ -219,13 +219,28 @@ qplot(PC1,
       geom = c("point")) + ggtitle(title)
 ```
 
+
+
+```{r}
+heatmap(as.matrix(predict(fOTUsHMM_pca)[,1:20]))
+dim(fOTUsHMM_pca)
+heatmap(as.matrix(fOTUsHMM[,-1])[,1:400])
+
+```
+
+
+
 # NMDS
 
-Let's perform non-parametric multidimensional scaling:
+Let's perform non-metric multidimensional scaling:
 
 ```{r}
 #install.packages("vegan")
 library(vegan)
+```
+
+
+```{r}
 ord1 <- metaMDS(fOTUsHMM[,2:8290])
 ```
 
