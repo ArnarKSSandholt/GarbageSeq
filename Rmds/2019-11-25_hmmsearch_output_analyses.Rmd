@@ -57,6 +57,7 @@ output:
 library(tidyr)
 library(tidyverse)
 library(ggplot2)
+install.packages("ggbiplot")
 ```
 
 # Initilise variables
@@ -181,10 +182,23 @@ fOTUsHMM_pca <- fOTUsHMM %>%
          center = TRUE)
 ```
 
+
+```{r}
+library(ggbiplot)
+```
+
+
+
+```{r}
+ggbiplot(fOTUsHMM_pca, var.axes = F, choices = 4:3)
+```
+
+
+
 # Checkout the results of the PCA
 
 ```{r}
-summary(fOTUsHMM_pca)
+summary(fOTUsHMM_pca) %>% tail()
 ```
 
 Doesn't seem like PCA will be very useful.
