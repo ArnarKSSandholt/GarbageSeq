@@ -294,7 +294,6 @@ PC12s <- tibble(fOTUs = names(fOTUsHMM_pca$x[,1]),
               PC1 = unname(fOTUsHMM_pca$x[,1]), 
               PC2 = unname(fOTUsHMM_pca$x[,2]))
 
-
 title <- "PCA of e-values of matches in fOTUs"
 qplot(PC1, 
       PC2, 
@@ -304,7 +303,6 @@ qplot(PC1,
 PC23s <- tibble(fOTUs = names(fOTUsHMM_pca$x[,1]), 
               PC2 = unname(fOTUsHMM_pca$x[,2]), 
               PC3 = unname(fOTUsHMM_pca$x[,3]))
-
 
 title <- "PCA of e-values of matches in fOTUs"
 qplot(PC2, 
@@ -316,7 +314,6 @@ PC34s <- tibble(fOTUs = names(fOTUsHMM_pca$x[,1]),
               PC3 = unname(fOTUsHMM_pca$x[,3]), 
               PC4 = unname(fOTUsHMM_pca$x[,4]))
 
-
 title <- "PCA of e-values of matches in fOTUs"
 qplot(PC3, 
       PC4, 
@@ -325,44 +322,72 @@ qplot(PC3,
 
 ```
 
-
-
 ## Create a file for each list
+
+### Create file names
 
 ```{r}
 # Path to files
-path <- "../analyses/"
-
+path <- "../analyses/lists_of_PCA_clusters/"
 # Names of files
+PC12a_filename <- paste(path,"fOTU_PC1-and-2_x--100-to-0-and-y--100-to-+100.txt", sep = "", collapse = NULL)
+PC12b_filename <- paste(path,"fOTU_PC1-and-2_x-+250-to-+400-and-y--100-to-0.txt", sep = "", collapse = NULL)
+PC23_filename <- paste(path,"fOTU_PC2-and-3_x--100-to-+50-and-y--100-to-+100.txt", sep = "", collapse = NULL)
+PC34_filename <- paste(path,"fOTU_PC3-and-4_x--50-to-+50-and-y--50-to-+75.txt", sep = "", collapse = NULL)
 
-PC12_filename <- paste(path,"fOTU_PC12_", sep = "", collapse = NULL)
-PC23_filename <- paste(path,"", sep = "", collapse = NULL)
-PC34_filename <- paste(path,"", sep = "", collapse = NULL)
-
-
-fileConn<-file("output.txt")
-writeLines(c("Hello","World"), fileConn)
-close(fileConn)
 ```
 
-## Append lists of FOTUs
+### Filter tibbles based on coordinates
 
 ```{r}
-line="blah text blah blah etc etc"
-write(line,file="myfile",append=TRUE)
+# This function filters a tibble based on given limit values
+filterator <- function(data, x_low, x_high, y_low, y_high){
+  data %>% 
+    filter(data[,2] > x_low & data[,2] < x_high & data[,3] > y_low & data[,3] < y_high) %>%
+    select(fOTUs)
+}
 ```
 
 
+```{r}
+PC12_cluster1 <- filterator(PC12s,-100,0,-100,100) 
+PC12_cluster2 <- filterator(PC12s,250,400,-100,0) 
+PC23_cluster <- filterator(PC23s,-100,50,-100,100)
+PC34_cluster <- filterator(PC34s,-50,50,-50,75)
+```
 
+### Create the files
 
-
-
-
-
-
-
-
-
+```{r}
+write_delim(PC12_cluster1, 
+            PC12a_filename, 
+            delim = "", 
+            na = "NA", 
+            append = FALSE,
+            col_names = FALSE, 
+            quote_escape = "double")
+write_delim(PC12_cluster2, 
+            PC12b_filename, 
+            delim = "", 
+            na = "NA", 
+            append = FALSE,
+            col_names = FALSE, 
+            quote_escape = "double")
+write_delim(PC23_cluster, 
+            PC23_filename, 
+            delim = "", 
+            na = "NA", 
+            append = FALSE,
+            col_names = FALSE, 
+            quote_escape = "double")
+write_delim(PC34_cluster, 
+            PC34_filename, 
+            delim = "", 
+            na = "NA", 
+            append = FALSE,
+            col_names = FALSE, 
+            quote_escape = "double")
+```
 
 
 # Not used at the moment
