@@ -161,8 +161,8 @@ save(fOTUsHMM, file = "../analyses/fOTUsHMM.RData")
 # Load R data
 
 ```{r eval=FALSE, include=TRUE}
-fOTUsHMM <-  load(file = "../analyses/fOTUsHMM.RData")
-#fOTUsHMM <- readRDS(file = "../analyses/fOTUsHMM.rds")
+#fOTUsHMM <-  load(file = "../analyses/fOTUsHMM.RData")
+fOTUsHMM <- readRDS(file = "../analyses/fOTUsHMM.rds")
 ```
 
 
@@ -183,7 +183,7 @@ fOTUsHMM_pca <- fOTUsHMM %>%
 ```
 
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 library(ggbiplot)
 ```
 
@@ -216,9 +216,8 @@ title <- "PCA of e-values of matches in fOTUs"
 qplot(PC1, 
       PC2, 
       data = PCs, 
-      geom = c("point")) + ggtitle(title)
+      geom = c("point", "density2d")) + ggtitle(title)
 ```
-
 
 
 ```{r}
@@ -281,6 +280,88 @@ Let's plot out the ordination space in 2-d:
 ordiplot(ord1)
 points(ord1)
 ```
+
+
+# Create lists of fOTUs of interest
+
+## Preview PCA plots
+
+These PCA plots can be used to visually determine potential groupings.
+
+```{r}
+
+PC12s <- tibble(fOTUs = names(fOTUsHMM_pca$x[,1]), 
+              PC1 = unname(fOTUsHMM_pca$x[,1]), 
+              PC2 = unname(fOTUsHMM_pca$x[,2]))
+
+
+title <- "PCA of e-values of matches in fOTUs"
+qplot(PC1, 
+      PC2, 
+      data = PC12s, 
+      geom = c("point", "density2d")) + ggtitle(title)
+
+PC23s <- tibble(fOTUs = names(fOTUsHMM_pca$x[,1]), 
+              PC2 = unname(fOTUsHMM_pca$x[,2]), 
+              PC3 = unname(fOTUsHMM_pca$x[,3]))
+
+
+title <- "PCA of e-values of matches in fOTUs"
+qplot(PC2, 
+      PC3, 
+      data = PC23s, 
+      geom = c("point", "density2d")) + ggtitle(title)
+
+PC34s <- tibble(fOTUs = names(fOTUsHMM_pca$x[,1]), 
+              PC3 = unname(fOTUsHMM_pca$x[,3]), 
+              PC4 = unname(fOTUsHMM_pca$x[,4]))
+
+
+title <- "PCA of e-values of matches in fOTUs"
+qplot(PC3, 
+      PC4, 
+      data = PC34s, 
+      geom = c("point", "density2d")) + ggtitle(title)
+
+```
+
+
+
+## Create a file for each list
+
+```{r}
+# Path to files
+path <- "../analyses/"
+
+# Names of files
+
+PC12_filename <- paste(path,"fOTU_PC12_", sep = "", collapse = NULL)
+PC23_filename <- paste(path,"", sep = "", collapse = NULL)
+PC34_filename <- paste(path,"", sep = "", collapse = NULL)
+
+
+fileConn<-file("output.txt")
+writeLines(c("Hello","World"), fileConn)
+close(fileConn)
+```
+
+## Append lists of FOTUs
+
+```{r}
+line="blah text blah blah etc etc"
+write(line,file="myfile",append=TRUE)
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 
