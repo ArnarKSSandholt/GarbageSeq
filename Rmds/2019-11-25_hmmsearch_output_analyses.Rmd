@@ -154,15 +154,15 @@ for(fOTU_file in files) {
 The previous chunk with 1432 fOTUs took about 2 h 14 minutes to run with one Intel Core i7-8550U CPU @ 1.80GHz (turbo 1.99GHz). So in order to save up time from previous calculations again, let's store the R data:
 
 ```{r eval=FALSE, include=TRUE}
-saveRDS(fOTUsHMM, file = "../analyses/fOTUsHMM.rds")
-save(fOTUsHMM, file = "../analyses/fOTUsHMM.RData")
+saveRDS(fOTUsHMM, file = "../analyses/temp_R_data/fOTUsHMM.rds")
+save(fOTUsHMM, file = "../analyses/temp_R_data/fOTUsHMM.RData")
 ```
 
 # Load R data
 
 ```{r eval=FALSE, include=TRUE}
-#fOTUsHMM <-  load(file = "../analyses/fOTUsHMM.RData")
-fOTUsHMM <- readRDS(file = "../analyses/fOTUsHMM.rds")
+#fOTUsHMM <-  load(file = "../analyses/temp_R_data/fOTUsHMM.RData")
+fOTUsHMM <- readRDS(file = "../analyses/temp_R_data/fOTUsHMM.rds")
 ```
 
 
@@ -248,15 +248,15 @@ ord1 <- metaMDS(fOTUsHMM[,2:8290])
 Save the data once again to speed-up things.
 
 ```{r eval=FALSE, include=TRUE}
-saveRDS(ord1, file = "../analyses/ord1.rds")
-save(ord1, file = "../analyses/ord1.RData")
+saveRDS(ord1, file = "../analyses/temp_R_data/ord1.rds")
+save(ord1, file = "../analyses/temp_R_data/ord1.RData")
 ```
 
 # Load R data
 
 ```{r eval=FALSE, include=TRUE}
-ord1 <-  load(file = "../analyses/ord1.RData")
-#ord1 <- readRDS(file = "../analyses/ord1.rds")
+ord1 <-  load(file = "../analyses/temp_R_data/ord1.RData")
+#ord1 <- readRDS(file = "../analyses/temp_R_data/ord1.rds")
 ```
 
 
