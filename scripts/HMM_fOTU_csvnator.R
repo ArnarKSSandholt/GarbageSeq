@@ -92,7 +92,7 @@ for(fOTU_file in files) {
       
       # Choose the largest value among the unique HMMs
       summarise(max = max(log_eval)) %>%
-      add_column(fOTU_name = fOTU_first_term)
+      add_column(fOTU_name = fOTU_first_term) %>%
     
     # pivot_wider should work for tidyr v. 1.0.0 
     # but I use 0.8.3, therefore I use spread() instead
@@ -100,7 +100,7 @@ for(fOTU_file in files) {
     #            values_from = log_eval)
     
     # Finally, spread the e-vals on one row
-    spread(hmm_profile_id,avg_log_eval)
+    spread(hmm_profile_id, max)
   }
   # Append the current fOTU data to one big tibble
   fOTUsHMM <- bind_rows(fOTUsHMM,fOTU)
