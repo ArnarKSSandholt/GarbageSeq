@@ -258,6 +258,53 @@ ordiplot(ord1)
 points(ord1)
 ```
 
+and let's filter away the outliers and make new plot from above:
+
+```{r}
+NMDS_points1 <- as_tibble(ord1$points) %>%
+  filter(MDS1 < 50)
+
+title <- "NMDS, MDS1 < 50"
+qplot(MDS1, 
+      MDS2, 
+      data = NMDS_points1, 
+      geom = c("point", "density2d")) + ggtitle(title)
+
+path <- "../visualisations/nmds_hmmsearch_avg_MDS1_less_than_50.png"
+
+ggsave(filename = path,
+       device = png, 
+       width = 1000, 
+       height = 750, 
+       units = "in",
+       limitsize = FALSE,
+       dpi = 320)
+```
+
+Let's filter away slightly more:
+
+```{r}
+NMDS_points2 <- as_tibble(ord1$points) %>%
+  filter(MDS1 < 1 & MDS1 > -1)
+
+title <- "NMDS, -1 < MDS1 < 1"
+qplot(MDS1, 
+      MDS2, 
+      data = NMDS_points2, 
+      geom = c("point", "density2d")) + ggtitle(title)
+
+path <- "../visualisations/nmds_hmmsearch_avg_MDS1_less_than_1_and_greater_than_-1.png"
+
+ggsave(filename = path,
+       device = png, 
+       width = 1000, 
+       height = 750, 
+       units = "in",
+       limitsize = FALSE,
+       dpi = 320)
+```
+
+
 
 # Create lists of fOTUs of interest
 
