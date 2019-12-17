@@ -113,5 +113,5 @@ write_csv(x = fOTUsHMM,
           path=path_file, 
           na = "NA", 
           append = FALSE, 
-          col_names = !append,
+          col_names = TRUE,
           quote_escape = "double")
