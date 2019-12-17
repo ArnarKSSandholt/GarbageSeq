@@ -1,0 +1,313 @@
+---
+title: "HMM search output analyses with max e-val:s"
+author: "LJM"
+date: "`r Sys.Date()`"
+link-citations: true
+bibliography: bibliography.bib
+biblio-style: "alpha" #https://www.overleaf.com/learn/latex/Bibtex_bibliography_styles
+#csl: "../uppsala-universitet-institutionen-for-biologisk-grundutbildning.csl"
+documentclass: report
+output:
+  bookdown::html_document2:
+    highlight: tango
+    theme: journal
+    split_by: none # only generate a single output page
+    self_contained: TRUE
+    toc: yes
+    toc_float: 
+      collapsed: TRUE
+      smooth_scroll: TRUE
+      print: FALSE
+    code_folding: show
+    number_sections: TRUE
+    code_download: TRUE
+  html_document: 
+    toc: TRUE
+    toc_float: TRUE
+    code_folding: show
+    highlight: tango
+    number_sections: TRUE
+    self_contained: TRUE
+    smart: TRUE # To be figured out when this is useful
+    theme: journal
+  pdf_document:
+    toc: TRUE
+    toc_depth: 2
+    highlight: tango # This appears to be the same as default
+    number_sections: TRUE
+  bookdown::html_document2:
+    highlight: tango
+    theme: journal
+    split_by: none # only generate a single output page
+    self_contained: TRUE
+    toc: yes
+    toc_float: 
+      collapsed: TRUE
+      smooth_scroll: TRUE
+      print: FALSE
+    code_folding: show
+    number_sections: TRUE
+    code_download: TRUE
+---
+
+This document contains the final analyses and visualialisations of HMMer search with eggNOG viral HMM profiles on fOTUs.
+
+
+# Load libraries
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+#library(devtools)
+#install_github("vqv/ggbiplot")
+library(ggbiplot)
+#install.packages("vegan")
+library(vegan)
+```
+
+# Read intermediary `csv` file
+
+In the intermediary `csv` file the $-log_{10}(\text{e-val})$:s are the maximum e-values among all the hits to the fOTUs instead (and in contrast to the previous run in file `2019-11-25_hmmsearch_output_analyses.Rmd`) of the average of all the HMMsearch hits to the fOTUs.
+
+
+```{r eval=FALSE, include=TRUE}
+fOTUsHMM <- read_csv(file = "../analyses/HMMsearch/fOTUsHMM.csv")
+```
+
+# Exchange NA, Inf and -Inf with 0
+
+```{r}
+is.na(fOTUsHMM) <- sapply(fOTUsHMM, is.infinite)
+fOTUsHMM[is.na(fOTUsHMM)] <- 0
+```
+
+# Move fOTU names to row names and execute PCA 
+
+```{r}
+fOTUsHMM_pca <- fOTUsHMM %>% 
+  column_to_rownames(var = "fOTU_name") %>%
+  prcomp(., 
+         center = TRUE)
+```
+
+# Visualise the results
+
+## PCA plots {#pca-preview}
+
+These PCA plots can be used to visually determine potential groupings.
+
+```{r}
+ggbiplot(fOTUsHMM_pca, var.axes = F, choices = 1:2)
+```
+
+Here above the plot is slightly squashed but the following aren't:
+
+```{r}
+
+PC12s <- tibble(fOTUs = names(fOTUsHMM_pca$x[,1]), 
+              PC1 = unname(fOTUsHMM_pca$x[,1]), 
+              PC2 = unname(fOTUsHMM_pca$x[,2]))
+
+title <- "PCA of e-values of matches in fOTUs"
+qplot(PC1, 
+      PC2, 
+      data = PC12s, 
+      geom = c("point", "density2d")) + ggtitle(title)
+
+ggsave(filename = "../visualisations/pca_hmmsearch_max_PC1-2.png",
+       device = png, 
+       width = 1000, 
+       height = 750, 
+       units = "in",
+       limitsize = FALSE,
+       dpi = 320)
+
+PC23s <- tibble(fOTUs = names(fOTUsHMM_pca$x[,1]), 
+              PC2 = unname(fOTUsHMM_pca$x[,2]), 
+              PC3 = unname(fOTUsHMM_pca$x[,3]))
+
+title <- "PCA of e-values of matches in fOTUs"
+qplot(PC2, 
+      PC3, 
+      data = PC23s, 
+      geom = c("point", "density2d")) + ggtitle(title)
+
+ggsave(filename = "../visualisations/pca_hmmsearch_max_PC2-3.png",
+       device = png, 
+       width = 1000, 
+       height = 750, 
+       units = "in",
+       limitsize = FALSE,
+       dpi = 320)
+
+PC34s <- tibble(fOTUs = names(fOTUsHMM_pca$x[,1]), 
+              PC3 = unname(fOTUsHMM_pca$x[,3]), 
+              PC4 = unname(fOTUsHMM_pca$x[,4]))
+
+title <- "PCA of e-values of matches in fOTUs"
+qplot(PC3, 
+      PC4, 
+      data = PC34s, 
+      geom = c("point", "density2d")) + ggtitle(title)
+
+ggsave(filename = "../visualisations/pca_hmmsearch_max_PC3-4.png",
+       device = png, 
+       width = 1000, 
+       height = 750, 
+       units = "in",
+       limitsize = FALSE,
+       dpi = 320)
+```
+
+## Heatmaps
+
+```{r}
+heatmap(as.matrix(predict(fOTUsHMM_pca)[,1:20]))
+dim(fOTUsHMM_pca)
+heatmap(as.matrix(fOTUsHMM[,-1])[,1:400])
+```
+
+# NMDS
+
+Let's perform non-metric multidimensional scaling:
+
+```{r}
+width <- dim(fOTUsHMM)[2]
+ord <- metaMDS(fOTUsHMM[,2:width])
+```
+
+# Save/Load R data
+
+Save the data once again to speed-up things.
+
+```{r eval=FALSE, include=TRUE}
+saveRDS(ord, file = "../analyses/HMMsearch/temp_R_data/ord.rds")
+#ord <- readRDS(file = "../analyses/HMMsearch/temp_R_data/ord.rds")
+```
+
+How well does the 2-D representation of multidimensional space represent the actual multidimensional space is done by using statistic called stress. Stress < 0.1 indicates that the 2-D representation is a good repreresentation of the multi-D space. Let's check that out now:
+
+```{r}
+ord$stress
+```
+
+This is quite low which is great! Let's now plot out the relationship between the ordination dissimilarities and the distances in the ordination space:
+
+```{r}
+stressplot(ord)
+```
+
+Observed dissimilarity of 1 means the fOTU doesn't have any HMMs incommon with the others.
+
+Let's plot out the ordination space in 2-d:
+
+```{r}
+ordiplot(ord)
+points(ord)
+```
+
+# Remove outliers
+
+```{r}
+NMDS_points <- as_tibble(ord$points) %>%
+  filter(MDS1 < 50)
+```
+
+# Visualise the filtered data
+
+```{r}
+title <- "Non-metric multidimensional scaling data"
+qplot(MDS1, 
+      MDS2, 
+      data = NMDS_points, 
+      geom = c("point", "density2d")) + ggtitle(title)
+
+path <- "../visualisations/nmds_hmmsearch_max_MDS1_less_than_50.png"
+
+ggsave(filename = path,
+       device = png, 
+       width = 1000, 
+       height = 750, 
+       units = "in",
+       limitsize = FALSE,
+       dpi = 320)
+```
+
+# Create lists of fOTUs of interest
+
+Based on the previewing of PCA plots in \@ref(pca-preview) we can now manually curate a lists of fOTUs approximately based on clustering in them. 
+
+Let's first create file names:
+
+```{r}
+# Path to files
+path <- "../analyses/lists_of_PCA_clusters/"
+# Names of files
+PC12a_filename <- paste(path,"fOTU_PC1-and-2_x--100-to-0-and-y--100-to-+100.txt", sep = "", collapse = NULL)
+PC12b_filename <- paste(path,"fOTU_PC1-and-2_x-+250-to-+400-and-y--100-to-0.txt", sep = "", collapse = NULL)
+PC23_filename <- paste(path,"fOTU_PC2-and-3_x--100-to-+50-and-y--100-to-+100.txt", sep = "", collapse = NULL)
+PC34_filename <- paste(path,"fOTU_PC3-and-4_x--50-to-+50-and-y--50-to-+75.txt", sep = "", collapse = NULL)
+
+```
+
+and then we'll filter tibbles based on their coordinates with a simple function:
+
+```{r}
+# This function filters a tibble based on given limit values
+filterator <- function(data, x_low, x_high, y_low, y_high){
+  data %>% 
+    filter(data[,2] > x_low & data[,2] < x_high & data[,3] > y_low & data[,3] < y_high) %>%
+    select(fOTUs)
+}
+```
+
+and the actual filtering:
+
+```{r}
+PC12_cluster1 <- filterator(PC12s,-100,0,-100,100) 
+PC12_cluster2 <- filterator(PC12s,250,400,-100,0) 
+PC23_cluster <- filterator(PC23s,-100,50,-100,100)
+PC34_cluster <- filterator(PC34s,-50,50,-50,75)
+```
+
+Lastly, we'll just write the files:
+
+```{r}
+write_delim(PC12_cluster1, 
+            PC12a_filename, 
+            delim = "", 
+            na = "NA", 
+            append = FALSE,
+            col_names = FALSE, 
+            quote_escape = "double")
+write_delim(PC12_cluster2, 
+            PC12b_filename, 
+            delim = "", 
+            na = "NA", 
+            append = FALSE,
+            col_names = FALSE, 
+            quote_escape = "double")
+write_delim(PC23_cluster, 
+            PC23_filename, 
+            delim = "", 
+            na = "NA", 
+            append = FALSE,
+            col_names = FALSE, 
+            quote_escape = "double")
+write_delim(PC34_cluster, 
+            PC34_filename, 
+            delim = "", 
+            na = "NA", 
+            append = FALSE,
+            col_names = FALSE, 
+            quote_escape = "double")
+```
+
+
+# Session info
+
+```{r}
+sessionInfo()
+```
+
+
+# References
