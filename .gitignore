@@ -49,3 +49,7 @@ analyses/HMMsearch/hmmsearch_out_viruses_backup/*
 # Ignore all files but README.md in singularity directory
 singularity/*
 !singularity/README.md
+
+# Temporary R objects for making runs faster
+analyses/HMMsearch/temp_R_data/*.RData
+
