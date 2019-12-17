@@ -26,30 +26,25 @@ analyses/fOTU_proteomes/*.faa
 .Rhistory
 
 # HHMer search outputs
-analyses/HMM_scan/virus_hmm_scan_out/alns/*.out
-analyses/HMM_scan/virus_hmm_scan_out/domtblout/*.out
-analyses/HMM_scan/virus_hmm_scan_out/out/*.out
-analyses/HMM_scan/virus_hmm_scan_out/pfamtblout/*.out
-analyses/HMM_scan/virus_hmm_scan_out/tblout/*.out
-analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_viruses/*.out
+analyses/HMMsearch/hmmsearch_out_viruses/*.out
 
 # Downloaded viral eggNOG data
-analyses/HMM_scan_using_eggNOG_HMMs/eggNOG_data/annotations/*
-!analyses/HMM_scan_using_eggNOG_HMMs/eggNOG_data/annotations/README.md
-analyses/HMM_scan_using_eggNOG_HMMs/eggNOG_data/tars/*
-!analyses/HMM_scan_using_eggNOG_HMMs/eggNOG_data/tars/README.md
-analyses/HMM_scan_using_eggNOG_HMMs/eggNOG_data/HMMs/*
-!analyses/HMM_scan_using_eggNOG_HMMs/eggNOG_data/HMMs/README.md
+analyses/HMMsearch/eggNOG_data/annotations/*
+!analyses/HMMsearch/eggNOG_data/annotations/README.md
+analyses/HMMsearch/eggNOG_data/tars/*
+!analyses/HMMsearch/eggNOG_data/tars/README.md
+analyses/HMMsearch/eggNOG_data/HMMs/*
+!analyses/HMMsearch/eggNOG_data/HMMs/README.md
 
 # Parsed hmmsearch tab delimited files
-analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_parsed/*
-!analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_parsed/README.md
+analyses/HMMsearch/hmmsearch_out_parsed/*
+!analyses/HMMsearch/hmmsearch_out_parsed/README.md
 
 # Temporary directory for fOTUs that already have been scanned from viruses
 analyses/fOTU_proteomes_studied/*
 
 # Ignore the results of first run with incomplete results for ~2800 fOTUs
-analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_viruses_backup/*
+analyses/HMMsearch/hmmsearch_out_viruses_backup/*
 
 # Ignore all files but README.md in singularity directory
 singularity/*
