@@ -324,6 +324,14 @@ qplot(PC1,
       data = PC12s, 
       geom = c("point", "density2d")) + ggtitle(title)
 
+ggsave(filename = "../visualisations/pca_hmmsearch_avg_PC1-2.png",
+       device = png, 
+       width = 1000, 
+       height = 750, 
+       units = "in",
+       limitsize = FALSE,
+       dpi = 320)
+
 PC23s <- tibble(fOTUs = names(fOTUsHMM_pca$x[,1]), 
               PC2 = unname(fOTUsHMM_pca$x[,2]), 
               PC3 = unname(fOTUsHMM_pca$x[,3]))
@@ -333,6 +341,14 @@ qplot(PC2,
       PC3, 
       data = PC23s, 
       geom = c("point", "density2d")) + ggtitle(title)
+
+ggsave(filename = "../visualisations/pca_hmmsearch_avg_PC2-3.png",
+       device = png, 
+       width = 1000, 
+       height = 750, 
+       units = "in",
+       limitsize = FALSE,
+       dpi = 320)
 
 PC34s <- tibble(fOTUs = names(fOTUsHMM_pca$x[,1]), 
               PC3 = unname(fOTUsHMM_pca$x[,3]), 
@@ -344,6 +360,13 @@ qplot(PC3,
       data = PC34s, 
       geom = c("point", "density2d")) + ggtitle(title)
 
+ggsave(filename = "../visualisations/pca_hmmsearch_avg_PC3-4.png",
+       device = png, 
+       width = 1000, 
+       height = 750, 
+       units = "in",
+       limitsize = FALSE,
+       dpi = 320)
 ```
 
 ## Create a file for each list
