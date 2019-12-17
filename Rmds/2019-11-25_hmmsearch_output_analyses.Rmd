@@ -1,5 +1,5 @@
 ---
-title: "HMM search output analyses"
+title: "HMM search output analyses with avg e-val:s"
 author: "LJM"
 date: "`r Sys.Date()`"
 link-citations: true
