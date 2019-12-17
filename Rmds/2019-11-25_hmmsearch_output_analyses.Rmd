@@ -57,7 +57,7 @@ output:
 library(tidyr)
 library(tidyverse)
 library(ggplot2)
-install.packages("ggbiplot")
+#install.packages("ggbiplot")
 ```
 
 # Initilise variables
