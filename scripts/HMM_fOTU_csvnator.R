@@ -1,9 +1,8 @@
 #!/usr/bin/env Rscript
 
 # Load libraries
-library(tidyr)
 library(tidyverse)
-library(optparse) #install.packages("optparse")
+library(optparse)
 
 print(sessionInfo())
 
