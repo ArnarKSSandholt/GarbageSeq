@@ -75,14 +75,14 @@ fOTUsHMM <- read_csv(file = "../analyses/HMMsearch/fOTUsHMM.csv")
 
 # Exchange NA, Inf and -Inf with 0
 
-```{r}
+```{r eval=FALSE, include=TRUE}
 is.na(fOTUsHMM) <- sapply(fOTUsHMM, is.infinite)
 fOTUsHMM[is.na(fOTUsHMM)] <- 0
 ```
 
 # Move fOTU names to row names and execute PCA 
 
-```{r}
+```{r eval=FALSE, include=TRUE}
 fOTUsHMM_pca <- fOTUsHMM %>% 
   column_to_rownames(var = "fOTU_name") %>%
   prcomp(., 
@@ -95,13 +95,13 @@ fOTUsHMM_pca <- fOTUsHMM %>%
 
 These PCA plots can be used to visually determine potential groupings.
 
-```{r}
+```{r eval=FALSE, include=TRUE}
 ggbiplot(fOTUsHMM_pca, var.axes = F, choices = 1:2)
 ```
 
 Here above the plot is slightly squashed but the following aren't:
 
-```{r}
+```{r eval=FALSE, include=TRUE}
 
 PC12s <- tibble(fOTUs = names(fOTUsHMM_pca$x[,1]), 
               PC1 = unname(fOTUsHMM_pca$x[,1]), 
@@ -160,7 +160,7 @@ ggsave(filename = "../visualisations/pca_hmmsearch_max_PC3-4.png",
 
 ## Heatmaps
 
-```{r}
+```{r eval=FALSE, include=TRUE}
 heatmap(as.matrix(predict(fOTUsHMM_pca)[,1:20]))
 dim(fOTUsHMM_pca)
 heatmap(as.matrix(fOTUsHMM[,-1])[,1:400])
@@ -170,7 +170,7 @@ heatmap(as.matrix(fOTUsHMM[,-1])[,1:400])
 
 Let's perform non-metric multidimensional scaling:
 
-```{r}
+```{r eval=FALSE, include=TRUE}
 width <- dim(fOTUsHMM)[2]
 ord <- metaMDS(fOTUsHMM[,2:width])
 ```
@@ -186,13 +186,13 @@ saveRDS(ord, file = "../analyses/HMMsearch/temp_R_data/ord.rds")
 
 How well does the 2-D representation of multidimensional space represent the actual multidimensional space is done by using statistic called stress. Stress < 0.1 indicates that the 2-D representation is a good repreresentation of the multi-D space. Let's check that out now:
 
-```{r}
+```{r eval=FALSE, include=TRUE}
 ord$stress
 ```
 
 This is quite low which is great! Let's now plot out the relationship between the ordination dissimilarities and the distances in the ordination space:
 
-```{r}
+```{r eval=FALSE, include=TRUE}
 stressplot(ord)
 ```
 
@@ -200,21 +200,21 @@ Observed dissimilarity of 1 means the fOTU doesn't have any HMMs incommon with t
 
 Let's plot out the ordination space in 2-d:
 
-```{r}
+```{r eval=FALSE, include=TRUE}
 ordiplot(ord)
 points(ord)
 ```
 
 # Remove outliers
 
-```{r}
+```{r eval=FALSE, include=TRUE}
 NMDS_points <- as_tibble(ord$points) %>%
   filter(MDS1 < 50)
 ```
 
 # Visualise the filtered data
 
-```{r}
+```{r eval=FALSE, include=TRUE}
 title <- "Non-metric multidimensional scaling data"
 qplot(MDS1, 
       MDS2, 
@@ -238,7 +238,7 @@ Based on the previewing of PCA plots in \@ref(pca-preview) we can now manually c
 
 Let's first create file names:
 
-```{r}
+```{r eval=FALSE, include=TRUE}
 # Path to files
 path <- "../analyses/lists_of_PCA_clusters/"
 # Names of files
@@ -251,7 +251,7 @@ PC34_filename <- paste(path,"fOTU_PC3-and-4_x--50-to-+50-and-y--50-to-+75.txt", 
 
 and then we'll filter tibbles based on their coordinates with a simple function:
 
-```{r}
+```{r eval=FALSE, include=TRUE}
 # This function filters a tibble based on given limit values
 filterator <- function(data, x_low, x_high, y_low, y_high){
   data %>% 
@@ -262,7 +262,7 @@ filterator <- function(data, x_low, x_high, y_low, y_high){
 
 and the actual filtering:
 
-```{r}
+```{r eval=FALSE, include=TRUE}
 PC12_cluster1 <- filterator(PC12s,-100,0,-100,100) 
 PC12_cluster2 <- filterator(PC12s,250,400,-100,0) 
 PC23_cluster <- filterator(PC23s,-100,50,-100,100)
@@ -271,7 +271,7 @@ PC34_cluster <- filterator(PC34s,-50,50,-50,75)
 
 Lastly, we'll just write the files:
 
-```{r}
+```{r eval=FALSE, include=TRUE}
 write_delim(PC12_cluster1, 
             PC12a_filename, 
             delim = "", 
