@@ -131,16 +131,6 @@ for(fOTU_file in files) {
       # Choose average of all e-values for each unique HMM
       summarise(avg_log_eval = mean(log_eval)) %>%
       add_column(fOTU_name = fOTU_first_term) %>%
-      
-      # Choose the largest value among the unique HMMs
-      #summarise(max = max(log_eval)) %>%
-      #add_column(fOTU_name = fOTU_first_term)
-      
-      # pivot_wider should work for tidyr v. 1.0.0 
-      # but I use 0.8.3, therefore I use spread() instead
-      # pivot_wider(names_from = hmm_profile_id, 
-      #            values_from = log_eval)
-      
       # Finally, spread the e-vals on one row
       spread(hmm_profile_id,avg_log_eval)
   }
