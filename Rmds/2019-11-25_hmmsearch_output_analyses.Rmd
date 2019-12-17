@@ -227,15 +227,13 @@ ord1 <- metaMDS(fOTUsHMM[,2:8290])
 Save the data once again to speed-up things.
 
 ```{r eval=FALSE, include=TRUE}
-saveRDS(ord1, file = "../analyses/temp_R_data/ord1.rds")
-save(ord1, file = "../analyses/temp_R_data/ord1.RData")
+saveRDS(ord1, file = "../analyses/HMMsearch/temp_R_data/ord1.rds")
 ```
 
 # Load R data
 
 ```{r eval=FALSE, include=TRUE}
-ord1 <-  load(file = "../analyses/temp_R_data/ord1.RData")
-#ord1 <- readRDS(file = "../analyses/temp_R_data/ord1.rds")
+ord1 <- readRDS(file = "../analyses/HMMsearch/temp_R_data/ord1.rds")
 ```
 
 
