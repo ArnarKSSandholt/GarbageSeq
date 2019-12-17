@@ -173,26 +173,6 @@ fOTUsHMM_pca <- fOTUsHMM %>%
 ```
 
 
-```{r message=FALSE, warning=FALSE}
-library(ggbiplot)
-```
-
-
-
-```{r}
-ggbiplot(fOTUsHMM_pca, var.axes = F, choices = 4:3)
-```
-
-
-
-# Checkout the results of the PCA
-
-```{r}
-summary(fOTUsHMM_pca) %>% tail()
-```
-
-Doesn't seem like PCA will be very useful.
-
 # Visualise the results
 
 The following graph depicts how large percentage of bins in fOTU have at least one hit from viral HMM profiles with e-value less than 0.01.
@@ -207,6 +187,15 @@ qplot(PC1,
       PC2, 
       data = PCs, 
       geom = c("point", "density2d")) + ggtitle(title)
+```
+
+
+```{r message=FALSE, warning=FALSE}
+library(ggbiplot)
+```
+
+```{r}
+ggbiplot(fOTUsHMM_pca, var.axes = F, choices = 4:3)
 ```
 
 
