@@ -176,12 +176,6 @@ fOTUsHMM_pca <- fOTUsHMM %>%
 The following graph depicts how large percentage of bins in fOTU have at least one hit from viral HMM profiles with e-value less than 0.01.
 
 ```{r}
-
-
-```{r message=FALSE, warning=FALSE}
-library(ggbiplot)
-```
-
 ```{r}
 ggbiplot(fOTUsHMM_pca, var.axes = F, choices = 4:3)
 ```
