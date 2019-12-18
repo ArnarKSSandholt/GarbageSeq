@@ -167,7 +167,7 @@ fOTUsHMM_pca <- fOTUsHMM %>%
 The following graph depicts how large percentage of bins in fOTU have at least one hit from viral HMM profiles with e-value less than 0.01.
 
 ```{r}
-file_name <- "../visualisations/ggbiplot_avg_PC1-2.png"
+file_name <- "../visualisations/HMMsearch/ggbiplot_avg_PC1-2.png"
 png(filename = file_name)
 ggbiplot(fOTUsHMM_pca, var.axes = F, choices = 1:2)
 dev.off()
@@ -177,13 +177,13 @@ ggbiplot(fOTUsHMM_pca, var.axes = F, choices = 1:2)
 
 ```{r}
 prediction <- predict(fOTUsHMM_pca)[,1:20]
-file_name <- "../visualisations/heatmap_avg_20_first_PCs.png"
+file_name <- "../visualisations/HMMsearch/heatmap_avg_20_first_PCs.png"
 png(filename = file_name)
 heatmap(as.matrix(prediction))
 dev.off()
 heatmap(as.matrix(prediction))
 
-file_name <- "../visualisations/heatmap_avg_400_first_fOTUs.png"
+file_name <- "../visualisations/HMMsearch/heatmap_avg_400_first_fOTUs.png"
 png(filename = file_name)
 heatmap(as.matrix(fOTUsHMM[,-1])[,1:400])
 dev.off()
@@ -241,7 +241,7 @@ qplot(MDS1,
       data = NMDS_points1, 
       geom = c("point", "density2d")) + ggtitle(title)
 
-path <- "../visualisations/nmds_hmmsearch_avg_MDS1_less_than_50.png"
+path <- "../visualisations/HMMsearch/nmds_hmmsearch_avg_MDS1_less_than_50.png"
 
 ggsave(filename = path,
        device = png, 
@@ -264,7 +264,7 @@ qplot(MDS1,
       data = NMDS_points2, 
       geom = c("point", "density2d")) + ggtitle(title)
 
-path <- "../visualisations/nmds_hmmsearch_avg_MDS1_less_than_1_and_greater_than_-1.png"
+path <- "../visualisations/HMMsearch/nmds_hmmsearch_avg_MDS1_less_than_1_and_greater_than_-1.png"
 
 ggsave(filename = path,
        device = png, 
@@ -295,7 +295,7 @@ qplot(PC1,
       data = PC12s, 
       geom = c("point", "density2d")) + ggtitle(title)
 
-ggsave(filename = "../visualisations/pca_hmmsearch_avg_PC1-2.png",
+ggsave(filename = "../visualisations/HMMsearch/pca_hmmsearch_avg_PC1-2.png",
        device = png, 
        width = 1000, 
        height = 750, 
@@ -313,7 +313,7 @@ qplot(PC2,
       data = PC23s, 
       geom = c("point", "density2d")) + ggtitle(title)
 
-ggsave(filename = "../visualisations/pca_hmmsearch_avg_PC2-3.png",
+ggsave(filename = "../visualisations/HMMsearch/pca_hmmsearch_avg_PC2-3.png",
        device = png, 
        width = 1000, 
        height = 750, 
@@ -331,7 +331,7 @@ qplot(PC3,
       data = PC34s, 
       geom = c("point", "density2d")) + ggtitle(title)
 
-ggsave(filename = "../visualisations/pca_hmmsearch_avg_PC3-4.png",
+ggsave(filename = "../visualisations/HMMsearch/pca_hmmsearch_avg_PC3-4.png",
        device = png, 
        width = 1000, 
        height = 750, 
