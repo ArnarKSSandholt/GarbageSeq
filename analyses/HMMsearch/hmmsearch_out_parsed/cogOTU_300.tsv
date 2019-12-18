@@ -1,0 +1,83 @@
+cogOTU_300	4QBPD	1	Loc090519-7m_megahit_metabat_bin-0408	00007	1.5e-12	39.4	0.1	4.9e-12	37.7	0.0	1.8	2	Glutamate-1-semialdehyde 2,1-aminomutase
+cogOTU_300	4QCWM	1	Loc090402-1m_megahit_metabat_bin-0847	00023	1.4e-12	39.2	0.0	2.8e-12	38.2	0.0	1.7	1	Glucose-1-phosphate cytidylyltransferase
+cogOTU_300	4QCWM	1	Loc090116-7m_megahit_metabat_bin-1077	00022	1.8e-12	38.9	0.0	2.9e-12	38.2	0.0	1.7	1	Glucose-1-phosphate cytidylyltransferase
+cogOTU_300	4QBAP	1	Loc090519-7m_megahit_metabat_bin-0408	00014	0.00019	13.4	0.0	0.00029	12.8	0.0	1.2	1	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol alpha-1,3-N-acetylgalactosaminyltransferase
+cogOTU_300	4QBAP	1	Loc090116-7m_megahit_metabat_bin-1077	00007	0.00032	12.7	0.0	0.0005	12.0	0.0	1.3	1	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol alpha-1,3-N-acetylgalactosaminyltransferase
+cogOTU_300	4QBAP	1	Loc090402-1m_megahit_metabat_bin-0847	00001	0.00032	12.7	0.0	0.0005	12.0	0.0	1.3	1	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol alpha-1,3-N-acetylgalactosaminyltransferase
+cogOTU_300	4QBAP	1	Loc090402-7m_megahit_metabat_bin-0698	00004	0.00032	12.7	0.0	0.0005	12.0	0.0	1.3	1	N,N'-diacetylbacillosaminyl-diphospho-undecaprenol alpha-1,3-N-acetylgalactosaminyltransferase
+cogOTU_300	4QBNR	1	Loc090116-7m_megahit_metabat_bin-1077	00001	0.0003	12.6	1.5	0.00095	11.0	1.5	1.7	1	UDP-N-acetylglucosamine 4,6-dehydratase (inverting)
+cogOTU_300	4QBNR	1	Loc090402-1m_megahit_metabat_bin-0847	00018	0.0003	12.6	1.5	0.00095	11.0	1.5	1.7	1	UDP-N-acetylglucosamine 4,6-dehydratase (inverting)
+cogOTU_300	4QBNR	1	Loc090402-7m_megahit_metabat_bin-0698	00016	0.0003	12.6	1.5	0.00095	11.0	1.5	1.7	1	UDP-N-acetylglucosamine 4,6-dehydratase (inverting)
+cogOTU_300	4QBNR	1	Loc090519-7m_megahit_metabat_bin-0408	00004	0.0003	12.6	1.5	0.00095	11.0	1.5	1.7	1	UDP-N-acetylglucosamine 4,6-dehydratase (inverting)
+cogOTU_300	4QBY0	1	Loc090402-1m_megahit_metabat_bin-0847	00011	9.5e-05	14.0	0.0	0.00015	13.4	0.0	1.2	1	hypothetical protein
+cogOTU_300	4QBY0	1	Loc090402-7m_megahit_metabat_bin-0698	00014	9.5e-05	14.0	0.0	0.00015	13.4	0.0	1.2	1	hypothetical protein
+cogOTU_300	4QBY0	1	Loc090519-7m_megahit_metabat_bin-0408	00012	9.5e-05	14.0	0.0	0.00015	13.4	0.0	1.2	1	hypothetical protein
+cogOTU_300	4QBY0	1	Loc090116-7m_megahit_metabat_bin-1077	00017	9.5e-05	14.0	0.0	0.00015	13.4	0.0	1.2	1	hypothetical protein
+cogOTU_300	4QBU2	1	Loc090116-7m_megahit_metabat_bin-1077	00017	0.00025	13.1	0.0	0.00039	12.5	0.0	1.2	1	hypothetical protein
+cogOTU_300	4QBU2	1	Loc090402-1m_megahit_metabat_bin-0847	00011	0.00025	13.1	0.0	0.00039	12.5	0.0	1.2	1	hypothetical protein
+cogOTU_300	4QBU2	1	Loc090402-7m_megahit_metabat_bin-0698	00014	0.00025	13.1	0.0	0.00039	12.5	0.0	1.2	1	hypothetical protein
+cogOTU_300	4QBU2	1	Loc090519-7m_megahit_metabat_bin-0408	00012	0.00025	13.1	0.0	0.00039	12.5	0.0	1.2	1	hypothetical protein
+cogOTU_300	4QF3X	1	Loc090116-7m_megahit_metabat_bin-1077	00005	6.8e-09	27.8	0.6	1.1e-07	23.9	0.6	2.6	1	3-oxoacyl-[acyl-carrier-protein] reductase FabG
+cogOTU_300	4QF3X	1	Loc090116-7m_megahit_metabat_bin-1077	00025	8.2e-08	24.2	1.0	1e-06	20.6	1.0	2.4	1	3-oxoacyl-[acyl-carrier-protein] reductase FabG
+cogOTU_300	4QF3X	1	Loc090519-7m_megahit_metabat_bin-0408	00003	8.2e-08	24.2	1.0	1e-06	20.6	1.0	2.4	1	3-oxoacyl-[acyl-carrier-protein] reductase FabG
+cogOTU_300	4QAK9	1	Loc090116-7m_megahit_metabat_bin-1077	00015	0.0012	11.5	2.2	0.0032	10.1	0.6	2.5	1	hypothetical protein
+cogOTU_300	4QAK9	1	Loc090402-1m_megahit_metabat_bin-0847	00009	0.0012	11.5	2.2	0.0032	10.1	0.6	2.5	1	hypothetical protein
+cogOTU_300	4QAK9	1	Loc090402-7m_megahit_metabat_bin-0698	00012	0.0012	11.5	2.2	0.0032	10.1	0.6	2.5	1	hypothetical protein
+cogOTU_300	4QAK9	1	Loc090519-7m_megahit_metabat_bin-0408	00010	0.0012	11.5	2.2	0.0032	10.1	0.6	2.5	1	hypothetical protein
+cogOTU_300	4QFT7	1	Loc090116-7m_megahit_metabat_bin-1077	00002	0.00043	12.2	0.0	0.00077	11.4	0.0	1.3	1	UDP-4-amino-4-deoxy-L-arabinose--oxoglutarate aminotransferase
+cogOTU_300	4QFT7	1	Loc090402-1m_megahit_metabat_bin-0847	00019	0.00043	12.2	0.0	0.00077	11.4	0.0	1.3	1	UDP-4-amino-4-deoxy-L-arabinose--oxoglutarate aminotransferase
+cogOTU_300	4QFT7	1	Loc090402-7m_megahit_metabat_bin-0698	00017	0.00043	12.2	0.0	0.00077	11.4	0.0	1.3	1	UDP-4-amino-4-deoxy-L-arabinose--oxoglutarate aminotransferase
+cogOTU_300	4QFT7	1	Loc090519-7m_megahit_metabat_bin-0408	00005	0.00043	12.2	0.0	0.00077	11.4	0.0	1.3	1	UDP-4-amino-4-deoxy-L-arabinose--oxoglutarate aminotransferase
+cogOTU_300	4QCH6	1	Loc090402-1m_megahit_metabat_bin-0847	00011	0.00012	12.9	0.0	0.00017	12.3	0.0	1.1	1	hypothetical protein
+cogOTU_300	4QCH6	1	Loc090402-7m_megahit_metabat_bin-0698	00014	0.00012	12.9	0.0	0.00017	12.3	0.0	1.1	1	hypothetical protein
+cogOTU_300	4QCH6	1	Loc090519-7m_megahit_metabat_bin-0408	00012	0.00012	12.9	0.0	0.00017	12.3	0.0	1.1	1	hypothetical protein
+cogOTU_300	4QCH6	1	Loc090116-7m_megahit_metabat_bin-1077	00017	0.00012	12.9	0.0	0.00017	12.3	0.0	1.1	1	hypothetical protein
+cogOTU_300	4QDQ3	1	Loc090116-7m_megahit_metabat_bin-1077	00008	0.00036	13.2	2.6	0.00038	13.1	0.4	2.3	1	putative undecaprenyl-phosphate N-acetylglucosaminyl 1-phosphate transferase
+cogOTU_300	4QDQ3	1	Loc090402-1m_megahit_metabat_bin-0847	00002	0.00036	13.2	2.6	0.00038	13.1	0.4	2.3	1	putative undecaprenyl-phosphate N-acetylglucosaminyl 1-phosphate transferase
+cogOTU_300	4QDQ3	1	Loc090402-7m_megahit_metabat_bin-0698	00005	0.00036	13.2	2.6	0.00038	13.1	0.4	2.3	1	putative undecaprenyl-phosphate N-acetylglucosaminyl 1-phosphate transferase
+cogOTU_300	4QDQ3	1	Loc090519-7m_megahit_metabat_bin-0408	00015	0.00036	13.2	2.6	0.00038	13.1	0.4	2.3	1	putative undecaprenyl-phosphate N-acetylglucosaminyl 1-phosphate transferase
+cogOTU_300	4QCFA	1	Loc090116-7m_megahit_metabat_bin-1077	00001	8.7e-18	57.1	0.0	1.3e-17	56.5	0.0	1.3	1	UDP-N-acetylglucosamine 4,6-dehydratase (inverting)
+cogOTU_300	4QCFA	1	Loc090402-1m_megahit_metabat_bin-0847	00018	8.7e-18	57.1	0.0	1.3e-17	56.5	0.0	1.3	1	UDP-N-acetylglucosamine 4,6-dehydratase (inverting)
+cogOTU_300	4QCFA	1	Loc090402-7m_megahit_metabat_bin-0698	00016	8.7e-18	57.1	0.0	1.3e-17	56.5	0.0	1.3	1	UDP-N-acetylglucosamine 4,6-dehydratase (inverting)
+cogOTU_300	4QCFA	1	Loc090519-7m_megahit_metabat_bin-0408	00004	8.7e-18	57.1	0.0	1.3e-17	56.5	0.0	1.3	1	UDP-N-acetylglucosamine 4,6-dehydratase (inverting)
+cogOTU_300	4QCFA	1	Loc090116-7m_megahit_metabat_bin-1077	00025	7.7e-07	21.1	0.0	1.1e-06	20.6	0.0	1.2	1	3-oxoacyl-[acyl-carrier-protein] reductase FabG
+cogOTU_300	4QCFA	1	Loc090519-7m_megahit_metabat_bin-0408	00003	7.7e-07	21.1	0.0	1.1e-06	20.6	0.0	1.2	1	3-oxoacyl-[acyl-carrier-protein] reductase FabG
+cogOTU_300	4QCFA	1	Loc090116-7m_megahit_metabat_bin-1077	00005	9e-07	20.9	0.0	1.4e-06	20.3	0.0	1.2	1	3-oxoacyl-[acyl-carrier-protein] reductase FabG
+cogOTU_300	4QAW0	1	Loc090402-1m_megahit_metabat_bin-0847	00011	0.00061	12.2	0.0	0.00098	11.5	0.0	1.2	1	hypothetical protein
+cogOTU_300	4QAW0	1	Loc090402-7m_megahit_metabat_bin-0698	00014	0.00061	12.2	0.0	0.00098	11.5	0.0	1.2	1	hypothetical protein
+cogOTU_300	4QAW0	1	Loc090519-7m_megahit_metabat_bin-0408	00012	0.00061	12.2	0.0	0.00098	11.5	0.0	1.2	1	hypothetical protein
+cogOTU_300	4QAW0	1	Loc090116-7m_megahit_metabat_bin-1077	00017	0.00061	12.2	0.0	0.00098	11.5	0.0	1.2	1	hypothetical protein
+cogOTU_300	4QAVY	1	Loc090402-1m_megahit_metabat_bin-0847	00016	0.00053	12.5	0.0	0.00076	12.0	0.0	1.4	1	hypothetical protein
+cogOTU_300	4QB5I	1	Loc090402-1m_megahit_metabat_bin-0847	00011	0.00012	13.8	0.0	0.00016	13.4	0.0	1.2	1	hypothetical protein
+cogOTU_300	4QB5I	1	Loc090402-7m_megahit_metabat_bin-0698	00014	0.00012	13.8	0.0	0.00016	13.4	0.0	1.2	1	hypothetical protein
+cogOTU_300	4QB5I	1	Loc090519-7m_megahit_metabat_bin-0408	00012	0.00012	13.8	0.0	0.00016	13.4	0.0	1.2	1	hypothetical protein
+cogOTU_300	4QB5I	1	Loc090116-7m_megahit_metabat_bin-1077	00017	0.00012	13.8	0.0	0.00016	13.4	0.0	1.2	1	hypothetical protein
+cogOTU_300	4QAWG	1	Loc090116-7m_megahit_metabat_bin-1077	00017	0.0002	13.0	0.0	0.00032	12.4	0.0	1.2	1	hypothetical protein
+cogOTU_300	4QAWG	1	Loc090402-1m_megahit_metabat_bin-0847	00011	0.0002	13.0	0.0	0.00032	12.4	0.0	1.2	1	hypothetical protein
+cogOTU_300	4QAWG	1	Loc090402-7m_megahit_metabat_bin-0698	00014	0.0002	13.0	0.0	0.00032	12.4	0.0	1.2	1	hypothetical protein
+cogOTU_300	4QAWG	1	Loc090519-7m_megahit_metabat_bin-0408	00012	0.0002	13.0	0.0	0.00032	12.4	0.0	1.2	1	hypothetical protein
+cogOTU_300	4QAR1	1	Loc090402-1m_megahit_metabat_bin-0847	00011	7.8e-05	14.9	0.0	0.00013	14.2	0.0	1.3	1	hypothetical protein
+cogOTU_300	4QAR1	1	Loc090402-7m_megahit_metabat_bin-0698	00014	7.8e-05	14.9	0.0	0.00013	14.2	0.0	1.3	1	hypothetical protein
+cogOTU_300	4QAR1	1	Loc090519-7m_megahit_metabat_bin-0408	00012	7.8e-05	14.9	0.0	0.00013	14.2	0.0	1.3	1	hypothetical protein
+cogOTU_300	4QAR1	1	Loc090116-7m_megahit_metabat_bin-1077	00017	7.9e-05	14.8	0.0	0.00013	14.2	0.0	1.3	1	hypothetical protein
+cogOTU_300	4QAJP	1	Loc090116-7m_megahit_metabat_bin-1077	00017	0.00033	12.1	0.0	0.00049	11.5	0.0	1.1	1	hypothetical protein
+cogOTU_300	4QAJP	1	Loc090402-1m_megahit_metabat_bin-0847	00011	0.00033	12.1	0.0	0.00049	11.5	0.0	1.1	1	hypothetical protein
+cogOTU_300	4QAJP	1	Loc090402-7m_megahit_metabat_bin-0698	00014	0.00033	12.1	0.0	0.00049	11.5	0.0	1.1	1	hypothetical protein
+cogOTU_300	4QAJP	1	Loc090519-7m_megahit_metabat_bin-0408	00012	0.00033	12.1	0.0	0.00049	11.5	0.0	1.1	1	hypothetical protein
+cogOTU_300	4QAMX	0	Loc090519-7m_megahit_metabat_bin-0408	00011	0.085	5.8	10.3	0.00064	12.6	1.1	2.2	1	hypothetical protein
+cogOTU_300	4QC21	1	Loc090116-7m_megahit_metabat_bin-1077	00001	7.7e-14	43.7	0.1	1.1e-13	43.1	0.1	1.2	1	UDP-N-acetylglucosamine 4,6-dehydratase (inverting)
+cogOTU_300	4QC21	1	Loc090402-1m_megahit_metabat_bin-0847	00018	7.7e-14	43.7	0.1	1.1e-13	43.1	0.1	1.2	1	UDP-N-acetylglucosamine 4,6-dehydratase (inverting)
+cogOTU_300	4QC21	1	Loc090402-7m_megahit_metabat_bin-0698	00016	7.7e-14	43.7	0.1	1.1e-13	43.1	0.1	1.2	1	UDP-N-acetylglucosamine 4,6-dehydratase (inverting)
+cogOTU_300	4QC21	1	Loc090519-7m_megahit_metabat_bin-0408	00004	7.7e-14	43.7	0.1	1.1e-13	43.1	0.1	1.2	1	UDP-N-acetylglucosamine 4,6-dehydratase (inverting)
+cogOTU_300	4QGAA	1	Loc090402-1m_megahit_metabat_bin-0847	00011	0.00014	13.8	0.0	0.00024	13.0	0.0	1.3	1	hypothetical protein
+cogOTU_300	4QGAA	1	Loc090402-7m_megahit_metabat_bin-0698	00014	0.00014	13.8	0.0	0.00024	13.0	0.0	1.3	1	hypothetical protein
+cogOTU_300	4QGAA	1	Loc090519-7m_megahit_metabat_bin-0408	00012	0.00014	13.8	0.0	0.00024	13.0	0.0	1.3	1	hypothetical protein
+cogOTU_300	4QGAA	1	Loc090116-7m_megahit_metabat_bin-1077	00017	0.00014	13.8	0.0	0.00024	13.0	0.0	1.3	1	hypothetical protein
+cogOTU_300	4QASH	1	Loc090402-1m_megahit_metabat_bin-0847	00011	0.00011	14.2	0.0	0.00017	13.7	0.0	1.2	1	hypothetical protein
+cogOTU_300	4QASH	1	Loc090402-7m_megahit_metabat_bin-0698	00014	0.00011	14.2	0.0	0.00017	13.7	0.0	1.2	1	hypothetical protein
+cogOTU_300	4QASH	1	Loc090519-7m_megahit_metabat_bin-0408	00012	0.00011	14.2	0.0	0.00017	13.7	0.0	1.2	1	hypothetical protein
+cogOTU_300	4QASH	1	Loc090116-7m_megahit_metabat_bin-1077	00017	0.00011	14.2	0.0	0.00017	13.7	0.0	1.2	1	hypothetical protein
+cogOTU_300	4QB58	1	Loc090116-7m_megahit_metabat_bin-1077	00017	0.00019	12.6	0.0	0.00034	11.8	0.0	1.3	1	hypothetical protein
+cogOTU_300	4QB58	1	Loc090402-1m_megahit_metabat_bin-0847	00011	0.00019	12.6	0.0	0.00034	11.8	0.0	1.3	1	hypothetical protein
+cogOTU_300	4QB58	1	Loc090402-7m_megahit_metabat_bin-0698	00014	0.00019	12.6	0.0	0.00034	11.8	0.0	1.3	1	hypothetical protein
+cogOTU_300	4QB58	1	Loc090519-7m_megahit_metabat_bin-0408	00012	0.00019	12.6	0.0	0.00034	11.8	0.0	1.3	1	hypothetical protein

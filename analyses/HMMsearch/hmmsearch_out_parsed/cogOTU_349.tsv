@@ -1,0 +1,37 @@
+cogOTU_349	4QCWM	1	Loc081215-1m_megahit_metabat_bin-0788	00005	3.1e-21	68.4	0.0	2.4e-19	62.2	0.0	2.0	1	UTP--glucose-1-phosphate uridylyltransferase
+cogOTU_349	4QCWM	1	Loc081215-6m_megahit_metabat_bin-1545	00018	1.2e-20	66.5	0.0	9.1e-19	60.2	0.0	2.0	1	UTP--glucose-1-phosphate uridylyltransferase
+cogOTU_349	4QCWM	1	Loc090116-7m_megahit_metabat_bin-0216	00009	1.3e-20	66.4	0.0	9.9e-19	60.1	0.0	2.0	1	UTP--glucose-1-phosphate uridylyltransferase
+cogOTU_349	4QCWM	1	Loc081215-9m_megahit_metabat_bin-0962	00012	1.4e-20	66.2	0.0	9.2e-19	60.2	0.0	2.0	1	UTP--glucose-1-phosphate uridylyltransferase
+cogOTU_349	4QCWM	1	Loc090116-8m_megahit_metabat_bin-0527	00015	1.5e-20	66.1	0.0	1.2e-18	59.9	0.0	2.0	1	UTP--glucose-1-phosphate uridylyltransferase
+cogOTU_349	4QCWM	1	Loc090116-9m_megahit_metabat_bin-0714	00003	1.5e-20	66.1	0.0	1.2e-18	59.9	0.0	2.0	1	UTP--glucose-1-phosphate uridylyltransferase
+cogOTU_349	4QCWM	1	Loc090907-8-6m_megahit_metabat_bin-757	00002	1.5e-20	66.1	0.0	1.2e-18	59.9	0.0	2.0	1	UTP--glucose-1-phosphate uridylyltransferase
+cogOTU_349	4QBQH	1	Loc080925-5-5m_megahit_metabat_bin-0354	00008	6.8e-36	117.1	2.8	1.2e-33	109.7	0.4	2.0	2	O-antigen biosynthesis glycosyltransferase WbnK
+cogOTU_349	4QBQH	1	Loc081215-6m_megahit_metabat_bin-1545	00002	6.8e-36	117.1	2.8	1.2e-33	109.7	0.4	2.0	2	O-antigen biosynthesis glycosyltransferase WbnK
+cogOTU_349	4QBQH	1	Loc081215-9m_megahit_metabat_bin-0962	00015	6.8e-36	117.1	2.8	1.2e-33	109.7	0.4	2.0	2	O-antigen biosynthesis glycosyltransferase WbnK
+cogOTU_349	4QBQH	1	Loc090116-8m_megahit_metabat_bin-0527	00021	6.8e-36	117.1	2.8	1.2e-33	109.7	0.4	2.0	2	O-antigen biosynthesis glycosyltransferase WbnK
+cogOTU_349	4QG9U	1	Loc090116-8m_megahit_metabat_bin-0527	00008	0.0082	8.2	28.8	0.0086	8.1	28.8	1.0	1	hypothetical protein
+cogOTU_349	4QG9U	0	Loc081215-1m_megahit_metabat_bin-0788	00014	0.012	7.7	29.2	0.013	7.6	29.2	1.0	1	hypothetical protein
+cogOTU_349	4QG9U	0	Loc090116-9m_megahit_metabat_bin-0714	00008	0.06	5.4	29.5	0.062	5.3	29.5	1.0	1	hypothetical protein
+cogOTU_349	4QF4P	1	Loc090907-8-6m_megahit_metabat_bin-757	00008	0.00046	13.3	0.0	0.00096	12.2	0.0	1.6	1	hypothetical protein
+cogOTU_349	4QF4P	1	Loc081215-6m_megahit_metabat_bin-1545	00022	0.00091	12.3	0.0	0.0034	10.5	0.0	2.0	1	hypothetical protein
+cogOTU_349	4QF4P	1	Loc090116-8m_megahit_metabat_bin-0527	00010	0.00092	12.3	0.0	0.0034	10.5	0.0	2.0	1	hypothetical protein
+cogOTU_349	4QF4P	1	Loc090116-7m_megahit_metabat_bin-0216	00002	0.00095	12.3	0.0	0.0036	10.4	0.0	2.0	1	hypothetical protein
+cogOTU_349	4QDMX	1	Loc080925-5-5m_megahit_metabat_bin-0354	00012	0.00044	11.9	0.0	0.00054	11.6	0.0	1.1	1	Transcriptional activator protein Anr
+cogOTU_349	4QDMX	1	Loc081215-1m_megahit_metabat_bin-0788	00015	0.00044	11.9	0.0	0.00054	11.6	0.0	1.1	1	Transcriptional activator protein Anr
+cogOTU_349	4QDMX	1	Loc081215-6m_megahit_metabat_bin-1545	00023	0.00044	11.9	0.0	0.00054	11.6	0.0	1.1	1	Transcriptional activator protein Anr
+cogOTU_349	4QDMX	1	Loc081215-9m_megahit_metabat_bin-0962	00001	0.00044	11.9	0.0	0.00054	11.6	0.0	1.1	1	Transcriptional activator protein Anr
+cogOTU_349	4QDMX	1	Loc090116-7m_megahit_metabat_bin-0216	00001	0.00044	11.9	0.0	0.00054	11.6	0.0	1.1	1	Transcriptional activator protein Anr
+cogOTU_349	4QDMX	1	Loc090116-8m_megahit_metabat_bin-0527	00009	0.00044	11.9	0.0	0.00054	11.6	0.0	1.1	1	Transcriptional activator protein Anr
+cogOTU_349	4QDMX	1	Loc090116-9m_megahit_metabat_bin-0714	00009	0.00044	11.9	0.0	0.00054	11.6	0.0	1.1	1	Transcriptional activator protein Anr
+cogOTU_349	4QH0I	1	Loc090907-8-6m_megahit_metabat_bin-757	00007	0.00012	12.7	0.0	0.00013	12.6	0.0	1.0	1	hypothetical protein
+cogOTU_349	4QANK	1	Loc090907-8-6m_megahit_metabat_bin-757	00008	0.00038	13.8	0.2	0.0011	12.3	0.2	1.9	1	hypothetical protein
+cogOTU_349	4QANK	1	Loc081215-6m_megahit_metabat_bin-1545	00022	0.00085	12.7	0.1	0.0036	10.7	0.1	2.2	1	hypothetical protein
+cogOTU_349	4QANK	1	Loc090116-9m_megahit_metabat_bin-0714	00010	0.00086	12.7	0.1	0.0036	10.7	0.1	2.2	1	hypothetical protein
+cogOTU_349	4QANK	1	Loc090116-8m_megahit_metabat_bin-0527	00010	0.00086	12.7	0.1	0.0036	10.7	0.1	2.2	1	hypothetical protein
+cogOTU_349	4QANK	1	Loc081215-1m_megahit_metabat_bin-0788	00016	0.00087	12.7	0.1	0.0036	10.7	0.1	2.2	1	hypothetical protein
+cogOTU_349	4QANK	1	Loc090116-7m_megahit_metabat_bin-0216	00002	0.00091	12.6	0.1	0.0038	10.7	0.1	2.2	1	hypothetical protein
+cogOTU_349	4QCXA	1	Loc080925-5-5m_megahit_metabat_bin-0354	00009	3.4e-09	29.1	0.1	5.1e-09	28.5	0.1	1.2	1	hypothetical protein
+cogOTU_349	4QCXA	1	Loc081215-6m_megahit_metabat_bin-1545	00003	3.4e-09	29.1	0.1	5.1e-09	28.5	0.1	1.2	1	hypothetical protein
+cogOTU_349	4QCXA	1	Loc081215-9m_megahit_metabat_bin-0962	00016	3.4e-09	29.1	0.1	5.1e-09	28.5	0.1	1.2	1	hypothetical protein
+cogOTU_349	4QCXA	1	Loc090116-8m_megahit_metabat_bin-0527	00022	4.5e-09	28.7	0.1	6.4e-09	28.1	0.1	1.2	1	hypothetical protein
+cogOTU_349	4QDUB	1	Loc081215-6m_megahit_metabat_bin-1545	00007	0.00091	12.1	0.3	0.0048	9.8	0.1	2.2	1	hypothetical protein

@@ -1,0 +1,196 @@
+cogOTU_2290	4QEB9	0	Loc090519-4m_megahit_metabat_bin-383	00159	0.044	5.5	3.0	0.059	5.1	3.0	1.0	1	hypothetical protein
+cogOTU_2290	4QEB9	0	Loc090519-4m_megahit_metabat_bin-566	00159	0.044	5.5	3.0	0.059	5.1	3.0	1.0	1	hypothetical protein
+cogOTU_2290	4QC53	1	Loc090519-4m_megahit_metabat_bin-383	00118	0.0026	11.7	0.1	0.0029	11.5	0.1	1.1	1	putative D,D-dipeptide transport ATP-binding protein DdpF
+cogOTU_2290	4QC53	1	Loc090519-4m_megahit_metabat_bin-566	00118	0.0026	11.7	0.1	0.0029	11.5	0.1	1.1	1	putative D,D-dipeptide transport ATP-binding protein DdpF
+cogOTU_2290	4QC53	1	Loclat_megahit_metabat_bin-17312	00022	0.0026	11.7	0.1	0.0029	11.5	0.1	1.1	1	putative D,D-dipeptide transport ATP-binding protein DdpF
+cogOTU_2290	4QBRE	1	Loc090519-4m_megahit_metabat_bin-383	00153	3.3e-36	119.7	0.0	7.4e-34	112.0	0.0	2.2	2	IS3 family transposase ISAtu3
+cogOTU_2290	4QBRE	1	Loc090519-4m_megahit_metabat_bin-566	00153	3.3e-36	119.7	0.0	7.4e-34	112.0	0.0	2.2	2	IS3 family transposase ISAtu3
+cogOTU_2290	4QBRE	1	Loc090519-4m_megahit_metabat_bin-383	00088	0.00034	14.5	0.0	0.00034	14.5	0.0	1.0	1	hypothetical protein
+cogOTU_2290	4QBRE	1	Loc090519-4m_megahit_metabat_bin-566	00088	0.00034	14.5	0.0	0.00034	14.5	0.0	1.0	1	hypothetical protein
+cogOTU_2290	4QH80	1	Loc090519-4m_megahit_metabat_bin-383	00033	0.0008	13.1	0.0	0.0011	12.7	0.0	1.1	1	hypothetical protein
+cogOTU_2290	4QH80	1	Loc090519-4m_megahit_metabat_bin-566	00033	0.0008	13.1	0.0	0.0011	12.7	0.0	1.1	1	hypothetical protein
+cogOTU_2290	4QBFG	1	Loclat_megahit_metabat_bin-17312	00025	8.8e-11	36.4	0.2	1.4e-10	35.7	0.2	1.3	1	Phthalate 4,5-dioxygenase oxygenase reductase subunit
+cogOTU_2290	4QBFG	1	Loc090519-4m_megahit_metabat_bin-383	00163	1e-10	36.2	0.3	1.7e-10	35.5	0.3	1.3	1	Phthalate 4,5-dioxygenase oxygenase reductase subunit
+cogOTU_2290	4QBFG	1	Loc090519-4m_megahit_metabat_bin-566	00163	1e-10	36.2	0.3	1.7e-10	35.5	0.3	1.3	1	Phthalate 4,5-dioxygenase oxygenase reductase subunit
+cogOTU_2290	4QBFG	1	Loc090519-4m_megahit_metabat_bin-383	00040	1.6e-08	29.1	0.1	2.4e-08	28.6	0.1	1.2	1	Phthalate dioxygenase reductase
+cogOTU_2290	4QBFG	1	Loc090519-4m_megahit_metabat_bin-566	00040	1.6e-08	29.1	0.1	2.4e-08	28.6	0.1	1.2	1	Phthalate dioxygenase reductase
+cogOTU_2290	4QAKZ	1	Loc090519-4m_megahit_metabat_bin-383	00023	3.6e-11	37.2	0.0	5.7e-06	20.0	0.0	2.0	2	Osmoprotectant import ATP-binding protein OsmV
+cogOTU_2290	4QAKZ	1	Loc090519-4m_megahit_metabat_bin-566	00023	3.6e-11	37.2	0.0	5.7e-06	20.0	0.0	2.0	2	Osmoprotectant import ATP-binding protein OsmV
+cogOTU_2290	4QAKZ	1	Loc090519-4m_megahit_metabat_bin-383	00094	7.4e-09	29.5	0.0	1.5e-08	28.5	0.0	1.4	1	Oligopeptide transport ATP-binding protein OppD
+cogOTU_2290	4QAKZ	1	Loc090519-4m_megahit_metabat_bin-566	00094	7.4e-09	29.5	0.0	1.5e-08	28.5	0.0	1.4	1	Oligopeptide transport ATP-binding protein OppD
+cogOTU_2290	4QAKZ	1	Loclat_megahit_metabat_bin-19828	00009	7.4e-09	29.5	0.0	1.5e-08	28.5	0.0	1.4	1	Oligopeptide transport ATP-binding protein OppD
+cogOTU_2290	4QAKZ	1	Loc090519-4m_megahit_metabat_bin-383	00058	8.1e-09	29.4	0.0	1.1e-05	19.0	0.0	2.0	2	Arginine transport ATP-binding protein ArtM
+cogOTU_2290	4QAKZ	1	Loc090519-4m_megahit_metabat_bin-566	00058	8.1e-09	29.4	0.0	1.1e-05	19.0	0.0	2.0	2	Arginine transport ATP-binding protein ArtM
+cogOTU_2290	4QAKZ	1	Loc090519-4m_megahit_metabat_bin-383	00015	1.7e-07	25.0	0.0	9.6e-07	22.5	0.0	1.7	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QAKZ	1	Loc090519-4m_megahit_metabat_bin-566	00015	1.7e-07	25.0	0.0	9.6e-07	22.5	0.0	1.7	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QAKZ	1	Loclat_megahit_metabat_bin-17931	00012	1.7e-07	25.0	0.0	9.6e-07	22.5	0.0	1.7	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QAKZ	1	Loc090519-4m_megahit_metabat_bin-383	00014	3.6e-07	24.0	0.0	4.8e-07	23.5	0.0	1.4	1	putative D,D-dipeptide transport ATP-binding protein DdpD
+cogOTU_2290	4QAKZ	1	Loc090519-4m_megahit_metabat_bin-566	00014	3.6e-07	24.0	0.0	4.8e-07	23.5	0.0	1.4	1	putative D,D-dipeptide transport ATP-binding protein DdpD
+cogOTU_2290	4QAKZ	1	Loclat_megahit_metabat_bin-17931	00011	3.6e-07	24.0	0.0	4.8e-07	23.5	0.0	1.4	1	putative D,D-dipeptide transport ATP-binding protein DdpD
+cogOTU_2290	4QAKZ	1	Loc090519-4m_megahit_metabat_bin-383	00043	1.4e-05	18.7	0.0	1.5e-05	18.6	0.0	1.0	1	Cell division ATP-binding protein FtsE
+cogOTU_2290	4QAKZ	1	Loc090519-4m_megahit_metabat_bin-566	00043	1.4e-05	18.7	0.0	1.5e-05	18.6	0.0	1.0	1	Cell division ATP-binding protein FtsE
+cogOTU_2290	4QAKZ	1	Loc090519-4m_megahit_metabat_bin-383	00093	1.5e-05	18.6	0.0	4e-05	17.2	0.0	1.4	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QAKZ	1	Loc090519-4m_megahit_metabat_bin-566	00093	1.5e-05	18.6	0.0	4e-05	17.2	0.0	1.4	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QAKZ	1	Loclat_megahit_metabat_bin-19828	00010	1.5e-05	18.6	0.0	4e-05	17.2	0.0	1.4	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QAKZ	1	Loc090519-4m_megahit_metabat_bin-383	00059	0.0001	15.8	0.0	0.0038	10.6	0.0	2.0	2	High-affinity branched-chain amino acid transport ATP-binding protein LivF
+cogOTU_2290	4QAKZ	1	Loc090519-4m_megahit_metabat_bin-566	00059	0.0001	15.8	0.0	0.0038	10.6	0.0	2.0	2	High-affinity branched-chain amino acid transport ATP-binding protein LivF
+cogOTU_2290	4QH4K	1	Loc090519-4m_megahit_metabat_bin-383	00091	5.6e-30	98.2	0.0	8.1e-30	97.6	0.0	1.1	1	hypothetical protein
+cogOTU_2290	4QH4K	1	Loc090519-4m_megahit_metabat_bin-566	00091	5.6e-30	98.2	0.0	8.1e-30	97.6	0.0	1.1	1	hypothetical protein
+cogOTU_2290	4QGNM	1	Loc090519-4m_megahit_metabat_bin-383	00018	6.6e-42	138.1	0.0	7.7e-42	137.8	0.0	1.0	1	DNA mismatch repair protein MutS
+cogOTU_2290	4QGNM	1	Loc090519-4m_megahit_metabat_bin-566	00018	6.6e-42	138.1	0.0	7.7e-42	137.8	0.0	1.0	1	DNA mismatch repair protein MutS
+cogOTU_2290	4QAQN	1	Loc090519-4m_megahit_metabat_bin-383	00153	0.00053	13.9	0.0	0.00087	13.2	0.0	1.3	1	IS3 family transposase ISAtu3
+cogOTU_2290	4QAQN	1	Loc090519-4m_megahit_metabat_bin-566	00153	0.00053	13.9	0.0	0.00087	13.2	0.0	1.3	1	IS3 family transposase ISAtu3
+cogOTU_2290	4QCBU	1	Loc090519-4m_megahit_metabat_bin-383	00137	0.0017	12.3	0.0	0.0023	11.8	0.0	1.1	1	Glyoxylate/hydroxypyruvate reductase B
+cogOTU_2290	4QCBU	1	Loc090519-4m_megahit_metabat_bin-566	00137	0.0017	12.3	0.0	0.0023	11.8	0.0	1.1	1	Glyoxylate/hydroxypyruvate reductase B
+cogOTU_2290	4QEIK	1	Loc090519-4m_megahit_metabat_bin-383	00137	2.4e-27	90.6	0.0	2.9e-27	90.3	0.0	1.1	1	Glyoxylate/hydroxypyruvate reductase B
+cogOTU_2290	4QEIK	1	Loc090519-4m_megahit_metabat_bin-566	00137	2.4e-27	90.6	0.0	2.9e-27	90.3	0.0	1.1	1	Glyoxylate/hydroxypyruvate reductase B
+cogOTU_2290	4QEIK	1	Loclat_megahit_metabat_bin-19828	00005	1.1e-26	88.4	0.0	1.5e-26	88.0	0.0	1.1	1	Glyoxylate/hydroxypyruvate reductase A
+cogOTU_2290	4QEIK	1	Loc090519-4m_megahit_metabat_bin-383	00106	1.2e-25	85.0	0.0	1.7e-25	84.5	0.0	1.2	1	Glyoxylate/hydroxypyruvate reductase A
+cogOTU_2290	4QEIK	1	Loc090519-4m_megahit_metabat_bin-566	00106	1.2e-25	85.0	0.0	1.7e-25	84.5	0.0	1.2	1	Glyoxylate/hydroxypyruvate reductase A
+cogOTU_2290	4QEDQ	1	Loc090519-4m_megahit_metabat_bin-383	00058	0.00089	11.9	0.1	0.022	7.3	0.0	2.2	2	Arginine transport ATP-binding protein ArtM
+cogOTU_2290	4QEDQ	1	Loc090519-4m_megahit_metabat_bin-566	00058	0.00089	11.9	0.1	0.022	7.3	0.0	2.2	2	Arginine transport ATP-binding protein ArtM
+cogOTU_2290	4QEDQ	1	Loc090519-4m_megahit_metabat_bin-383	00023	0.0065	9.0	0.0	0.16	4.4	0.0	2.0	2	Osmoprotectant import ATP-binding protein OsmV
+cogOTU_2290	4QEDQ	1	Loc090519-4m_megahit_metabat_bin-566	00023	0.0065	9.0	0.0	0.16	4.4	0.0	2.0	2	Osmoprotectant import ATP-binding protein OsmV
+cogOTU_2290	4QBY0	1	Loc090519-4m_megahit_metabat_bin-383	00023	0.00019	15.1	0.1	0.00028	14.6	0.1	1.1	1	Osmoprotectant import ATP-binding protein OsmV
+cogOTU_2290	4QBY0	1	Loc090519-4m_megahit_metabat_bin-566	00023	0.00019	15.1	0.1	0.00028	14.6	0.1	1.1	1	Osmoprotectant import ATP-binding protein OsmV
+cogOTU_2290	4QBY0	1	Loc090519-4m_megahit_metabat_bin-383	00015	0.0035	11.0	0.1	0.0048	10.5	0.1	1.1	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QBY0	1	Loc090519-4m_megahit_metabat_bin-566	00015	0.0035	11.0	0.1	0.0048	10.5	0.1	1.1	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QBY0	1	Loclat_megahit_metabat_bin-17931	00012	0.0035	11.0	0.1	0.0048	10.5	0.1	1.1	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QBU2	1	Loc090519-4m_megahit_metabat_bin-383	00014	0.005	11.0	0.0	0.0072	10.4	0.0	1.2	1	putative D,D-dipeptide transport ATP-binding protein DdpD
+cogOTU_2290	4QBU2	1	Loc090519-4m_megahit_metabat_bin-566	00014	0.005	11.0	0.0	0.0072	10.4	0.0	1.2	1	putative D,D-dipeptide transport ATP-binding protein DdpD
+cogOTU_2290	4QBU2	1	Loclat_megahit_metabat_bin-17931	00011	0.005	11.0	0.0	0.0072	10.4	0.0	1.2	1	putative D,D-dipeptide transport ATP-binding protein DdpD
+cogOTU_2290	4QF3X	1	Loc090519-4m_megahit_metabat_bin-383	00063	5.1e-14	46.7	1.9	6.2e-13	43.1	1.9	2.1	1	Gluconate 5-dehydrogenase
+cogOTU_2290	4QF3X	1	Loc090519-4m_megahit_metabat_bin-566	00063	5.1e-14	46.7	1.9	6.2e-13	43.1	1.9	2.1	1	Gluconate 5-dehydrogenase
+cogOTU_2290	4QF3X	1	Loc090519-4m_megahit_metabat_bin-383	00068	7.8e-10	33.0	0.4	6.4e-06	20.2	0.0	2.5	2	5-keto-D-gluconate 5-reductase
+cogOTU_2290	4QF3X	1	Loc090519-4m_megahit_metabat_bin-566	00068	7.8e-10	33.0	0.4	6.4e-06	20.2	0.0	2.5	2	5-keto-D-gluconate 5-reductase
+cogOTU_2290	4QF3X	1	Loc090519-4m_megahit_metabat_bin-383	00111	1.7e-05	18.8	0.0	2.3e-05	18.3	0.0	1.2	1	2-keto-3-deoxy-L-fuconate dehydrogenase
+cogOTU_2290	4QF3X	1	Loc090519-4m_megahit_metabat_bin-566	00111	1.7e-05	18.8	0.0	2.3e-05	18.3	0.0	1.2	1	2-keto-3-deoxy-L-fuconate dehydrogenase
+cogOTU_2290	4QF3X	1	Loclat_megahit_metabat_bin-17312	00011	1.7e-05	18.8	0.0	2.3e-05	18.3	0.0	1.2	1	2-keto-3-deoxy-L-fuconate dehydrogenase
+cogOTU_2290	4QBIX	1	Loclat_megahit_metabat_bin-17312	00026	1.5e-05	19.4	0.0	2.5e-05	18.6	0.0	1.4	1	Transcriptional regulator SlyA
+cogOTU_2290	4QBIX	1	Loc090519-4m_megahit_metabat_bin-383	00164	1.5e-05	19.4	0.0	2.5e-05	18.6	0.0	1.4	1	Transcriptional regulator SlyA
+cogOTU_2290	4QBIX	1	Loc090519-4m_megahit_metabat_bin-566	00164	1.5e-05	19.4	0.0	2.5e-05	18.6	0.0	1.4	1	Transcriptional regulator SlyA
+cogOTU_2290	4QDYF	1	Loc090519-4m_megahit_metabat_bin-383	00141	0.0035	11.8	1.0	0.005	11.3	0.0	1.8	1	C4-dicarboxylate TRAP transporter large permease protein DctM
+cogOTU_2290	4QDYF	1	Loc090519-4m_megahit_metabat_bin-566	00141	0.0035	11.8	1.0	0.005	11.3	0.0	1.8	1	C4-dicarboxylate TRAP transporter large permease protein DctM
+cogOTU_2290	4QGJE	1	Loc090519-4m_megahit_metabat_bin-383	00144	0.001	14.1	0.0	0.002	13.2	0.0	1.4	1	3-oxoadipate CoA-transferase subunit B
+cogOTU_2290	4QGJE	1	Loc090519-4m_megahit_metabat_bin-566	00144	0.001	14.1	0.0	0.002	13.2	0.0	1.4	1	3-oxoadipate CoA-transferase subunit B
+cogOTU_2290	4QH20	1	Loc090519-4m_megahit_metabat_bin-383	00013	0.005	11.5	0.3	0.005	11.5	0.3	3.2	1	putative D,D-dipeptide transport system permease protein DdpC
+cogOTU_2290	4QH20	1	Loc090519-4m_megahit_metabat_bin-566	00013	0.005	11.5	0.3	0.005	11.5	0.3	3.2	1	putative D,D-dipeptide transport system permease protein DdpC
+cogOTU_2290	4QH20	1	Loclat_megahit_metabat_bin-17931	00010	0.005	11.5	0.3	0.005	11.5	0.3	3.2	1	putative D,D-dipeptide transport system permease protein DdpC
+cogOTU_2290	4QC38	1	Loc090519-4m_megahit_metabat_bin-383	00039	0.0028	11.9	0.0	0.004	11.4	0.0	1.2	1	HTH-type transcriptional regulator TsaR
+cogOTU_2290	4QC38	1	Loc090519-4m_megahit_metabat_bin-566	00039	0.0028	11.9	0.0	0.004	11.4	0.0	1.2	1	HTH-type transcriptional regulator TsaR
+cogOTU_2290	4QF4X	1	Loclat_megahit_metabat_bin-17312	00023	0.0023	13.1	0.0	0.0048	12.1	0.0	1.4	1	4-hydroxy-2-oxovalerate aldolase
+cogOTU_2290	4QF4X	1	Loc090519-4m_megahit_metabat_bin-383	00119	0.0026	13.0	0.0	0.0054	12.0	0.0	1.4	1	4-hydroxy-2-oxovalerate aldolase
+cogOTU_2290	4QF4X	1	Loc090519-4m_megahit_metabat_bin-566	00119	0.0026	13.0	0.0	0.0054	12.0	0.0	1.4	1	4-hydroxy-2-oxovalerate aldolase
+cogOTU_2290	4QBT2	1	Loc090519-4m_megahit_metabat_bin-383	00052	3.4e-05	18.1	0.1	4.2e-05	17.8	0.1	1.3	1	hypothetical protein
+cogOTU_2290	4QBT2	1	Loc090519-4m_megahit_metabat_bin-566	00052	3.4e-05	18.1	0.1	4.2e-05	17.8	0.1	1.3	1	hypothetical protein
+cogOTU_2290	4QCH6	1	Loc090519-4m_megahit_metabat_bin-383	00093	0.0052	9.6	0.0	0.0078	9.0	0.0	1.2	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QCH6	1	Loc090519-4m_megahit_metabat_bin-566	00093	0.0052	9.6	0.0	0.0078	9.0	0.0	1.2	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QCH6	1	Loclat_megahit_metabat_bin-19828	00010	0.0052	9.6	0.0	0.0078	9.0	0.0	1.2	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QBZX	1	Loc090519-4m_megahit_metabat_bin-383	00153	8.8e-07	23.4	0.4	0.00014	16.4	0.1	2.8	2	IS3 family transposase ISAtu3
+cogOTU_2290	4QBZX	1	Loc090519-4m_megahit_metabat_bin-566	00153	8.8e-07	23.4	0.4	0.00014	16.4	0.1	2.8	2	IS3 family transposase ISAtu3
+cogOTU_2290	4QAQE	1	Loc090519-4m_megahit_metabat_bin-383	00087	3.5e-46	152.9	0.1	4.3e-46	152.6	0.1	1.0	1	Prophage integrase IntA
+cogOTU_2290	4QAQE	1	Loc090519-4m_megahit_metabat_bin-566	00087	3.5e-46	152.9	0.1	4.3e-46	152.6	0.1	1.0	1	Prophage integrase IntA
+cogOTU_2290	4QAX8	1	Loc090519-4m_megahit_metabat_bin-383	00162	0.0023	12.7	0.0	0.0025	12.6	0.0	1.1	1	hypothetical protein
+cogOTU_2290	4QAX8	1	Loc090519-4m_megahit_metabat_bin-566	00162	0.0023	12.7	0.0	0.0025	12.6	0.0	1.1	1	hypothetical protein
+cogOTU_2290	4QAX8	1	Loclat_megahit_metabat_bin-17312	00024	0.0023	12.7	0.0	0.0025	12.6	0.0	1.1	1	hypothetical protein
+cogOTU_2290	4QCFA	1	Loc090519-4m_megahit_metabat_bin-383	00099	9.9e-18	59.0	0.0	1.2e-17	58.7	0.0	1.1	1	D-erythronate dehydrogenase
+cogOTU_2290	4QCFA	1	Loc090519-4m_megahit_metabat_bin-566	00099	9.9e-18	59.0	0.0	1.2e-17	58.7	0.0	1.1	1	D-erythronate dehydrogenase
+cogOTU_2290	4QCFA	1	Loclat_megahit_metabat_bin-19828	00001	9.9e-18	59.0	0.0	1.2e-17	58.7	0.0	1.1	1	D-erythronate dehydrogenase
+cogOTU_2290	4QCFA	1	Loc090519-4m_megahit_metabat_bin-383	00068	1.6e-05	18.9	0.0	0.00015	15.8	0.0	2.0	1	5-keto-D-gluconate 5-reductase
+cogOTU_2290	4QCFA	1	Loc090519-4m_megahit_metabat_bin-566	00068	1.6e-05	18.9	0.0	0.00015	15.8	0.0	2.0	1	5-keto-D-gluconate 5-reductase
+cogOTU_2290	4QEWP	1	Loc090519-4m_megahit_metabat_bin-383	00023	2.4e-22	73.6	0.0	3.2e-22	73.2	0.0	1.1	1	Osmoprotectant import ATP-binding protein OsmV
+cogOTU_2290	4QEWP	1	Loc090519-4m_megahit_metabat_bin-566	00023	2.4e-22	73.6	0.0	3.2e-22	73.2	0.0	1.1	1	Osmoprotectant import ATP-binding protein OsmV
+cogOTU_2290	4QEWP	1	Loc090519-4m_megahit_metabat_bin-383	00093	9.9e-19	61.6	0.0	3.9e-18	59.7	0.0	1.7	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QEWP	1	Loc090519-4m_megahit_metabat_bin-566	00093	9.9e-19	61.6	0.0	3.9e-18	59.7	0.0	1.7	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QEWP	1	Loclat_megahit_metabat_bin-19828	00010	9.9e-19	61.6	0.0	3.9e-18	59.7	0.0	1.7	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QEWP	1	Loc090519-4m_megahit_metabat_bin-383	00015	1.2e-16	54.8	0.0	3.4e-16	53.3	0.0	1.6	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QEWP	1	Loc090519-4m_megahit_metabat_bin-566	00015	1.2e-16	54.8	0.0	3.4e-16	53.3	0.0	1.6	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QEWP	1	Loclat_megahit_metabat_bin-17931	00012	1.2e-16	54.8	0.0	3.4e-16	53.3	0.0	1.6	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QEWP	1	Loc090519-4m_megahit_metabat_bin-383	00059	9.5e-15	48.5	0.0	1.1e-14	48.3	0.0	1.0	1	High-affinity branched-chain amino acid transport ATP-binding protein LivF
+cogOTU_2290	4QEWP	1	Loc090519-4m_megahit_metabat_bin-566	00059	9.5e-15	48.5	0.0	1.1e-14	48.3	0.0	1.0	1	High-affinity branched-chain amino acid transport ATP-binding protein LivF
+cogOTU_2290	4QEWP	1	Loc090519-4m_megahit_metabat_bin-383	00058	6.8e-13	42.4	0.0	1.1e-12	41.6	0.0	1.2	1	Arginine transport ATP-binding protein ArtM
+cogOTU_2290	4QEWP	1	Loc090519-4m_megahit_metabat_bin-566	00058	6.8e-13	42.4	0.0	1.1e-12	41.6	0.0	1.2	1	Arginine transport ATP-binding protein ArtM
+cogOTU_2290	4QEWP	1	Loc090519-4m_megahit_metabat_bin-383	00094	1.3e-11	38.1	0.0	1e-10	35.1	0.0	1.9	1	Oligopeptide transport ATP-binding protein OppD
+cogOTU_2290	4QEWP	1	Loc090519-4m_megahit_metabat_bin-566	00094	1.3e-11	38.1	0.0	1e-10	35.1	0.0	1.9	1	Oligopeptide transport ATP-binding protein OppD
+cogOTU_2290	4QEWP	1	Loclat_megahit_metabat_bin-19828	00009	1.3e-11	38.1	0.0	1e-10	35.1	0.0	1.9	1	Oligopeptide transport ATP-binding protein OppD
+cogOTU_2290	4QEWP	1	Loc090519-4m_megahit_metabat_bin-383	00014	2.5e-09	30.6	0.0	1.6e-05	18.0	0.0	1.9	2	putative D,D-dipeptide transport ATP-binding protein DdpD
+cogOTU_2290	4QEWP	1	Loc090519-4m_megahit_metabat_bin-566	00014	2.5e-09	30.6	0.0	1.6e-05	18.0	0.0	1.9	2	putative D,D-dipeptide transport ATP-binding protein DdpD
+cogOTU_2290	4QEWP	1	Loclat_megahit_metabat_bin-17931	00011	2.5e-09	30.6	0.0	1.6e-05	18.0	0.0	1.9	2	putative D,D-dipeptide transport ATP-binding protein DdpD
+cogOTU_2290	4QEWP	1	Loc090519-4m_megahit_metabat_bin-383	00043	3.1e-09	30.2	0.0	3.5e-09	30.1	0.0	1.0	1	Cell division ATP-binding protein FtsE
+cogOTU_2290	4QEWP	1	Loc090519-4m_megahit_metabat_bin-566	00043	3.1e-09	30.2	0.0	3.5e-09	30.1	0.0	1.0	1	Cell division ATP-binding protein FtsE
+cogOTU_2290	4QAY9	1	Loc090519-4m_megahit_metabat_bin-383	00023	0.0024	11.4	0.1	0.0034	10.9	0.1	1.2	1	Osmoprotectant import ATP-binding protein OsmV
+cogOTU_2290	4QAY9	1	Loc090519-4m_megahit_metabat_bin-566	00023	0.0024	11.4	0.1	0.0034	10.9	0.1	1.2	1	Osmoprotectant import ATP-binding protein OsmV
+cogOTU_2290	4QBDW	1	Loc090519-4m_megahit_metabat_bin-383	00158	0.00011	16.8	0.0	0.0064	11.2	0.0	2.7	2	hypothetical protein
+cogOTU_2290	4QBDW	1	Loc090519-4m_megahit_metabat_bin-566	00158	0.00011	16.8	0.0	0.0064	11.2	0.0	2.7	2	hypothetical protein
+cogOTU_2290	4QAWG	1	Loc090519-4m_megahit_metabat_bin-383	00015	0.00027	14.7	0.3	0.00041	14.1	0.3	1.2	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QAWG	1	Loc090519-4m_megahit_metabat_bin-566	00015	0.00027	14.7	0.3	0.00041	14.1	0.3	1.2	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QAWG	1	Loclat_megahit_metabat_bin-17931	00012	0.00027	14.7	0.3	0.00041	14.1	0.3	1.2	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QAWG	1	Loc090519-4m_megahit_metabat_bin-383	00023	0.00066	13.5	0.2	0.00096	12.9	0.2	1.2	1	Osmoprotectant import ATP-binding protein OsmV
+cogOTU_2290	4QAWG	1	Loc090519-4m_megahit_metabat_bin-566	00023	0.00066	13.5	0.2	0.00096	12.9	0.2	1.2	1	Osmoprotectant import ATP-binding protein OsmV
+cogOTU_2290	4QGQK	1	Loclat_megahit_metabat_bin-19828	00013	0.004	11.6	0.1	0.0063	11.0	0.1	1.2	1	D-galactarolactone cycloisomerase
+cogOTU_2290	4QAR1	1	Loclat_megahit_metabat_bin-17312	00016	1.5e-09	32.5	0.0	2.5e-09	31.8	0.0	1.2	1	Phenol regulator MopR
+cogOTU_2290	4QAR1	1	Loc090519-4m_megahit_metabat_bin-383	00123	1.7e-09	32.3	0.0	2.8e-09	31.6	0.0	1.2	1	Phenol regulator MopR
+cogOTU_2290	4QAR1	1	Loc090519-4m_megahit_metabat_bin-566	00123	1.7e-09	32.3	0.0	2.8e-09	31.6	0.0	1.2	1	Phenol regulator MopR
+cogOTU_2290	4QAR1	1	Loc090519-4m_megahit_metabat_bin-383	00091	7.1e-05	17.1	0.0	9.7e-05	16.7	0.0	1.2	1	hypothetical protein
+cogOTU_2290	4QAR1	1	Loc090519-4m_megahit_metabat_bin-566	00091	7.1e-05	17.1	0.0	9.7e-05	16.7	0.0	1.2	1	hypothetical protein
+cogOTU_2290	4QAR1	1	Loc090519-4m_megahit_metabat_bin-383	00023	0.00013	16.3	1.1	0.00062	14.0	1.1	2.0	1	Osmoprotectant import ATP-binding protein OsmV
+cogOTU_2290	4QAR1	1	Loc090519-4m_megahit_metabat_bin-566	00023	0.00013	16.3	1.1	0.00062	14.0	1.1	2.0	1	Osmoprotectant import ATP-binding protein OsmV
+cogOTU_2290	4QAR1	1	Loc090519-4m_megahit_metabat_bin-383	00015	0.00016	16.0	0.0	0.00028	15.2	0.0	1.4	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QAR1	1	Loc090519-4m_megahit_metabat_bin-566	00015	0.00016	16.0	0.0	0.00028	15.2	0.0	1.4	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QAR1	1	Loclat_megahit_metabat_bin-17931	00012	0.00016	16.0	0.0	0.00028	15.2	0.0	1.4	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QAR1	1	Loc090519-4m_megahit_metabat_bin-383	00058	0.00059	14.1	0.0	0.0011	13.3	0.0	1.4	1	Arginine transport ATP-binding protein ArtM
+cogOTU_2290	4QAR1	1	Loc090519-4m_megahit_metabat_bin-566	00058	0.00059	14.1	0.0	0.0011	13.3	0.0	1.4	1	Arginine transport ATP-binding protein ArtM
+cogOTU_2290	4QAR1	1	Loc090519-4m_megahit_metabat_bin-383	00093	0.0017	12.6	0.0	0.0023	12.1	0.0	1.3	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QAR1	1	Loc090519-4m_megahit_metabat_bin-566	00093	0.0017	12.6	0.0	0.0023	12.1	0.0	1.3	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QAR1	1	Loclat_megahit_metabat_bin-19828	00010	0.0017	12.6	0.0	0.0023	12.1	0.0	1.3	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QBC8	1	Loclat_megahit_metabat_bin-17931	00004	0.0032	11.3	0.1	0.005	10.6	0.1	1.2	1	Histidine ammonia-lyase
+cogOTU_2290	4QBC8	1	Loc090519-4m_megahit_metabat_bin-383	00083	0.0032	11.3	0.1	0.005	10.6	0.1	1.2	1	Histidine ammonia-lyase
+cogOTU_2290	4QBC8	1	Loc090519-4m_megahit_metabat_bin-566	00083	0.0032	11.3	0.1	0.005	10.6	0.1	1.2	1	Histidine ammonia-lyase
+cogOTU_2290	4QASV	1	Loc090519-4m_megahit_metabat_bin-383	00015	0.0049	10.4	0.0	0.007	9.9	0.0	1.3	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QASV	1	Loc090519-4m_megahit_metabat_bin-566	00015	0.0049	10.4	0.0	0.007	9.9	0.0	1.3	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QASV	1	Loclat_megahit_metabat_bin-17931	00012	0.0049	10.4	0.0	0.007	9.9	0.0	1.3	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QASV	1	Loc090519-4m_megahit_metabat_bin-383	00058	0.0056	10.3	0.0	0.017	8.7	0.0	1.6	1	Arginine transport ATP-binding protein ArtM
+cogOTU_2290	4QASV	1	Loc090519-4m_megahit_metabat_bin-566	00058	0.0056	10.3	0.0	0.017	8.7	0.0	1.6	1	Arginine transport ATP-binding protein ArtM
+cogOTU_2290	4QEPP	1	Loc090519-4m_megahit_metabat_bin-383	00155	7.2e-05	17.9	0.1	0.00027	16.1	0.0	1.8	1	HTH-type transcriptional repressor KstR2
+cogOTU_2290	4QEPP	1	Loc090519-4m_megahit_metabat_bin-566	00155	7.2e-05	17.9	0.1	0.00027	16.1	0.0	1.8	1	HTH-type transcriptional repressor KstR2
+cogOTU_2290	4QBFQ	1	Loc090519-4m_megahit_metabat_bin-383	00075	0.0005	13.6	0.0	0.0017	11.8	0.1	1.8	1	putative N-methylproline demethylase
+cogOTU_2290	4QBFQ	1	Loc090519-4m_megahit_metabat_bin-566	00075	0.0005	13.6	0.0	0.0017	11.8	0.1	1.8	1	putative N-methylproline demethylase
+cogOTU_2290	4QC21	1	Loc090519-4m_megahit_metabat_bin-383	00099	9.8e-11	35.6	0.0	1.3e-10	35.2	0.0	1.1	1	D-erythronate dehydrogenase
+cogOTU_2290	4QC21	1	Loc090519-4m_megahit_metabat_bin-566	00099	9.8e-11	35.6	0.0	1.3e-10	35.2	0.0	1.1	1	D-erythronate dehydrogenase
+cogOTU_2290	4QC21	1	Loclat_megahit_metabat_bin-19828	00001	9.8e-11	35.6	0.0	1.3e-10	35.2	0.0	1.1	1	D-erythronate dehydrogenase
+cogOTU_2290	4QDME	1	Loc090519-4m_megahit_metabat_bin-383	00015	0.0091	8.6	0.1	0.012	8.2	0.1	1.0	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QDME	1	Loc090519-4m_megahit_metabat_bin-566	00015	0.0091	8.6	0.1	0.012	8.2	0.1	1.0	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QDME	1	Loclat_megahit_metabat_bin-17931	00012	0.0091	8.6	0.1	0.012	8.2	0.1	1.0	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QBMI	1	Loc090519-4m_megahit_metabat_bin-383	00134	0.0028	12.3	0.1	0.0042	11.7	0.1	1.2	1	3-phenylpropionate/cinnamic acid dioxygenase ferredoxin subunit
+cogOTU_2290	4QBMI	1	Loc090519-4m_megahit_metabat_bin-566	00134	0.0028	12.3	0.1	0.0042	11.7	0.1	1.2	1	3-phenylpropionate/cinnamic acid dioxygenase ferredoxin subunit
+cogOTU_2290	4QHIY	1	Loc090519-4m_megahit_metabat_bin-383	00066	0.00047	13.0	0.1	0.00051	12.9	0.1	1.0	1	hypothetical protein
+cogOTU_2290	4QHIY	1	Loc090519-4m_megahit_metabat_bin-566	00066	0.00047	13.0	0.1	0.00051	12.9	0.1	1.0	1	hypothetical protein
+cogOTU_2290	4QE86	1	Loc090519-4m_megahit_metabat_bin-383	00066	0.00071	14.2	0.1	0.0016	13.1	0.0	1.7	1	hypothetical protein
+cogOTU_2290	4QE86	1	Loc090519-4m_megahit_metabat_bin-566	00066	0.00071	14.2	0.1	0.0016	13.1	0.0	1.7	1	hypothetical protein
+cogOTU_2290	4QE7I	1	Loc090519-4m_megahit_metabat_bin-383	00096	0.003	11.8	0.0	0.0049	11.1	0.0	1.3	1	Glutathione transport system permease protein GsiC
+cogOTU_2290	4QE7I	1	Loc090519-4m_megahit_metabat_bin-566	00096	0.003	11.8	0.0	0.0049	11.1	0.0	1.3	1	Glutathione transport system permease protein GsiC
+cogOTU_2290	4QE7I	1	Loclat_megahit_metabat_bin-19828	00007	0.003	11.8	0.0	0.0049	11.1	0.0	1.3	1	Glutathione transport system permease protein GsiC
+cogOTU_2290	4QE5N	1	Loc090519-4m_megahit_metabat_bin-383	00001	0.00028	15.6	0.0	0.00059	14.6	0.0	1.6	1	hypothetical protein
+cogOTU_2290	4QE5N	1	Loc090519-4m_megahit_metabat_bin-566	00001	0.00028	15.6	0.0	0.00059	14.6	0.0	1.6	1	hypothetical protein
+cogOTU_2290	4QCR3	1	Loc090519-4m_megahit_metabat_bin-383	00023	0.0031	11.7	0.0	0.0047	11.1	0.0	1.2	1	Osmoprotectant import ATP-binding protein OsmV
+cogOTU_2290	4QCR3	1	Loc090519-4m_megahit_metabat_bin-566	00023	0.0031	11.7	0.0	0.0047	11.1	0.0	1.2	1	Osmoprotectant import ATP-binding protein OsmV
+cogOTU_2290	4QCR3	1	Loc090519-4m_megahit_metabat_bin-383	00015	0.0035	11.5	0.1	0.0049	11.0	0.1	1.2	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QCR3	1	Loc090519-4m_megahit_metabat_bin-566	00015	0.0035	11.5	0.1	0.0049	11.0	0.1	1.2	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QCR3	1	Loclat_megahit_metabat_bin-17931	00012	0.0035	11.5	0.1	0.0049	11.0	0.1	1.2	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QCR3	1	Loc090519-4m_megahit_metabat_bin-383	00014	0.0053	10.9	0.1	0.0074	10.4	0.1	1.2	1	putative D,D-dipeptide transport ATP-binding protein DdpD
+cogOTU_2290	4QCR3	1	Loc090519-4m_megahit_metabat_bin-566	00014	0.0053	10.9	0.1	0.0074	10.4	0.1	1.2	1	putative D,D-dipeptide transport ATP-binding protein DdpD
+cogOTU_2290	4QCR3	1	Loclat_megahit_metabat_bin-17931	00011	0.0053	10.9	0.1	0.0074	10.4	0.1	1.2	1	putative D,D-dipeptide transport ATP-binding protein DdpD
+cogOTU_2290	4QASH	1	Loc090519-4m_megahit_metabat_bin-383	00093	0.0013	12.9	0.0	0.0021	12.2	0.0	1.2	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QASH	1	Loc090519-4m_megahit_metabat_bin-566	00093	0.0013	12.9	0.0	0.0021	12.2	0.0	1.2	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QASH	1	Loclat_megahit_metabat_bin-19828	00010	0.0013	12.9	0.0	0.0021	12.2	0.0	1.2	1	Oligopeptide transport ATP-binding protein OppF
+cogOTU_2290	4QASH	1	Loc090519-4m_megahit_metabat_bin-383	00094	0.0047	11.1	0.2	0.02	9.0	0.0	1.8	1	Oligopeptide transport ATP-binding protein OppD
+cogOTU_2290	4QASH	1	Loc090519-4m_megahit_metabat_bin-566	00094	0.0047	11.1	0.2	0.02	9.0	0.0	1.8	1	Oligopeptide transport ATP-binding protein OppD
+cogOTU_2290	4QASH	1	Loclat_megahit_metabat_bin-19828	00009	0.0047	11.1	0.2	0.02	9.0	0.0	1.8	1	Oligopeptide transport ATP-binding protein OppD
+cogOTU_2290	4QFCE	1	Loc090519-4m_megahit_metabat_bin-383	00098	0.003	12.2	0.0	0.0068	11.0	0.0	1.5	1	D-galactarolactone cycloisomerase
+cogOTU_2290	4QFCE	1	Loc090519-4m_megahit_metabat_bin-566	00098	0.003	12.2	0.0	0.0068	11.0	0.0	1.5	1	D-galactarolactone cycloisomerase
+cogOTU_2290	4QEK7	1	Loc090519-4m_megahit_metabat_bin-383	00059	0.0014	11.6	0.0	0.0019	11.2	0.0	1.2	1	High-affinity branched-chain amino acid transport ATP-binding protein LivF
+cogOTU_2290	4QEK7	1	Loc090519-4m_megahit_metabat_bin-566	00059	0.0014	11.6	0.0	0.0019	11.2	0.0	1.2	1	High-affinity branched-chain amino acid transport ATP-binding protein LivF
+cogOTU_2290	4QEK7	1	Loc090519-4m_megahit_metabat_bin-383	00058	0.0018	11.2	0.0	0.003	10.5	0.0	1.3	1	Arginine transport ATP-binding protein ArtM
+cogOTU_2290	4QEK7	1	Loc090519-4m_megahit_metabat_bin-566	00058	0.0018	11.2	0.0	0.003	10.5	0.0	1.3	1	Arginine transport ATP-binding protein ArtM
+cogOTU_2290	4QFQ1	1	Loc090519-4m_megahit_metabat_bin-383	00075	0.0047	11.3	0.0	0.0091	10.4	0.0	1.4	1	putative N-methylproline demethylase
+cogOTU_2290	4QFQ1	1	Loc090519-4m_megahit_metabat_bin-566	00075	0.0047	11.3	0.0	0.0091	10.4	0.0	1.4	1	putative N-methylproline demethylase

@@ -1,0 +1,468 @@
+cogOTU_180	4QGES	0	Loc080925-7m_megahit_metabat_bin-0234	00087	0.011	10.8	2.0	0.025	9.6	1.7	1.7	2	hypothetical protein
+cogOTU_180	4QDQA	1	Loc090721-7m_megahit_metabat_bin-858	00026	0.00044	15.2	0.1	0.00064	14.7	0.1	1.4	1	hypothetical protein
+cogOTU_180	4QEUM	0	Loc080925-7m_megahit_metabat_bin-0234	00111	0.02	10.2	7.6	0.017	10.5	6.3	1.6	1	Inner membrane protein YhaH
+cogOTU_180	4QBG8	1	Loc080925-7m_megahit_metabat_bin-0234	00137	0.002	13.7	0.0	0.0033	12.9	0.0	1.4	1	hypothetical protein
+cogOTU_180	4QF0N	1	Loc080925-6m_megahit_metabat_bin-0307	00063	0.00097	13.7	0.0	0.25	5.7	0.0	2.6	2	hypothetical protein
+cogOTU_180	4QF0N	1	Loc080925-7m_megahit_metabat_bin-0234	00043	0.00097	13.7	0.0	0.25	5.7	0.0	2.6	2	hypothetical protein
+cogOTU_180	4QF0N	1	Loc090721-6m_megahit_metabat_bin-536	00126	0.00097	13.7	0.0	0.25	5.7	0.0	2.6	2	hypothetical protein
+cogOTU_180	4QF0N	1	Loc090721-7m_megahit_metabat_bin-858	00103	0.00097	13.7	0.0	0.25	5.7	0.0	2.6	2	hypothetical protein
+cogOTU_180	4QF0N	1	Loclat_megahit_metabat_bin-18817	00086	0.00097	13.7	0.0	0.25	5.7	0.0	2.6	2	hypothetical protein
+cogOTU_180	4QF8H	1	Loc080925-6m_megahit_metabat_bin-0307	00068	0.004	12.2	0.5	0.0073	11.3	0.5	1.4	1	hypothetical protein
+cogOTU_180	4QF8H	1	Loc080925-7m_megahit_metabat_bin-0234	00030	0.004	12.2	0.5	0.0073	11.3	0.5	1.4	1	hypothetical protein
+cogOTU_180	4QF8H	1	Loc090721-6m_megahit_metabat_bin-536	00116	0.004	12.2	0.5	0.0073	11.3	0.5	1.4	1	hypothetical protein
+cogOTU_180	4QF8H	1	Loclat_megahit_metabat_bin-18817	00081	0.004	12.2	0.5	0.0073	11.3	0.5	1.4	1	hypothetical protein
+cogOTU_180	4QE20	1	Loc090721-7m_megahit_metabat_bin-858	00114	0.0045	12.7	0.0	0.0062	12.3	0.0	1.2	1	hypothetical protein
+cogOTU_180	4QBUH	1	Loc080925-6m_megahit_metabat_bin-0307	00116	0.0027	13.0	0.2	0.029	9.7	0.2	2.4	1	hypothetical protein
+cogOTU_180	4QBUH	1	Loc080925-7m_megahit_metabat_bin-0234	00080	0.0027	13.0	0.2	0.029	9.7	0.2	2.4	1	hypothetical protein
+cogOTU_180	4QBUH	1	Loc090721-6m_megahit_metabat_bin-536	00074	0.0027	13.0	0.2	0.029	9.7	0.2	2.4	1	hypothetical protein
+cogOTU_180	4QBUH	1	Loc090721-7m_megahit_metabat_bin-858	00051	0.0027	13.0	0.2	0.029	9.7	0.2	2.4	1	hypothetical protein
+cogOTU_180	4QBUH	1	Loclat_megahit_metabat_bin-18817	00034	0.0027	13.0	0.2	0.029	9.7	0.2	2.4	1	hypothetical protein
+cogOTU_180	4QAXN	1	Loc080925-6m_megahit_metabat_bin-0307	00087	0.0029	12.7	0.0	0.24	6.4	0.0	2.7	2	hypothetical protein
+cogOTU_180	4QAXN	1	Loc080925-7m_megahit_metabat_bin-0234	00011	0.0029	12.7	0.0	0.24	6.4	0.0	2.7	2	hypothetical protein
+cogOTU_180	4QAXN	1	Loc090721-6m_megahit_metabat_bin-536	00097	0.0029	12.7	0.0	0.24	6.4	0.0	2.7	2	hypothetical protein
+cogOTU_180	4QAXN	1	Loc090721-7m_megahit_metabat_bin-858	00014	0.0029	12.7	0.0	0.24	6.4	0.0	2.7	2	hypothetical protein
+cogOTU_180	4QAXN	1	Loclat_megahit_metabat_bin-18817	00062	0.0029	12.7	0.0	0.24	6.4	0.0	2.7	2	hypothetical protein
+cogOTU_180	4QAKZ	1	Loc080925-6m_megahit_metabat_bin-0307	00134	3.7e-09	31.3	13.5	2.4e-05	18.7	6.6	2.1	2	Galactose/methyl galactoside import ATP-binding protein MglA
+cogOTU_180	4QAKZ	1	Loc080925-7m_megahit_metabat_bin-0234	00063	3.7e-09	31.3	13.5	2.4e-05	18.7	6.6	2.1	2	Galactose/methyl galactoside import ATP-binding protein MglA
+cogOTU_180	4QAKZ	1	Loc090721-6m_megahit_metabat_bin-536	00055	3.7e-09	31.3	13.5	2.4e-05	18.7	6.6	2.1	2	Galactose/methyl galactoside import ATP-binding protein MglA
+cogOTU_180	4QAKZ	1	Loc090721-7m_megahit_metabat_bin-858	00033	3.7e-09	31.3	13.5	2.4e-05	18.7	6.6	2.1	2	Galactose/methyl galactoside import ATP-binding protein MglA
+cogOTU_180	4QAKZ	1	Loclat_megahit_metabat_bin-18817	00016	3.7e-09	31.3	13.5	2.4e-05	18.7	6.6	2.1	2	Galactose/methyl galactoside import ATP-binding protein MglA
+cogOTU_180	4QCF7	1	Loc090721-7m_megahit_metabat_bin-858	00038	0.0018	12.8	0.2	0.0029	12.0	0.2	1.2	1	scyllo-inositol 2-dehydrogenase (NADP(+)) IolU
+cogOTU_180	4QCF7	1	Loc080925-6m_megahit_metabat_bin-0307	00129	0.0018	12.8	0.2	0.0028	12.1	0.2	1.2	1	scyllo-inositol 2-dehydrogenase (NADP(+)) IolU
+cogOTU_180	4QCF7	1	Loc080925-7m_megahit_metabat_bin-0234	00068	0.0018	12.8	0.2	0.0028	12.1	0.2	1.2	1	scyllo-inositol 2-dehydrogenase (NADP(+)) IolU
+cogOTU_180	4QCF7	1	Loc090721-6m_megahit_metabat_bin-536	00060	0.0018	12.8	0.2	0.0028	12.1	0.2	1.2	1	scyllo-inositol 2-dehydrogenase (NADP(+)) IolU
+cogOTU_180	4QCF7	1	Loclat_megahit_metabat_bin-18817	00021	0.0018	12.8	0.2	0.0028	12.1	0.2	1.2	1	scyllo-inositol 2-dehydrogenase (NADP(+)) IolU
+cogOTU_180	4QFBT	1	Loc080925-5-5m_megahit_metabat_bin-0404	00009	3.1e-05	18.7	0.1	4.4e-05	18.1	0.1	1.4	1	Antilisterial bacteriocin subtilosin biosynthesis protein AlbA
+cogOTU_180	4QFBT	1	Loc080925-6m_megahit_metabat_bin-0307	00008	3.1e-05	18.7	0.1	4.4e-05	18.1	0.1	1.4	1	Antilisterial bacteriocin subtilosin biosynthesis protein AlbA
+cogOTU_180	4QFBT	1	Loc090721-6m_megahit_metabat_bin-536	00135	3.1e-05	18.7	0.1	4.4e-05	18.1	0.1	1.4	1	Antilisterial bacteriocin subtilosin biosynthesis protein AlbA
+cogOTU_180	4QFBT	1	Loc080925-5-5m_megahit_metabat_bin-0404	00005	5.7e-05	17.8	0.3	0.00014	16.5	0.3	1.7	1	Anaerobic sulfatase-maturating enzyme
+cogOTU_180	4QFBT	1	Loc080925-6m_megahit_metabat_bin-0307	00012	5.7e-05	17.8	0.3	0.00014	16.5	0.3	1.7	1	Anaerobic sulfatase-maturating enzyme
+cogOTU_180	4QFBT	1	Loc090721-6m_megahit_metabat_bin-536	00036	5.7e-05	17.8	0.3	0.00014	16.5	0.3	1.7	1	Anaerobic sulfatase-maturating enzyme
+cogOTU_180	4QDZA	1	Loc080925-6m_megahit_metabat_bin-0307	00059	3.8e-17	57.8	0.6	1.6e-07	26.2	0.0	3.9	4	hypothetical protein
+cogOTU_180	4QDZA	1	Loc080925-7m_megahit_metabat_bin-0234	00038	3.8e-17	57.8	0.6	1.6e-07	26.2	0.0	3.9	4	hypothetical protein
+cogOTU_180	4QDZA	1	Loc090721-6m_megahit_metabat_bin-536	00004	3.8e-17	57.8	0.6	1.6e-07	26.2	0.0	3.9	4	hypothetical protein
+cogOTU_180	4QDZA	1	Loc090721-7m_megahit_metabat_bin-858	00107	3.8e-17	57.8	0.6	1.6e-07	26.2	0.0	3.9	4	hypothetical protein
+cogOTU_180	4QDZA	1	Loclat_megahit_metabat_bin-18817	00090	3.8e-17	57.8	0.6	1.6e-07	26.2	0.0	3.9	4	hypothetical protein
+cogOTU_180	4QBQP	1	Loc080925-6m_megahit_metabat_bin-0307	00071	0.00066	14.7	0.0	0.001	14.1	0.0	1.2	1	N-glycosidase YbiA
+cogOTU_180	4QBQP	1	Loc080925-7m_megahit_metabat_bin-0234	00027	0.00066	14.7	0.0	0.001	14.1	0.0	1.2	1	N-glycosidase YbiA
+cogOTU_180	4QBQP	1	Loc090721-6m_megahit_metabat_bin-536	00113	0.00066	14.7	0.0	0.001	14.1	0.0	1.2	1	N-glycosidase YbiA
+cogOTU_180	4QBQP	1	Loclat_megahit_metabat_bin-18817	00078	0.00066	14.7	0.0	0.001	14.1	0.0	1.2	1	N-glycosidase YbiA
+cogOTU_180	4QH3W	1	Loc080925-5-5m_megahit_metabat_bin-0404	00011	0.0037	12.8	0.1	0.047	9.2	0.0	2.4	1	hypothetical protein
+cogOTU_180	4QH3W	1	Loc080925-6m_megahit_metabat_bin-0307	00006	0.0037	12.8	0.1	0.047	9.2	0.0	2.4	1	hypothetical protein
+cogOTU_180	4QH3W	1	Loc090721-6m_megahit_metabat_bin-536	00133	0.0037	12.8	0.1	0.047	9.2	0.0	2.4	1	hypothetical protein
+cogOTU_180	4QH3W	1	Loc090721-7m_megahit_metabat_bin-858	00097	0.0037	12.8	0.1	0.047	9.2	0.0	2.4	1	hypothetical protein
+cogOTU_180	4QF7C	1	Loc080925-6m_megahit_metabat_bin-0307	00078	0.0017	13.3	0.0	0.0018	13.2	0.0	1.1	1	hypothetical protein
+cogOTU_180	4QF7C	1	Loc080925-7m_megahit_metabat_bin-0234	00020	0.0017	13.3	0.0	0.0018	13.2	0.0	1.1	1	hypothetical protein
+cogOTU_180	4QF7C	1	Loc090721-6m_megahit_metabat_bin-536	00106	0.0017	13.3	0.0	0.0018	13.2	0.0	1.1	1	hypothetical protein
+cogOTU_180	4QF7C	1	Loc090721-7m_megahit_metabat_bin-858	00090	0.0017	13.3	0.0	0.0018	13.2	0.0	1.1	1	hypothetical protein
+cogOTU_180	4QF7C	1	Loclat_megahit_metabat_bin-18817	00071	0.0017	13.3	0.0	0.0018	13.2	0.0	1.1	1	hypothetical protein
+cogOTU_180	4QH1R	0	Loc080925-6m_megahit_metabat_bin-0307	00057	0.027	9.9	8.3	0.002	13.5	3.4	1.6	1	hypothetical protein
+cogOTU_180	4QH1R	0	Loc080925-7m_megahit_metabat_bin-0234	00036	0.027	9.9	8.3	0.002	13.5	3.4	1.6	1	hypothetical protein
+cogOTU_180	4QH1R	0	Loc090721-6m_megahit_metabat_bin-536	00006	0.027	9.9	8.3	0.002	13.5	3.4	1.6	1	hypothetical protein
+cogOTU_180	4QH1R	0	Loc090721-7m_megahit_metabat_bin-858	00109	0.027	9.9	8.3	0.002	13.5	3.4	1.6	1	hypothetical protein
+cogOTU_180	4QGKP	1	Loc080925-6m_megahit_metabat_bin-0307	00126	5.6e-18	60.3	0.0	8.4e-18	59.8	0.0	1.2	1	hypothetical protein
+cogOTU_180	4QGKP	1	Loc080925-7m_megahit_metabat_bin-0234	00071	5.6e-18	60.3	0.0	8.4e-18	59.8	0.0	1.2	1	hypothetical protein
+cogOTU_180	4QGKP	1	Loc090721-6m_megahit_metabat_bin-536	00063	5.6e-18	60.3	0.0	8.4e-18	59.8	0.0	1.2	1	hypothetical protein
+cogOTU_180	4QGKP	1	Loc090721-7m_megahit_metabat_bin-858	00041	5.6e-18	60.3	0.0	8.4e-18	59.8	0.0	1.2	1	hypothetical protein
+cogOTU_180	4QGKP	1	Loclat_megahit_metabat_bin-18817	00024	5.6e-18	60.3	0.0	8.4e-18	59.8	0.0	1.2	1	hypothetical protein
+cogOTU_180	4QD9R	1	Loc080925-6m_megahit_metabat_bin-0307	00051	0.0019	13.7	0.1	0.0032	12.9	0.1	1.4	1	hypothetical protein
+cogOTU_180	4QD9R	1	Loc090721-7m_megahit_metabat_bin-858	00078	0.0019	13.7	0.1	0.0032	12.9	0.1	1.4	1	hypothetical protein
+cogOTU_180	4QD9R	1	Loc080925-7m_megahit_metabat_bin-0234	00052	0.0021	13.5	0.2	0.0038	12.7	0.2	1.4	1	hypothetical protein
+cogOTU_180	4QD9R	1	Loc090721-6m_megahit_metabat_bin-536	00013	0.0021	13.5	0.2	0.0038	12.7	0.2	1.4	1	hypothetical protein
+cogOTU_180	4QDIA	1	Loclat_megahit_metabat_bin-18817	00093	0.0052	12.1	0.1	0.0091	11.4	0.1	1.5	1	hypothetical protein
+cogOTU_180	4QBYD	1	Loc090721-7m_megahit_metabat_bin-858	00116	0.00059	14.6	0.0	0.02	9.6	0.0	2.1	2	hypothetical protein
+cogOTU_180	4QBY0	1	Loc080925-6m_megahit_metabat_bin-0307	00114	3.5e-67	222.6	0.0	1.7e-66	220.4	0.0	2.1	1	ATP-dependent RecD-like DNA helicase
+cogOTU_180	4QBY0	1	Loc080925-7m_megahit_metabat_bin-0234	00082	3.5e-67	222.6	0.0	1.7e-66	220.4	0.0	2.1	1	ATP-dependent RecD-like DNA helicase
+cogOTU_180	4QBY0	1	Loc090721-6m_megahit_metabat_bin-536	00076	3.5e-67	222.6	0.0	1.7e-66	220.4	0.0	2.1	1	ATP-dependent RecD-like DNA helicase
+cogOTU_180	4QBY0	1	Loc090721-7m_megahit_metabat_bin-858	00053	3.5e-67	222.6	0.0	1.7e-66	220.4	0.0	2.1	1	ATP-dependent RecD-like DNA helicase
+cogOTU_180	4QBY0	1	Loclat_megahit_metabat_bin-18817	00036	3.5e-67	222.6	0.0	1.7e-66	220.4	0.0	2.1	1	ATP-dependent RecD-like DNA helicase
+cogOTU_180	4QBY0	1	Loc080925-6m_megahit_metabat_bin-0307	00104	4.3e-08	27.9	0.0	0.00054	14.4	0.0	2.5	2	hypothetical protein
+cogOTU_180	4QBY0	1	Loc080925-7m_megahit_metabat_bin-0234	00120	4.3e-08	27.9	0.0	0.00054	14.4	0.0	2.5	2	hypothetical protein
+cogOTU_180	4QBY0	1	Loc090721-6m_megahit_metabat_bin-536	00123	4.3e-08	27.9	0.0	0.00054	14.4	0.0	2.5	2	hypothetical protein
+cogOTU_180	4QBY0	1	Loc090721-7m_megahit_metabat_bin-858	00063	4.3e-08	27.9	0.0	0.00054	14.4	0.0	2.5	2	hypothetical protein
+cogOTU_180	4QBY0	1	Loclat_megahit_metabat_bin-18817	00045	4.3e-08	27.9	0.0	0.00054	14.4	0.0	2.5	2	hypothetical protein
+cogOTU_180	4QBY0	1	Loc090721-7m_megahit_metabat_bin-858	00026	1e-05	20.1	0.0	1.7e-05	19.4	0.0	1.3	1	hypothetical protein
+cogOTU_180	4QBY0	1	Loc090721-7m_megahit_metabat_bin-858	00068	1.3e-05	19.7	0.0	3.1e-05	18.5	0.0	1.5	1	hypothetical protein
+cogOTU_180	4QBY0	1	Loc080925-6m_megahit_metabat_bin-0307	00099	1.6e-05	19.5	0.0	3.1e-05	18.5	0.0	1.4	1	hypothetical protein
+cogOTU_180	4QBY0	1	Loc090721-6m_megahit_metabat_bin-536	00085	1.6e-05	19.5	0.0	3.1e-05	18.5	0.0	1.4	1	hypothetical protein
+cogOTU_180	4QBY0	1	Loclat_megahit_metabat_bin-18817	00050	1.6e-05	19.5	0.0	3.1e-05	18.5	0.0	1.4	1	hypothetical protein
+cogOTU_180	4QBY0	1	Loc080925-6m_megahit_metabat_bin-0307	00135	0.00011	16.7	0.1	0.00072	14.0	0.0	2.3	1	hypothetical protein
+cogOTU_180	4QBY0	1	Loc080925-7m_megahit_metabat_bin-0234	00062	0.00011	16.7	0.1	0.00072	14.0	0.0	2.3	1	hypothetical protein
+cogOTU_180	4QBY0	1	Loc090721-6m_megahit_metabat_bin-536	00054	0.00011	16.7	0.1	0.00072	14.0	0.0	2.3	1	hypothetical protein
+cogOTU_180	4QBY0	1	Loc090721-7m_megahit_metabat_bin-858	00032	0.00011	16.7	0.1	0.00072	14.0	0.0	2.3	1	hypothetical protein
+cogOTU_180	4QBY0	1	Loclat_megahit_metabat_bin-18817	00015	0.00011	16.7	0.1	0.00072	14.0	0.0	2.3	1	hypothetical protein
+cogOTU_180	4QBY0	1	Loc090721-7m_megahit_metabat_bin-858	00099	0.0015	12.9	0.0	0.0027	12.1	0.0	1.3	1	IS21 family transposase ISRel16
+cogOTU_180	4QBY0	1	Loc080925-7m_megahit_metabat_bin-0234	00084	0.0018	12.7	0.7	0.0034	11.8	0.2	1.6	1	IS21 family transposase ISRel16
+cogOTU_180	4QBU2	1	Loc090721-7m_megahit_metabat_bin-858	00099	3.6e-28	94.1	0.4	4.8e-28	93.7	0.4	1.1	1	IS21 family transposase ISRel16
+cogOTU_180	4QBU2	1	Loc080925-7m_megahit_metabat_bin-0234	00084	4.8e-28	93.7	0.8	6.4e-28	93.3	0.8	1.1	1	IS21 family transposase ISRel16
+cogOTU_180	4QBU2	1	Loc080925-6m_megahit_metabat_bin-0307	00084	9.8e-05	17.3	0.0	0.00027	15.9	0.0	1.7	1	hypothetical protein
+cogOTU_180	4QBU2	1	Loc080925-7m_megahit_metabat_bin-0234	00014	9.8e-05	17.3	0.0	0.00027	15.9	0.0	1.7	1	hypothetical protein
+cogOTU_180	4QBU2	1	Loclat_megahit_metabat_bin-18817	00065	9.8e-05	17.3	0.0	0.00027	15.9	0.0	1.7	1	hypothetical protein
+cogOTU_180	4QBU2	1	Loc090721-6m_megahit_metabat_bin-536	00100	9.9e-05	17.3	0.0	0.00027	15.9	0.0	1.7	1	hypothetical protein
+cogOTU_180	4QBU2	1	Loc090721-7m_megahit_metabat_bin-858	00026	0.00013	16.9	0.3	0.00021	16.3	0.0	1.5	1	hypothetical protein
+cogOTU_180	4QBU2	1	Loc090721-7m_megahit_metabat_bin-858	00068	0.00017	16.6	0.8	0.00031	15.7	0.0	1.9	1	hypothetical protein
+cogOTU_180	4QBU2	1	Loc080925-6m_megahit_metabat_bin-0307	00099	0.00017	16.5	0.0	0.00043	15.2	0.0	1.7	1	hypothetical protein
+cogOTU_180	4QBU2	1	Loc090721-6m_megahit_metabat_bin-536	00085	0.00017	16.5	0.0	0.00043	15.2	0.0	1.7	1	hypothetical protein
+cogOTU_180	4QBU2	1	Loclat_megahit_metabat_bin-18817	00050	0.00017	16.5	0.0	0.00043	15.2	0.0	1.7	1	hypothetical protein
+cogOTU_180	4QBU2	1	Loc080925-6m_megahit_metabat_bin-0307	00135	0.00055	14.9	0.7	0.00055	14.9	0.7	2.3	1	hypothetical protein
+cogOTU_180	4QBU2	1	Loc080925-7m_megahit_metabat_bin-0234	00062	0.00055	14.9	0.7	0.00055	14.9	0.7	2.3	1	hypothetical protein
+cogOTU_180	4QBU2	1	Loc090721-6m_megahit_metabat_bin-536	00054	0.00055	14.9	0.7	0.00055	14.9	0.7	2.3	1	hypothetical protein
+cogOTU_180	4QBU2	1	Loc090721-7m_megahit_metabat_bin-858	00032	0.00055	14.9	0.7	0.00055	14.9	0.7	2.3	1	hypothetical protein
+cogOTU_180	4QBU2	1	Loclat_megahit_metabat_bin-18817	00015	0.00055	14.9	0.7	0.00055	14.9	0.7	2.3	1	hypothetical protein
+cogOTU_180	4QBUW	1	Loc080925-6m_megahit_metabat_bin-0307	00079	0.00081	14.3	0.1	0.0017	13.3	0.1	1.5	1	hypothetical protein
+cogOTU_180	4QBUW	1	Loc080925-7m_megahit_metabat_bin-0234	00019	0.00081	14.3	0.1	0.0017	13.3	0.1	1.5	1	hypothetical protein
+cogOTU_180	4QBUW	1	Loc090721-6m_megahit_metabat_bin-536	00105	0.00081	14.3	0.1	0.0017	13.3	0.1	1.5	1	hypothetical protein
+cogOTU_180	4QBUW	1	Loc090721-7m_megahit_metabat_bin-858	00091	0.00081	14.3	0.1	0.0017	13.3	0.1	1.5	1	hypothetical protein
+cogOTU_180	4QBUW	1	Loclat_megahit_metabat_bin-18817	00070	0.00081	14.3	0.1	0.0017	13.3	0.1	1.5	1	hypothetical protein
+cogOTU_180	4QD1C	1	Loc080925-6m_megahit_metabat_bin-0307	00061	0.00045	15.5	0.0	0.015	10.6	0.0	2.3	2	hypothetical protein
+cogOTU_180	4QD1C	1	Loc080925-7m_megahit_metabat_bin-0234	00041	0.00045	15.5	0.0	0.015	10.6	0.0	2.3	2	hypothetical protein
+cogOTU_180	4QD1C	1	Loc090721-6m_megahit_metabat_bin-536	00001	0.00045	15.5	0.0	0.015	10.6	0.0	2.3	2	hypothetical protein
+cogOTU_180	4QD1C	1	Loc090721-7m_megahit_metabat_bin-858	00105	0.00045	15.5	0.0	0.015	10.6	0.0	2.3	2	hypothetical protein
+cogOTU_180	4QD1C	1	Loclat_megahit_metabat_bin-18817	00088	0.00045	15.5	0.0	0.015	10.6	0.0	2.3	2	hypothetical protein
+cogOTU_180	4QDD8	1	Loc080925-6m_megahit_metabat_bin-0307	00133	0.0086	11.1	0.2	0.0086	11.1	0.2	2.6	1	Ribose import permease protein RbsC
+cogOTU_180	4QDD8	1	Loc080925-7m_megahit_metabat_bin-0234	00064	0.0086	11.1	0.2	0.0086	11.1	0.2	2.6	1	Ribose import permease protein RbsC
+cogOTU_180	4QDD8	1	Loc090721-6m_megahit_metabat_bin-536	00056	0.0086	11.1	0.2	0.0086	11.1	0.2	2.6	1	Ribose import permease protein RbsC
+cogOTU_180	4QDD8	1	Loc090721-7m_megahit_metabat_bin-858	00034	0.0086	11.1	0.2	0.0086	11.1	0.2	2.6	1	Ribose import permease protein RbsC
+cogOTU_180	4QDD8	1	Loclat_megahit_metabat_bin-18817	00017	0.0086	11.1	0.2	0.0086	11.1	0.2	2.6	1	Ribose import permease protein RbsC
+cogOTU_180	4QAKB	1	Loc080925-6m_megahit_metabat_bin-0307	00140	0.0037	12.5	0.2	0.17	7.1	0.0	2.7	2	hypothetical protein
+cogOTU_180	4QAKB	1	Loc080925-7m_megahit_metabat_bin-0234	00058	0.0037	12.5	0.2	0.17	7.1	0.0	2.7	2	hypothetical protein
+cogOTU_180	4QAKB	1	Loc090721-6m_megahit_metabat_bin-536	00050	0.0037	12.5	0.2	0.17	7.1	0.0	2.7	2	hypothetical protein
+cogOTU_180	4QAKB	1	Loc090721-7m_megahit_metabat_bin-858	00028	0.0037	12.5	0.2	0.17	7.1	0.0	2.7	2	hypothetical protein
+cogOTU_180	4QAKB	1	Loclat_megahit_metabat_bin-18817	00011	0.0037	12.5	0.2	0.17	7.1	0.0	2.7	2	hypothetical protein
+cogOTU_180	4QGNP	1	Loc080925-7m_megahit_metabat_bin-0234	00034	0.00091	15.1	0.0	0.0011	14.9	0.0	1.1	1	hypothetical protein
+cogOTU_180	4QGNP	1	Loc090721-7m_megahit_metabat_bin-858	00102	0.0032	13.3	0.0	0.0061	12.4	0.0	1.5	1	hypothetical protein
+cogOTU_180	4QGNP	1	Loc080925-6m_megahit_metabat_bin-0307	00064	0.0032	13.3	0.0	0.0061	12.4	0.0	1.5	1	hypothetical protein
+cogOTU_180	4QGNP	1	Loclat_megahit_metabat_bin-18817	00085	0.0032	13.3	0.0	0.0061	12.4	0.0	1.5	1	hypothetical protein
+cogOTU_180	4QG8J	1	Loc080925-6m_megahit_metabat_bin-0307	00039	0.0017	13.7	0.2	0.0035	12.7	0.2	1.5	1	hypothetical protein
+cogOTU_180	4QG8J	1	Loc080925-7m_megahit_metabat_bin-0234	00093	0.0017	13.7	0.2	0.0035	12.7	0.2	1.5	1	hypothetical protein
+cogOTU_180	4QG8J	1	Loc090721-6m_megahit_metabat_bin-536	00045	0.0017	13.7	0.2	0.0035	12.7	0.2	1.5	1	hypothetical protein
+cogOTU_180	4QB3B	1	Loc080925-6m_megahit_metabat_bin-0307	00033	1.1e-13	46.8	0.2	1.2e-13	46.7	0.2	1.1	1	DNA-binding protein HU
+cogOTU_180	4QB3B	1	Loc080925-7m_megahit_metabat_bin-0234	00088	1.2e-13	46.6	0.2	1.5e-13	46.4	0.2	1.1	1	Integration host factor subunit beta
+cogOTU_180	4QGS6	1	Loc080925-7m_megahit_metabat_bin-0234	00035	0.0036	11.2	1.0	0.004	11.1	1.0	1.0	1	hypothetical protein
+cogOTU_180	4QGS6	1	Loc090721-7m_megahit_metabat_bin-858	00110	0.0036	11.2	1.0	0.004	11.1	1.0	1.0	1	hypothetical protein
+cogOTU_180	4QGS6	1	Loclat_megahit_metabat_bin-18817	00092	0.0036	11.2	1.0	0.004	11.1	1.0	1.0	1	hypothetical protein
+cogOTU_180	4QCGC	1	Loc080925-6m_megahit_metabat_bin-0307	00038	4.1e-61	202.3	2.8	4.8e-61	202.0	2.8	1.0	1	hypothetical protein
+cogOTU_180	4QCGC	1	Loc080925-7m_megahit_metabat_bin-0234	00092	4.1e-61	202.3	2.8	4.8e-61	202.0	2.8	1.0	1	hypothetical protein
+cogOTU_180	4QCGC	1	Loc090721-6m_megahit_metabat_bin-536	00046	4.1e-61	202.3	2.8	4.8e-61	202.0	2.8	1.0	1	hypothetical protein
+cogOTU_180	4QDVY	1	Loc080925-6m_megahit_metabat_bin-0307	00028	0.0022	12.6	0.1	0.0032	12.0	0.1	1.2	1	Ribose-phosphate pyrophosphokinase
+cogOTU_180	4QBPZ	1	Loc090721-6m_megahit_metabat_bin-536	00034	0.0028	13.0	0.0	0.0065	11.9	0.0	1.5	1	Anaerobic nitric oxide reductase transcription regulator NorR
+cogOTU_180	4QF0W	1	Loc080925-6m_megahit_metabat_bin-0307	00138	0.002	13.4	0.0	0.0024	13.2	0.0	1.1	1	hypothetical protein
+cogOTU_180	4QF0W	1	Loc080925-7m_megahit_metabat_bin-0234	00060	0.002	13.4	0.0	0.0024	13.2	0.0	1.1	1	hypothetical protein
+cogOTU_180	4QF0W	1	Loc090721-6m_megahit_metabat_bin-536	00052	0.002	13.4	0.0	0.0024	13.2	0.0	1.1	1	hypothetical protein
+cogOTU_180	4QF0W	1	Loclat_megahit_metabat_bin-18817	00013	0.002	13.4	0.0	0.0024	13.2	0.0	1.1	1	hypothetical protein
+cogOTU_180	4QBT2	1	Loc080925-6m_megahit_metabat_bin-0307	00080	3.2e-13	45.2	1.5	1.4e-11	39.8	0.2	2.9	2	Ribonuclease J
+cogOTU_180	4QBT2	1	Loc080925-7m_megahit_metabat_bin-0234	00018	3.2e-13	45.2	1.5	1.4e-11	39.8	0.2	2.9	2	Ribonuclease J
+cogOTU_180	4QBT2	1	Loc090721-6m_megahit_metabat_bin-536	00104	3.2e-13	45.2	1.5	1.4e-11	39.8	0.2	2.9	2	Ribonuclease J
+cogOTU_180	4QBT2	1	Loc090721-7m_megahit_metabat_bin-858	00092	3.2e-13	45.2	1.5	1.4e-11	39.8	0.2	2.9	2	Ribonuclease J
+cogOTU_180	4QBT2	1	Loclat_megahit_metabat_bin-18817	00069	3.2e-13	45.2	1.5	1.4e-11	39.8	0.2	2.9	2	Ribonuclease J
+cogOTU_180	4QGPZ	1	Loc080925-6m_megahit_metabat_bin-0307	00090	0.00039	15.9	0.1	0.011	11.2	0.0	2.4	2	hypothetical protein
+cogOTU_180	4QGPZ	1	Loc080925-7m_megahit_metabat_bin-0234	00008	0.00039	15.9	0.1	0.011	11.2	0.0	2.4	2	hypothetical protein
+cogOTU_180	4QGPZ	1	Loc090721-6m_megahit_metabat_bin-536	00094	0.00039	15.9	0.1	0.011	11.2	0.0	2.4	2	hypothetical protein
+cogOTU_180	4QGPZ	1	Loc090721-7m_megahit_metabat_bin-858	00017	0.00039	15.9	0.1	0.011	11.2	0.0	2.4	2	hypothetical protein
+cogOTU_180	4QGPZ	1	Loclat_megahit_metabat_bin-18817	00059	0.00039	15.9	0.1	0.011	11.2	0.0	2.4	2	hypothetical protein
+cogOTU_180	4QCH6	1	Loc080925-6m_megahit_metabat_bin-0307	00114	8e-19	62.5	0.0	1.6e-12	41.7	0.0	2.4	2	ATP-dependent RecD-like DNA helicase
+cogOTU_180	4QCH6	1	Loc080925-7m_megahit_metabat_bin-0234	00082	8e-19	62.5	0.0	1.6e-12	41.7	0.0	2.4	2	ATP-dependent RecD-like DNA helicase
+cogOTU_180	4QCH6	1	Loc090721-6m_megahit_metabat_bin-536	00076	8e-19	62.5	0.0	1.6e-12	41.7	0.0	2.4	2	ATP-dependent RecD-like DNA helicase
+cogOTU_180	4QCH6	1	Loc090721-7m_megahit_metabat_bin-858	00053	8e-19	62.5	0.0	1.6e-12	41.7	0.0	2.4	2	ATP-dependent RecD-like DNA helicase
+cogOTU_180	4QCH6	1	Loclat_megahit_metabat_bin-18817	00036	8e-19	62.5	0.0	1.6e-12	41.7	0.0	2.4	2	ATP-dependent RecD-like DNA helicase
+cogOTU_180	4QCH6	1	Loc080925-6m_megahit_metabat_bin-0307	00135	7.4e-05	16.4	0.0	0.00013	15.6	0.0	1.3	1	hypothetical protein
+cogOTU_180	4QCH6	1	Loc080925-7m_megahit_metabat_bin-0234	00062	7.4e-05	16.4	0.0	0.00013	15.6	0.0	1.3	1	hypothetical protein
+cogOTU_180	4QCH6	1	Loc090721-6m_megahit_metabat_bin-536	00054	7.4e-05	16.4	0.0	0.00013	15.6	0.0	1.3	1	hypothetical protein
+cogOTU_180	4QCH6	1	Loc090721-7m_megahit_metabat_bin-858	00032	7.4e-05	16.4	0.0	0.00013	15.6	0.0	1.3	1	hypothetical protein
+cogOTU_180	4QCH6	1	Loclat_megahit_metabat_bin-18817	00015	7.4e-05	16.4	0.0	0.00013	15.6	0.0	1.3	1	hypothetical protein
+cogOTU_180	4QCH6	1	Loc090721-7m_megahit_metabat_bin-858	00099	0.0045	10.5	0.0	0.006	10.1	0.0	1.2	1	IS21 family transposase ISRel16
+cogOTU_180	4QCYT	1	Loc080925-7m_megahit_metabat_bin-0234	00105	0.002	13.1	0.0	0.002	13.1	0.0	1.0	1	hypothetical protein
+cogOTU_180	4QDG6	1	Loc080925-6m_megahit_metabat_bin-0307	00107	9.8e-11	36.3	13.1	4.1e-09	30.9	3.6	2.7	2	hypothetical protein
+cogOTU_180	4QDG6	1	Loc080925-7m_megahit_metabat_bin-0234	00117	9.8e-11	36.3	13.1	4.1e-09	30.9	3.6	2.7	2	hypothetical protein
+cogOTU_180	4QDG6	1	Loc090721-7m_megahit_metabat_bin-858	00060	9.8e-11	36.3	13.1	4.1e-09	30.9	3.6	2.7	2	hypothetical protein
+cogOTU_180	4QDG6	1	Loclat_megahit_metabat_bin-18817	00042	9.8e-11	36.3	13.1	4.1e-09	30.9	3.6	2.7	2	hypothetical protein
+cogOTU_180	4QDG6	1	Loc090721-6m_megahit_metabat_bin-536	00125	7e-10	33.4	3.2	1e-09	32.9	3.2	1.2	1	hypothetical protein
+cogOTU_180	4QDG6	1	Loc080925-6m_megahit_metabat_bin-0307	00102	1e-09	32.9	3.2	1.5e-09	32.3	3.2	1.3	1	hypothetical protein
+cogOTU_180	4QDG6	1	Loc080925-7m_megahit_metabat_bin-0234	00122	1e-09	32.9	3.2	1.5e-09	32.3	3.2	1.3	1	hypothetical protein
+cogOTU_180	4QDG6	1	Loc090721-7m_megahit_metabat_bin-858	00065	1e-09	32.9	3.2	1.5e-09	32.3	3.2	1.3	1	hypothetical protein
+cogOTU_180	4QDG6	1	Loclat_megahit_metabat_bin-18817	00047	1e-09	32.9	3.2	1.5e-09	32.3	3.2	1.3	1	hypothetical protein
+cogOTU_180	4QDG6	1	Loc080925-6m_megahit_metabat_bin-0307	00119	8.5e-08	26.6	6.5	0.0004	14.5	1.5	2.5	2	hypothetical protein
+cogOTU_180	4QDG6	1	Loc080925-7m_megahit_metabat_bin-0234	00077	8.5e-08	26.6	6.5	0.0004	14.5	1.5	2.5	2	hypothetical protein
+cogOTU_180	4QDG6	1	Loc090721-6m_megahit_metabat_bin-536	00071	8.5e-08	26.6	6.5	0.0004	14.5	1.5	2.5	2	hypothetical protein
+cogOTU_180	4QDG6	1	Loc090721-7m_megahit_metabat_bin-858	00048	8.5e-08	26.6	6.5	0.0004	14.5	1.5	2.5	2	hypothetical protein
+cogOTU_180	4QDG6	1	Loclat_megahit_metabat_bin-18817	00031	8.5e-08	26.6	6.5	0.0004	14.5	1.5	2.5	2	hypothetical protein
+cogOTU_180	4QCFB	1	Loc080925-5-5m_megahit_metabat_bin-0404	00012	5e-06	21.2	0.0	1.1e-05	20.1	0.0	1.5	1	Ubiquinone biosynthesis O-methyltransferase
+cogOTU_180	4QCFB	1	Loc080925-6m_megahit_metabat_bin-0307	00005	5e-06	21.2	0.0	1.1e-05	20.1	0.0	1.5	1	Ubiquinone biosynthesis O-methyltransferase
+cogOTU_180	4QCFB	1	Loc090721-6m_megahit_metabat_bin-536	00132	5e-06	21.2	0.0	1.1e-05	20.1	0.0	1.5	1	Ubiquinone biosynthesis O-methyltransferase
+cogOTU_180	4QCFB	1	Loc090721-7m_megahit_metabat_bin-858	00098	5e-06	21.2	0.0	1.1e-05	20.1	0.0	1.5	1	Ubiquinone biosynthesis O-methyltransferase
+cogOTU_180	4QAQE	1	Loc080925-6m_megahit_metabat_bin-0307	00016	3.8e-30	100.9	0.2	4.1e-30	100.8	0.2	1.0	1	Tyrosine recombinase XerC
+cogOTU_180	4QAQE	1	Loc080925-7m_megahit_metabat_bin-0234	00127	3.8e-30	100.9	0.2	4.1e-30	100.8	0.2	1.0	1	Tyrosine recombinase XerC
+cogOTU_180	4QAQE	1	Loc090721-7m_megahit_metabat_bin-858	00003	3.8e-30	100.9	0.2	4.1e-30	100.8	0.2	1.0	1	Tyrosine recombinase XerC
+cogOTU_180	4QAQE	1	Loclat_megahit_metabat_bin-18817	00001	3.8e-30	100.9	0.2	4.1e-30	100.8	0.2	1.0	1	Tyrosine recombinase XerC
+cogOTU_180	4QAQE	1	Loc080925-6m_megahit_metabat_bin-0307	00092	2.1e-24	82.0	12.3	3.8e-24	81.2	12.4	1.4	1	Tyrosine recombinase XerC
+cogOTU_180	4QAQE	1	Loc080925-7m_megahit_metabat_bin-0234	00006	2.1e-24	82.0	12.3	3.8e-24	81.2	12.4	1.4	1	Tyrosine recombinase XerC
+cogOTU_180	4QAQE	1	Loc090721-6m_megahit_metabat_bin-536	00092	2.1e-24	82.0	12.3	3.8e-24	81.2	12.4	1.4	1	Tyrosine recombinase XerC
+cogOTU_180	4QAQE	1	Loc090721-7m_megahit_metabat_bin-858	00019	2.1e-24	82.0	12.3	3.8e-24	81.2	12.4	1.4	1	Tyrosine recombinase XerC
+cogOTU_180	4QAQE	1	Loclat_megahit_metabat_bin-18817	00057	2.1e-24	82.0	12.3	3.8e-24	81.2	12.4	1.4	1	Tyrosine recombinase XerC
+cogOTU_180	4QFD8	1	Loc080925-7m_megahit_metabat_bin-0234	00139	4e-48	159.4	0.3	4.7e-48	159.1	0.3	1.0	1	DNA primase TraC
+cogOTU_180	4QBJG	1	Loc080925-6m_megahit_metabat_bin-0307	00031	0.003	13.1	1.6	0.003	13.1	1.6	3.2	2	hypothetical protein
+cogOTU_180	4QBJG	1	Loc080925-7m_megahit_metabat_bin-0234	00086	0.003	13.1	1.6	0.003	13.1	1.6	3.2	2	hypothetical protein
+cogOTU_180	4QB89	1	Loc080925-6m_megahit_metabat_bin-0307	00111	0.00024	16.6	0.1	0.0005	15.6	0.1	1.5	1	hypothetical protein
+cogOTU_180	4QB89	1	Loc080925-7m_megahit_metabat_bin-0234	00113	0.00024	16.6	0.1	0.0005	15.6	0.1	1.5	1	hypothetical protein
+cogOTU_180	4QB89	1	Loc090721-6m_megahit_metabat_bin-536	00079	0.00024	16.6	0.1	0.0005	15.6	0.1	1.5	1	hypothetical protein
+cogOTU_180	4QB89	1	Loc090721-7m_megahit_metabat_bin-858	00056	0.00024	16.6	0.1	0.0005	15.6	0.1	1.5	1	hypothetical protein
+cogOTU_180	4QB89	1	Loclat_megahit_metabat_bin-18817	00039	0.00024	16.6	0.1	0.0005	15.6	0.1	1.5	1	hypothetical protein
+cogOTU_180	4QB89	1	Loc080925-6m_megahit_metabat_bin-0307	00063	0.0029	13.1	0.1	0.023	10.2	0.0	2.6	1	hypothetical protein
+cogOTU_180	4QB89	1	Loc080925-7m_megahit_metabat_bin-0234	00043	0.0029	13.1	0.1	0.023	10.2	0.0	2.6	1	hypothetical protein
+cogOTU_180	4QB89	1	Loc090721-6m_megahit_metabat_bin-536	00126	0.0029	13.1	0.1	0.023	10.2	0.0	2.6	1	hypothetical protein
+cogOTU_180	4QB89	1	Loc090721-7m_megahit_metabat_bin-858	00103	0.0029	13.1	0.1	0.023	10.2	0.0	2.6	1	hypothetical protein
+cogOTU_180	4QB89	1	Loclat_megahit_metabat_bin-18817	00086	0.0029	13.1	0.1	0.023	10.2	0.0	2.6	1	hypothetical protein
+cogOTU_180	4QHFW	1	Loc090721-7m_megahit_metabat_bin-858	00086	3e-09	32.0	0.1	2e-08	29.3	0.1	2.2	1	hypothetical protein
+cogOTU_180	4QHFW	1	Loc080925-6m_megahit_metabat_bin-0307	00074	3.2e-09	31.9	0.1	2.1e-08	29.2	0.1	2.1	1	hypothetical protein
+cogOTU_180	4QHFW	1	Loc080925-7m_megahit_metabat_bin-0234	00024	3.2e-09	31.9	0.1	2.1e-08	29.2	0.1	2.1	1	hypothetical protein
+cogOTU_180	4QHFW	1	Loc090721-6m_megahit_metabat_bin-536	00110	3.2e-09	31.9	0.1	2.1e-08	29.2	0.1	2.1	1	hypothetical protein
+cogOTU_180	4QHFW	1	Loclat_megahit_metabat_bin-18817	00075	3.2e-09	31.9	0.1	2.1e-08	29.2	0.1	2.1	1	hypothetical protein
+cogOTU_180	4QHFW	1	Loc080925-6m_megahit_metabat_bin-0307	00039	3.1e-07	25.4	0.0	5.3e-07	24.7	0.0	1.4	1	hypothetical protein
+cogOTU_180	4QHFW	1	Loc080925-7m_megahit_metabat_bin-0234	00093	3.1e-07	25.4	0.0	5.3e-07	24.7	0.0	1.4	1	hypothetical protein
+cogOTU_180	4QHFW	1	Loc090721-6m_megahit_metabat_bin-536	00045	3.1e-07	25.4	0.0	5.3e-07	24.7	0.0	1.4	1	hypothetical protein
+cogOTU_180	4QH06	1	Loc080925-6m_megahit_metabat_bin-0307	00028	5.1e-38	126.0	0.0	6.5e-38	125.6	0.0	1.1	1	Ribose-phosphate pyrophosphokinase
+cogOTU_180	4QF5Y	1	Loc090721-7m_megahit_metabat_bin-858	00026	0.004	12.3	0.0	0.018	10.2	0.0	1.8	2	hypothetical protein
+cogOTU_180	4QEWP	1	Loc080925-6m_megahit_metabat_bin-0307	00134	4.9e-29	96.5	14.6	9.3e-23	75.7	5.4	2.2	2	Galactose/methyl galactoside import ATP-binding protein MglA
+cogOTU_180	4QEWP	1	Loc080925-7m_megahit_metabat_bin-0234	00063	4.9e-29	96.5	14.6	9.3e-23	75.7	5.4	2.2	2	Galactose/methyl galactoside import ATP-binding protein MglA
+cogOTU_180	4QEWP	1	Loc090721-6m_megahit_metabat_bin-536	00055	4.9e-29	96.5	14.6	9.3e-23	75.7	5.4	2.2	2	Galactose/methyl galactoside import ATP-binding protein MglA
+cogOTU_180	4QEWP	1	Loc090721-7m_megahit_metabat_bin-858	00033	4.9e-29	96.5	14.6	9.3e-23	75.7	5.4	2.2	2	Galactose/methyl galactoside import ATP-binding protein MglA
+cogOTU_180	4QEWP	1	Loclat_megahit_metabat_bin-18817	00016	4.9e-29	96.5	14.6	9.3e-23	75.7	5.4	2.2	2	Galactose/methyl galactoside import ATP-binding protein MglA
+cogOTU_180	4QEWP	1	Loc080925-6m_megahit_metabat_bin-0307	00057	0.00022	15.0	1.4	0.00022	15.0	1.4	1.0	1	hypothetical protein
+cogOTU_180	4QEWP	1	Loc080925-7m_megahit_metabat_bin-0234	00036	0.00022	15.0	1.4	0.00022	15.0	1.4	1.0	1	hypothetical protein
+cogOTU_180	4QEWP	1	Loc090721-6m_megahit_metabat_bin-536	00006	0.00022	15.0	1.4	0.00022	15.0	1.4	1.0	1	hypothetical protein
+cogOTU_180	4QEWP	1	Loc090721-7m_megahit_metabat_bin-858	00109	0.00022	15.0	1.4	0.00022	15.0	1.4	1.0	1	hypothetical protein
+cogOTU_180	4QE03	1	Loc080925-7m_megahit_metabat_bin-0234	00131	5.8e-08	28.3	5.8	0.33	6.7	0.5	7.9	6	hypothetical protein
+cogOTU_180	4QE03	1	Loc090721-6m_megahit_metabat_bin-536	00020	5.8e-08	28.3	5.8	0.33	6.7	0.5	7.9	6	hypothetical protein
+cogOTU_180	4QE03	1	Loc090721-7m_megahit_metabat_bin-858	00083	5.8e-08	28.3	5.8	0.33	6.7	0.5	7.9	6	hypothetical protein
+cogOTU_180	4QGYM	1	Loc080925-6m_megahit_metabat_bin-0307	00114	2e-12	42.2	0.0	8.1e-12	40.2	0.0	1.9	1	ATP-dependent RecD-like DNA helicase
+cogOTU_180	4QGYM	1	Loc080925-7m_megahit_metabat_bin-0234	00082	2e-12	42.2	0.0	8.1e-12	40.2	0.0	1.9	1	ATP-dependent RecD-like DNA helicase
+cogOTU_180	4QGYM	1	Loc090721-6m_megahit_metabat_bin-536	00076	2e-12	42.2	0.0	8.1e-12	40.2	0.0	1.9	1	ATP-dependent RecD-like DNA helicase
+cogOTU_180	4QGYM	1	Loc090721-7m_megahit_metabat_bin-858	00053	2e-12	42.2	0.0	8.1e-12	40.2	0.0	1.9	1	ATP-dependent RecD-like DNA helicase
+cogOTU_180	4QGYM	1	Loclat_megahit_metabat_bin-18817	00036	2e-12	42.2	0.0	8.1e-12	40.2	0.0	1.9	1	ATP-dependent RecD-like DNA helicase
+cogOTU_180	4QAY9	1	Loc090721-7m_megahit_metabat_bin-858	00068	0.0046	11.2	0.1	0.0058	10.9	0.1	1.2	1	hypothetical protein
+cogOTU_180	4QAY9	1	Loc080925-6m_megahit_metabat_bin-0307	00135	0.0055	11.0	0.8	0.15	6.2	0.0	2.5	2	hypothetical protein
+cogOTU_180	4QAY9	1	Loc080925-7m_megahit_metabat_bin-0234	00062	0.0055	11.0	0.8	0.15	6.2	0.0	2.5	2	hypothetical protein
+cogOTU_180	4QAY9	1	Loc090721-6m_megahit_metabat_bin-536	00054	0.0055	11.0	0.8	0.15	6.2	0.0	2.5	2	hypothetical protein
+cogOTU_180	4QAY9	1	Loc090721-7m_megahit_metabat_bin-858	00032	0.0055	11.0	0.8	0.15	6.2	0.0	2.5	2	hypothetical protein
+cogOTU_180	4QAY9	1	Loclat_megahit_metabat_bin-18817	00015	0.0055	11.0	0.8	0.15	6.2	0.0	2.5	2	hypothetical protein
+cogOTU_180	4QB1C	1	Loc090721-7m_megahit_metabat_bin-858	00099	2.2e-07	25.8	0.0	4.1e-07	24.9	0.0	1.3	1	IS21 family transposase ISRel16
+cogOTU_180	4QB1C	1	Loc080925-7m_megahit_metabat_bin-0234	00084	2.3e-07	25.7	0.0	4.1e-07	24.9	0.0	1.3	1	IS21 family transposase ISRel16
+cogOTU_180	4QB1C	1	Loc090721-7m_megahit_metabat_bin-858	00026	0.00011	16.9	0.0	0.00018	16.2	0.0	1.3	1	hypothetical protein
+cogOTU_180	4QB1C	1	Loc080925-6m_megahit_metabat_bin-0307	00099	0.00015	16.5	0.0	0.00033	15.3	0.0	1.5	1	hypothetical protein
+cogOTU_180	4QB1C	1	Loc090721-6m_megahit_metabat_bin-536	00085	0.00015	16.5	0.0	0.00033	15.3	0.0	1.5	1	hypothetical protein
+cogOTU_180	4QB1C	1	Loclat_megahit_metabat_bin-18817	00050	0.00015	16.5	0.0	0.00033	15.3	0.0	1.5	1	hypothetical protein
+cogOTU_180	4QB1C	1	Loc090721-7m_megahit_metabat_bin-858	00068	0.00033	15.4	0.0	0.00071	14.2	0.0	1.6	1	hypothetical protein
+cogOTU_180	4QB1C	1	Loc080925-6m_megahit_metabat_bin-0307	00134	0.0021	12.7	0.0	0.003	12.2	0.0	1.3	1	Galactose/methyl galactoside import ATP-binding protein MglA
+cogOTU_180	4QB1C	1	Loc080925-7m_megahit_metabat_bin-0234	00063	0.0021	12.7	0.0	0.003	12.2	0.0	1.3	1	Galactose/methyl galactoside import ATP-binding protein MglA
+cogOTU_180	4QB1C	1	Loc090721-6m_megahit_metabat_bin-536	00055	0.0021	12.7	0.0	0.003	12.2	0.0	1.3	1	Galactose/methyl galactoside import ATP-binding protein MglA
+cogOTU_180	4QB1C	1	Loc090721-7m_megahit_metabat_bin-858	00033	0.0021	12.7	0.0	0.003	12.2	0.0	1.3	1	Galactose/methyl galactoside import ATP-binding protein MglA
+cogOTU_180	4QB1C	1	Loclat_megahit_metabat_bin-18817	00016	0.0021	12.7	0.0	0.003	12.2	0.0	1.3	1	Galactose/methyl galactoside import ATP-binding protein MglA
+cogOTU_180	4QB1C	1	Loc080925-5-5m_megahit_metabat_bin-0404	00004	0.0022	12.6	0.0	0.0048	11.5	0.0	1.5	1	hypothetical protein
+cogOTU_180	4QB1C	1	Loc080925-6m_megahit_metabat_bin-0307	00013	0.0022	12.6	0.0	0.0048	11.5	0.0	1.5	1	hypothetical protein
+cogOTU_180	4QB1C	1	Loc080925-7m_megahit_metabat_bin-0234	00098	0.0022	12.6	0.0	0.0048	11.5	0.0	1.5	1	hypothetical protein
+cogOTU_180	4QB1C	1	Loc090721-6m_megahit_metabat_bin-536	00037	0.0022	12.6	0.0	0.0048	11.5	0.0	1.5	1	hypothetical protein
+cogOTU_180	4QB1C	1	Loc090721-7m_megahit_metabat_bin-858	00010	0.0022	12.6	0.0	0.0048	11.5	0.0	1.5	1	hypothetical protein
+cogOTU_180	4QB5I	1	Loc080925-6m_megahit_metabat_bin-0307	00076	4.5e-42	139.6	7.3	1.2e-41	138.1	7.3	1.6	1	UvrABC system protein B
+cogOTU_180	4QB5I	1	Loc080925-7m_megahit_metabat_bin-0234	00022	4.5e-42	139.6	7.3	1.2e-41	138.1	7.3	1.6	1	UvrABC system protein B
+cogOTU_180	4QB5I	1	Loc090721-6m_megahit_metabat_bin-536	00108	4.5e-42	139.6	7.3	1.2e-41	138.1	7.3	1.6	1	UvrABC system protein B
+cogOTU_180	4QB5I	1	Loclat_megahit_metabat_bin-18817	00073	4.5e-42	139.6	7.3	1.2e-41	138.1	7.3	1.6	1	UvrABC system protein B
+cogOTU_180	4QB5I	1	Loc090721-7m_megahit_metabat_bin-858	00088	4.8e-42	139.5	7.4	9.7e-42	138.5	7.4	1.4	1	UvrABC system protein B
+cogOTU_180	4QB5I	1	Loc080925-6m_megahit_metabat_bin-0307	00086	5.1e-39	129.6	0.6	8.6e-39	128.8	0.1	1.6	1	RNA polymerase-associated protein RapA
+cogOTU_180	4QB5I	1	Loc080925-7m_megahit_metabat_bin-0234	00012	5.1e-39	129.6	0.6	8.6e-39	128.8	0.1	1.6	1	RNA polymerase-associated protein RapA
+cogOTU_180	4QB5I	1	Loc090721-6m_megahit_metabat_bin-536	00098	5.1e-39	129.6	0.6	8.6e-39	128.8	0.1	1.6	1	RNA polymerase-associated protein RapA
+cogOTU_180	4QB5I	1	Loclat_megahit_metabat_bin-18817	00063	5.1e-39	129.6	0.6	8.6e-39	128.8	0.1	1.6	1	RNA polymerase-associated protein RapA
+cogOTU_180	4QB5I	1	Loc090721-7m_megahit_metabat_bin-858	00013	5.3e-39	129.5	0.7	8.1e-39	128.9	0.1	1.6	1	RNA polymerase-associated protein RapA
+cogOTU_180	4QB5I	1	Loc080925-6m_megahit_metabat_bin-0307	00041	2.4e-23	78.1	0.6	3.8e-23	77.4	0.6	1.2	1	hypothetical protein
+cogOTU_180	4QB5I	1	Loc080925-7m_megahit_metabat_bin-0234	00095	2.4e-23	78.1	0.6	3.8e-23	77.4	0.6	1.2	1	hypothetical protein
+cogOTU_180	4QB5I	1	Loc090721-6m_megahit_metabat_bin-536	00043	2.4e-23	78.1	0.6	3.8e-23	77.4	0.6	1.2	1	hypothetical protein
+cogOTU_180	4QB5I	1	Loc090721-7m_megahit_metabat_bin-858	00069	1.9e-15	52.2	1.1	2.6e-15	51.7	1.1	1.2	1	hypothetical protein
+cogOTU_180	4QB5I	1	Loc080925-6m_megahit_metabat_bin-0307	00114	1.1e-06	23.4	3.2	1.7e-06	22.8	3.1	1.7	1	ATP-dependent RecD-like DNA helicase
+cogOTU_180	4QB5I	1	Loc080925-7m_megahit_metabat_bin-0234	00082	1.1e-06	23.4	3.2	1.7e-06	22.8	3.1	1.7	1	ATP-dependent RecD-like DNA helicase
+cogOTU_180	4QB5I	1	Loc090721-6m_megahit_metabat_bin-536	00076	1.1e-06	23.4	3.2	1.7e-06	22.8	3.1	1.7	1	ATP-dependent RecD-like DNA helicase
+cogOTU_180	4QB5I	1	Loc090721-7m_megahit_metabat_bin-858	00053	1.1e-06	23.4	3.2	1.7e-06	22.8	3.1	1.7	1	ATP-dependent RecD-like DNA helicase
+cogOTU_180	4QB5I	1	Loclat_megahit_metabat_bin-18817	00036	1.1e-06	23.4	3.2	1.7e-06	22.8	3.1	1.7	1	ATP-dependent RecD-like DNA helicase
+cogOTU_180	4QB5I	1	Loc090721-7m_megahit_metabat_bin-858	00099	0.00028	15.4	0.2	0.0004	15.0	0.2	1.4	1	IS21 family transposase ISRel16
+cogOTU_180	4QB5I	1	Loc080925-7m_megahit_metabat_bin-0234	00084	0.00032	15.3	0.2	0.00041	14.9	0.2	1.4	1	IS21 family transposase ISRel16
+cogOTU_180	4QB5I	1	Loc090721-7m_megahit_metabat_bin-858	00026	0.0011	13.5	0.1	0.003	12.1	0.0	1.4	1	hypothetical protein
+cogOTU_180	4QB5I	1	Loc090721-7m_megahit_metabat_bin-858	00068	0.0012	13.4	0.1	0.0022	12.5	0.1	1.6	1	hypothetical protein
+cogOTU_180	4QB5I	1	Loc080925-6m_megahit_metabat_bin-0307	00104	0.0017	12.9	0.6	0.0035	11.9	0.6	1.6	1	hypothetical protein
+cogOTU_180	4QB5I	1	Loc080925-7m_megahit_metabat_bin-0234	00120	0.0017	12.9	0.6	0.0035	11.9	0.6	1.6	1	hypothetical protein
+cogOTU_180	4QB5I	1	Loc090721-6m_megahit_metabat_bin-536	00123	0.0017	12.9	0.6	0.0035	11.9	0.6	1.6	1	hypothetical protein
+cogOTU_180	4QB5I	1	Loc090721-7m_megahit_metabat_bin-858	00063	0.0017	12.9	0.6	0.0035	11.9	0.6	1.6	1	hypothetical protein
+cogOTU_180	4QB5I	1	Loclat_megahit_metabat_bin-18817	00045	0.0017	12.9	0.6	0.0035	11.9	0.6	1.6	1	hypothetical protein
+cogOTU_180	4QB5I	1	Loc080925-6m_megahit_metabat_bin-0307	00099	0.0017	12.9	0.1	0.0057	11.2	0.0	1.6	1	hypothetical protein
+cogOTU_180	4QB5I	1	Loc090721-6m_megahit_metabat_bin-536	00085	0.0017	12.9	0.1	0.0057	11.2	0.0	1.6	1	hypothetical protein
+cogOTU_180	4QB5I	1	Loclat_megahit_metabat_bin-18817	00050	0.0017	12.9	0.1	0.0057	11.2	0.0	1.6	1	hypothetical protein
+cogOTU_180	4QFK6	1	Loc080925-6m_megahit_metabat_bin-0307	00130	0.00089	13.3	0.2	0.0011	13.1	0.2	1.1	1	hypothetical protein
+cogOTU_180	4QFK6	1	Loc080925-7m_megahit_metabat_bin-0234	00067	0.00089	13.3	0.2	0.0011	13.1	0.2	1.1	1	hypothetical protein
+cogOTU_180	4QFK6	1	Loc090721-6m_megahit_metabat_bin-536	00059	0.00089	13.3	0.2	0.0011	13.1	0.2	1.1	1	hypothetical protein
+cogOTU_180	4QFK6	1	Loc090721-7m_megahit_metabat_bin-858	00037	0.00089	13.3	0.2	0.0011	13.1	0.2	1.1	1	hypothetical protein
+cogOTU_180	4QFK6	1	Loclat_megahit_metabat_bin-18817	00020	0.00089	13.3	0.2	0.0011	13.1	0.2	1.1	1	hypothetical protein
+cogOTU_180	4QD6F	1	Loc090721-7m_megahit_metabat_bin-858	00113	0.0023	13.0	0.1	0.0033	12.4	0.1	1.3	1	hypothetical protein
+cogOTU_180	4QAWG	1	Loc080925-6m_megahit_metabat_bin-0307	00101	1.6e-69	230.5	0.9	2e-69	230.2	0.9	1.1	1	hypothetical protein
+cogOTU_180	4QAWG	1	Loc080925-7m_megahit_metabat_bin-0234	00123	1.6e-69	230.5	0.9	2e-69	230.2	0.9	1.1	1	hypothetical protein
+cogOTU_180	4QAWG	1	Loc090721-6m_megahit_metabat_bin-536	00083	1.6e-69	230.5	0.9	2e-69	230.2	0.9	1.1	1	hypothetical protein
+cogOTU_180	4QAWG	1	Loc090721-7m_megahit_metabat_bin-858	00066	1.6e-69	230.5	0.9	2e-69	230.2	0.9	1.1	1	hypothetical protein
+cogOTU_180	4QAWG	1	Loclat_megahit_metabat_bin-18817	00048	1.6e-69	230.5	0.9	2e-69	230.2	0.9	1.1	1	hypothetical protein
+cogOTU_180	4QAWG	1	Loc080925-7m_megahit_metabat_bin-0234	00084	0.0001	16.9	0.0	0.00017	16.2	0.0	1.4	1	IS21 family transposase ISRel16
+cogOTU_180	4QAWG	1	Loc090721-7m_megahit_metabat_bin-858	00099	0.00013	16.5	0.0	0.00021	15.9	0.0	1.4	1	IS21 family transposase ISRel16
+cogOTU_180	4QARC	1	Loc080925-6m_megahit_metabat_bin-0307	00097	4.7e-09	30.3	0.0	4.9e-09	30.2	0.0	1.0	1	hypothetical protein
+cogOTU_180	4QARC	1	Loc080925-7m_megahit_metabat_bin-0234	00001	4.7e-09	30.3	0.0	4.9e-09	30.2	0.0	1.0	1	hypothetical protein
+cogOTU_180	4QARC	1	Loc090721-6m_megahit_metabat_bin-536	00087	4.7e-09	30.3	0.0	4.9e-09	30.2	0.0	1.0	1	hypothetical protein
+cogOTU_180	4QARC	1	Loc090721-7m_megahit_metabat_bin-858	00024	4.7e-09	30.3	0.0	4.9e-09	30.2	0.0	1.0	1	hypothetical protein
+cogOTU_180	4QARC	1	Loclat_megahit_metabat_bin-18817	00052	4.7e-09	30.3	0.0	4.9e-09	30.2	0.0	1.0	1	hypothetical protein
+cogOTU_180	4QCU1	1	Loc080925-6m_megahit_metabat_bin-0307	00082	0.0056	12.2	0.1	0.07	8.7	0.0	2.2	1	hypothetical protein
+cogOTU_180	4QCU1	1	Loc080925-7m_megahit_metabat_bin-0234	00016	0.0056	12.2	0.1	0.07	8.7	0.0	2.2	1	hypothetical protein
+cogOTU_180	4QCU1	1	Loc090721-6m_megahit_metabat_bin-536	00102	0.0056	12.2	0.1	0.07	8.7	0.0	2.2	1	hypothetical protein
+cogOTU_180	4QCU1	1	Loc090721-7m_megahit_metabat_bin-858	00094	0.0056	12.2	0.1	0.07	8.7	0.0	2.2	1	hypothetical protein
+cogOTU_180	4QCU1	1	Loclat_megahit_metabat_bin-18817	00067	0.0056	12.2	0.1	0.07	8.7	0.0	2.2	1	hypothetical protein
+cogOTU_180	4QG2W	1	Loc080925-7m_megahit_metabat_bin-0234	00139	0.0001	17.8	0.3	0.00024	16.6	0.3	1.7	1	DNA primase TraC
+cogOTU_180	4QHQ3	1	Loc080925-6m_megahit_metabat_bin-0307	00018	0.0047	12.1	1.8	0.0048	12.1	0.2	1.8	1	hypothetical protein
+cogOTU_180	4QHQ3	1	Loc080925-7m_megahit_metabat_bin-0234	00130	0.0047	12.1	1.8	0.0048	12.1	0.2	1.8	1	hypothetical protein
+cogOTU_180	4QHQ3	1	Loc090721-7m_megahit_metabat_bin-858	00005	0.0047	12.1	1.8	0.0048	12.1	0.2	1.8	1	hypothetical protein
+cogOTU_180	4QHQ3	1	Loclat_megahit_metabat_bin-18817	00004	0.0047	12.1	1.8	0.0048	12.1	0.2	1.8	1	hypothetical protein
+cogOTU_180	4QE1A	1	Loc080925-7m_megahit_metabat_bin-0234	00131	5.4e-08	28.5	5.2	0.49	6.2	0.0	7.9	6	hypothetical protein
+cogOTU_180	4QE1A	1	Loc090721-6m_megahit_metabat_bin-536	00020	5.4e-08	28.5	5.2	0.49	6.2	0.0	7.9	6	hypothetical protein
+cogOTU_180	4QE1A	1	Loc090721-7m_megahit_metabat_bin-858	00083	5.4e-08	28.5	5.2	0.49	6.2	0.0	7.9	6	hypothetical protein
+cogOTU_180	4QC8C	1	Loc080925-5-5m_megahit_metabat_bin-0404	00010	7.9e-10	33.1	0.0	1.3e-09	32.4	0.0	1.2	1	hypothetical protein
+cogOTU_180	4QC8C	1	Loc080925-6m_megahit_metabat_bin-0307	00007	7.9e-10	33.1	0.0	1.3e-09	32.4	0.0	1.2	1	hypothetical protein
+cogOTU_180	4QC8C	1	Loc090721-6m_megahit_metabat_bin-536	00134	7.9e-10	33.1	0.0	1.3e-09	32.4	0.0	1.2	1	hypothetical protein
+cogOTU_180	4QC8C	1	Loc090721-7m_megahit_metabat_bin-858	00096	7.9e-10	33.1	0.0	1.3e-09	32.4	0.0	1.2	1	hypothetical protein
+cogOTU_180	4QC8C	1	Loc080925-6m_megahit_metabat_bin-0307	00128	7e-07	23.4	0.2	1.1e-06	22.8	0.2	1.2	1	Anaerobic magnesium-protoporphyrin IX monomethyl ester cyclase
+cogOTU_180	4QC8C	1	Loc080925-7m_megahit_metabat_bin-0234	00069	7e-07	23.4	0.2	1.1e-06	22.8	0.2	1.2	1	Anaerobic magnesium-protoporphyrin IX monomethyl ester cyclase
+cogOTU_180	4QC8C	1	Loc090721-6m_megahit_metabat_bin-536	00061	7e-07	23.4	0.2	1.1e-06	22.8	0.2	1.2	1	Anaerobic magnesium-protoporphyrin IX monomethyl ester cyclase
+cogOTU_180	4QC8C	1	Loc090721-7m_megahit_metabat_bin-858	00039	7e-07	23.4	0.2	1.1e-06	22.8	0.2	1.2	1	Anaerobic magnesium-protoporphyrin IX monomethyl ester cyclase
+cogOTU_180	4QC8C	1	Loclat_megahit_metabat_bin-18817	00022	7e-07	23.4	0.2	1.1e-06	22.8	0.2	1.2	1	Anaerobic magnesium-protoporphyrin IX monomethyl ester cyclase
+cogOTU_180	4QAR1	1	Loc080925-5-5m_megahit_metabat_bin-0404	00004	9.6e-21	70.0	0.6	9.6e-21	70.0	0.6	1.8	1	hypothetical protein
+cogOTU_180	4QAR1	1	Loc080925-6m_megahit_metabat_bin-0307	00013	9.6e-21	70.0	0.6	9.6e-21	70.0	0.6	1.8	1	hypothetical protein
+cogOTU_180	4QAR1	1	Loc080925-7m_megahit_metabat_bin-0234	00098	9.6e-21	70.0	0.6	9.6e-21	70.0	0.6	1.8	1	hypothetical protein
+cogOTU_180	4QAR1	1	Loc090721-6m_megahit_metabat_bin-536	00037	9.6e-21	70.0	0.6	9.6e-21	70.0	0.6	1.8	1	hypothetical protein
+cogOTU_180	4QAR1	1	Loc090721-7m_megahit_metabat_bin-858	00010	9.6e-21	70.0	0.6	9.6e-21	70.0	0.6	1.8	1	hypothetical protein
+cogOTU_180	4QAR1	1	Loc080925-6m_megahit_metabat_bin-0307	00084	4.8e-19	64.4	2.2	4.8e-19	64.4	2.2	1.8	1	hypothetical protein
+cogOTU_180	4QAR1	1	Loc080925-7m_megahit_metabat_bin-0234	00014	4.8e-19	64.4	2.2	4.8e-19	64.4	2.2	1.8	1	hypothetical protein
+cogOTU_180	4QAR1	1	Loc090721-6m_megahit_metabat_bin-536	00100	4.8e-19	64.4	2.2	4.8e-19	64.4	2.2	1.8	1	hypothetical protein
+cogOTU_180	4QAR1	1	Loclat_megahit_metabat_bin-18817	00065	4.8e-19	64.4	2.2	4.8e-19	64.4	2.2	1.8	1	hypothetical protein
+cogOTU_180	4QAR1	1	Loc090721-7m_megahit_metabat_bin-858	00026	1.5e-15	53.0	1.6	1.8e-15	52.7	1.6	1.1	1	hypothetical protein
+cogOTU_180	4QAR1	1	Loc080925-6m_megahit_metabat_bin-0307	00099	3e-15	51.9	3.5	3.9e-15	51.6	3.5	1.2	1	hypothetical protein
+cogOTU_180	4QAR1	1	Loc090721-6m_megahit_metabat_bin-536	00085	3e-15	51.9	3.5	3.9e-15	51.6	3.5	1.2	1	hypothetical protein
+cogOTU_180	4QAR1	1	Loclat_megahit_metabat_bin-18817	00050	3e-15	51.9	3.5	3.9e-15	51.6	3.5	1.2	1	hypothetical protein
+cogOTU_180	4QAR1	1	Loc090721-7m_megahit_metabat_bin-858	00068	7.7e-15	50.6	3.8	9.8e-15	50.3	3.8	1.3	1	hypothetical protein
+cogOTU_180	4QAR1	1	Loc080925-7m_megahit_metabat_bin-0234	00084	2.5e-10	35.8	0.2	3.3e-10	35.4	0.2	1.3	1	IS21 family transposase ISRel16
+cogOTU_180	4QAR1	1	Loc090721-7m_megahit_metabat_bin-858	00099	3.1e-10	35.5	0.1	4.1e-10	35.1	0.1	1.2	1	IS21 family transposase ISRel16
+cogOTU_180	4QAR1	1	Loc080925-6m_megahit_metabat_bin-0307	00135	9.4e-07	24.1	12.1	2.1e-06	22.9	11.6	1.9	1	hypothetical protein
+cogOTU_180	4QAR1	1	Loc080925-7m_megahit_metabat_bin-0234	00062	9.4e-07	24.1	12.1	2.1e-06	22.9	11.6	1.9	1	hypothetical protein
+cogOTU_180	4QAR1	1	Loc090721-6m_megahit_metabat_bin-536	00054	9.4e-07	24.1	12.1	2.1e-06	22.9	11.6	1.9	1	hypothetical protein
+cogOTU_180	4QAR1	1	Loc090721-7m_megahit_metabat_bin-858	00032	9.4e-07	24.1	12.1	2.1e-06	22.9	11.6	1.9	1	hypothetical protein
+cogOTU_180	4QAR1	1	Loclat_megahit_metabat_bin-18817	00015	9.4e-07	24.1	12.1	2.1e-06	22.9	11.6	1.9	1	hypothetical protein
+cogOTU_180	4QAR1	1	Loc080925-6m_megahit_metabat_bin-0307	00086	4.4e-06	21.8	0.1	2.6e-05	19.3	0.0	2.1	1	RNA polymerase-associated protein RapA
+cogOTU_180	4QAR1	1	Loc080925-7m_megahit_metabat_bin-0234	00012	4.4e-06	21.8	0.1	2.6e-05	19.3	0.0	2.1	1	RNA polymerase-associated protein RapA
+cogOTU_180	4QAR1	1	Loc090721-6m_megahit_metabat_bin-536	00098	4.4e-06	21.8	0.1	2.6e-05	19.3	0.0	2.1	1	RNA polymerase-associated protein RapA
+cogOTU_180	4QAR1	1	Loclat_megahit_metabat_bin-18817	00063	4.4e-06	21.8	0.1	2.6e-05	19.3	0.0	2.1	1	RNA polymerase-associated protein RapA
+cogOTU_180	4QAR1	1	Loc090721-6m_megahit_metabat_bin-536	00034	4.5e-06	21.8	0.0	5.7e-06	21.5	0.0	1.2	1	Anaerobic nitric oxide reductase transcription regulator NorR
+cogOTU_180	4QAR1	1	Loc090721-7m_megahit_metabat_bin-858	00013	5.7e-06	21.5	0.5	2.6e-05	19.3	0.0	2.1	1	RNA polymerase-associated protein RapA
+cogOTU_180	4QAR1	1	Loc090721-7m_megahit_metabat_bin-858	00011	4.4e-05	18.6	0.7	8.5e-05	17.6	0.7	1.7	1	hypothetical protein
+cogOTU_180	4QAR1	1	Loc080925-6m_megahit_metabat_bin-0307	00114	0.0013	13.7	1.4	0.0031	12.5	0.0	2.3	1	ATP-dependent RecD-like DNA helicase
+cogOTU_180	4QAR1	1	Loc080925-7m_megahit_metabat_bin-0234	00082	0.0013	13.7	1.4	0.0031	12.5	0.0	2.3	1	ATP-dependent RecD-like DNA helicase
+cogOTU_180	4QAR1	1	Loc090721-6m_megahit_metabat_bin-536	00076	0.0013	13.7	1.4	0.0031	12.5	0.0	2.3	1	ATP-dependent RecD-like DNA helicase
+cogOTU_180	4QAR1	1	Loc090721-7m_megahit_metabat_bin-858	00053	0.0013	13.7	1.4	0.0031	12.5	0.0	2.3	1	ATP-dependent RecD-like DNA helicase
+cogOTU_180	4QAR1	1	Loclat_megahit_metabat_bin-18817	00036	0.0013	13.7	1.4	0.0031	12.5	0.0	2.3	1	ATP-dependent RecD-like DNA helicase
+cogOTU_180	4QAR1	1	Loc080925-6m_megahit_metabat_bin-0307	00134	0.0014	13.6	0.0	0.0097	10.9	0.0	2.1	1	Galactose/methyl galactoside import ATP-binding protein MglA
+cogOTU_180	4QAR1	1	Loc080925-7m_megahit_metabat_bin-0234	00063	0.0014	13.6	0.0	0.0097	10.9	0.0	2.1	1	Galactose/methyl galactoside import ATP-binding protein MglA
+cogOTU_180	4QAR1	1	Loc090721-6m_megahit_metabat_bin-536	00055	0.0014	13.6	0.0	0.0097	10.9	0.0	2.1	1	Galactose/methyl galactoside import ATP-binding protein MglA
+cogOTU_180	4QAR1	1	Loc090721-7m_megahit_metabat_bin-858	00033	0.0014	13.6	0.0	0.0097	10.9	0.0	2.1	1	Galactose/methyl galactoside import ATP-binding protein MglA
+cogOTU_180	4QAR1	1	Loclat_megahit_metabat_bin-18817	00016	0.0014	13.6	0.0	0.0097	10.9	0.0	2.1	1	Galactose/methyl galactoside import ATP-binding protein MglA
+cogOTU_180	4QASV	1	Loc080925-6m_megahit_metabat_bin-0307	00101	2e-05	19.1	0.4	4.7e-05	17.8	0.4	1.6	1	hypothetical protein
+cogOTU_180	4QASV	1	Loc080925-7m_megahit_metabat_bin-0234	00123	2e-05	19.1	0.4	4.7e-05	17.8	0.4	1.6	1	hypothetical protein
+cogOTU_180	4QASV	1	Loc090721-6m_megahit_metabat_bin-536	00083	2e-05	19.1	0.4	4.7e-05	17.8	0.4	1.6	1	hypothetical protein
+cogOTU_180	4QASV	1	Loc090721-7m_megahit_metabat_bin-858	00066	2e-05	19.1	0.4	4.7e-05	17.8	0.4	1.6	1	hypothetical protein
+cogOTU_180	4QASV	1	Loclat_megahit_metabat_bin-18817	00048	2e-05	19.1	0.4	4.7e-05	17.8	0.4	1.6	1	hypothetical protein
+cogOTU_180	4QCT7	1	Loc080925-5-5m_megahit_metabat_bin-0404	00009	2.1e-19	66.0	0.3	3e-19	65.5	0.3	1.2	1	Antilisterial bacteriocin subtilosin biosynthesis protein AlbA
+cogOTU_180	4QCT7	1	Loc080925-6m_megahit_metabat_bin-0307	00008	2.1e-19	66.0	0.3	3e-19	65.5	0.3	1.2	1	Antilisterial bacteriocin subtilosin biosynthesis protein AlbA
+cogOTU_180	4QCT7	1	Loc090721-6m_megahit_metabat_bin-536	00135	2.1e-19	66.0	0.3	3e-19	65.5	0.3	1.2	1	Antilisterial bacteriocin subtilosin biosynthesis protein AlbA
+cogOTU_180	4QCT7	1	Loc080925-5-5m_megahit_metabat_bin-0404	00007	1.3e-14	50.3	4.9	1.6e-14	50.0	4.9	1.2	1	Antilisterial bacteriocin subtilosin biosynthesis protein AlbA
+cogOTU_180	4QCT7	1	Loc080925-6m_megahit_metabat_bin-0307	00010	1.3e-14	50.3	4.9	1.6e-14	50.0	4.9	1.2	1	Antilisterial bacteriocin subtilosin biosynthesis protein AlbA
+cogOTU_180	4QCT7	1	Loc080925-5-5m_megahit_metabat_bin-0404	00008	5.9e-14	48.1	10.6	8.3e-14	47.6	10.6	1.2	1	hypothetical protein
+cogOTU_180	4QCT7	1	Loc080925-6m_megahit_metabat_bin-0307	00009	5.9e-14	48.1	10.6	8.3e-14	47.6	10.6	1.2	1	hypothetical protein
+cogOTU_180	4QCT7	1	Loc080925-5-5m_megahit_metabat_bin-0404	00006	1.3e-12	43.7	3.6	1.9e-12	43.1	3.6	1.2	1	hypothetical protein
+cogOTU_180	4QCT7	1	Loc080925-6m_megahit_metabat_bin-0307	00011	1.3e-12	43.7	3.6	1.9e-12	43.1	3.6	1.2	1	hypothetical protein
+cogOTU_180	4QCT7	1	Loc090721-6m_megahit_metabat_bin-536	00035	1.3e-12	43.7	3.6	1.9e-12	43.1	3.6	1.2	1	hypothetical protein
+cogOTU_180	4QCT7	1	Loc080925-5-5m_megahit_metabat_bin-0404	00005	4.4e-12	42.0	11.2	8.8e-12	41.0	11.1	1.5	1	Anaerobic sulfatase-maturating enzyme
+cogOTU_180	4QCT7	1	Loc080925-6m_megahit_metabat_bin-0307	00012	4.4e-12	42.0	11.2	8.8e-12	41.0	11.1	1.5	1	Anaerobic sulfatase-maturating enzyme
+cogOTU_180	4QCT7	1	Loc090721-6m_megahit_metabat_bin-536	00036	4.4e-12	42.0	11.2	8.8e-12	41.0	11.1	1.5	1	Anaerobic sulfatase-maturating enzyme
+cogOTU_180	4QCT7	1	Loc080925-5-5m_megahit_metabat_bin-0404	00010	7.3e-05	18.2	0.4	0.00034	16.0	0.1	2.0	1	hypothetical protein
+cogOTU_180	4QCT7	1	Loc080925-6m_megahit_metabat_bin-0307	00007	7.3e-05	18.2	0.4	0.00034	16.0	0.1	2.0	1	hypothetical protein
+cogOTU_180	4QCT7	1	Loc090721-6m_megahit_metabat_bin-536	00134	7.3e-05	18.2	0.4	0.00034	16.0	0.1	2.0	1	hypothetical protein
+cogOTU_180	4QCT7	1	Loc090721-7m_megahit_metabat_bin-858	00096	7.3e-05	18.2	0.4	0.00034	16.0	0.1	2.0	1	hypothetical protein
+cogOTU_180	4QCT7	1	Loc080925-5-5m_megahit_metabat_bin-0404	00013	0.0016	13.9	1.9	0.0093	11.3	0.3	2.2	1	hypothetical protein
+cogOTU_180	4QCT7	1	Loc080925-6m_megahit_metabat_bin-0307	00004	0.0016	13.9	1.9	0.0093	11.3	0.3	2.2	1	hypothetical protein
+cogOTU_180	4QESU	1	Loc090721-7m_megahit_metabat_bin-858	00088	8.8e-10	32.7	7.4	1.3e-09	32.1	7.4	1.1	1	UvrABC system protein B
+cogOTU_180	4QEQU	1	Loc080925-6m_megahit_metabat_bin-0307	00056	0.0015	12.3	2.6	0.0019	11.9	2.6	1.1	1	hypothetical protein
+cogOTU_180	4QEQU	1	Loc090721-6m_megahit_metabat_bin-536	00007	0.0015	12.3	2.6	0.0019	11.9	2.6	1.1	1	hypothetical protein
+cogOTU_180	4QF0X	1	Loc080925-6m_megahit_metabat_bin-0307	00137	2.6e-05	19.7	0.0	2.9e-05	19.6	0.0	1.1	1	hypothetical protein
+cogOTU_180	4QF0X	1	Loc080925-7m_megahit_metabat_bin-0234	00061	2.6e-05	19.7	0.0	2.9e-05	19.6	0.0	1.1	1	hypothetical protein
+cogOTU_180	4QF0X	1	Loc090721-6m_megahit_metabat_bin-536	00053	2.6e-05	19.7	0.0	2.9e-05	19.6	0.0	1.1	1	hypothetical protein
+cogOTU_180	4QF0X	1	Loc090721-7m_megahit_metabat_bin-858	00030	2.6e-05	19.7	0.0	2.9e-05	19.6	0.0	1.1	1	hypothetical protein
+cogOTU_180	4QF0X	1	Loclat_megahit_metabat_bin-18817	00014	2.6e-05	19.7	0.0	2.9e-05	19.6	0.0	1.1	1	hypothetical protein
+cogOTU_180	4QF8S	1	Loc090721-7m_megahit_metabat_bin-858	00026	0.00039	15.2	0.2	0.00094	14.0	0.0	1.6	1	hypothetical protein
+cogOTU_180	4QF8S	1	Loc090721-7m_megahit_metabat_bin-858	00068	0.00047	15.0	0.1	0.0016	13.2	0.1	1.9	1	hypothetical protein
+cogOTU_180	4QF8S	1	Loc080925-6m_megahit_metabat_bin-0307	00099	0.00049	14.9	0.1	0.0016	13.2	0.1	1.8	1	hypothetical protein
+cogOTU_180	4QF8S	1	Loc090721-6m_megahit_metabat_bin-536	00085	0.00049	14.9	0.1	0.0016	13.2	0.1	1.8	1	hypothetical protein
+cogOTU_180	4QF8S	1	Loclat_megahit_metabat_bin-18817	00050	0.00049	14.9	0.1	0.0016	13.2	0.1	1.8	1	hypothetical protein
+cogOTU_180	4QBDC	1	Loc080925-7m_megahit_metabat_bin-0234	00141	0.00096	14.0	0.7	0.0015	13.3	0.7	1.3	1	hypothetical protein
+cogOTU_180	4QBDC	1	Loc090721-6m_megahit_metabat_bin-536	00026	0.00096	14.0	0.7	0.0015	13.3	0.7	1.3	1	hypothetical protein
+cogOTU_180	4QCZ2	0	Loc080925-7m_megahit_metabat_bin-0234	00111	0.026	9.0	4.7	0.036	8.5	4.7	1.3	1	Inner membrane protein YhaH
+cogOTU_180	4QAJ8	0	Loc080925-6m_megahit_metabat_bin-0307	00130	0.043	8.3	10.6	0.21	6.1	5.3	2.3	2	hypothetical protein
+cogOTU_180	4QAJ8	0	Loc080925-7m_megahit_metabat_bin-0234	00067	0.043	8.3	10.6	0.21	6.1	5.3	2.3	2	hypothetical protein
+cogOTU_180	4QAJ8	0	Loc090721-6m_megahit_metabat_bin-536	00059	0.043	8.3	10.6	0.21	6.1	5.3	2.3	2	hypothetical protein
+cogOTU_180	4QAJ8	0	Loc090721-7m_megahit_metabat_bin-858	00037	0.043	8.3	10.6	0.21	6.1	5.3	2.3	2	hypothetical protein
+cogOTU_180	4QAJ8	0	Loclat_megahit_metabat_bin-18817	00020	0.043	8.3	10.6	0.21	6.1	5.3	2.3	2	hypothetical protein
+cogOTU_180	4QC84	1	Loc080925-6m_megahit_metabat_bin-0307	00101	1.2e-07	26.4	1.8	2.1e-07	25.6	0.3	1.7	2	hypothetical protein
+cogOTU_180	4QC84	1	Loc080925-7m_megahit_metabat_bin-0234	00123	1.2e-07	26.4	1.8	2.1e-07	25.6	0.3	1.7	2	hypothetical protein
+cogOTU_180	4QC84	1	Loc090721-6m_megahit_metabat_bin-536	00083	1.2e-07	26.4	1.8	2.1e-07	25.6	0.3	1.7	2	hypothetical protein
+cogOTU_180	4QC84	1	Loc090721-7m_megahit_metabat_bin-858	00066	1.2e-07	26.4	1.8	2.1e-07	25.6	0.3	1.7	2	hypothetical protein
+cogOTU_180	4QC84	1	Loclat_megahit_metabat_bin-18817	00048	1.2e-07	26.4	1.8	2.1e-07	25.6	0.3	1.7	2	hypothetical protein
+cogOTU_180	4QFDZ	1	Loc080925-6m_megahit_metabat_bin-0307	00079	0.00099	13.9	2.4	0.0019	13.0	2.4	1.5	1	hypothetical protein
+cogOTU_180	4QFDZ	1	Loc080925-7m_megahit_metabat_bin-0234	00019	0.00099	13.9	2.4	0.0019	13.0	2.4	1.5	1	hypothetical protein
+cogOTU_180	4QFDZ	1	Loc090721-6m_megahit_metabat_bin-536	00105	0.00099	13.9	2.4	0.0019	13.0	2.4	1.5	1	hypothetical protein
+cogOTU_180	4QFDZ	1	Loc090721-7m_megahit_metabat_bin-858	00091	0.00099	13.9	2.4	0.0019	13.0	2.4	1.5	1	hypothetical protein
+cogOTU_180	4QFDZ	1	Loclat_megahit_metabat_bin-18817	00070	0.00099	13.9	2.4	0.0019	13.0	2.4	1.5	1	hypothetical protein
+cogOTU_180	4QCPY	0	Loc080925-6m_megahit_metabat_bin-0307	00056	0.025	9.8	5.4	0.031	9.5	2.3	2.2	2	hypothetical protein
+cogOTU_180	4QCPY	0	Loc090721-6m_megahit_metabat_bin-536	00007	0.025	9.8	5.4	0.031	9.5	2.3	2.2	2	hypothetical protein
+cogOTU_180	4QBAI	1	Loc080925-6m_megahit_metabat_bin-0307	00087	0.0015	11.6	0.2	0.02	7.9	0.0	2.0	2	hypothetical protein
+cogOTU_180	4QBAI	1	Loc080925-7m_megahit_metabat_bin-0234	00011	0.0015	11.6	0.2	0.02	7.9	0.0	2.0	2	hypothetical protein
+cogOTU_180	4QBAI	1	Loc090721-6m_megahit_metabat_bin-536	00097	0.0015	11.6	0.2	0.02	7.9	0.0	2.0	2	hypothetical protein
+cogOTU_180	4QBAI	1	Loc090721-7m_megahit_metabat_bin-858	00014	0.0015	11.6	0.2	0.02	7.9	0.0	2.0	2	hypothetical protein
+cogOTU_180	4QBAI	1	Loclat_megahit_metabat_bin-18817	00062	0.0015	11.6	0.2	0.02	7.9	0.0	2.0	2	hypothetical protein
+cogOTU_180	4QAWP	1	Loc080925-6m_megahit_metabat_bin-0307	00106	0.0015	14.1	0.1	0.0038	12.9	0.1	1.7	1	hypothetical protein
+cogOTU_180	4QAWP	1	Loc080925-7m_megahit_metabat_bin-0234	00118	0.0015	14.1	0.1	0.0038	12.9	0.1	1.7	1	hypothetical protein
+cogOTU_180	4QAWP	1	Loc090721-6m_megahit_metabat_bin-536	00121	0.0015	14.1	0.1	0.0038	12.9	0.1	1.7	1	hypothetical protein
+cogOTU_180	4QAWP	1	Loc090721-7m_megahit_metabat_bin-858	00061	0.0015	14.1	0.1	0.0038	12.9	0.1	1.7	1	hypothetical protein
+cogOTU_180	4QAWP	1	Loclat_megahit_metabat_bin-18817	00043	0.0015	14.1	0.1	0.0038	12.9	0.1	1.7	1	hypothetical protein
+cogOTU_180	4QFIQ	1	Loc080925-7m_megahit_metabat_bin-0234	00104	4e-05	18.1	1.4	4.2e-05	18.0	0.1	1.6	1	hypothetical protein
+cogOTU_180	4QFIQ	1	Loc090721-6m_megahit_metabat_bin-536	00025	4e-05	18.1	1.4	4.2e-05	18.0	0.1	1.6	1	hypothetical protein
+cogOTU_180	4QFIQ	1	Loclat_megahit_metabat_bin-18817	00008	4e-05	18.1	1.4	4.2e-05	18.0	0.1	1.6	1	hypothetical protein
+cogOTU_180	4QDCQ	1	Loc080925-6m_megahit_metabat_bin-0307	00071	4.5e-19	64.4	0.4	5.5e-19	64.1	0.4	1.1	1	N-glycosidase YbiA
+cogOTU_180	4QDCQ	1	Loc080925-7m_megahit_metabat_bin-0234	00027	4.5e-19	64.4	0.4	5.5e-19	64.1	0.4	1.1	1	N-glycosidase YbiA
+cogOTU_180	4QDCQ	1	Loc090721-6m_megahit_metabat_bin-536	00113	4.5e-19	64.4	0.4	5.5e-19	64.1	0.4	1.1	1	N-glycosidase YbiA
+cogOTU_180	4QDCQ	1	Loclat_megahit_metabat_bin-18817	00078	4.5e-19	64.4	0.4	5.5e-19	64.1	0.4	1.1	1	N-glycosidase YbiA
+cogOTU_180	4QB5P	1	Loc090721-7m_megahit_metabat_bin-858	00116	0.0046	11.9	0.0	0.052	8.5	0.0	2.1	2	hypothetical protein
+cogOTU_180	4QFK9	1	Loc080925-7m_megahit_metabat_bin-0234	00106	0.00024	15.7	0.0	0.0003	15.4	0.0	1.1	1	hypothetical protein
+cogOTU_180	4QDCP	1	Loc080925-6m_megahit_metabat_bin-0307	00030	0.0026	11.3	0.1	0.0025	11.3	0.1	1.0	1	hypothetical protein
+cogOTU_180	4QDCP	1	Loc080925-7m_megahit_metabat_bin-0234	00085	0.0026	11.3	0.1	0.0025	11.3	0.1	1.0	1	hypothetical protein
+cogOTU_180	4QBRX	1	Loc080925-6m_megahit_metabat_bin-0307	00085	0.00024	16.7	0.0	0.00032	16.3	0.0	1.2	1	hypothetical protein
+cogOTU_180	4QBRX	1	Loc080925-7m_megahit_metabat_bin-0234	00013	0.00024	16.7	0.0	0.00032	16.3	0.0	1.2	1	hypothetical protein
+cogOTU_180	4QBRX	1	Loc090721-6m_megahit_metabat_bin-536	00099	0.00024	16.7	0.0	0.00032	16.3	0.0	1.2	1	hypothetical protein
+cogOTU_180	4QBRX	1	Loc090721-7m_megahit_metabat_bin-858	00012	0.00024	16.7	0.0	0.00032	16.3	0.0	1.2	1	hypothetical protein
+cogOTU_180	4QBRX	1	Loclat_megahit_metabat_bin-18817	00064	0.00024	16.7	0.0	0.00032	16.3	0.0	1.2	1	hypothetical protein
+cogOTU_180	4QF30	1	Loc080925-7m_megahit_metabat_bin-0234	00138	7.1e-05	18.4	0.1	8.6e-05	18.1	0.1	1.1	1	hypothetical protein
+cogOTU_180	4QASH	1	Loc090721-7m_megahit_metabat_bin-858	00026	0.00092	14.2	2.0	0.0012	13.8	0.4	2.0	1	hypothetical protein
+cogOTU_180	4QATN	1	Loc080925-6m_megahit_metabat_bin-0307	00111	3.4e-14	48.6	0.1	5.3e-14	47.9	0.1	1.3	1	hypothetical protein
+cogOTU_180	4QATN	1	Loc080925-7m_megahit_metabat_bin-0234	00113	3.4e-14	48.6	0.1	5.3e-14	47.9	0.1	1.3	1	hypothetical protein
+cogOTU_180	4QATN	1	Loc090721-6m_megahit_metabat_bin-536	00079	3.4e-14	48.6	0.1	5.3e-14	47.9	0.1	1.3	1	hypothetical protein
+cogOTU_180	4QATN	1	Loc090721-7m_megahit_metabat_bin-858	00056	3.4e-14	48.6	0.1	5.3e-14	47.9	0.1	1.3	1	hypothetical protein
+cogOTU_180	4QATN	1	Loclat_megahit_metabat_bin-18817	00039	3.4e-14	48.6	0.1	5.3e-14	47.9	0.1	1.3	1	hypothetical protein
+cogOTU_180	4QCHF	1	Loc090721-7m_megahit_metabat_bin-858	00026	0.0014	13.1	0.6	0.0021	12.5	0.1	1.5	1	hypothetical protein
+cogOTU_180	4QB58	1	Loc090721-7m_megahit_metabat_bin-858	00026	0.00087	13.4	0.0	0.0013	12.8	0.0	1.3	1	hypothetical protein
+cogOTU_180	4QB58	1	Loc080925-6m_megahit_metabat_bin-0307	00099	0.0015	12.6	0.0	0.0024	11.9	0.0	1.3	1	hypothetical protein
+cogOTU_180	4QB58	1	Loc090721-6m_megahit_metabat_bin-536	00085	0.0015	12.6	0.0	0.0024	11.9	0.0	1.3	1	hypothetical protein
+cogOTU_180	4QB58	1	Loclat_megahit_metabat_bin-18817	00050	0.0015	12.6	0.0	0.0024	11.9	0.0	1.3	1	hypothetical protein

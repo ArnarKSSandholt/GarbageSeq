@@ -1,0 +1,66 @@
+cogOTU_1375	4QAVS	1	Loc090721-4m_megahit_metabat_bin-0872	00007	0.0013	11.5	0.1	0.0028	10.4	0.1	1.5	1	Glutarate-semialdehyde dehydrogenase DavD
+cogOTU_1375	4QAVS	1	Loc090721-5m_megahit_metabat_bin-395	00020	0.0013	11.5	0.1	0.0028	10.4	0.1	1.5	1	Glutarate-semialdehyde dehydrogenase DavD
+cogOTU_1375	4QAVS	1	Loc090721-6m_megahit_metabat_bin-288	00019	0.0013	11.5	0.1	0.0028	10.4	0.1	1.5	1	Glutarate-semialdehyde dehydrogenase DavD
+cogOTU_1375	4QAVS	1	Loc090721-8-6m_megahit_metabat_bin-0257	00001	0.0013	11.5	0.1	0.0028	10.4	0.1	1.5	1	Glutarate-semialdehyde dehydrogenase DavD
+cogOTU_1375	4QAVS	1	Loc090907-5m_megahit_metabat_bin-434	00001	0.0013	11.5	0.1	0.0028	10.4	0.1	1.5	1	Glutarate-semialdehyde dehydrogenase DavD
+cogOTU_1375	4QAVS	1	Loc090907-6m_megahit_metabat_bin-037	00007	0.0013	11.5	0.1	0.0028	10.4	0.1	1.5	1	Glutarate-semialdehyde dehydrogenase DavD
+cogOTU_1375	4QAVS	1	Loc090907-8-6m_megahit_metabat_bin-490	00004	0.0013	11.5	0.1	0.0028	10.4	0.1	1.5	1	Glutarate-semialdehyde dehydrogenase DavD
+cogOTU_1375	4QCWM	1	Loc090721-4m_megahit_metabat_bin-0872	00003	3e-56	184.0	0.0	3.7e-56	183.7	0.0	1.0	1	Glucose-1-phosphate thymidylyltransferase 1
+cogOTU_1375	4QCWM	1	Loc090721-5m_megahit_metabat_bin-395	00017	3e-56	184.0	0.0	3.7e-56	183.7	0.0	1.0	1	Glucose-1-phosphate thymidylyltransferase 1
+cogOTU_1375	4QCWM	1	Loc090721-6m_megahit_metabat_bin-288	00012	3e-56	184.0	0.0	3.7e-56	183.7	0.0	1.0	1	Glucose-1-phosphate thymidylyltransferase 1
+cogOTU_1375	4QCWM	1	Loc090721-8-6m_megahit_metabat_bin-0257	00007	3e-56	184.0	0.0	3.7e-56	183.7	0.0	1.0	1	Glucose-1-phosphate thymidylyltransferase 1
+cogOTU_1375	4QCWM	1	Loc090907-5m_megahit_metabat_bin-434	00008	3e-56	184.0	0.0	3.7e-56	183.7	0.0	1.0	1	Glucose-1-phosphate thymidylyltransferase 1
+cogOTU_1375	4QCWM	1	Loc090907-6m_megahit_metabat_bin-037	00003	3e-56	184.0	0.0	3.7e-56	183.7	0.0	1.0	1	Glucose-1-phosphate thymidylyltransferase 1
+cogOTU_1375	4QCWM	1	Loc090907-8-6m_megahit_metabat_bin-490	00010	3e-56	184.0	0.0	3.7e-56	183.7	0.0	1.0	1	Glucose-1-phosphate thymidylyltransferase 1
+cogOTU_1375	4QBNR	1	Loc090721-5m_megahit_metabat_bin-395	00016	9.6e-36	116.5	0.0	1.2e-35	116.2	0.0	1.1	1	dTDP-4-dehydrorhamnose reductase
+cogOTU_1375	4QBNR	1	Loc090721-6m_megahit_metabat_bin-288	00013	9.6e-36	116.5	0.0	1.2e-35	116.2	0.0	1.1	1	dTDP-4-dehydrorhamnose reductase
+cogOTU_1375	4QBNR	1	Loc090721-8-6m_megahit_metabat_bin-0257	00008	9.6e-36	116.5	0.0	1.2e-35	116.2	0.0	1.1	1	dTDP-4-dehydrorhamnose reductase
+cogOTU_1375	4QBNR	1	Loc090907-5m_megahit_metabat_bin-434	00007	9.6e-36	116.5	0.0	1.2e-35	116.2	0.0	1.1	1	dTDP-4-dehydrorhamnose reductase
+cogOTU_1375	4QBNR	1	Loc090907-6m_megahit_metabat_bin-037	00002	9.6e-36	116.5	0.0	1.2e-35	116.2	0.0	1.1	1	dTDP-4-dehydrorhamnose reductase
+cogOTU_1375	4QBNR	1	Loc090907-8-6m_megahit_metabat_bin-490	00011	9.6e-36	116.5	0.0	1.2e-35	116.2	0.0	1.1	1	dTDP-4-dehydrorhamnose reductase
+cogOTU_1375	4QBNR	1	Loc090721-4m_megahit_metabat_bin-0872	00002	2e-35	115.5	0.0	2.6e-35	115.1	0.0	1.1	1	dTDP-4-dehydrorhamnose reductase
+cogOTU_1375	4QBNR	1	Loc090721-4m_megahit_metabat_bin-0872	00001	4.6e-05	15.9	0.0	7.9e-05	15.1	0.0	1.4	1	dTDP-glucose 4,6-dehydratase
+cogOTU_1375	4QBNR	1	Loc090721-5m_megahit_metabat_bin-395	00015	4.6e-05	15.9	0.0	7.9e-05	15.1	0.0	1.4	1	dTDP-glucose 4,6-dehydratase
+cogOTU_1375	4QBNR	1	Loc090721-6m_megahit_metabat_bin-288	00014	4.6e-05	15.9	0.0	7.9e-05	15.1	0.0	1.4	1	dTDP-glucose 4,6-dehydratase
+cogOTU_1375	4QBNR	1	Loc090721-8-6m_megahit_metabat_bin-0257	00009	4.6e-05	15.9	0.0	7.9e-05	15.1	0.0	1.4	1	dTDP-glucose 4,6-dehydratase
+cogOTU_1375	4QBNR	1	Loc090907-5m_megahit_metabat_bin-434	00006	4.6e-05	15.9	0.0	7.9e-05	15.1	0.0	1.4	1	dTDP-glucose 4,6-dehydratase
+cogOTU_1375	4QBNR	1	Loc090907-6m_megahit_metabat_bin-037	00001	4.6e-05	15.9	0.0	7.9e-05	15.1	0.0	1.4	1	dTDP-glucose 4,6-dehydratase
+cogOTU_1375	4QBNR	1	Loc090907-8-6m_megahit_metabat_bin-490	00012	4.6e-05	15.9	0.0	7.9e-05	15.1	0.0	1.4	1	dTDP-glucose 4,6-dehydratase
+cogOTU_1375	4QH2Q	1	Loc090721-5m_megahit_metabat_bin-395	00014	6.7e-24	76.4	0.1	2.2e-23	74.7	0.2	1.8	1	hypothetical protein
+cogOTU_1375	4QH2Q	1	Loc090721-4m_megahit_metabat_bin-0872	00010	2e-09	28.5	0.0	2e-09	28.4	0.0	1.0	1	hypothetical protein
+cogOTU_1375	4QH2Q	1	Loc090721-6m_megahit_metabat_bin-288	00022	2e-09	28.5	0.0	2e-09	28.4	0.0	1.0	1	hypothetical protein
+cogOTU_1375	4QH2Q	1	Loc090907-6m_megahit_metabat_bin-037	00015	2e-09	28.5	0.0	2e-09	28.4	0.0	1.0	1	hypothetical protein
+cogOTU_1375	4QHD3	1	Loc090721-4m_megahit_metabat_bin-0872	00004	1.6e-61	200.6	0.0	2e-61	200.3	0.0	1.0	1	dTDP-4-dehydrorhamnose 3,5-epimerase
+cogOTU_1375	4QHD3	1	Loc090907-5m_megahit_metabat_bin-434	00009	1.6e-61	200.6	0.0	2e-61	200.3	0.0	1.0	1	dTDP-4-dehydrorhamnose 3,5-epimerase
+cogOTU_1375	4QHD3	1	Loc090721-5m_megahit_metabat_bin-395	00018	8.8e-61	198.2	0.0	1.1e-60	197.9	0.0	1.0	1	dTDP-4-dehydrorhamnose 3,5-epimerase
+cogOTU_1375	4QHD3	1	Loc090721-6m_megahit_metabat_bin-288	00011	8.8e-61	198.2	0.0	1.1e-60	197.9	0.0	1.0	1	dTDP-4-dehydrorhamnose 3,5-epimerase
+cogOTU_1375	4QHD3	1	Loc090721-8-6m_megahit_metabat_bin-0257	00006	8.8e-61	198.2	0.0	1.1e-60	197.9	0.0	1.0	1	dTDP-4-dehydrorhamnose 3,5-epimerase
+cogOTU_1375	4QHD3	1	Loc090907-6m_megahit_metabat_bin-037	00004	8.8e-61	198.2	0.0	1.1e-60	197.9	0.0	1.0	1	dTDP-4-dehydrorhamnose 3,5-epimerase
+cogOTU_1375	4QHD3	1	Loc090907-8-6m_megahit_metabat_bin-490	00009	8.8e-61	198.2	0.0	1.1e-60	197.9	0.0	1.0	1	dTDP-4-dehydrorhamnose 3,5-epimerase
+cogOTU_1375	4QDDU	1	Loc090721-4m_megahit_metabat_bin-0872	00024	5.7e-05	15.5	0.7	6.4e-05	15.3	0.7	1.0	1	hypothetical protein
+cogOTU_1375	4QDDU	1	Loc090721-5m_megahit_metabat_bin-395	00003	5.7e-05	15.5	0.7	6.4e-05	15.3	0.7	1.0	1	hypothetical protein
+cogOTU_1375	4QDDU	1	Loc090721-6m_megahit_metabat_bin-288	00017	5.7e-05	15.5	0.7	6.4e-05	15.3	0.7	1.0	1	hypothetical protein
+cogOTU_1375	4QCFA	1	Loc090721-4m_megahit_metabat_bin-0872	00001	5e-80	262.1	0.0	6.2e-80	261.8	0.0	1.0	1	dTDP-glucose 4,6-dehydratase
+cogOTU_1375	4QCFA	1	Loc090721-5m_megahit_metabat_bin-395	00015	5e-80	262.1	0.0	6.2e-80	261.8	0.0	1.0	1	dTDP-glucose 4,6-dehydratase
+cogOTU_1375	4QCFA	1	Loc090721-6m_megahit_metabat_bin-288	00014	5e-80	262.1	0.0	6.2e-80	261.8	0.0	1.0	1	dTDP-glucose 4,6-dehydratase
+cogOTU_1375	4QCFA	1	Loc090721-8-6m_megahit_metabat_bin-0257	00009	5e-80	262.1	0.0	6.2e-80	261.8	0.0	1.0	1	dTDP-glucose 4,6-dehydratase
+cogOTU_1375	4QCFA	1	Loc090907-5m_megahit_metabat_bin-434	00006	5e-80	262.1	0.0	6.2e-80	261.8	0.0	1.0	1	dTDP-glucose 4,6-dehydratase
+cogOTU_1375	4QCFA	1	Loc090907-6m_megahit_metabat_bin-037	00001	5e-80	262.1	0.0	6.2e-80	261.8	0.0	1.0	1	dTDP-glucose 4,6-dehydratase
+cogOTU_1375	4QCFA	1	Loc090907-8-6m_megahit_metabat_bin-490	00012	5e-80	262.1	0.0	6.2e-80	261.8	0.0	1.0	1	dTDP-glucose 4,6-dehydratase
+cogOTU_1375	4QCFA	1	Loc090721-5m_megahit_metabat_bin-395	00016	4.4e-15	48.8	0.0	6.4e-15	48.3	0.0	1.3	1	dTDP-4-dehydrorhamnose reductase
+cogOTU_1375	4QCFA	1	Loc090721-6m_megahit_metabat_bin-288	00013	4.4e-15	48.8	0.0	6.4e-15	48.3	0.0	1.3	1	dTDP-4-dehydrorhamnose reductase
+cogOTU_1375	4QCFA	1	Loc090721-8-6m_megahit_metabat_bin-0257	00008	4.4e-15	48.8	0.0	6.4e-15	48.3	0.0	1.3	1	dTDP-4-dehydrorhamnose reductase
+cogOTU_1375	4QCFA	1	Loc090907-5m_megahit_metabat_bin-434	00007	4.4e-15	48.8	0.0	6.4e-15	48.3	0.0	1.3	1	dTDP-4-dehydrorhamnose reductase
+cogOTU_1375	4QCFA	1	Loc090907-6m_megahit_metabat_bin-037	00002	4.4e-15	48.8	0.0	6.4e-15	48.3	0.0	1.3	1	dTDP-4-dehydrorhamnose reductase
+cogOTU_1375	4QCFA	1	Loc090907-8-6m_megahit_metabat_bin-490	00011	4.4e-15	48.8	0.0	6.4e-15	48.3	0.0	1.3	1	dTDP-4-dehydrorhamnose reductase
+cogOTU_1375	4QCFA	1	Loc090721-4m_megahit_metabat_bin-0872	00002	4.5e-15	48.8	0.0	6.5e-15	48.2	0.0	1.3	1	dTDP-4-dehydrorhamnose reductase
+cogOTU_1375	4QARC	1	Loc090721-4m_megahit_metabat_bin-0872	00016	1.3e-06	19.8	0.0	1.5e-06	19.6	0.0	1.0	1	hypothetical protein
+cogOTU_1375	4QARC	1	Loc090721-5m_megahit_metabat_bin-395	00010	1.3e-06	19.8	0.0	1.5e-06	19.6	0.0	1.0	1	hypothetical protein
+cogOTU_1375	4QARC	1	Loc090721-6m_megahit_metabat_bin-288	00006	1.3e-06	19.8	0.0	1.5e-06	19.6	0.0	1.0	1	hypothetical protein
+cogOTU_1375	4QARC	1	Loc090907-5m_megahit_metabat_bin-434	00019	1.3e-06	19.8	0.0	1.5e-06	19.6	0.0	1.0	1	hypothetical protein
+cogOTU_1375	4QARC	1	Loc090907-8-6m_megahit_metabat_bin-490	00001	1.3e-06	19.8	0.0	1.5e-06	19.6	0.0	1.0	1	hypothetical protein
+cogOTU_1375	4QDUT	1	Loc090721-5m_megahit_metabat_bin-395	00014	0.00014	14.0	0.1	0.00014	14.0	0.1	3.7	4	hypothetical protein
+cogOTU_1375	4QD45	1	Loc090721-4m_megahit_metabat_bin-0872	00021	0.00097	12.0	0.1	0.0014	11.5	0.1	1.3	1	hypothetical protein
+cogOTU_1375	4QFCE	1	Loc090721-4m_megahit_metabat_bin-0872	00025	1.6e-13	43.6	0.0	2e-13	43.3	0.0	1.1	1	hypothetical protein
+cogOTU_1375	4QFCE	1	Loc090721-5m_megahit_metabat_bin-395	00004	1.6e-13	43.6	0.0	2e-13	43.3	0.0	1.1	1	hypothetical protein
+cogOTU_1375	4QFCE	1	Loc090721-6m_megahit_metabat_bin-288	00018	1.6e-13	43.6	0.0	2e-13	43.3	0.0	1.1	1	hypothetical protein

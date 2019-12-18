@@ -1,0 +1,44 @@
+cogOTU_2657	4QFIX	1	Loc090907-5m_megahit_metabat_bin-774	00008	4.3e-08	24.6	0.1	6.8e-08	23.9	0.1	1.3	1	tRNA 5-methylaminomethyl-2-thiouridine biosynthesis bifunctional protein MnmC
+cogOTU_2657	4QDB9	1	Loclat_megahit_metabat_bin-17580	00001	5e-05	15.5	0.2	0.0042	9.3	0.0	2.4	2	putative endopeptidase p60
+cogOTU_2657	4QDB9	1	Loc090907-5m_megahit_metabat_bin-774	00009	0.00024	13.3	0.2	0.011	8.1	0.0	2.5	2	hypothetical protein
+cogOTU_2657	4QDB9	1	Loc090721-4m_megahit_metabat_bin-0297	00019	0.00029	13.1	0.2	0.012	7.9	0.0	2.5	2	hypothetical protein
+cogOTU_2657	4QDBX	0	Loc090721-4m_megahit_metabat_bin-0297	00004	0.056	4.1	12.1	0.063	3.9	12.1	1.1	1	hypothetical protein
+cogOTU_2657	4QDBX	0	Loclat_megahit_metabat_bin-17580	00008	0.093	3.3	13.5	0.14	2.8	13.5	1.2	1	hypothetical protein
+cogOTU_2657	4QEEQ	1	Loc080925-5m_megahit_metabat_bin-0903	00005	0.00027	13.2	0.1	0.00031	13.0	0.1	1.3	1	hypothetical protein
+cogOTU_2657	4QEEQ	1	Loc080925-7m_megahit_metabat_bin-0690	00011	0.00027	13.2	0.1	0.00031	13.0	0.1	1.3	1	hypothetical protein
+cogOTU_2657	4QEEQ	1	Loc090721-4m_megahit_metabat_bin-0297	00018	0.00027	13.2	0.1	0.00031	13.0	0.1	1.3	1	hypothetical protein
+cogOTU_2657	4QEEQ	1	Loc090907-5m_megahit_metabat_bin-774	00010	0.00027	13.2	0.1	0.00031	13.0	0.1	1.3	1	hypothetical protein
+cogOTU_2657	4QEEQ	1	Loclat_megahit_metabat_bin-17580	00002	0.00027	13.2	0.1	0.00031	13.0	0.1	1.3	1	hypothetical protein
+cogOTU_2657	4QFM3	0	Loc090721-4m_megahit_metabat_bin-0297	00002	0.035	4.0	11.9	0.049	3.5	11.9	1.1	1	hypothetical protein
+cogOTU_2657	4QF01	0	Loc090721-4m_megahit_metabat_bin-0297	00002	0.048	5.2	11.4	0.02	6.4	7.1	2.1	2	hypothetical protein
+cogOTU_2657	4QED7	1	Loc090721-4m_megahit_metabat_bin-0297	00015	6.4e-05	14.9	0.2	0.0001	14.2	0.2	1.2	1	hypothetical protein
+cogOTU_2657	4QED7	1	Loc080925-5m_megahit_metabat_bin-0903	00013	6.4e-05	14.8	0.2	0.0001	14.2	0.2	1.2	1	hypothetical protein
+cogOTU_2657	4QED7	1	Loc080925-7m_megahit_metabat_bin-0690	00014	0.00016	13.5	0.2	0.00025	12.9	0.2	1.2	1	hypothetical protein
+cogOTU_2657	4QBU2	1	Loc080925-7m_megahit_metabat_bin-0690	00014	2.6e-06	19.4	0.0	3.9e-06	18.9	0.0	1.2	1	hypothetical protein
+cogOTU_2657	4QBU2	1	Loc090721-4m_megahit_metabat_bin-0297	00015	3.2e-06	19.2	0.0	4.8e-06	18.6	0.0	1.2	1	hypothetical protein
+cogOTU_2657	4QBU2	1	Loc080925-5m_megahit_metabat_bin-0903	00013	3.2e-06	19.2	0.0	4.8e-06	18.6	0.0	1.1	1	hypothetical protein
+cogOTU_2657	4QC9T	1	Loc090721-4m_megahit_metabat_bin-0297	00016	0.0052	9.1	5.8	0.0038	9.6	1.2	2.9	2	hypothetical protein
+cogOTU_2657	4QB5I	1	Loc080925-7m_megahit_metabat_bin-0690	00014	1.5e-07	23.2	0.0	2e-07	22.7	0.0	1.3	1	hypothetical protein
+cogOTU_2657	4QB5I	1	Loc080925-5m_megahit_metabat_bin-0903	00013	4.4e-07	21.6	0.0	6.6e-07	21.1	0.0	1.3	1	hypothetical protein
+cogOTU_2657	4QB5I	1	Loc090721-4m_megahit_metabat_bin-0297	00015	4.4e-07	21.6	0.0	6.6e-07	21.1	0.0	1.3	1	hypothetical protein
+cogOTU_2657	4QAWG	1	Loc080925-5m_megahit_metabat_bin-0903	00002	1.2e-59	194.9	0.0	1.5e-59	194.6	0.0	1.0	1	Replicative DNA helicase
+cogOTU_2657	4QAWG	1	Loc080925-7m_megahit_metabat_bin-0690	00002	1.2e-59	194.9	0.0	1.5e-59	194.6	0.0	1.0	1	Replicative DNA helicase
+cogOTU_2657	4QAWG	1	Loc090721-4m_megahit_metabat_bin-0297	00015	1.5e-05	16.6	0.0	2.3e-05	16.0	0.0	1.2	1	hypothetical protein
+cogOTU_2657	4QAWG	1	Loc080925-5m_megahit_metabat_bin-0903	00013	1.5e-05	16.6	0.0	2.3e-05	16.0	0.0	1.2	1	hypothetical protein
+cogOTU_2657	4QAWG	1	Loc080925-7m_megahit_metabat_bin-0690	00014	1.8e-05	16.3	0.0	2.8e-05	15.7	0.0	1.2	1	hypothetical protein
+cogOTU_2657	4QAU9	1	Loc080925-5m_megahit_metabat_bin-0903	00008	6.1e-38	122.7	0.0	6.8e-38	122.6	0.0	1.0	1	Single-stranded DNA-binding protein
+cogOTU_2657	4QAU9	1	Loc090907-5m_megahit_metabat_bin-774	00002	6.1e-38	122.7	0.0	6.8e-38	122.6	0.0	1.0	1	Single-stranded DNA-binding protein
+cogOTU_2657	4QAU9	1	Loc080925-7m_megahit_metabat_bin-0690	00006	6.1e-38	122.7	0.0	7.2e-38	122.5	0.0	1.0	1	Single-stranded DNA-binding protein
+cogOTU_2657	4QAU9	1	Loc090721-4m_megahit_metabat_bin-0297	00007	6.1e-38	122.7	0.0	7.2e-38	122.5	0.0	1.0	1	Single-stranded DNA-binding protein
+cogOTU_2657	4QAU9	1	Loclat_megahit_metabat_bin-17580	00005	6.1e-38	122.7	0.0	7.2e-38	122.5	0.0	1.0	1	Single-stranded DNA-binding protein
+cogOTU_2657	4QASV	1	Loc080925-5m_megahit_metabat_bin-0903	00002	6.5e-07	20.9	0.0	1e-06	20.3	0.0	1.2	1	Replicative DNA helicase
+cogOTU_2657	4QASV	1	Loc080925-7m_megahit_metabat_bin-0690	00002	6.5e-07	20.9	0.0	1e-06	20.3	0.0	1.2	1	Replicative DNA helicase
+cogOTU_2657	4QASV	1	Loc080925-7m_megahit_metabat_bin-0690	00014	0.00073	10.9	0.0	0.00099	10.5	0.0	1.1	1	hypothetical protein
+cogOTU_2657	4QASV	1	Loc090721-4m_megahit_metabat_bin-0297	00015	0.0012	10.2	0.0	0.0016	9.8	0.0	1.1	1	hypothetical protein
+cogOTU_2657	4QASV	1	Loc080925-5m_megahit_metabat_bin-0903	00013	0.0012	10.2	0.0	0.0016	9.8	0.0	1.1	1	hypothetical protein
+cogOTU_2657	4QBQJ	1	Loc090721-4m_megahit_metabat_bin-0297	00015	0.00096	10.8	0.4	0.0019	9.8	0.1	1.6	1	hypothetical protein
+cogOTU_2657	4QBQJ	1	Loc080925-5m_megahit_metabat_bin-0903	00013	0.00096	10.8	0.4	0.0019	9.8	0.1	1.6	1	hypothetical protein
+cogOTU_2657	4QBQJ	1	Loc080925-7m_megahit_metabat_bin-0690	00014	0.001	10.7	0.5	0.0019	9.8	0.2	1.6	1	hypothetical protein
+cogOTU_2657	4QASH	1	Loc090721-4m_megahit_metabat_bin-0297	00015	0.00038	12.4	0.0	0.00062	11.7	0.0	1.3	1	hypothetical protein
+cogOTU_2657	4QASH	1	Loc080925-5m_megahit_metabat_bin-0903	00013	0.00038	12.4	0.0	0.00062	11.7	0.0	1.3	1	hypothetical protein
+cogOTU_2657	4QASH	1	Loc080925-7m_megahit_metabat_bin-0690	00014	0.00042	12.2	0.0	0.00069	11.5	0.0	1.3	1	hypothetical protein
