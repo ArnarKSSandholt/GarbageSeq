@@ -176,16 +176,6 @@ fOTUsHMM_pca <- fOTUsHMM %>%
 The following graph depicts how large percentage of bins in fOTU have at least one hit from viral HMM profiles with e-value less than 0.01.
 
 ```{r}
-PCs <- tibble(fOTUs = names(fOTUsHMM_pca$x[,1]), 
-              PC1 = unname(fOTUsHMM_pca$x[,1]), 
-              PC2 = unname(fOTUsHMM_pca$x[,2]))
-
-title <- "PCA of e-values of matches in fOTUs"
-qplot(PC1, 
-      PC2, 
-      data = PCs, 
-      geom = c("point", "density2d")) + ggtitle(title)
-```
 
 
 ```{r message=FALSE, warning=FALSE}
