@@ -58,92 +58,12 @@ library(vegan)
 library(ggbiplot)
 ```
 
-# Initilise variables
+# Read intermediary `csv` file
 
-```{r, message=FALSE, cache=TRUE}
-#fOTUsHMM <- read_csv(file = "../analyses/fOTU_HMM_headers.csv")
-fOTUsHMM <- tibble()
-
-path_to_data <- 
-  "../analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_parsed/"
-
-files <- list.files(path = path_to_data, 
-                    pattern = "*.tsv", recursive=FALSE)
-
-# Read in some data
-tsv_names <- c("fOTU_name",
-               "hmm_profile_id",
-               "inside_inclusion_threshold",
-               "Target_Bin_id",
-               "Target_Seq_id",
-               "full_sequence_e_value",
-               "full_sequence_score",
-               "full_sequence_bias",
-               "best_one_domain_e-value",
-               "best_one_domain_score",
-               "best_one_domain_bias",
-               "exp",
-               "N",
-               "description")
-```
-
-# Read data and create a tibble out of them
-
-```{r, cache=TRUE}
-# Go through each tsv parsed results file
-for(fOTU_file in files) {
-  # Create the file path
-  path_file <- paste(path_to_data,fOTU_file, sep = "")
-  
-  # Create a tibble from a tsv file
-  fOTU <- read_tsv(file = path_file, 
-                   col_types = "cclcfdddddddic", 
-                   col_names = tsv_names) %>%
-    # Take only interesting columns
-    select(.,c("fOTU_name",
-               "hmm_profile_id",
-               "full_sequence_e_value")) %>%
-    # Create a new col with -log_10 e-values
-    mutate(log_eval = -1*log10(full_sequence_e_value)) %>%
-    # Drop the old e-value column
-    select(.,-full_sequence_e_value) 
-  
-  # Check if there were empty bins
-  fOTU_first_term <- fOTU %>%
-    pull(fOTU_name) # This returns a vector of fOTU names
-  # Pick just first element because that 
-  # would be where my "dummy" text would reside
-  fOTU_first_term <- fOTU_first_term[1]
-  
-  # Check if the results had no hits
-  if(fOTU_first_term == "dummy"){
-    # For now just jump over those fOTUs with zero hits
-    #fOTUsHMM <- bind_rows(fOTUsHMM,tibble())
-    next
-  }else{
-    # If there were matches spread the -log_10 evalues for each
-    # fOTU in one row
-    fOTU <- fOTU %>%
-      # Group all same HMMs together
-      group_by(hmm_profile_id) %>%
-      # Choose average of all e-values for each unique HMM
-      summarise(avg_log_eval = mean(log_eval)) %>%
-      add_column(fOTU_name = fOTU_first_term) %>%
-      # Finally, spread the e-vals on one row
-      spread(hmm_profile_id,avg_log_eval)
-  }
-  # Append the current fOTU data to one big tibble
-  fOTUsHMM <- bind_rows(fOTUsHMM,fOTU)
-}
-```
-
-# Save/Load R data
-
-The previous chunk with 1432 fOTUs took about 2 h 14 minutes to run with one Intel Core i7-8550U CPU @ 1.80GHz (turbo 1.99GHz). So in order to save up time from previous calculations again, let's store the R data:
+In the intermediary `csv` file the $-log_{10}(\text{e-val})$:s are the average e-values of all matches with same HMM profiles to each fOTU.
 
 ```{r eval=FALSE, include=TRUE}
-#saveRDS(fOTUsHMM, file = "../analyses/HMMsearch/temp_R_data/fOTUsHMM.rds")
-fOTUsHMM <- readRDS(file = "../analyses/HMMsearch/temp_R_data/fOTUsHMM.rds")
+fOTUsHMM <- read_csv(file = "../analyses/HMMsearch/avg_fOTUsHMM.csv")
 ```
 
 # Exchange NA, Inf and -Inf with 0
