@@ -11,10 +11,18 @@ options(stringsAsFactors=F)
 
 ## set list of cmd line arguments
 option_list <- list(
-  make_option("--pathToParsed", type="character", default="../analyses/HMMsearch/hmmsearch_out_parsed/",
+  make_option("--pathToParsed", 
+              type="character", 
+              default="../analyses/HMMsearch/hmmsearch_out_parsed/",
               help="The path in which parsed HMMsearch output is stored [default='../analyses/HMMsearch/hmmsearch_out_parsed/']"),
-  make_option("--pathToOutput", type="character", default="../analyses/HMMsearch/",
-              help="The path where the whole csv file shall be stored [default='../analyses/HMMsearch/']")
+  make_option("--pathToOutput", 
+              type="character", 
+              default="../analyses/HMMsearch/",
+              help="The path where the whole csv file shall be stored [default='../analyses/HMMsearch/']"),
+  make_option("--maxOrAvg", 
+              type="character", 
+              default="max",
+              help="Shall the maximum of -log_10 e-values be picked or the average. Allowed values are either 'max' or 'avg'. [default='max']")
 )
 
 ## list of options
