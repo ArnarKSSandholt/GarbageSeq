@@ -50,9 +50,9 @@ Essentially the following code will be run in a sbatch script:
 
 ```{bash eval=FALSE, include=TRUE}
 #ml bioinfo-tools hmmer/3.2.1
-DATA="../analyses/HMM_scan_using_eggNOG_HMMs/eggNOG_data/HMMs/10239/"
+DATA="../analyses/HMMsearch/eggNOG_data/HMMs/10239/"
 fOTUproteoms_DIR="../analyses/fOTU_proteomes/"
-HMMer_OUTPUT_DIR="../analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_viruses/"
+HMMer_OUTPUT_DIR="../analyses/HMMsearch/hmmsearch_out_viruses/"
 TAXID_NO="10239"
 read -r -a fOTUproteoms <<< $( find $fOTUproteoms_DIR -name "*.faa" -and -type f -print0 | xargs -0 echo )
 echo "fOTUprot" ${#fOTUproteoms[@]}
@@ -83,10 +83,10 @@ cat $fOTUs | awk -F, -v delimiter="," -f $SCRIPT > $OUTPUT
 
 # Parse delimited files from hmmsearch output files
 
-```{bash eval=FALSE, include=TRUE}
+```{bash}
 SCRIPT="../scripts/hmmsearchOutputParser.awk"
-eggNOGs="../analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_viruses/"
-PARSED="../analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_parsed/"
+eggNOGs="../analyses/HMMsearch/hmmsearch_out_viruses/"
+PARSED="../analyses/HMMsearch/hmmsearch_out_parsed/"
 read -r -a eggNOGarray <<< $( find $eggNOGs -name "*.out" -and -type f -print0 | xargs -0 echo )
 
 SECONDS=0
@@ -131,7 +131,7 @@ echo "$(($duration / 60)) minutes and $(($duration % 60)) seconds elapsed."
 ## Utility script for parsing eggNOG output files
 
 ```{bash eval=FALSE, include=TRUE}
-OUTPUT="../analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_viruses/"
+OUTPUT="../analyses/HMMsearch/hmmsearch_out_viruses/"
 FILE="10239-with-cogOTU_1165.out"
 SCRIPT="../scripts/hmmsearchOutputParser.awk"
 #pcre2grep -M -B 19 -A 11 "^    \d.+$\n(.*\n)*?^Internal pipeline statistics summary:" $OUTPUT1
@@ -158,7 +158,7 @@ cat $TSV_FILE | awk -v delimiter=";" -v last_col="4" -v excluded_recs="$REGEXP" 
 ## Helper chunk for moving already studied fOTUs
 
 ```{bash include=TRUE}
-STUDIED_fOTUs="../analyses/HMM_scan_using_eggNOG_HMMs/hmmsearch_out_viruses/"
+STUDIED_fOTUs="../analyses/HMMsearch/hmmsearch_out_viruses/"
 fOTUs="../analyses/fOTU_proteomes1/" 
 TEMP_STORAGE="../analyses/fOTU_proteomes_studied/"
 
