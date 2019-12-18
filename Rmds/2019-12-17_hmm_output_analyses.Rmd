@@ -165,8 +165,18 @@ ggsave(filename = "../visualisations/pca_hmmsearch_max_PC3-4.png",
 ## Heatmaps
 
 ```{r eval=FALSE, include=TRUE}
-heatmap(as.matrix(predict(fOTUsHMM_pca)[,1:20]))
 dim(fOTUsHMM_pca)
+prediction <- predict(fOTUsHMM_pca)[,1:20]
+file_name <- "../visualisations/heatmap_max_20_first_PCs.png"
+png(filename = file_name)
+heatmap(as.matrix(prediction))
+dev.off()
+heatmap(as.matrix(prediction))
+
+file_name <- "../visualisations/heatmap_max_400_first_fOTUs.png"
+png(filename = file_name)
+heatmap(as.matrix(fOTUsHMM[,-1])[,1:400])
+dev.off()
 heatmap(as.matrix(fOTUsHMM[,-1])[,1:400])
 ```
 
