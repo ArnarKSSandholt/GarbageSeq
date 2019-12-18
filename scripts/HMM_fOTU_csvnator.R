@@ -40,6 +40,9 @@ path_to_data <- opt$pathToParsed
 files <- list.files(path = path_to_data, 
                     pattern = "*.tsv", recursive=FALSE)
 
+# This variable keeps track of if we're looking at average or maximum of -log e-values
+the_mode <- opt$maxOrAvg
+
 # Read in some data
 tsv_names <- c("fOTU_name",
                "hmm_profile_id",
