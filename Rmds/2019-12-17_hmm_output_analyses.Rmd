@@ -95,7 +95,11 @@ fOTUsHMM_pca <- fOTUsHMM %>%
 
 These PCA plots can be used to visually determine potential groupings.
 
-```{r eval=FALSE, include=TRUE}
+```{r}
+file_name <- "../visualisations/ggbiplot_max_PC1-2.png"
+png(filename = file_name)
+ggbiplot(fOTUsHMM_pca, var.axes = F, choices = 1:2)
+dev.off()
 ggbiplot(fOTUsHMM_pca, var.axes = F, choices = 1:2)
 ```
 
