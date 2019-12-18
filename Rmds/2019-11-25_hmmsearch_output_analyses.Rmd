@@ -142,15 +142,15 @@ for(fOTU_file in files) {
 The previous chunk with 1432 fOTUs took about 2 h 14 minutes to run with one Intel Core i7-8550U CPU @ 1.80GHz (turbo 1.99GHz). So in order to save up time from previous calculations again, let's store the R data:
 
 ```{r eval=FALSE, include=TRUE}
-saveRDS(fOTUsHMM, file = "../analyses/temp_R_data/fOTUsHMM.rds")
-save(fOTUsHMM, file = "../analyses/temp_R_data/fOTUsHMM.RData")
+saveRDS(fOTUsHMM, file = "../analyses/HMMsearch/temp_R_data/fOTUsHMM.rds")
+save(fOTUsHMM, file = "../analyses/HMMsearch/temp_R_data/fOTUsHMM.RData")
 ```
 
 # Load R data
 
 ```{r eval=FALSE, include=TRUE}
-#fOTUsHMM <-  load(file = "../analyses/temp_R_data/fOTUsHMM.RData")
-fOTUsHMM <- readRDS(file = "../analyses/temp_R_data/fOTUsHMM.rds")
+#fOTUsHMM <-  load(file = "../analyses/HMMsearch/temp_R_data/fOTUsHMM.RData")
+fOTUsHMM <- readRDS(file = "../analyses/HMMsearch/temp_R_data/fOTUsHMM.rds")
 ```
 
 
