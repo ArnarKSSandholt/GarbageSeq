@@ -96,7 +96,7 @@ fOTUsHMM_pca <- fOTUsHMM %>%
 These PCA plots can be used to visually determine potential groupings.
 
 ```{r}
-file_name <- "../visualisations/ggbiplot_max_PC1-2.png"
+file_name <- "../visualisations/HMMsearch/ggbiplot_max_PC1-2.png"
 png(filename = file_name)
 ggbiplot(fOTUsHMM_pca, var.axes = F, choices = 1:2)
 dev.off()
@@ -117,7 +117,7 @@ qplot(PC1,
       data = PC12s, 
       geom = c("point", "density2d")) + ggtitle(title)
 
-ggsave(filename = "../visualisations/pca_hmmsearch_max_PC1-2.png",
+ggsave(filename = "../visualisations/HMMsearch/pca_hmmsearch_max_PC1-2.png",
        device = png, 
        width = 1000, 
        height = 750, 
@@ -135,7 +135,7 @@ qplot(PC2,
       data = PC23s, 
       geom = c("point", "density2d")) + ggtitle(title)
 
-ggsave(filename = "../visualisations/pca_hmmsearch_max_PC2-3.png",
+ggsave(filename = "../visualisations/HMMsearch/pca_hmmsearch_max_PC2-3.png",
        device = png, 
        width = 1000, 
        height = 750, 
@@ -153,7 +153,7 @@ qplot(PC3,
       data = PC34s, 
       geom = c("point", "density2d")) + ggtitle(title)
 
-ggsave(filename = "../visualisations/pca_hmmsearch_max_PC3-4.png",
+ggsave(filename = "../visualisations/HMMsearch/pca_hmmsearch_max_PC3-4.png",
        device = png, 
        width = 1000, 
        height = 750, 
@@ -167,13 +167,13 @@ ggsave(filename = "../visualisations/pca_hmmsearch_max_PC3-4.png",
 ```{r eval=FALSE, include=TRUE}
 dim(fOTUsHMM_pca)
 prediction <- predict(fOTUsHMM_pca)[,1:20]
-file_name <- "../visualisations/heatmap_max_20_first_PCs.png"
+file_name <- "../visualisations/HMMsearch/heatmap_max_20_first_PCs.png"
 png(filename = file_name)
 heatmap(as.matrix(prediction))
 dev.off()
 heatmap(as.matrix(prediction))
 
-file_name <- "../visualisations/heatmap_max_400_first_fOTUs.png"
+file_name <- "../visualisations/HMMsearch/heatmap_max_400_first_fOTUs.png"
 png(filename = file_name)
 heatmap(as.matrix(fOTUsHMM[,-1])[,1:400])
 dev.off()
@@ -235,7 +235,7 @@ qplot(MDS1,
       data = NMDS_points, 
       geom = c("point", "density2d")) + ggtitle(title)
 
-path <- "../visualisations/nmds_hmmsearch_max_MDS1_less_than_50.png"
+path <- "../visualisations/HMMsearch/nmds_hmmsearch_max_MDS1_less_than_50.png"
 
 ggsave(filename = path,
        device = png, 
