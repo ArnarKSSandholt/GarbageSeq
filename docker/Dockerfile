@@ -16,7 +16,8 @@ RUN R -e "install.packages('DT')" \
 && chmod a+rx /usr/bin/phantomjs \
 && R -e "install.packages('revealjs', type = 'source')" \
 && R -e "install.packages('reticulate')" \
-&& R -e "install.packages('kableExtra')"
+&& R -e "install.packages('kableExtra')" \
+&& R -e "install.packages('rentrez')"
 
 # Install miniconda
 RUN wget --quiet https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh && \
@@ -38,7 +39,7 @@ RUN conda install biopython
 # Install HMMER v. 3.2.1-2
 RUN conda install hmmer
 # Install bio-perl
-RUN conda install perl-bioperl entrez-direct
+RUN conda install perl-bioperl
 
 # Install tool for automatic trimming of spurious MPAs
 # Install mafft in order to create MPAs for HMM profile building
