@@ -93,24 +93,29 @@ for(fOTU_file in files) {
   }else{
     # If there were matches spread the -log_10 evalues for each
     # fOTU in one row
-    fOTU <- fOTU %>%
-      # Group all same HMMs together
-      group_by(hmm_profile_id) %>%
-      # Choose average of all e-values for each unique HMM
-      #summarise(avg_log_eval = mean(log_eval)) %>%
-      #add_column(fOTU_name = fOTU_first_term) %>%
-      
-      # Choose the largest value among the unique HMMs
-      summarise(max = max(log_eval)) %>%
-      add_column(fOTU_name = fOTU_first_term) %>%
     
-    # pivot_wider should work for tidyr v. 1.0.0 
-    # but I use 0.8.3, therefore I use spread() instead
-    # pivot_wider(names_from = hmm_profile_id, 
-    #            values_from = log_eval)
-    
-    # Finally, spread the e-vals on one row
-    spread(hmm_profile_id, max)
+    # Check if we're taking the max or avg -log e-value
+    if(the_mode == "max"){
+      fOTU <- fOTU %>%
+        # Group all same HMMs together
+        group_by(hmm_profile_id) %>%
+        # Choose the largest value among the unique HMMs
+        summarise(max = max(log_eval)) %>%
+        add_column(fOTU_name = fOTU_first_term) %>%
+        spread(hmm_profile_id, max)
+    }else if(the_mode == "avg"){
+      fOTU <- fOTU %>%
+        # Group all same HMMs together
+        group_by(hmm_profile_id) %>%
+        # Choose average of all e-values for each unique HMM
+        summarise(avg_log_eval = mean(log_eval)) %>%
+        add_column(fOTU_name = fOTU_first_term) %>%
+        # Finally, spread the e-vals on one row
+        spread(hmm_profile_id, avg_log_eval)
+    }else{
+      print("Wrong maxOrAvg option given")
+      stopifnot(FALSE)
+    }
   }
   # Append the current fOTU data to one big tibble
   fOTUsHMM <- bind_rows(fOTUsHMM,fOTU)
