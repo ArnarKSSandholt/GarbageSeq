@@ -36,15 +36,8 @@ analyses/HMMsearch/eggNOG_data/tars/*
 analyses/HMMsearch/eggNOG_data/HMMs/*
 !analyses/HMMsearch/eggNOG_data/HMMs/README.md
 
-# Parsed hmmsearch tab delimited files
-analyses/HMMsearch/hmmsearch_out_parsed/*
-!analyses/HMMsearch/hmmsearch_out_parsed/README.md
-
 # Temporary directory for fOTUs that already have been scanned from viruses
 analyses/fOTU_proteomes_studied/*
-
-# Ignore the results of first run with incomplete results for ~2800 fOTUs
-analyses/HMMsearch/hmmsearch_out_viruses_backup/*
 
 # Ignore all files but README.md in singularity directory
 singularity/*
