@@ -62,6 +62,7 @@ library(tidyverse)
 library(ggbiplot)
 #install.packages("vegan")
 library(vegan)
+library(rentrez)
 ```
 
 # Read intermediary `csv` file
@@ -70,7 +71,7 @@ In the intermediary `csv` file the $-log_{10}(\text{e-val})$:s are the maximum e
 
 
 ```{r eval=FALSE, include=TRUE}
-fOTUsHMM <- read_csv(file = "../analyses/HMMsearch/fOTUsHMM.csv")
+fOTUsHMM <- read_csv(file = "../analyses/HMMsearch/max_fOTUsHMM.csv")
 ```
 
 # Exchange NA, Inf and -Inf with 0
