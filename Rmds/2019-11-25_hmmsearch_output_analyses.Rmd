@@ -162,31 +162,41 @@ fOTUsHMM_pca <- fOTUsHMM %>%
          center = TRUE)
 ```
 
-
 # Visualise the results
 
 The following graph depicts how large percentage of bins in fOTU have at least one hit from viral HMM profiles with e-value less than 0.01.
 
 ```{r}
+file_name <- "../visualisations/ggbiplot_avg_PC1-2.png"
+png(filename = file_name)
+ggbiplot(fOTUsHMM_pca, var.axes = F, choices = 1:2)
+dev.off()
 ggbiplot(fOTUsHMM_pca, var.axes = F, choices = 1:2)
 ```
 
 
 ```{r}
-heatmap(as.matrix(predict(fOTUsHMM_pca)[,1:20]))
-dim(fOTUsHMM_pca)
+prediction <- predict(fOTUsHMM_pca)[,1:20]
+file_name <- "../visualisations/heatmap_avg_20_first_PCs.png"
+png(filename = file_name)
+heatmap(as.matrix(prediction))
+dev.off()
+heatmap(as.matrix(prediction))
+
+file_name <- "../visualisations/heatmap_avg_400_first_fOTUs.png"
+png(filename = file_name)
 heatmap(as.matrix(fOTUsHMM[,-1])[,1:400])
-
+dev.off()
+heatmap(as.matrix(fOTUsHMM[,-1])[,1:400])
 ```
-
-
 
 # NMDS
 
 Let's perform non-metric multidimensional scaling:
 
 ```{r}
-ord1 <- metaMDS(fOTUsHMM[,2:8290])
+width <- dim(fOTUsHMM)[2]
+ord1 <- metaMDS(fOTUsHMM[,2:width])
 ```
 
 # Save/Load R data
@@ -197,7 +207,6 @@ Save or load the data once again to speed-up things.
 #saveRDS(ord1, file = "../analyses/HMMsearch/temp_R_data/ord1.rds")
 ord1 <- readRDS(file = "../analyses/HMMsearch/temp_R_data/ord1.rds")
 ```
-
 
 How well does the 2-D representation of multidimensional space represent the actual multidimensional space is done by using statistic called stress. Stress < 0.1 indicates that the 2-D representation is a good repreresentation of the multi-D space. Let's check that out now:
 
