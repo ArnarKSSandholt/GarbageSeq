@@ -238,7 +238,7 @@ qplot(MDS1,
       data = NMDS_points, 
       geom = c("point", "density2d")) + ggtitle(title)
 
-path <- "../visualisations/HMMsearch/nmds_hmmsearch_max_MDS1_less_than_50.png"
+path <- "../visualisations/HMMsearch/nmds_hmmsearch_max_MDS1_greater_than_-2.png"
 
 ggsave(filename = path,
        device = png, 
