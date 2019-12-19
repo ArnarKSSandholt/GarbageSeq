@@ -125,8 +125,8 @@ ord_avg <- metaMDS(fOTUsHMM[,2:width])
 Save or load the data once again to speed-up things.
 
 ```{r eval=FALSE, include=TRUE}
-saveRDS(ord_avg, file = "../analyses/HMMsearch/R_data/avg_ord.rds")
-#ord_avg <- readRDS(file = "../analyses/HMMsearch/R_data/avg_ord.rds")
+#saveRDS(ord_avg, file = "../analyses/HMMsearch/R_data/avg_ord.rds")
+ord_avg <- readRDS(file = "../analyses/HMMsearch/R_data/avg_ord.rds")
 ```
 
 How well does the 2-D representation of multidimensional space represent the actual multidimensional space is done by using statistic called stress. Stress < 0.1 indicates that the 2-D representation is a good repreresentation of the multi-D space. Let's check that out now:
