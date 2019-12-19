@@ -291,7 +291,11 @@ PC34_filename <- paste(path,
 
 ```{r}
 # This function filters a tibble based on given limit values
-filterator <- function(data, x_low, x_high, y_low, y_high){
+filterator <- function(data, 
+                       x_low = -9999, 
+                       x_high = 9999, 
+                       y_low = -9999, 
+                       y_high = 9999){
   data %>% 
     filter(data[,2] > x_low & data[,2] < x_high & data[,3] > y_low & data[,3] < y_high) %>%
     select(fOTUs)
