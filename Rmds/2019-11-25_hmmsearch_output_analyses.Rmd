@@ -63,7 +63,8 @@ library(ggbiplot)
 In the intermediary `csv` file the $-log_{10}(\text{e-val})$:s are the average e-values of all matches with same HMM profiles to each fOTU.
 
 ```{r eval=FALSE, include=TRUE}
-fOTUsHMM <- read_csv(file = "../analyses/HMMsearch/avg_fOTUsHMM.csv")
+columns <- paste("c", strrep("d",8315), sep = "")
+fOTUsHMM <- read_csv(file = "../analyses/HMMsearch/avg_fOTUsHMM.csv", col_types = columns)
 ```
 
 # Exchange NA, Inf and -Inf with 0
