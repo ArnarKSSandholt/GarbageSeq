@@ -218,6 +218,11 @@ Observed dissimilarity of 1 means the fOTU doesn't have any HMMs incommon with t
 Let's plot out the ordination space in 2-d:
 
 ```{r eval=FALSE, include=TRUE}
+file_name <- "../visualisations/HMMsearch/nmds_ordiplot_all_data.png"
+png(filename = file_name)
+ordiplot(ord)
+points(ord)
+dev.off()
 ordiplot(ord)
 points(ord)
 ```
