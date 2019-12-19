@@ -257,22 +257,51 @@ Let's first create file names:
 
 ```{r eval=FALSE, include=TRUE}
 # Path to files
-path <- "../analyses/lists_of_PCA_clusters/"
+path <- "../analyses/HMMsearch/lists_of_PCA_clusters/"
+
 # Names of files
 PC12a_filename <- paste(path,
-                        "fOTU_max_PC1-and-2_x--100-to-0-and-y--100-to-+100.txt", 
+                        "fOTU_max_PC1-and-2_x--100-to-0-and-y--50-to-+50.txt", 
                         sep = "", 
                         collapse = NULL)
 PC12b_filename <- paste(path,
-                        "fOTU_max_PC1-and-2_x-+250-to-+400-and-y--100-to-0.txt", 
+                        "fOTU_max_PC1-and-2_x-+200-to-+500-and-y--100-to-0.txt", 
                         sep = "", 
                         collapse = NULL)
-PC23_filename <- paste(path,
-                       "fOTU_max_PC2-and-3_x--100-to-+50-and-y--100-to-+100.txt", 
+
+
+PC23a_filename <- paste(path,
+                       "fOTU_max_PC2-and-3_x--100-to-+75-and-y--150-to-+80.txt", 
                        sep = "", 
                        collapse = NULL)
-PC34_filename <- paste(path,
-                       "fOTU_max_PC3-and-4_x--50-to-+50-and-y--50-to-+75.txt", 
+PC23b_filename <- paste(path,
+                       "fOTU_max_PC2-and-3_x-+100-to-+250-and-y--80-to-+125.txt", 
+                       sep = "", 
+                       collapse = NULL)
+PC23c_filename <- paste(path,
+                       "fOTU_max_PC2-and-3_x-+250-to-+425-and-y--200-to-0.txt", 
+                       sep = "", 
+                       collapse = NULL)
+PC23d_filename <- paste(path,
+                       "fOTU_max_PC2-and-3_x-+400-to-+650-and-y--210-to--80.txt", 
+                       sep = "", 
+                       collapse = NULL)
+PC23e_filename <- paste(path,
+                       "fOTU_max_PC2-and-3_x-0-to-+200-and-y-+200-to-+450.txt", 
+                       sep = "", 
+                       collapse = NULL)
+
+
+PC34a_filename <- paste(path,
+                       "fOTU_max_PC3-and-4_x--80-to-+80-and-y--50-to-+75.txt", 
+                       sep = "", 
+                       collapse = NULL)
+PC34b_filename <- paste(path,
+                       "fOTU_max_PC3-and-4_x--50-to-0-and-y-+75-to-+175.txt", 
+                       sep = "", 
+                       collapse = NULL)
+PC34c_filename <- paste(path,
+                       "fOTU_max_PC3-and-4_x-+200-to-+450-and-y--25-to-+50.txt", 
                        sep = "", 
                        collapse = NULL)
 ```
