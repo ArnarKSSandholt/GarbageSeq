@@ -251,6 +251,8 @@ ggsave(filename = path,
 
 # Create lists of fOTUs of interest
 
+## PCA lists
+
 Based on the previewing of PCA plots in \@ref(pca-preview) we can now manually curate a lists of fOTUs approximately based on clustering in them. 
 
 Let's first create file names:
