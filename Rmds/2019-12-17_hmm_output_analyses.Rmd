@@ -259,18 +259,33 @@ Let's first create file names:
 # Path to files
 path <- "../analyses/lists_of_PCA_clusters/"
 # Names of files
-PC12a_filename <- paste(path,"fOTU_PC1-and-2_x--100-to-0-and-y--100-to-+100.txt", sep = "", collapse = NULL)
-PC12b_filename <- paste(path,"fOTU_PC1-and-2_x-+250-to-+400-and-y--100-to-0.txt", sep = "", collapse = NULL)
-PC23_filename <- paste(path,"fOTU_PC2-and-3_x--100-to-+50-and-y--100-to-+100.txt", sep = "", collapse = NULL)
-PC34_filename <- paste(path,"fOTU_PC3-and-4_x--50-to-+50-and-y--50-to-+75.txt", sep = "", collapse = NULL)
-
+PC12a_filename <- paste(path,
+                        "fOTU_max_PC1-and-2_x--100-to-0-and-y--100-to-+100.txt", 
+                        sep = "", 
+                        collapse = NULL)
+PC12b_filename <- paste(path,
+                        "fOTU_max_PC1-and-2_x-+250-to-+400-and-y--100-to-0.txt", 
+                        sep = "", 
+                        collapse = NULL)
+PC23_filename <- paste(path,
+                       "fOTU_max_PC2-and-3_x--100-to-+50-and-y--100-to-+100.txt", 
+                       sep = "", 
+                       collapse = NULL)
+PC34_filename <- paste(path,
+                       "fOTU_max_PC3-and-4_x--50-to-+50-and-y--50-to-+75.txt", 
+                       sep = "", 
+                       collapse = NULL)
 ```
 
 and then we'll filter tibbles based on their coordinates with a simple function:
 
 ```{r eval=FALSE, include=TRUE}
 # This function filters a tibble based on given limit values
-filterator <- function(data, x_low, x_high, y_low, y_high){
+filterator <- function(data, 
+                       x_low = -9999, 
+                       x_high = 9999, 
+                       y_low = -9999, 
+                       y_high = 9999){
   data %>% 
     filter(data[,2] > x_low & data[,2] < x_high & data[,3] > y_low & data[,3] < y_high) %>%
     select(fOTUs)
