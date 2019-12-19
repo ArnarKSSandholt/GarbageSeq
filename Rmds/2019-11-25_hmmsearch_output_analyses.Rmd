@@ -154,15 +154,15 @@ and let's filter away the outliers and make new plot from above:
 
 ```{r}
 NMDS_points1 <- as_tibble(ord_avg$points) %>%
-  filter(MDS1 < 50)
+  filter(MDS1 > -10)
 
-title <- "NMDS, MDS1 < 50"
+title <- "NMDS, MDS1 > -10"
 qplot(MDS1, 
       MDS2, 
       data = NMDS_points1, 
       geom = c("point", "density2d")) + ggtitle(title)
 
-path <- "../visualisations/HMMsearch/nmds_hmmsearch_avg_MDS1_less_than_50.png"
+path <- "../visualisations/HMMsearch/nmds_hmmsearch_avg_MDS1_greater_than_-10.png"
 
 ggsave(filename = path,
        device = png, 
