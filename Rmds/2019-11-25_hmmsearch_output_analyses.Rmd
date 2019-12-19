@@ -263,6 +263,7 @@ ggsave(filename = "../visualisations/HMMsearch/pca_hmmsearch_avg_PC3-4.png",
 
 ## Create a file for each list
 
+By comparing visually the PCA data, we can see that they are located essentially in same locations. Thus it is unnecessary to create new lists based on the average e-value points when there already are points based on the maximum e-values.
 
 
 # Session info
