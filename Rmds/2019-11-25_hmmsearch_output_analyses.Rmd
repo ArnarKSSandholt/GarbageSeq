@@ -117,7 +117,7 @@ Let's perform non-metric multidimensional scaling:
 
 ```{r}
 width <- dim(fOTUsHMM)[2]
-ord1 <- metaMDS(fOTUsHMM[,2:width])
+ord_avg <- metaMDS(fOTUsHMM[,2:width])
 ```
 
 # Save/Load R data
@@ -125,20 +125,20 @@ ord1 <- metaMDS(fOTUsHMM[,2:width])
 Save or load the data once again to speed-up things.
 
 ```{r eval=FALSE, include=TRUE}
-#saveRDS(ord1, file = "../analyses/HMMsearch/temp_R_data/ord1.rds")
-ord1 <- readRDS(file = "../analyses/HMMsearch/temp_R_data/ord1.rds")
+saveRDS(ord_avg, file = "../analyses/HMMsearch/R_data/avg_ord.rds")
+#ord_avg <- readRDS(file = "../analyses/HMMsearch/R_data/avg_ord.rds")
 ```
 
 How well does the 2-D representation of multidimensional space represent the actual multidimensional space is done by using statistic called stress. Stress < 0.1 indicates that the 2-D representation is a good repreresentation of the multi-D space. Let's check that out now:
 
 ```{r}
-ord1$stress
+ord_avg$stress
 ```
 
 This is quite low which is great! Let's now plot out the relationship between the ordination dissimilarities and the distances in the ordination space:
 
 ```{r}
-stressplot(ord1)
+stressplot(ord_avg)
 ```
 
 Observed dissimilarity of 1 means the fOTU doesn't have any HMMs incommon with the others.
@@ -146,14 +146,14 @@ Observed dissimilarity of 1 means the fOTU doesn't have any HMMs incommon with t
 Let's plot out the ordination space in 2-d:
 
 ```{r}
-ordiplot(ord1)
-points(ord1)
+ordiplot(ord_avg)
+points(ord_avg)
 ```
 
 and let's filter away the outliers and make new plot from above:
 
 ```{r}
-NMDS_points1 <- as_tibble(ord1$points) %>%
+NMDS_points1 <- as_tibble(ord_avg$points) %>%
   filter(MDS1 < 50)
 
 title <- "NMDS, MDS1 < 50"
@@ -176,7 +176,7 @@ ggsave(filename = path,
 Let's filter away slightly more:
 
 ```{r}
-NMDS_points2 <- as_tibble(ord1$points) %>%
+NMDS_points2 <- as_tibble(ord_avg$points) %>%
   filter(MDS1 < 1 & MDS1 > -1)
 
 title <- "NMDS, -1 < MDS1 < 1"
