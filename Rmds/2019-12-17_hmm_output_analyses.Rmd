@@ -317,7 +317,7 @@ filterator <- function(data,
                        y_high = 9999){
   data %>% 
     filter(data[,2] > x_low & data[,2] < x_high & data[,3] > y_low & data[,3] < y_high) %>%
-    select(fOTUs)
+    select(1)
 }
 ```
 
