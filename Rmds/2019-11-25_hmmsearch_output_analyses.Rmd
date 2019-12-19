@@ -177,15 +177,15 @@ Let's filter away slightly more:
 
 ```{r}
 NMDS_points2 <- as_tibble(ord_avg$points) %>%
-  filter(MDS1 < 1 & MDS1 > -1)
+  filter(MDS1 > -2)
 
-title <- "NMDS, -1 < MDS1 < 1"
+title <- "NMDS, -2 < MDS1"
 qplot(MDS1, 
       MDS2, 
       data = NMDS_points2, 
       geom = c("point", "density2d")) + ggtitle(title)
 
-path <- "../visualisations/HMMsearch/nmds_hmmsearch_avg_MDS1_less_than_1_and_greater_than_-1.png"
+path <- "../visualisations/HMMsearch/nmds_hmmsearch_avg_MDS1_greater_than_-2.png"
 
 ggsave(filename = path,
        device = png, 
