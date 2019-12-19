@@ -423,6 +423,113 @@ write_delim(PC34_cluster3,
 ```
 
 
+## NMDS lists
+
+Based on the previewing of PCA plots in \@ref(pca-preview) we can now manually curate a lists of fOTUs approximately based on clustering in them. 
+
+Let's first create file names:
+
+```{r eval=FALSE, include=TRUE}
+# Path to files
+path <- "../analyses/HMMsearch/lists_of_clusters/"
+
+# Names of files
+NMDSa_filename <- paste(path,
+                       "fOTU_max_NMDS_x--10-to--7.txt", 
+                       sep = "", 
+                       collapse = NULL)
+NMDSb_filename <- paste(path,
+                       "fOTU_max_NMDS_x--0_05-to-+0_05.txt", 
+                       sep = "", 
+                       collapse = NULL)
+NMDSc_filename <- paste(path,
+                       "fOTU_max_NMDS_x--1-to--0_2.txt", 
+                       sep = "", 
+                       collapse = NULL)
+NMDSd_filename <- paste(path,
+                       "fOTU_max_NMDS_x--0_2-to--0.05txt", 
+                       sep = "", 
+                       collapse = NULL)
+NMDSe_filename <- paste(path,
+                       "fOTU_max_NMDS_x-+0_05-to-+9999.txt", 
+                       sep = "", 
+                       collapse = NULL)
+```
+
+Now we need to have a data frame with 3 columns, first of which contains the fOTU names. This so because then the already made function `filterator`'s indexing is correct. 
+
+```{r}
+unfiltered <- as_tibble(as_tibble(ord$points)) %>%
+  # Prepend the column before first column
+  add_column(fOTUs = fOTUs_tbl, .before = 1)
+NMDS_points <- unfiltered %>%
+  filter(MDS1 > -2)
+```
+
+and the actual filtering:
+
+```{r eval=FALSE, include=TRUE}
+# The outliers
+NMDS_cluster5 <- filterator(unfiltered,
+                            x_low = -10, 
+                            x_high = -7)
+# The rest
+NMDS_cluster1 <- filterator(NMDS_points, 
+                            x_low = -0.05,
+                            x_high = 0.05)
+NMDS_cluster2 <- filterator(NMDS_points,
+                            x_low = -1,
+                            x_high = -0.2)
+NMDS_cluster3 <- filterator(NMDS_points,
+                            x_low = -0.2,
+                            x_high = -0.05)
+NMDS_cluster4 <- filterator(NMDS_points,
+                            x_low = 0.05)
+```
+
+Lastly, we'll just write the files:
+
+```{r eval=FALSE, include=TRUE}
+write_delim(NMDS_cluster5, 
+            NMDSe_filename, 
+            delim = "", 
+            na = "NA", 
+            append = FALSE,
+            col_names = FALSE, 
+            quote_escape = "double")
+write_delim(NMDS_cluster1, 
+            NMDSa_filename, 
+            delim = "", 
+            na = "NA", 
+            append = FALSE,
+            col_names = FALSE, 
+            quote_escape = "double")
+write_delim(NMDS_cluster2, 
+            NMDSb_filename, 
+            delim = "", 
+            na = "NA", 
+            append = FALSE,
+            col_names = FALSE, 
+            quote_escape = "double")
+write_delim(NMDS_cluster3, 
+            NMDSc_filename, 
+            delim = "", 
+            na = "NA", 
+            append = FALSE,
+            col_names = FALSE, 
+            quote_escape = "double")
+write_delim(NMDS_cluster4, 
+            NMDSd_filename, 
+            delim = "", 
+            na = "NA", 
+            append = FALSE,
+            col_names = FALSE, 
+            quote_escape = "double")
+```
+
+
+
+
 
 
 
