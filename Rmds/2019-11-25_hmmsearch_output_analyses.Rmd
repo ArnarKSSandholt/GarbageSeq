@@ -267,7 +267,7 @@ ggsave(filename = "../visualisations/HMMsearch/pca_hmmsearch_avg_PC3-4.png",
 
 ```{r}
 # Path to files
-path <- "../analyses/lists_of_PCA_clusters/"
+path <- "../analyses/HMMsearch/lists_of_PCA_clusters/"
 # Names of files
 PC12a_filename <- paste(path,
                         "fOTU_avg_PC1-and-2_x--100-to-0-and-y--100-to-+100.txt", 
