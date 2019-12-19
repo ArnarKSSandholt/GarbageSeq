@@ -197,8 +197,8 @@ ord <- metaMDS(fOTUsHMM[,2:width])
 Save the data once again to speed-up things.
 
 ```{r eval=FALSE, include=TRUE}
-saveRDS(ord, file = "../analyses/HMMsearch/temp_R_data/ord.rds")
-#ord <- readRDS(file = "../analyses/HMMsearch/temp_R_data/ord.rds")
+#saveRDS(ord, file = "../analyses/HMMsearch/R_data/max_ord.rds")
+ord <- readRDS(file = "../analyses/HMMsearch/R_data/max_ord.rds")
 ```
 
 How well does the 2-D representation of multidimensional space represent the actual multidimensional space is done by using statistic called stress. Stress < 0.1 indicates that the 2-D representation is a good repreresentation of the multi-D space. Let's check that out now:
