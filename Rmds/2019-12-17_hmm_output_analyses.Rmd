@@ -295,10 +295,18 @@ filterator <- function(data,
 and the actual filtering:
 
 ```{r eval=FALSE, include=TRUE}
-PC12_cluster1 <- filterator(PC12s,-100,0,-100,100) 
-PC12_cluster2 <- filterator(PC12s,250,400,-100,0) 
-PC23_cluster <- filterator(PC23s,-100,50,-100,100)
-PC34_cluster <- filterator(PC34s,-50,50,-50,75)
+PC12_cluster1 <- filterator(PC12s,-100,0,-50,50) 
+PC12_cluster2 <- filterator(PC12s,200,500,-100,0)
+
+PC23_cluster1 <- filterator(PC23s,-100,75,-150,80)
+PC23_cluster2 <- filterator(PC23s,100,250,-80,125)
+PC23_cluster3 <- filterator(PC23s,250,425,-200,0)
+PC23_cluster4 <- filterator(PC23s,400,650,-210,80)
+PC23_cluster5 <- filterator(PC23s,0,200,200,450)
+
+PC34_cluster1 <- filterator(PC34s,-80,80,-50,75)
+PC34_cluster2 <- filterator(PC34s,-50,0,75,175)
+PC34_cluster3 <- filterator(PC34s,200,450,-25,50)
 ```
 
 Lastly, we'll just write the files:
