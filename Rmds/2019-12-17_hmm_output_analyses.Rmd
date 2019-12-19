@@ -318,21 +318,69 @@ write_delim(PC12_cluster2,
             append = FALSE,
             col_names = FALSE, 
             quote_escape = "double")
-write_delim(PC23_cluster, 
-            PC23_filename, 
+
+write_delim(PC23_cluster1, 
+            PC23a_filename, 
             delim = "", 
             na = "NA", 
             append = FALSE,
             col_names = FALSE, 
             quote_escape = "double")
-write_delim(PC34_cluster, 
-            PC34_filename, 
+write_delim(PC23_cluster2, 
+            PC23b_filename, 
+            delim = "", 
+            na = "NA", 
+            append = FALSE,
+            col_names = FALSE, 
+            quote_escape = "double")
+write_delim(PC23_cluster3, 
+            PC23c_filename, 
+            delim = "", 
+            na = "NA", 
+            append = FALSE,
+            col_names = FALSE, 
+            quote_escape = "double")
+write_delim(PC23_cluster4, 
+            PC23d_filename, 
+            delim = "", 
+            na = "NA", 
+            append = FALSE,
+            col_names = FALSE, 
+            quote_escape = "double")
+write_delim(PC23_cluster5, 
+            PC23e_filename, 
+            delim = "", 
+            na = "NA", 
+            append = FALSE,
+            col_names = FALSE, 
+            quote_escape = "double")
+
+write_delim(PC34_cluster1, 
+            PC34a_filename, 
+            delim = "", 
+            na = "NA", 
+            append = FALSE,
+            col_names = FALSE, 
+            quote_escape = "double")
+write_delim(PC34_cluster2, 
+            PC34b_filename, 
+            delim = "", 
+            na = "NA", 
+            append = FALSE,
+            col_names = FALSE, 
+            quote_escape = "double")
+write_delim(PC34_cluster3, 
+            PC34c_filename, 
             delim = "", 
             na = "NA", 
             append = FALSE,
             col_names = FALSE, 
             quote_escape = "double")
 ```
+
+
+
+
 
 
 # Session info
