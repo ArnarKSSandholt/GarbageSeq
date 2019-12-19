@@ -269,11 +269,22 @@ ggsave(filename = "../visualisations/HMMsearch/pca_hmmsearch_avg_PC3-4.png",
 # Path to files
 path <- "../analyses/lists_of_PCA_clusters/"
 # Names of files
-PC12a_filename <- paste(path,"fOTU_PC1-and-2_x--100-to-0-and-y--100-to-+100.txt", sep = "", collapse = NULL)
-PC12b_filename <- paste(path,"fOTU_PC1-and-2_x-+250-to-+400-and-y--100-to-0.txt", sep = "", collapse = NULL)
-PC23_filename <- paste(path,"fOTU_PC2-and-3_x--100-to-+50-and-y--100-to-+100.txt", sep = "", collapse = NULL)
-PC34_filename <- paste(path,"fOTU_PC3-and-4_x--50-to-+50-and-y--50-to-+75.txt", sep = "", collapse = NULL)
-
+PC12a_filename <- paste(path,
+                        "fOTU_avg_PC1-and-2_x--100-to-0-and-y--100-to-+100.txt", 
+                        sep = "", 
+                        collapse = NULL)
+PC12b_filename <- paste(path,
+                        "fOTU_avg_PC1-and-2_x-+250-to-+400-and-y--100-to-0.txt", 
+                        sep = "", 
+                        collapse = NULL)
+PC23_filename <- paste(path,
+                       "fOTU_avg_PC2-and-3_x--100-to-+50-and-y--100-to-+100.txt", 
+                       sep = "", 
+                       collapse = NULL)
+PC34_filename <- paste(path,
+                       "fOTU_avg_PC3-and-4_x--50-to-+50-and-y--50-to-+75.txt", 
+                       sep = "", 
+                       collapse = NULL)
 ```
 
 ### Filter tibbles based on coordinates
