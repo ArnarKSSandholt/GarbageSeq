@@ -226,7 +226,7 @@ points(ord)
 
 ```{r eval=FALSE, include=TRUE}
 NMDS_points <- as_tibble(ord$points) %>%
-  filter(MDS1 < 50)
+  filter(MDS1 > -2)
 ```
 
 # Visualise the filtered data
