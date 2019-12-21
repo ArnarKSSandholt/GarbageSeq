@@ -1,0 +1,5 @@
+cogOTU_1322
+cogOTU_1724
+cogOTU_2188
+cogOTU_521
+cogOTU_737
