@@ -8,33 +8,13 @@ biblio-style: "alpha" #https://www.overleaf.com/learn/latex/Bibtex_bibliography_
 #csl: "../uppsala-universitet-institutionen-for-biologisk-grundutbildning.csl"
 documentclass: report
 output:
-  bookdown::html_document2:
-    highlight: tango
-    theme: journal
-    split_by: none # only generate a single output page
-    self_contained: TRUE
-    toc: yes
-    toc_float: 
-      collapsed: TRUE
-      smooth_scroll: TRUE
-      print: FALSE
-    code_folding: show
-    number_sections: TRUE
-    code_download: TRUE
-  html_document: 
-    toc: TRUE
-    toc_float: TRUE
-    code_folding: show
-    highlight: tango
-    number_sections: TRUE
-    self_contained: TRUE
-    smart: TRUE # To be figured out when this is useful
-    theme: journal
-  pdf_document:
-    toc: TRUE
-    toc_depth: 2
-    highlight: tango # This appears to be the same as default
-    number_sections: TRUE
+  bookdown::pdf_document2:
+    keep_tex: no
+    latex_engine: xelatex
+    #highlight: pygments #Other options: default, tango, kate, monochrome, espresso, zenburn, haddock, and textmate
+    #theme: spacelab
+    pandoc_args: ["--variable", "subparagraph",
+                "--top-level-division","chapter"] # Could also be section 
   bookdown::html_document2:
     highlight: tango
     theme: journal
