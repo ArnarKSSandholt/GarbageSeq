@@ -237,7 +237,7 @@ NMDS_points <- as_tibble(ord$points) %>%
 # Visualise the filtered data
 
 ```{r eval=FALSE, include=TRUE}
-title <- "Non-metric multidimensional scaling data"
+title <- "NMDS, all from MDS1 > -2"
 qplot(MDS1, 
       MDS2, 
       data = NMDS_points, 
