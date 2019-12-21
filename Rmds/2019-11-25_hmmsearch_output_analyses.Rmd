@@ -32,7 +32,7 @@ output:
 
 # Load libraries
 
-```{r message=FALSE, warning=FALSE}
+```{r}
 library(tidyverse)
 library(vegan)
 library(ggbiplot)
@@ -42,9 +42,11 @@ library(ggbiplot)
 
 In the intermediary `csv` file the $-log_{10}(\text{e-val})$:s are the average e-values of all matches with same HMM profiles to each fOTU.
 
-```{r eval=FALSE, include=TRUE}
+```{r}
+# Create a character string which determines the column types
 columns <- paste("c", strrep("d",8315), sep = "")
-fOTUsHMM <- read_csv(file = "../analyses/HMMsearch/avg_fOTUsHMM.csv", col_types = columns)
+fOTUsHMM <- read_csv(file = "../analyses/HMMsearch/avg_fOTUsHMM.csv", 
+                     col_types = columns)
 ```
 
 # Exchange NA, Inf and -Inf with 0
@@ -75,6 +77,7 @@ dev.off()
 ggbiplot(fOTUsHMM_pca, var.axes = F, choices = 1:2)
 ```
 
+Here are some heatmaps to visualise how e-values are spread out by principal components and by HMMs.
 
 ```{r}
 prediction <- predict(fOTUsHMM_pca)[,1:20]
@@ -95,7 +98,7 @@ heatmap(as.matrix(fOTUsHMM[,-1])[,1:400])
 
 Let's perform non-metric multidimensional scaling:
 
-```{r}
+```{r eval=FALSE, include=TRUE}
 width <- dim(fOTUsHMM)[2]
 ord_avg <- metaMDS(fOTUsHMM[,2:width])
 ```
@@ -104,7 +107,7 @@ ord_avg <- metaMDS(fOTUsHMM[,2:width])
 
 Save or load the data once again to speed-up things.
 
-```{r eval=FALSE, include=TRUE}
+```{r}
 #saveRDS(ord_avg, file = "../analyses/HMMsearch/R_data/avg_ord.rds")
 ord_avg <- readRDS(file = "../analyses/HMMsearch/R_data/avg_ord.rds")
 ```
@@ -175,8 +178,6 @@ ggsave(filename = path,
        limitsize = FALSE,
        dpi = 320)
 ```
-
-
 
 # Create lists of fOTUs of interest
 
