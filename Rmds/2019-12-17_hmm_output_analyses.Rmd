@@ -234,7 +234,7 @@ NMDS_points <- as_tibble(ord$points) %>%
   filter(MDS1 > -2)
 ```
 
-# Visualise the filtered data
+# Visualise the filtered data {#nmds-preview}
 
 ```{r eval=FALSE, include=TRUE}
 title <- "NMDS, all from MDS1 > -2"
@@ -445,9 +445,9 @@ write_delim(PC34_cluster3,
 
 ## NMDS lists
 
-Based on the previewing of PCA plots in \@ref(pca-preview) we can now manually curate a lists of fOTUs approximately based on clustering in them. 
+Based on the previewing of NMDS plots in \@ref(nmds-preview) we can now manually curate a lists of fOTUs approximately based on various putative clusters in them. 
 
-Let's first create file names:
+Let's first create file names for the putative clusters:
 
 ```{r eval=FALSE, include=TRUE}
 # Path to files
