@@ -492,6 +492,88 @@ unfiltered <- as_tibble(ord$points)
 unfiltered <- cbind(select(fOTUsHMM,1), 
                     unfiltered)
 ```
+
+and execute the actual filtering:
+
+```{r eval=FALSE, include=TRUE}
+# The outlier
+NMDS_cluster1 <- filterator(unfiltered,
+                            x_low = -10, 
+                            x_high = -7)
+# And the rest
+NMDS_cluster2 <- filterator(unfiltered,
+                            x_low = -1,
+                            x_high = -0.2)
+NMDS_cluster3 <- filterator(unfiltered,
+                            x_low = -0.2,
+                            x_high = -0.05)
+NMDS_cluster4 <- filterator(unfiltered,
+                            x_low = -0.02,
+                            x_high = 0)
+NMDS_cluster5 <- filterator(unfiltered,
+                            x_low = 0,
+                            x_high = 0.01)
+NMDS_cluster6 <- filterator(unfiltered,
+                            x_low = 0.01,
+                            x_high = 0.02)
+NMDS_cluster7 <- filterator(unfiltered,
+                            x_low = 0.05)
+```
+
+Lastly, we'll just write the cluster files:
+
+```{r eval=FALSE, include=TRUE}
+write_delim(NMDS_cluster1, 
+            NMDSa_filename, 
+            delim = "", 
+            na = "NA", 
+            append = FALSE,
+            col_names = FALSE, 
+            quote_escape = "double")
+write_delim(NMDS_cluster2, 
+            NMDSb_filename, 
+            delim = "", 
+            na = "NA", 
+            append = FALSE,
+            col_names = FALSE, 
+            quote_escape = "double")
+write_delim(NMDS_cluster3, 
+            NMDSc_filename, 
+            delim = "", 
+            na = "NA", 
+            append = FALSE,
+            col_names = FALSE, 
+            quote_escape = "double")
+write_delim(NMDS_cluster4, 
+            NMDSd_filename, 
+            delim = "", 
+            na = "NA", 
+            append = FALSE,
+            col_names = FALSE, 
+            quote_escape = "double")
+write_delim(NMDS_cluster5, 
+            NMDSe_filename, 
+            delim = "", 
+            na = "NA", 
+            append = FALSE,
+            col_names = FALSE, 
+            quote_escape = "double")
+write_delim(NMDS_cluster6, 
+            NMDSf_filename, 
+            delim = "", 
+            na = "NA", 
+            append = FALSE,
+            col_names = FALSE, 
+            quote_escape = "double")
+write_delim(NMDS_cluster7, 
+            NMDSg_filename, 
+            delim = "", 
+            na = "NA", 
+            append = FALSE,
+            col_names = FALSE, 
+            quote_escape = "double")
+```
+
 # Searching further on viral HMM profiles
 
 ```{r}
