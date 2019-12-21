@@ -478,79 +478,25 @@ NMDSe_filename <- paste(path,
 
 Now we need to have a data frame with 3 columns, first of which contains the fOTU names. This so because then the already made function `filterator`'s indexing is correct. 
 
+# Searching further on viral HMM profiles
+
 ```{r}
-unfiltered <- as_tibble(as_tibble(ord$points)) %>%
-  # Prepend the column before first column
-  add_column(fOTUs = fOTUs_tbl, .before = 1)
-NMDS_points <- unfiltered %>%
-  filter(MDS1 > -2)
+#entrez_dbs()
+#entrez_db_searchable(db = "taxonomy")
+res <- entrez_search(db = "taxonomy", term = "(PLoS Neglected Tropical Diseases[JOUR] AND 2015[PDAT])", retmax = 9999, use_history = T)
+res$count
+#res$ids
+length(res$ids) == res$count
+recs <- entrez_fetch(db = "pubmed", id = res$ids[1:25], rettype = "xml", parsed = TRUE)
 ```
 
-and the actual filtering:
-
-```{r eval=FALSE, include=TRUE}
-# The outliers
-NMDS_cluster5 <- filterator(unfiltered,
-                            x_low = -10, 
-                            x_high = -7)
-# The rest
-NMDS_cluster1 <- filterator(NMDS_points, 
-                            x_low = -0.05,
-                            x_high = 0.05)
-NMDS_cluster2 <- filterator(NMDS_points,
-                            x_low = -1,
-                            x_high = -0.2)
-NMDS_cluster3 <- filterator(NMDS_points,
-                            x_low = -0.2,
-                            x_high = -0.05)
-NMDS_cluster4 <- filterator(NMDS_points,
-                            x_low = 0.05)
+```{r}
+#a <- xpathSApply(recs, "//MedlineCitation/Article/ArticleTitle", xmlValue)
+#esums <- entrez_summary(db = "pubmed", id = res$ids[1:25])
+a <- extract_from_esummary(esums, "title")
+#entrez_info(db = "mesh")
+a
 ```
-
-Lastly, we'll just write the files:
-
-```{r eval=FALSE, include=TRUE}
-write_delim(NMDS_cluster5, 
-            NMDSe_filename, 
-            delim = "", 
-            na = "NA", 
-            append = FALSE,
-            col_names = FALSE, 
-            quote_escape = "double")
-write_delim(NMDS_cluster1, 
-            NMDSa_filename, 
-            delim = "", 
-            na = "NA", 
-            append = FALSE,
-            col_names = FALSE, 
-            quote_escape = "double")
-write_delim(NMDS_cluster2, 
-            NMDSb_filename, 
-            delim = "", 
-            na = "NA", 
-            append = FALSE,
-            col_names = FALSE, 
-            quote_escape = "double")
-write_delim(NMDS_cluster3, 
-            NMDSc_filename, 
-            delim = "", 
-            na = "NA", 
-            append = FALSE,
-            col_names = FALSE, 
-            quote_escape = "double")
-write_delim(NMDS_cluster4, 
-            NMDSd_filename, 
-            delim = "", 
-            na = "NA", 
-            append = FALSE,
-            col_names = FALSE, 
-            quote_escape = "double")
-```
-
-
-
-
-
 
 
 
