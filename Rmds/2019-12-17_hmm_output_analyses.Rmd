@@ -459,18 +459,26 @@ NMDSa_filename <- paste(path,
                        sep = "", 
                        collapse = NULL)
 NMDSb_filename <- paste(path,
-                       "fOTU_max_NMDS_x--0_05-to-+0_05.txt", 
-                       sep = "", 
-                       collapse = NULL)
-NMDSc_filename <- paste(path,
                        "fOTU_max_NMDS_x--1-to--0_2.txt", 
                        sep = "", 
                        collapse = NULL)
-NMDSd_filename <- paste(path,
+NMDSc_filename <- paste(path,
                        "fOTU_max_NMDS_x--0_2-to--0.05txt", 
                        sep = "", 
                        collapse = NULL)
+NMDSd_filename <- paste(path,
+                       "fOTU_max_NMDS_x--0_02-to-0.txt", 
+                       sep = "", 
+                       collapse = NULL)
 NMDSe_filename <- paste(path,
+                       "fOTU_max_NMDS_x-0-to-+0_01.txt", 
+                       sep = "", 
+                       collapse = NULL)
+NMDSf_filename <- paste(path,
+                       "fOTU_max_NMDS_x-+0_01-to-+0_02.txt", 
+                       sep = "", 
+                       collapse = NULL)
+NMDSg_filename <- paste(path,
                        "fOTU_max_NMDS_x-+0_05-to-+9999.txt", 
                        sep = "", 
                        collapse = NULL)
