@@ -88,7 +88,7 @@ gunzip "$OUTPUT"
 INPUT1="../analyses/HMMsearch/validation_and_further_analyses/10239_annotations.tsv"
 INPUT2="../analyses/HMMsearch/validation_and_further_analyses/10239_members.tsv"
 SCRIPT="../scripts/merge_files.awk"
-OUTPUT="../analyses/HMMsearch/validation_and_further_analyses/10239_members_annotations.tsv"
+OUT="../analyses/HMMsearch/validation_and_further_analyses/10239_members_annotations.tsv"
 
 awk -f $SCRIPT $INPUT1 $INPUT2 > $OUTPUT
 ```
