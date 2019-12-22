@@ -44,6 +44,8 @@ output:
                   "-V", "pagestyle=headings"]
 ---
 
+\clearpage
+
 # Introduction
 
 It would be nice to know further what viruses contributed to HMMs that matched to the fOTUs. Fortunately EggNOG database v 5.0 [@Huerta-Cepas2019] provides that information. Let's download the relevant file from EggNOG database and taxonomic data from NCBI and create one big tsv file with all that information. Thereafter, let's check which HMMs matched significantly (with $\text{- }log_{10}\text{(e-value)}$ of 2 or higher) to which fOTUs.
@@ -56,7 +58,11 @@ library(rentrez)
 library(XML)
 ```
 
-# Download members information on all viral HMMs
+\clearpage
+
+# Download from eggNOG database
+
+## Download members information on all viral HMMs
 
 ```{bash eval=FALSE, include=TRUE}
 OUTPUT="../analyses/HMMsearch/validation_and_further_analyses/10239_members.tsv.gz"
@@ -65,7 +71,7 @@ wget --verbose --continue --output-document="$OUTPUT" \
 gunzip "$OUTPUT"
 ```
 
-# Download annotation information on all viral HMMs
+## Download annotation information on all viral HMMs
 
 ```{bash eval=TRUE, include=TRUE}
 OUTPUT="../analyses/HMMsearch/validation_and_further_analyses/10239_annotations.tsv.gz"
@@ -73,6 +79,8 @@ wget --verbose --continue --output-document="$OUTPUT" \
 "http://eggnog5.embl.de/download/eggnog_5.0/per_tax_level/10239/10239_annotations.tsv.gz"
 gunzip "$OUTPUT"
 ```
+
+\clearpage
 
 # Merge annotations and members files
 
@@ -96,10 +104,7 @@ Looks pretty ok.
 
 Now we need to fetch taxonomic information from NCBI based on mem_taxid column information and append it to this previous data. R package `rentrez` can handle the accessing of NCBI and tidyverse can handle the rest.
 
-```{r}
-
-```
-
+\clearpage
 
 # Session info
 
@@ -107,5 +112,6 @@ Now we need to fetch taxonomic information from NCBI based on mem_taxid column i
 sessionInfo()
 ```
 
+\clearpage
 
 # References
