@@ -557,26 +557,6 @@ write_delim(NMDS_cluster7,
             quote_escape = "double")
 ```
 
-# Searching further on viral HMM profiles
-
-```{r}
-#entrez_dbs()
-#entrez_db_searchable(db = "taxonomy")
-res <- entrez_search(db = "taxonomy", term = "(PLoS Neglected Tropical Diseases[JOUR] AND 2015[PDAT])", retmax = 9999, use_history = T)
-res$count
-#res$ids
-length(res$ids) == res$count
-recs <- entrez_fetch(db = "pubmed", id = res$ids[1:25], rettype = "xml", parsed = TRUE)
-```
-
-```{r}
-#a <- xpathSApply(recs, "//MedlineCitation/Article/ArticleTitle", xmlValue)
-#esums <- entrez_summary(db = "pubmed", id = res$ids[1:25])
-a <- extract_from_esummary(esums, "title")
-#entrez_info(db = "mesh")
-a
-```
-
 # Session info
 
 ```{r}
