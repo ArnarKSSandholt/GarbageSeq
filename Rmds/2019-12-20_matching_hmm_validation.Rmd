@@ -90,7 +90,7 @@ INPUT2="../analyses/HMMsearch/validation_and_further_analyses/10239_members.tsv"
 SCRIPT="../scripts/merge_files.awk"
 OUT="../analyses/HMMsearch/validation_and_further_analyses/10239_members_annotations.tsv"
 
-awk -f $SCRIPT $INPUT1 $INPUT2 > $OUTPUT
+awk -f $SCRIPT $INPUT1 $INPUT2 > $OUT
 ```
 
 Now let's take a short look at the output
