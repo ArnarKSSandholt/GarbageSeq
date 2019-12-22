@@ -83,7 +83,7 @@ cat $fOTUs | awk -F, -v delimiter="," -f $SCRIPT > $OUTPUT
 
 # Parse delimited files from hmmsearch output files
 
-```{bash}
+```{bash eval=FALSE, include=TRUE}
 SCRIPT="../scripts/hmmsearchOutputParser.awk"
 eggNOGs="../analyses/HMMsearch/hmmsearch_out_viruses/"
 PARSED="../analyses/HMMsearch/hmmsearch_out_parsed/"
@@ -157,7 +157,7 @@ cat $TSV_FILE | awk -v delimiter=";" -v last_col="4" -v excluded_recs="$REGEXP" 
 
 ## Helper chunk for moving already studied fOTUs
 
-```{bash include=TRUE}
+```{bash eval=FALSE, include=TRUE}
 STUDIED_fOTUs="../analyses/HMMsearch/hmmsearch_out_viruses/"
 fOTUs="../analyses/fOTU_proteomes1/" 
 TEMP_STORAGE="../analyses/fOTU_proteomes_studied/"
