@@ -1,0 +1,97 @@
+---
+title: "Searching further on viral matching HMM profiles"
+author: "LJM"
+date: "`r Sys.Date()`"
+link-citations: true
+bibliography: bibliography.bib
+biblio-style: "alpha" #https://www.overleaf.com/learn/latex/Bibtex_bibliography_styles
+#csl: "../uppsala-universitet-institutionen-for-biologisk-grundutbildning.csl"
+documentclass: report
+output:
+  bookdown::html_document2:
+    highlight: tango
+    theme: journal
+    split_by: none # only generate a single output page
+    self_contained: TRUE
+    toc: yes
+    toc_float: 
+      collapsed: TRUE
+      smooth_scroll: TRUE
+      print: FALSE
+    code_folding: show
+    number_sections: TRUE
+    code_download: TRUE
+  bookdown::pdf_document2:
+    keep_tex: no
+    latex_engine: xelatex
+    #highlight: pygments #Other options: default, tango, kate, monochrome, espresso, zenburn, haddock, and textmate
+    #theme: spacelab
+    pandoc_args: ["--variable", "subparagraph",
+                "--top-level-division","chapter"] # Could also be section 
+---
+
+# Introduction
+
+It would be nice to know further what viruses contributed to HMMs that matched to the fOTUs. Fortunately EggNOG database v 5.0 [@Huerta-Cepas2019] provides that information. Let's download the relevant file from EggNOG database and taxonomic data from NCBI and create one big tsv file with all that information. Thereafter, let's check which HMMs matched significantly (with $\text{- }log_{10}\text{(e-value)}$ of 2 or higher) to which fOTUs.
+
+# Load libraries
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(rentrez)
+library(XML)
+```
+
+# Download members information on all viral HMMs
+
+```{bash eval=FALSE, include=TRUE}
+OUTPUT="../analyses/HMMsearch/validation_and_further_analyses/10239_members.tsv.gz"
+wget --verbose --continue --output-document="$OUTPUT" \
+"http://eggnog5.embl.de/download/eggnog_5.0/per_tax_level/10239/10239_members.tsv.gz"
+gunzip "$OUTPUT"
+```
+
+# Download annotation information on all viral HMMs
+
+```{bash eval=TRUE, include=TRUE}
+OUTPUT="../analyses/HMMsearch/validation_and_further_analyses/10239_annotations.tsv.gz"
+wget --verbose --continue --output-document="$OUTPUT" \
+"http://eggnog5.embl.de/download/eggnog_5.0/per_tax_level/10239/10239_annotations.tsv.gz"
+gunzip "$OUTPUT"
+```
+
+# Merge annotations and members files
+
+```{bash eval=TRUE, include=TRUE}
+INPUT1="../analyses/HMMsearch/validation_and_further_analyses/10239_annotations.tsv"
+INPUT2="../analyses/HMMsearch/validation_and_further_analyses/10239_members.tsv"
+SCRIPT="../scripts/merge_files.awk"
+OUTPUT="../analyses/HMMsearch/validation_and_further_analyses/10239_members_annotations.tsv"
+
+awk -f $SCRIPT $INPUT1 $INPUT2 > $OUTPUT
+```
+
+Now let's take a short look at the output
+
+```{bash}
+IN="../analyses/HMMsearch/validation_and_further_analyses/10239_members_annotations.tsv"
+head -n 3 $IN
+```
+
+Looks pretty ok.
+
+Now we need to fetch taxonomic information from NCBI based on mem_taxid column information and append it to this previous data. R package `rentrez` can handle the accessing of NCBI and tidyverse can handle the rest.
+
+```{r}
+
+```
+
+
+# Session info
+
+```{r}
+sessionInfo()
+```
+
+
+# References
