@@ -73,7 +73,7 @@ gunzip "$OUTPUT"
 
 ## Download annotation information on all viral HMMs
 
-```{bash eval=TRUE, include=TRUE}
+```{bash eval=FALSE, include=TRUE}
 OUTPUT="../analyses/HMMsearch/validation_and_further_analyses/10239_annotations.tsv.gz"
 wget --verbose --continue --output-document="$OUTPUT" \
 "http://eggnog5.embl.de/download/eggnog_5.0/per_tax_level/10239/10239_annotations.tsv.gz"
@@ -84,7 +84,7 @@ gunzip "$OUTPUT"
 
 # Merge annotations and members files
 
-```{bash eval=TRUE, include=TRUE}
+```{bash eval=FALSE, include=TRUE}
 INPUT1="../analyses/HMMsearch/validation_and_further_analyses/10239_annotations.tsv"
 INPUT2="../analyses/HMMsearch/validation_and_further_analyses/10239_members.tsv"
 SCRIPT="../scripts/merge_files.awk"
