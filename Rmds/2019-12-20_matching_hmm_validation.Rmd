@@ -50,7 +50,7 @@ output:
 
 It would be nice to know further what viruses contributed to HMMs that matched to the fOTUs. Fortunately EggNOG database v 5.0 [@Huerta-Cepas2019] provides that information. Let's download the relevant file from EggNOG database and taxonomic data from NCBI and create one big tsv file with all that information. Thereafter, let's check which HMMs matched significantly (with $\text{- }log_{10}\text{(e-value)}$ of 2 or higher) to which fOTUs.
 
-# Load libraries
+## Load libraries
 
 ```{r message=FALSE, warning=FALSE}
 library(tidyverse)
