@@ -104,6 +104,21 @@ Now we need to fetch taxonomic information from NCBI based on mem_taxid column i
 
 \clearpage
 
+# Fetch information from NCBI on each HMM
+
+Let's use Biopython v. 1.75 [@Cock2009] to access NCBI's taxonomy database for retrieving interesting taxonomic information about the viruses which contributed their proteins in the HMMs used. Biopython comes also with a handy parser of the XML format data that is returned from NCBI on each request.
+
+```{bash}
+IN="../analyses/HMMsearch/validation_and_further_analyses/10239_members_annotations.tsv"
+SCRIPT="../scripts/fetch_tax_data.py"
+awk -F"\t" 'BEGIN{OFS=","}{print $2,$5}' $IN | tail -n 2 | python3 $SCRIPT
+
+```
+
+
+
+\clearpage
+
 # Session info
 
 ```{r}
