@@ -12,7 +12,8 @@ BEGIN{
 }
 # Build an (associative) array from the first file
 NR==FNR{
-        A[$2]=$0;
+        A[$2]=$0
+        # Skip all other instructions in the script
         next
     }
 {
