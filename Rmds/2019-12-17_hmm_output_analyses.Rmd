@@ -42,8 +42,6 @@ library(tidyverse)
 library(ggbiplot)
 #install.packages("vegan")
 library(vegan)
-library(rentrez)
-library(XML)
 ```
 
 # Read intermediary `csv` file

@@ -54,8 +54,6 @@ It would be nice to know further what viruses contributed to HMMs that matched t
 
 ```{r message=FALSE, warning=FALSE}
 library(tidyverse)
-library(rentrez)
-library(XML)
 ```
 
 \clearpage
