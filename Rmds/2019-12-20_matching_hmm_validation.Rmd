@@ -111,7 +111,7 @@ Let's use Biopython v. 1.75 [@Cock2009] to access NCBI's taxonomy database for r
 ```{bash}
 IN="../analyses/HMMsearch/validation_and_further_analyses/10239_members_annotations.tsv"
 SCRIPT="../scripts/fetch_taxon_data.py"
-AWK_PARSER="../scripts/taxon_parser.awk"
+AWK_PARSER="../scripts/deWhiteSpacer.awk"
 OUTPUT="../analyses/HMMsearch/validation_and_further_analyses/lineages.tsv"
 # Retain fields of interest with AWK, process with python by augmenting the data with
 # taxon info from NCBI and print out in a nicely machine readable format with AWK
