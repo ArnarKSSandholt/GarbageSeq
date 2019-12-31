@@ -100,7 +100,7 @@ head -n 3 $IN
 
 Looks pretty ok.
 
-Now we need to fetch taxonomic information from NCBI based on mem_taxid column information and append it to this previous data. R package `rentrez` can handle the accessing of NCBI and tidyverse can handle the rest.
+Now we need to fetch taxonomic information from NCBI based on mem_taxid column information and append it to this previous data.
 
 \clearpage
 
@@ -108,16 +108,167 @@ Now we need to fetch taxonomic information from NCBI based on mem_taxid column i
 
 Let's use Biopython v. 1.75 [@Cock2009] to access NCBI's taxonomy database for retrieving interesting taxonomic information about the viruses which contributed their proteins in the HMMs used. Biopython comes also with a handy parser of the XML format data that is returned from NCBI on each request.
 
-```{bash}
+## Fetch taxonomic data
+
+```{bash eval=FALSE, include=TRUE}
 IN="../analyses/HMMsearch/validation_and_further_analyses/10239_members_annotations.tsv"
 SCRIPT="../scripts/fetch_taxon_data.py"
-AWK_PARSER="../scripts/deWhiteSpacer.awk"
+AWK_PARSER="../scripts/tabinator.awk"
 OUTPUT="../analyses/HMMsearch/validation_and_further_analyses/lineages.tsv"
 # Retain fields of interest with AWK, process with python by augmenting the data with
 # taxon info from NCBI and print out in a nicely machine readable format with AWK
-awk -F"\t" 'BEGIN{OFS=","}{print $2,$5}' $IN | python3 $SCRIPT | awk -F"@" -f $AWK_PARSER > $OUTPUT
+tail -n+2 $IN | awk -F"\t" 'BEGIN{OFS=","}{print $2,$5}' |\
+python3 $SCRIPT | awk -F"@" -f $AWK_PARSER > $OUTPUT
 ```
 
+In this returned file `/analyses/HMMsearch/validation_and_further_analyses/lineages.tsv` there are some issues that should be fixed before it will be read with R and processed further. The issues are:
+
+1. There are unnecessary spaces after `;` in lineages column, e.g. `Viruses; Caudovirales; Myoviridae; unclassified Myoviridae,Viruses; Caudovirales; Myoviridae; unclassified Myoviridae`.
+
+2. For 350 records root taxon was downloaded as the first taxon. This is of no interest for us so we need to get rid of it. This task involves not only removing `root` from scientific names (2nd field) but all NAs in other taxonomic columns and leading commas in lineages fields (the 13th one).
+
+3. For 350 other records generic Bacteria taxon was downloaded as the first taxon. This seems to be some type of incorrect relic and not a valid contributor organism for the HMMs. This task involves not only removing `Bacteria` from scientific names (2nd field) but all NAs in other taxonomic columns except `no_rank` (9th field) where `cellular organisms` should be removed and finally in lineages field (the 13th one) removing the leading `cellular organisms,` text.
+
+Let's fix these issues in this order before we move on.
+
+## Remove spaces from lineages field
+
+```{bash eval=FALSE, include=TRUE}
+IN="../analyses/HMMsearch/validation_and_further_analyses/lineages.tsv"
+OUT="../analyses/HMMsearch/validation_and_further_analyses/taxon_data.tsv"
+AWK_SCRIPT="../scripts/linDeWhitespacer.awk"
+awk -F"\t" -f $AWK_SCRIPT $IN > $OUT
+#sed -n '3'p $OUT
+#tail -n 100 $TEMP | awk -F"\t" -f $AWK_SCRIPT | awk -F"\t" '{print $13}'
+```
+
+## Remove `root` taxons from some records
+
+```{bash eval=FALSE, include=TRUE}
+export AWKPATH="../scripts/awk_lib"
+FILE="../analyses/HMMsearch/validation_and_further_analyses/taxon_data.tsv"
+TEMP="../analyses/HMMsearch/validation_and_further_analyses/temp.tsv"
+AWK_SCRIPT="../scripts/removeRoots.awk"
+cp $FILE $TEMP
+awk -F"\t" -f $AWK_SCRIPT $TEMP > $FILE 
+rm $TEMP
+```
+
+## Remove `Bacteria` taxons from some records
+
+```{bash eval=FALSE, include=TRUE}
+FILE="../analyses/HMMsearch/validation_and_further_analyses/taxon_data.tsv"
+TEMP="../analyses/HMMsearch/validation_and_further_analyses/temp.tsv"
+AWK_SCRIPT="../scripts/removeBacteria.awk"
+cp $FILE $TEMP
+awk -F"\t" -f $AWK_SCRIPT $TEMP > $FILE
+#sed -n '19,22'p $TEMP | awk -F"\t" -f $AWK_SCRIPT
+rm $TEMP
+```
+
+## The output file
+
+The retrieved data looks now the following: (the lines have been stripped so it looks nicer in `pdf`/`html`-formats)
+
+```{bash}
+FILE="../analyses/HMMsearch/validation_and_further_analyses/taxon_data.tsv"
+head -n 5 $FILE | cut -c-83
+```
+
+\clearpage
+
+# Augment existing data with taxonomic information
+
+## Read in the data
+
+```{r eval=FALSE, include=TRUE}
+# The files where the data is
+taxon_data_file <- "../analyses/HMMsearch/validation_and_further_analyses/taxon_data.tsv"
+hmm_data_file <- "../analyses/HMMsearch/validation_and_further_analyses/10239_members_annotations.tsv"
+fOTUs_data_file <- "../analyses/HMMsearch/max_fOTUsHMM.csv"
+
+# read in the data
+hmm_data <- read_tsv(file = hmm_data_file,
+                     col_names = TRUE,
+                     col_types = c("fcfccc"), 
+                     na = "NA")
+
+taxon_data <- read_tsv(file = taxon_data_file,
+                     col_names = c("HMM",
+                                   "sci_names",
+                                   "superkingdoms",
+                                   "orders",
+                                   "families",
+                                   "subfamilies",
+                                   "genuses",
+                                   "species",
+                                   "no_ranks",
+                                   "phylums",
+                                   "classes",
+                                   "unclassified",
+                                   "lineages"),
+                     col_types = c("ccccccccccccc"), 
+                     na = "NA")
+
+columns <- paste("c", strrep("d",8315), sep = "")
+fOTUsHMM <- read_csv(file = fOTUs_data_file,
+                     col_names = TRUE, 
+                     col_types = columns)
+
+```
+
+## Join the data into one tibble
+
+```{r eval=FALSE, include=TRUE}
+joined_data <- hmm_data %>%
+  left_join(.,
+            taxon_data,
+            by = "HMM")
+```
+
+## Create summary
+
+What we'd like to do now is create a tsv file for each fOTU such that it contains all the significant matches with HMMs as rows and the relevant HMM data gathered above joined to the rows.
+
+First let's define some functions
+
+```{r eval=FALSE, include=TRUE}
+# This function returns FALSE for columns/vectors
+# where all elements are NA
+not_all_na <- function(x){
+  !all(is.na(x))
+}
+
+# This function removes columns from the tibble where all the elements
+# are NA and returns the reduced tibble
+remove_na_cols <- function(this_tbl){
+  filtered <- this_tbl %>%
+    select_if(not_all_na)
+}
+```
+
+Now we'll simply iterate over each row in the tibble with fOTUs and $-log_{10}(\text{e-val})$:s, then remove all the columns (HMMs) (in each row) which didn't have any matches and pivot the HMMs with some $-log_{10}(\text{e-val})$:s as rows, join all the previously gathered data to each HMM and finally write this data to a `tsv`-file with the current fOTU name as file name.
+
+```{r eval=FALSE, include=TRUE}
+path <- "../analyses/HMMsearch/validation_and_further_analyses/fOTUwise_taxon_HMM_data/"
+for (row in 1:nrow(fOTUsHMM)) {
+  # Scrape the current fOTU name for use when writing files
+  fOTU_name <- as.character(fOTUsHMM[row,][1])
+  # Create the file name with path
+  file_name <- paste(path,fOTU_name,".tsv",sep = "")
+  fOTUsHMM[row,] %>%
+    remove_na_cols() %>%
+    select(-fOTU_name) %>%
+    gather("HMM","e-value") %>%
+    left_join(.,
+               joined_data,
+               by = "HMM") %>%
+    write_tsv(.,
+              path = file_name,
+              append = FALSE,
+              col_names = TRUE)
+}
+```
 
 
 \clearpage
