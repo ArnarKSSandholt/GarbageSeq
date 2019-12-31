@@ -43,7 +43,4 @@ analyses/HMMsearch/validation_and_further_analyses/fOTUwise_taxon_HMM_data/*
 # Ignore all files but README.md in singularity directory
 singularity/*
 !singularity/README.md
-
-# Temporary R objects for making runs faster
-analyses/HMMsearch/temp_R_data/*.RData
-
+singularity2/*
