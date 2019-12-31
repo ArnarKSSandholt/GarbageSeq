@@ -136,7 +136,7 @@ Let's fix these issues in this order before we move on.
 ```{bash eval=FALSE, include=TRUE}
 IN="../analyses/HMMsearch/validation_and_further_analyses/lineages.tsv"
 OUT="../analyses/HMMsearch/validation_and_further_analyses/taxon_data.tsv"
-AWK_SCRIPT="../scripts/linDeWhitespacer.awk"
+AWK_SCRIPT="../scripts/fixLineages.awk"
 awk -F"\t" -f $AWK_SCRIPT $IN > $OUT
 #sed -n '3'p $OUT
 #tail -n 100 $TEMP | awk -F"\t" -f $AWK_SCRIPT | awk -F"\t" '{print $13}'
