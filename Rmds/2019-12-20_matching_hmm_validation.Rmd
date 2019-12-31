@@ -131,7 +131,7 @@ In this returned file `/analyses/HMMsearch/validation_and_further_analyses/linea
 
 Let's fix these issues in this order before we move on.
 
-## Remove spaces from lineages field
+## Remove spaces and initial `,` from lineages field
 
 ```{bash eval=FALSE, include=TRUE}
 IN="../analyses/HMMsearch/validation_and_further_analyses/lineages.tsv"
