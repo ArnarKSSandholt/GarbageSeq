@@ -36,8 +36,9 @@ analyses/HMMsearch/eggNOG_data/tars/*
 analyses/HMMsearch/eggNOG_data/HMMs/*
 !analyses/HMMsearch/eggNOG_data/HMMs/README.md
 
-# Temporary directory for fOTUs that already have been scanned from viruses
-analyses/fOTU_proteomes_studied/*
+# fOTU wise taxonomic and other data
+analyses/HMMsearch/validation_and_further_analyses/fOTUwise_taxon_HMM_data/*
+!analyses/HMMsearch/validation_and_further_analyses/fOTUwise_taxon_HMM_data/README.md
 
 # Ignore all files but README.md in singularity directory
 singularity/*
