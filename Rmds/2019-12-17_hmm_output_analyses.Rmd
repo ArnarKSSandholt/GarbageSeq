@@ -49,21 +49,21 @@ library(vegan)
 In the intermediary `csv` file the $-log_{10}(\text{e-val})$:s are the maximum e-values among all the hits to the fOTUs instead (and in contrast to the previous run in file `2019-11-25_hmmsearch_output_analyses.Rmd`) of the average of all the HMMsearch hits to the fOTUs.
 
 
-```{r eval=FALSE, include=TRUE}
+```{r}
 columns <- paste("c", strrep("d",8315), sep = "")
 fOTUsHMM <- read_csv(file = "../analyses/HMMsearch/max_fOTUsHMM.csv", col_types = columns)
 ```
 
 # Exchange NA, Inf and -Inf with 0
 
-```{r eval=FALSE, include=TRUE}
+```{r}
 is.na(fOTUsHMM) <- sapply(fOTUsHMM, is.infinite)
 fOTUsHMM[is.na(fOTUsHMM)] <- 0
 ```
 
 # Move fOTU names to row names and execute PCA 
 
-```{r eval=FALSE, include=TRUE}
+```{r}
 fOTUsHMM_pca <- fOTUsHMM %>% 
   column_to_rownames(var = "fOTU_name") %>%
   prcomp(., 
