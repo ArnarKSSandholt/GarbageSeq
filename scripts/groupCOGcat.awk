@@ -30,10 +30,20 @@ BEGIN{
     #_POORLY_CHARACTERIZED
     cogFunCats["R"] = "General_function_prediction_only";
     cogFunCats["S"] = "Function_unknown";
+
+    # Set a default filtering - log_10 e-value above which everything will be
+    # accepted
+    if (length(e_val) == 0){
+        e_val = 0
+    }
+
 }
 {
-    cogCat = cogFunCats[$4];
-    if ($4 != "eggNOG_cat"){
-       printf " %s", cogCat
+    # We wish to skip tsv headers and "Function unknown"s
+    if ($4 != "eggNOG_cat" && $4 != "S" ){
+        if ($2 >= e_val){
+            cogCat = cogFunCats[$4];
+            printf " %s", cogCat
+        }
     }
 }
