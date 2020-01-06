@@ -13,6 +13,19 @@ keywords:
   - "text manipulation"
   - eggNOG
 output:
+  bookdown::pdf_document2:
+    keep_tex: no
+    latex_engine: xelatex
+    #highlight: pygments #Other options: default, tango, kate, monochrome, espresso, zenburn, haddock, and textmate
+    #theme: spacelab
+    # https://pandoc.org/MANUAL.html
+    pandoc_args: ["--top-level-division=section",
+                  "-V", "documentclass=article",
+                  "-V", "linkcolor=MidnightBlue",
+                  "-V", "citecolor=Aquamarine",
+                  "-V", "urlcolor=NavyBlue",
+                  "-V", "toccolor=NavyBlue",
+                  "-V", "pagestyle=headings"]
   bookdown::html_document2:
     highlight: tango
     theme: yeti
@@ -29,26 +42,13 @@ output:
     pandoc_args: ["--top-level-division=section",
               "-V", "documentclass=report"]
               
-  bookdown::pdf_document2:
-    keep_tex: no
-    latex_engine: xelatex
-    #highlight: pygments #Other options: default, tango, kate, monochrome, espresso, zenburn, haddock, and textmate
-    #theme: spacelab
-    # https://pandoc.org/MANUAL.html
-    pandoc_args: ["--top-level-division=section",
-                  "-V", "documentclass=article",
-                  "-V", "linkcolor=MidnightBlue",
-                  "-V", "citecolor=Aquamarine",
-                  "-V", "urlcolor=NavyBlue",
-                  "-V", "toccolor=NavyBlue",
-                  "-V", "pagestyle=headings"]
 ---
 
 \clearpage
 
 # Introduction
 
-In this document will be studied further what taxons are present in mainly two groups:
+In this document will be studied further what features are present in mainly two groups:
 
 1. VirFinder viral content is low and PlasFlow result suggests bacterial chromosomal material (putatively predominantly bacterial chromosomal content) (blue rows in Figure 1)
 
