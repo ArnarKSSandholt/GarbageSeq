@@ -48,7 +48,7 @@ output:
 
 # Introduction
 
-In this document will be studied further what features are present in manually clustered fOTU group `fOTU_max_PC2-and-3_x-+250-to-+425-and-y--200-to-0` (row 16 in Figure 1). Further, e-value filtering (of $10^{-2}$) and *Function unknown* of COG categories are filtered from these following clusters:
+In this document will be studied further what features are present in manually clustered fOTU group `fOTU_max_PC2-and-3_x-+250-to-+425-and-y--200-to-0` and `fOTU_max_PC2-and-3_x-0-to-+200-and-y-+200-to-+450` (rows 16 and 19 in Figure 1). Further, e-value filtering (of $10^{-2}$) and *Function unknown* of COG categories are filtered from these following clusters:
 
 1. VirFinder viral content is low and PlasFlow result suggests bacterial chromosomal material (putatively predominantly bacterial chromosomal content).
 
@@ -56,7 +56,7 @@ In this document will be studied further what features are present in manually c
 
 These estimation as based on previewing `summary_statistics.csv` file. The filtering of *Function unknown* of COG categories will help to see differences better between what is already there when it comes to viral material. 4
 
-![This figure shows some summary details of the putatively most promising viral cluster of the fOTUs. This will be studied further in this document.](../visualisations/promising_cluster.png)
+![This figure shows some summary details of the putatively most promising manually curated viral clusters of the fOTUs. These will be studied further in this document.](../visualisations/clusters_of_interest.png)
 
 
 \clearpage
@@ -129,12 +129,21 @@ awk -F"\t" -v e_val=$EVALUE -v header="families" -v field="11" \
 >> "$OUT""vir_Families_filtered.txt"
 ```
 
-Lastly let's run the previous groupings on `fOTU_max_PC2-and-3_x-+250-to-+425-and-y--200-to-0` cluster but before that can be done let's create a directory with symbolic links to the relevant fOTUs. 
+Lastly let's run the previous groupings on `fOTU_max_PC2-and-3_x-+250-to-+425-and-y--200-to-0` and `fOTU_max_PC2-and-3_x-0-to-+200-and-y-+200-to-+450` clusters but before that can be done let's create a directory with symbolic links to the relevant fOTUs. 
 
 ```{bash eval=FALSE, include=TRUE}
 VIR_LIST="../../lists_of_clusters/fOTU_max_PC2-and-3_x-+250-to-+425-and-y--200-to-0.txt"
 OUT_DIR_ROOT_VIR="../analyses/HMMsearch/validation_and_further_analyses/"
 OUT_DIR_VIR="fOTU_max_PC2-and-3_x-+250-to-+425-and-y--200-to-0_lns/"
+SCRIPT="../../../../scripts/groupSymLinkify.awk"
+cd "$OUT_DIR_ROOT_VIR""$OUT_DIR_VIR"
+awk -f "$SCRIPT" "$VIR_LIST"
+```
+
+```{bash eval=FALSE, include=TRUE}
+VIR_LIST="../../lists_of_clusters/fOTU_max_PC2-and-3_x-0-to-+200-and-y-+200-to-+450.txt"
+OUT_DIR_ROOT_VIR="../analyses/HMMsearch/validation_and_further_analyses/"
+OUT_DIR_VIR="fOTU_max_PC2-and-3_x-0-to-+200-and-y-+200-to-+450_lns/"
 SCRIPT="../../../../scripts/groupSymLinkify.awk"
 cd "$OUT_DIR_ROOT_VIR""$OUT_DIR_VIR"
 awk -f "$SCRIPT" "$VIR_LIST"
@@ -173,6 +182,38 @@ awk -F"\t" -v e_val=$EVALUE -v header="families" -v field="11" \
 >> "$OUT""fOTU_max_PC2-and-3_x-+250-to-+425-and-y--200-to-0_vir_Families_filtered.txt"
 ```
 
+and the same for `fOTU_max_PC2-and-3_x-0-to-+200-and-y-+200-to-+450`:
+
+```{bash eval=FALSE, include=TRUE}
+OUT_ROOT_DIR_VIR="../analyses/HMMsearch/validation_and_further_analyses/"
+DIR="fOTU_max_PC2-and-3_x-0-to-+200-and-y-+200-to-+450_lns/"
+OUT="../analyses/HMMsearch/validation_and_further_analyses/cluster_data/"
+SCRIPT_COGcat="../scripts/groupCOGcat.awk"
+SCRIPT_Names="../scripts/groupNames.awk"
+SCRIPT_Descs="../scripts/groupDescs.awk"
+SCRIPT_Taxons="../scripts/groupTaxons.awk"
+EVALUE="2.0"
+
+awk -F"\t" -v e_val=$EVALUE -f "$SCRIPT_COGcat" "$OUT_ROOT_DIR_VIR""$DIR"*".tsv" \
+>> "$OUT""fOTU_max_PC2-and-3_x-0-to-+200-and-y-+200-to-+450_vir_COGcats_filtered.txt"
+
+awk -F"\t" -v e_val=$EVALUE -v header="sci_names" -v field="8" \
+-f "$SCRIPT_Names" "$OUT_ROOT_DIR_VIR""$DIR"*".tsv" \
+>> "$OUT""fOTU_max_PC2-and-3_x-0-to-+200-and-y-+200-to-+450_vir_Sci_Names_filtered.txt"
+awk -F"\t" -v e_val=$EVALUE -v header="species" -v field="14" \
+-f "$SCRIPT_Names" "$OUT_ROOT_DIR_VIR""$DIR"*".tsv" \
+>> "$OUT""fOTU_max_PC2-and-3_x-0-to-+200-and-y-+200-to-+450_vir_Spec_Names_filtered.txt"
+
+awk -F"\t" -v e_val=$EVALUE -f "$SCRIPT_Descs" "$OUT_ROOT_DIR_VIR""$DIR"*".tsv" \
+>> "$OUT""fOTU_max_PC2-and-3_x-0-to-+200-and-y-+200-to-+450_vir_Descs_filtered.txt"
+
+awk -F"\t" -v e_val=$EVALUE -v header="orders" -v field="10" \
+-f "$SCRIPT_Taxons" "$OUT_ROOT_DIR_VIR""$DIR"*".tsv" \
+>> "$OUT""fOTU_max_PC2-and-3_x-0-to-+200-and-y-+200-to-+450_vir_Orders_filtered.txt"
+awk -F"\t" -v e_val=$EVALUE -v header="families" -v field="11" \
+-f "$SCRIPT_Taxons" "$OUT_ROOT_DIR_VIR""$DIR"*".tsv" \
+>> "$OUT""fOTU_max_PC2-and-3_x-0-to-+200-and-y-+200-to-+450_vir_Families_filtered.txt"
+```
 
 # Check what is in the clusters
 
