@@ -1,4 +1,5 @@
 # Script for classifying VirFinder output and computing different statistics for it.  
+# Usage: python virfinder_classifier.py /Path/to/VirFinder/results/directory /Path/to/list/of/bins/and/associated/fOTUS.csv /Path/to/output/file.csv
 
 import pandas as pd
 from os import listdir
@@ -12,6 +13,7 @@ virfinder_file_names = listdir(file_input_path)
 virfinder_file_names.sort()
 bin_fOTU_list = pd.read_csv(bin_fOTU_list_path)
 bin_fOTU_list = bin_fOTU_list.sort_values("name")
+bin_fOTU_list = bin_fOTU_list.reset_index(drop = True)
 num_virfinder_files = len(virfinder_file_names)
 virfinder_result_list = [None] * num_virfinder_files
 p_val_threshold = 0.05

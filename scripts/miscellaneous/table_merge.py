@@ -1,5 +1,5 @@
 # Merge two csv tables on a user specified column in each
-# Usage: /Path/to/input/file_1.csv merge_on_column_name_1 /Path/to/input/file_2.csv merge_on_column_name_2 /Path/to/output/file.csv
+# Usage: python table_merge.py /Path/to/input/file_1.csv merge_on_column_name_1 /Path/to/input/file_2.csv merge_on_column_name_2 /Path/to/output/file.csv
 
 import pandas as pd
 import sys

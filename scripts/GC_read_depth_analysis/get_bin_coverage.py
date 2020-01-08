@@ -11,6 +11,7 @@ bin_stat_with_cov_path = "/home/arnar/Documents/team_garbageSeq/data/stats_on_al
 contig_cov_table = pd.read_csv(contig_cov_path)
 bin_stat_table = pd.read_csv(bin_stat_path)
 bin_stat_table = bin_stat_table.sort_values("name")
+bin_stat_table = bin_stat_table.reset_index(drop = True)
 cov_list = [None] * len(bin_stat_table)
 output_table = [None] * len(bin_stat_table)
 bin_name_old = ""
