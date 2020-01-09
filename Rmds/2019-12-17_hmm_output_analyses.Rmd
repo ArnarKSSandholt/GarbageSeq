@@ -92,10 +92,12 @@ These PCA plots can be used to visually determine potential groupings.
 
 ```{r}
 file_name <- "../visualisations/HMMsearch/ggbiplot_max_PC1-2.png"
-png(filename = file_name)
-ggbiplot(fOTUsHMM_pca, var.axes = F, choices = 1:2)
+png(filename = file_name, width = 1000, height = 689)
+ggbiplot(fOTUsHMM_pca, var.axes = F, choices = 1:2) + ggtitle("PCA of fOTU wise HMM data") +
+  theme(plot.title = element_text(hjust = 0.5, size = 18), axis.title=element_text(size=14))
 dev.off()
-ggbiplot(fOTUsHMM_pca, var.axes = F, choices = 1:2)
+ggbiplot(fOTUsHMM_pca, var.axes = F, choices = 1:2) + ggtitle("PCA of fOTU wise HMM data") +
+  theme(plot.title = element_text(hjust = 0.5, size = 18), axis.title=element_text(size=14))
 ```
 
 Here above the plot is slightly squashed but the following aren't:
@@ -104,13 +106,24 @@ Here above the plot is slightly squashed but the following aren't:
 
 PC12s <- tibble(fOTUs = names(fOTUsHMM_pca$x[,1]), 
               PC1 = unname(fOTUsHMM_pca$x[,1]), 
-              PC2 = unname(fOTUsHMM_pca$x[,2]))
+              PC2 = unname(fOTUsHMM_pca$x[,2]),
+              ) %>%
+  mutate(Cluster = case_when(PC1 >= -100 & PC1 <= 0   & PC2 >= -50  & PC2 <= 50 ~ 'PC1-2B',
+                             PC1 >=  200 & PC1 <= 500 & PC2 >= -100 & PC2 <= 0 ~ 'PC1-2A',
+                             TRUE ~ 'Unclustered')) %>% 
+  mutate_at(4, as.factor)
 
 title <- "PCA of e-values of matches in fOTUs"
 qplot(PC1, 
       PC2, 
       data = PC12s, 
-      geom = c("point", "density2d")) + ggtitle(title)
+      geom = c("point"),
+      group = Cluster,
+      color = Cluster,
+      fill = Cluster) + ggtitle(title) +
+  theme(plot.title = element_text(hjust = 0.5, size = 18), 
+        axis.title=element_text(size=14)) + 
+  theme(legend.text=element_text(size=10))
 
 ggsave(filename = "../visualisations/HMMsearch/pca_hmmsearch_max_PC1-2.png",
        device = png, 
@@ -122,13 +135,26 @@ ggsave(filename = "../visualisations/HMMsearch/pca_hmmsearch_max_PC1-2.png",
 
 PC23s <- tibble(fOTUs = names(fOTUsHMM_pca$x[,1]), 
               PC2 = unname(fOTUsHMM_pca$x[,2]), 
-              PC3 = unname(fOTUsHMM_pca$x[,3]))
+              PC3 = unname(fOTUsHMM_pca$x[,3])) %>%
+  mutate(Cluster = case_when(PC2 >= -100 & PC2 <= 75  & PC3 >= -150 & PC3 <= 80 ~ 'PC2-3E',
+                             PC2 >= 100  & PC2 <= 250 & PC3 >= -80  & PC3 <= 125 ~ 'PC2-3C',
+                             PC2 >= 250  & PC2 <= 425 & PC3 >= -200 & PC3 <= 0 ~ 'PC2-3A',
+                             PC2 >= 400  & PC2 <= 650 & PC3 >= -210 & PC3 <= 80 ~ 'PC2-3D',
+                             PC2 >= 0    & PC2 <= 200 & PC3 >= 200  & PC3 <= 450 ~ 'PC2-3B',
+                             TRUE ~ 'Unclustered')) %>% 
+  mutate_at(4, as.factor)
 
 title <- "PCA of e-values of matches in fOTUs"
 qplot(PC2, 
       PC3, 
       data = PC23s, 
-      geom = c("point", "density2d")) + ggtitle(title)
+      geom = c("point"),
+      group = Cluster,
+      color = Cluster,
+      fill = Cluster) + ggtitle(title) +
+  theme(plot.title = element_text(hjust = 0.5, size = 18), 
+        axis.title=element_text(size=14)) + 
+  theme(legend.text=element_text(size=10))
 
 ggsave(filename = "../visualisations/HMMsearch/pca_hmmsearch_max_PC2-3.png",
        device = png, 
@@ -140,13 +166,24 @@ ggsave(filename = "../visualisations/HMMsearch/pca_hmmsearch_max_PC2-3.png",
 
 PC34s <- tibble(fOTUs = names(fOTUsHMM_pca$x[,1]), 
               PC3 = unname(fOTUsHMM_pca$x[,3]), 
-              PC4 = unname(fOTUsHMM_pca$x[,4]))
+              PC4 = unname(fOTUsHMM_pca$x[,4])) %>%
+  mutate(Cluster = case_when(PC3 >= -80 & PC3 <= 80 & PC4 >= -50 & PC4 <= 75 ~ 'PC3-4C',
+                             PC3 >= -50 & PC3 <= 0 & PC4 >= 75 & PC4 <= 175 ~ 'PC3-4B',
+                             PC3 >= 200 & PC3 <= 450 & PC4 >= -25 & PC4 <= 50 ~ 'PC3-4A',
+                             TRUE ~ 'Unclustered')) %>% 
+  mutate_at(4, as.factor)
 
 title <- "PCA of e-values of matches in fOTUs"
 qplot(PC3, 
       PC4, 
       data = PC34s, 
-      geom = c("point", "density2d")) + ggtitle(title)
+      geom = c("point"),
+      group = Cluster,
+      color = Cluster,
+      fill = Cluster) + ggtitle(title) +
+  theme(plot.title = element_text(hjust = 0.5, size = 18), 
+        axis.title=element_text(size=14)) + 
+  theme(legend.text=element_text(size=10))
 
 ggsave(filename = "../visualisations/HMMsearch/pca_hmmsearch_max_PC3-4.png",
        device = png, 
@@ -156,6 +193,8 @@ ggsave(filename = "../visualisations/HMMsearch/pca_hmmsearch_max_PC3-4.png",
        limitsize = FALSE,
        dpi = 320)
 ```
+
+
 
 ## Heatmaps
 
@@ -293,7 +332,9 @@ title <- "NMDS, -0.02 < MDS1 < 0.02"
 qplot(MDS1, 
       MDS2, 
       data = NMDS_points, 
-      geom = c("point", "density2d")) + ggtitle(title) + zoom
+      geom = c("point", "density2d")) + ggtitle(title) + zoom +
+  theme(plot.title = element_text(hjust = 0.5, size = 18), 
+        axis.title=element_text(size=14))
 
 path <- "../visualisations/HMMsearch/nmds_hmmsearch_max_MDS1_greater_than_-0_02_and_less_than_0_02.png"
 
