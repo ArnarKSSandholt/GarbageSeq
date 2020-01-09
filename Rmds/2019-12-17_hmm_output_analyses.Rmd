@@ -228,14 +228,53 @@ NMDS_points <- as_tibble(ord$points) %>%
   filter(MDS1 > -2)
 ```
 
-# Visualise the filtered data {#nmds-preview}
+# Rerun NMDS with outliers removed
+
+Let's perform non-metric multidimensional scaling again:
+
+```{r eval=FALSE, include=TRUE}
+width <- dim(NMDS_points)[2]
+ord <- metaMDS(NMDS_points[,2:width],)
+```
+
+# Save/Load R data
+
+Save the data once again to speed-up things.
 
 ```{r}
+#saveRDS(ord, file = "../analyses/HMMsearch/R_data/max_ord_outlier_filtered.rds")
+ord <- readRDS(file = "../analyses/HMMsearch/R_data/max_ord_outlier_filtered.rds")
+```
+
+How well does the 2-D representation of multidimensional space represent the actual multidimensional space is done by using statistic called stress. Stress < 0.1 indicates that the 2-D representation is a good repreresentation of the multi-D space. This time the stress value was: `r ord$stress` indicating that it wasn't super good.
+
+Here is the stress plot for this new NMDS:
+
+```{r}
+stressplot(ord)
+```
+
+```{r}
+file_name <- "../visualisations/HMMsearch/nmds_ordiplot_all_data_outlier_filtered.png"
+png(filename = file_name)
+ordiplot(ord)
+points(ord)
+dev.off()
+ordiplot(ord)
+points(ord)
+```
+
+
+# Visualise the filtered data {#nmds-preview}
+
+```{r eval=FALSE, include=TRUE}
 title <- "NMDS, all from MDS1 > -2"
 qplot(MDS1, 
       MDS2, 
       data = NMDS_points, 
-      geom = c("point", "density2d")) + ggtitle(title)
+      geom = c("point", "density2d")) + ggtitle(title) +
+  theme(plot.title = element_text(hjust = 0.5, size = 18), 
+        axis.title=element_text(size=14))
 
 path <- "../visualisations/HMMsearch/nmds_hmmsearch_max_MDS1_greater_than_-2.png"
 
