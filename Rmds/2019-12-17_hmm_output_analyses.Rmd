@@ -561,7 +561,7 @@ NMDSg_filename <- paste(path,
 
 Now we need to have a data frame with 3 columns, first of which contains the fOTU names. This so because then the already made function `filterator`'s indexing is correct. 
 
-```{r}
+```{r eval=FALSE, include=TRUE}
 unfiltered <- as_tibble(ord$points)
 # Prepend the fOTU_names before first column
 unfiltered <- cbind(select(fOTUsHMM,1), 
