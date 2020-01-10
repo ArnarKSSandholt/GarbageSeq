@@ -258,13 +258,12 @@ ordiplot(ord)
 points(ord)
 ```
 
-# Remove outlier(s)
+# Find and filter out the outlier(s)
 
 These are just removed so that it's easier to see the better the whole data.
 
 ```{r}
-NMDS_points <- as_tibble(ord$points) %>%
-  filter(MDS1 > -2)
+NMDS_points <- fOTUsHMM[-which(as_tibble(ord$points)$MDS1 < -2), ]
 ```
 
 # Rerun NMDS with outliers removed
