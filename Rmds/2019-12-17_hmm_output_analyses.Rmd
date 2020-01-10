@@ -303,50 +303,6 @@ ordiplot(ord)
 points(ord)
 ```
 
-
-# Visualise the filtered data {#nmds-preview}
-
-```{r eval=FALSE, include=TRUE}
-title <- "NMDS, all from MDS1 > -2"
-qplot(MDS1, 
-      MDS2, 
-      data = NMDS_points, 
-      geom = c("point", "density2d")) + ggtitle(title) +
-  theme(plot.title = element_text(hjust = 0.5, size = 18), 
-        axis.title=element_text(size=14))
-
-path <- "../visualisations/HMMsearch/nmds_hmmsearch_max_MDS1_greater_than_-2.png"
-
-ggsave(filename = path,
-       device = png, 
-       width = 1000, 
-       height = 750, 
-       units = "in",
-       limitsize = FALSE,
-       dpi = 320)
-
-# Let's zoom in to the main cluster
-zoom <- coord_cartesian(xlim = c(-0.02,0.02))
-
-title <- "NMDS, -0.02 < MDS1 < 0.02"
-qplot(MDS1, 
-      MDS2, 
-      data = NMDS_points, 
-      geom = c("point", "density2d")) + ggtitle(title) + zoom +
-  theme(plot.title = element_text(hjust = 0.5, size = 18), 
-        axis.title=element_text(size=14))
-
-path <- "../visualisations/HMMsearch/nmds_hmmsearch_max_MDS1_greater_than_-0_02_and_less_than_0_02.png"
-
-ggsave(filename = path,
-       device = png, 
-       width = 1000, 
-       height = 750, 
-       units = "in",
-       limitsize = FALSE,
-       dpi = 320)
-```
-
 # Create lists of fOTUs of interest
 
 ## PCA lists
