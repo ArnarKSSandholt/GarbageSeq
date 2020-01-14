@@ -121,9 +121,13 @@ qplot(PC1,
       group = Cluster,
       color = Cluster,
       fill = Cluster) + ggtitle(title) +
-  theme(plot.title = element_text(hjust = 0.5, size = 18), 
+  theme(plot.title = element_text(hjust = 0.5, 
+                                  size = 18), 
         axis.title=element_text(size=14)) + 
-  theme(legend.text=element_text(size=10))
+  theme(legend.text=element_text(size=10)) +
+  theme(axis.text=element_text(size=13),
+        axis.title=element_text(size=10, 
+                                face="bold"))
 
 ggsave(filename = "../visualisations/HMMsearch/pca_hmmsearch_max_PC1-2.png",
        device = png, 
@@ -154,7 +158,10 @@ qplot(PC2,
       fill = Cluster) + ggtitle(title) +
   theme(plot.title = element_text(hjust = 0.5, size = 18), 
         axis.title=element_text(size=14)) + 
-  theme(legend.text=element_text(size=10))
+  theme(legend.text=element_text(size=10)) +
+  theme(axis.text=element_text(size=13),
+        axis.title=element_text(size=10, 
+                                face="bold"))
 
 ggsave(filename = "../visualisations/HMMsearch/pca_hmmsearch_max_PC2-3.png",
        device = png, 
@@ -183,7 +190,10 @@ qplot(PC3,
       fill = Cluster) + ggtitle(title) +
   theme(plot.title = element_text(hjust = 0.5, size = 18), 
         axis.title=element_text(size=14)) + 
-  theme(legend.text=element_text(size=10))
+  theme(legend.text=element_text(size=10)) +
+  theme(axis.text=element_text(size=13),
+        axis.title=element_text(size=10, 
+                                face="bold"))
 
 ggsave(filename = "../visualisations/HMMsearch/pca_hmmsearch_max_PC3-4.png",
        device = png, 
