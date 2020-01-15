@@ -88,16 +88,41 @@ fOTUsHMM_pca <- fOTUsHMM %>%
 
 ## PCA plots {#pca-preview}
 
+But before starting to draw any figures, let's define some plot variables which will be used for all the plots.
+
+```{r}
+plot_title_justification <- 0.5
+figure_width <- 1000
+figure_height <- 750
+plot_title_size <- 18
+axis_title_size <- 14
+axis_text_size <- 13
+plot_resolution <- 320
+
+```
+
 These PCA plots can be used to visually determine potential groupings.
 
 ```{r}
 file_name <- "../visualisations/HMMsearch/ggbiplot_max_PC1-2.png"
-png(filename = file_name, width = 1000, height = 689)
-ggbiplot(fOTUsHMM_pca, var.axes = F, choices = 1:2) + ggtitle("PCA of fOTU wise HMM data") +
-  theme(plot.title = element_text(hjust = 0.5, size = 18), axis.title=element_text(size=14))
+png(filename = file_name, 
+    width = figure_width, 
+    height = figure_height)
+ggbiplot(fOTUsHMM_pca, 
+         var.axes = F, 
+         choices = 1:2) + 
+  ggtitle("PCA of fOTU wise HMM data") +
+  theme(plot.title = element_text(hjust = plot_title_justification, 
+                                  size = plot_title_size), 
+        axis.title=element_text(size = axis_title_size))
 dev.off()
-ggbiplot(fOTUsHMM_pca, var.axes = F, choices = 1:2) + ggtitle("PCA of fOTU wise HMM data") +
-  theme(plot.title = element_text(hjust = 0.5, size = 18), axis.title=element_text(size=14))
+ggbiplot(fOTUsHMM_pca, 
+         var.axes = F, 
+         choices = 1:2) + 
+  ggtitle("PCA of fOTU wise HMM data") +
+  theme(plot.title = element_text(hjust = plot_title_justification, 
+                                  size = plot_title_size), 
+        axis.title=element_text(size = axis_title_size))
 ```
 
 Here above the plot is slightly squashed but the following aren't:
@@ -121,21 +146,19 @@ qplot(PC1,
       group = Cluster,
       color = Cluster,
       fill = Cluster) + ggtitle(title) +
-  theme(plot.title = element_text(hjust = 0.5, 
-                                  size = 18), 
-        axis.title=element_text(size=14)) + 
+  theme(plot.title = element_text(hjust = plot_title_justification, 
+                                  size = plot_title_size), 
+        axis.title=element_text(size = axis_title_size)) + 
   theme(legend.text=element_text(size=10)) +
-  theme(axis.text=element_text(size=13),
-        axis.title=element_text(size=10, 
-                                face="bold"))
+  theme(axis.text=element_text(size = axis_text_size))
 
 ggsave(filename = "../visualisations/HMMsearch/pca_hmmsearch_max_PC1-2.png",
        device = png, 
-       width = 1000, 
-       height = 750, 
+       width = figure_width, 
+       height = figure_height, 
        units = "in",
        limitsize = FALSE,
-       dpi = 320)
+       dpi = plot_resolution)
 
 PC23s <- tibble(fOTUs = names(fOTUsHMM_pca$x[,1]), 
               PC2 = unname(fOTUsHMM_pca$x[,2]), 
@@ -156,20 +179,19 @@ qplot(PC2,
       group = Cluster,
       color = Cluster,
       fill = Cluster) + ggtitle(title) +
-  theme(plot.title = element_text(hjust = 0.5, size = 18), 
-        axis.title=element_text(size=14)) + 
+  theme(plot.title = element_text(hjust = plot_title_justification, 
+                                  size = plot_title_size), 
+        axis.title=element_text(size = axis_title_size)) + 
   theme(legend.text=element_text(size=10)) +
-  theme(axis.text=element_text(size=13),
-        axis.title=element_text(size=10, 
-                                face="bold"))
+  theme(axis.text=element_text(size = axis_text_size))
 
 ggsave(filename = "../visualisations/HMMsearch/pca_hmmsearch_max_PC2-3.png",
        device = png, 
-       width = 1000, 
-       height = 750, 
+       width = figure_width, 
+       height = figure_height, 
        units = "in",
        limitsize = FALSE,
-       dpi = 320)
+       dpi = plot_resolution)
 
 PC34s <- tibble(fOTUs = names(fOTUsHMM_pca$x[,1]), 
               PC3 = unname(fOTUsHMM_pca$x[,3]), 
@@ -188,20 +210,19 @@ qplot(PC3,
       group = Cluster,
       color = Cluster,
       fill = Cluster) + ggtitle(title) +
-  theme(plot.title = element_text(hjust = 0.5, size = 18), 
-        axis.title=element_text(size=14)) + 
+  theme(plot.title = element_text(hjust = plot_title_justification, 
+                                  size = plot_title_size), 
+        axis.title=element_text(size = axis_title_size)) + 
   theme(legend.text=element_text(size=10)) +
-  theme(axis.text=element_text(size=13),
-        axis.title=element_text(size=10, 
-                                face="bold"))
+  theme(axis.text=element_text(size = axis_text_size))
 
 ggsave(filename = "../visualisations/HMMsearch/pca_hmmsearch_max_PC3-4.png",
        device = png, 
-       width = 1000, 
-       height = 750, 
+       width = figure_width, 
+       height = figure_height, 
        units = "in",
        limitsize = FALSE,
-       dpi = 320)
+       dpi = plot_resolution)
 ```
 
 
@@ -316,24 +337,24 @@ points(ord)
 
 ```{r}
 NMDS_points <- as_tibble(ord[["points"]])
+
 qplot(MDS1, 
       MDS2, 
       data = NMDS_points, 
       geom = c("point")) +
-  theme(plot.title = element_text(hjust = 0.5, 
-                                  size = 18), 
-        axis.title=element_text(size=14)) +
-  theme(axis.text=element_text(size=13),
-        axis.title=element_text(size=12))
+  theme(plot.title = element_text(hjust = plot_title_justification, 
+                                  size = plot_title_size), 
+        axis.title=element_text(size = axis_title_size)) +
+  theme(axis.text=element_text(size = axis_text_size))
 
 path <- "../visualisations/HMMsearch/nmds_hmmsearch_max_all_data.png"
 ggsave(filename = path,
        device = png, 
-       width = 1000, 
-       height = 750, 
+       width = figure_width, 
+       height = figure_height, 
        units = "in",
        limitsize = FALSE,
-       dpi = 320)
+       dpi = plot_resolution)
 ```
 
 
