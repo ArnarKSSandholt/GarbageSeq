@@ -95,36 +95,12 @@ plot_title_justification <- 0.5
 figure_width <- 1000
 figure_height <- 750
 plot_title_size <- 18
-axis_title_size <- 14
-axis_text_size <- 13
+axis_title_size <- 16
+axis_text_size <- 15
 plot_resolution <- 320
+legend_text_size <- 15
 
 ```
-
-These PCA plots can be used to visually determine potential groupings.
-
-```{r}
-file_name <- "../visualisations/HMMsearch/ggbiplot_max_PC1-2.png"
-png(filename = file_name, 
-    width = figure_width, 
-    height = figure_height)
-ggbiplot(fOTUsHMM_pca, 
-         var.axes = F, 
-         choices = 1:2) + 
-  ggtitle("PCA of fOTU wise HMM data") +
-  theme(plot.title = element_text(hjust = plot_title_justification, 
-                                  size = plot_title_size), 
-        axis.title=element_text(size = axis_title_size))
-dev.off()
-ggbiplot(fOTUsHMM_pca, 
-         var.axes = F, 
-         choices = 1:2) + 
-  ggtitle("PCA of fOTU wise HMM data") +
-  theme(plot.title = element_text(hjust = plot_title_justification, 
-                                  size = plot_title_size), 
-        axis.title=element_text(size = axis_title_size))
-```
-
 Here above the plot is slightly squashed but the following aren't:
 
 ```{r}
@@ -149,7 +125,7 @@ qplot(PC1,
   theme(plot.title = element_text(hjust = plot_title_justification, 
                                   size = plot_title_size), 
         axis.title=element_text(size = axis_title_size)) + 
-  theme(legend.text=element_text(size=10)) +
+  theme(legend.text=element_text(size = legend_text_size)) +
   theme(axis.text=element_text(size = axis_text_size))
 
 ggsave(filename = "../visualisations/HMMsearch/pca_hmmsearch_max_PC1-2.png",
@@ -182,7 +158,7 @@ qplot(PC2,
   theme(plot.title = element_text(hjust = plot_title_justification, 
                                   size = plot_title_size), 
         axis.title=element_text(size = axis_title_size)) + 
-  theme(legend.text=element_text(size=10)) +
+  theme(legend.text=element_text(size = legend_text_size)) +
   theme(axis.text=element_text(size = axis_text_size))
 
 ggsave(filename = "../visualisations/HMMsearch/pca_hmmsearch_max_PC2-3.png",
@@ -213,7 +189,7 @@ qplot(PC3,
   theme(plot.title = element_text(hjust = plot_title_justification, 
                                   size = plot_title_size), 
         axis.title=element_text(size = axis_title_size)) + 
-  theme(legend.text=element_text(size=10)) +
+  theme(legend.text=element_text(size = legend_text_size)) +
   theme(axis.text=element_text(size = axis_text_size))
 
 ggsave(filename = "../visualisations/HMMsearch/pca_hmmsearch_max_PC3-4.png",
@@ -225,6 +201,31 @@ ggsave(filename = "../visualisations/HMMsearch/pca_hmmsearch_max_PC3-4.png",
        dpi = plot_resolution)
 ```
 
+
+
+These PCA plots can be used to visually determine potential groupings.
+
+```{r}
+file_name <- "../visualisations/HMMsearch/ggbiplot_max_PC1-2.png"
+png(filename = file_name, 
+    width = figure_width, 
+    height = figure_height)
+ggbiplot(fOTUsHMM_pca, 
+         var.axes = F, 
+         choices = 1:2) + 
+  ggtitle("PCA of fOTU wise HMM data") +
+  theme(plot.title = element_text(hjust = plot_title_justification, 
+                                  size = plot_title_size), 
+        axis.title=element_text(size = axis_title_size))
+dev.off()
+ggbiplot(fOTUsHMM_pca, 
+         var.axes = F, 
+         choices = 1:2) + 
+  ggtitle("PCA of fOTU wise HMM data") +
+  theme(plot.title = element_text(hjust = plot_title_justification, 
+                                  size = plot_title_size), 
+        axis.title=element_text(size = axis_title_size))
+```
 
 
 ## Heatmaps
