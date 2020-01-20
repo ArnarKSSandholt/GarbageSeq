@@ -44,3 +44,6 @@ analyses/HMMsearch/validation_and_further_analyses/fOTUwise_taxon_HMM_data/*
 singularity/*
 !singularity/README.md
 singularity2/*
+
+# Ignore log files
+*.log
